@@ -9,9 +9,10 @@ import {
   Check,
   Moon,
   Instagram,
+  Github,
   Trash,
   Bell,
-  Rss
+  Rss,
 } from 'lucide-angular';
 import { routes } from './app.routes';
 
@@ -27,6 +28,7 @@ export const appConfig: ApplicationConfig = {
         Check,
         Moon,
         Instagram,
+        Github,
         Trash,
         Bell,
         Rss
