@@ -1,0 +1,17 @@
+<div class="h-full overflow-hidden py-10">
+  @for (nav of navigations; track nav.title) {
+    <div class="pb-4">
+      <h3 class="font-medium text-sm py-1 mb-1">{{ nav.title }}</h3>
+      <div class="grid grid-flow-row auto-rows-max text-sm">
+        @for (link of nav.links; track link.title ) {
+          <a [routerLink]="link.routerLink" class="w-full flex items-center text-zinc-500 hover:text-zinc-900/80 py-1.5">
+            {{ link.title }}
+            @if (link?.isSoon) {
+              <span class="font-semibold text-[10px] text-white px-[5px] ml-3 rounded-md to-purple-600 from-pink-600 bg-gradient-to-r">Soon</span>
+            }
+          </a>
+        }
+      </div>
+    </div>
+  }
+</div>

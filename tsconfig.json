@@ -10,6 +10,8 @@
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
     "paths": {
+      "@components/*": ["./projects/documentation/src/app/components/*"],
+      "@docs/*": ["./projects/documentation/src/app/docs/*"],
       "ngx-angular-ui": [
         "./dist/ngx-angular-ui"
       ]
