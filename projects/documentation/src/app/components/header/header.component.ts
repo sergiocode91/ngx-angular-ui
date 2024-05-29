@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { LucideAngularModule } from 'lucide-angular';
 import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
+import { DarkmodeService } from '../../services/darkmode.service';
 
 @Component({
   selector: 'app-header',
@@ -10,5 +11,9 @@ import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-ap
   styles: ``
 })
 export class HeaderComponent {
+  _darkModeService: DarkmodeService = inject(DarkmodeService);
 
+  toggleDarkmode() {
+    this._darkModeService.toggleDarkmode();
+  }
 }

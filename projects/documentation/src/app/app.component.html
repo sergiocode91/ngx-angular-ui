@@ -1,1 +1,4 @@
-<router-outlet />
+<div [ngClass]="_darkModeService.darkModeSignal()">
+  <app-header />
+  <router-outlet />
+</div>
