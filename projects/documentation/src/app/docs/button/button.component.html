@@ -76,3 +76,30 @@
     <app-highlight-code [code]="code6" [language]="'typescript'" />
   }
 </app-tabs>
+
+<app-heading title="Icon" size="sm" />
+<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab7', $event)">
+  @if(activeTabs['tab7'] === 'Preview') {
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+      <button uiButton variant="outline" size="icon">
+        <lucide-icon name="Moon" [size]="18"></lucide-icon>
+      </button>
+    </div>
+  } @else {
+    <app-highlight-code [code]="code7" [language]="'typescript'" />
+  }
+</app-tabs>
+
+<app-heading title="Icon with text" size="sm" />
+<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab8', $event)">
+  @if(activeTabs['tab8'] === 'Preview') {
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+      <button uiButton variant="primary">
+        <lucide-icon name="Instagram" [size]="18" class="inline-flex mr-1"></lucide-icon>
+        Sign in with Instagram
+      </button>
+    </div>
+  } @else {
+    <app-highlight-code [code]="code8" [language]="'typescript'" />
+  }
+</app-tabs>

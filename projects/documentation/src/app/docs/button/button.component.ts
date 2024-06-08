@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LucideAngularModule } from 'lucide-angular';
 import {
   HeadingComponent,
   HighlightCodeComponent,
@@ -14,6 +15,7 @@ import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-ap
     HeadingComponent,
     PropsComponent,
     HighlightCodeComponent,
+    LucideAngularModule,
     TabsComponent,
     HtmlButtonDirective
   ],
