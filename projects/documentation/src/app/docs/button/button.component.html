@@ -4,11 +4,21 @@
 <app-props [props]="props" />
 
 <app-heading title="Usage" size="lg" [border]="true" />
-<app-highlight-code [code]="codeUseTs" [language]="'typescript'"></app-highlight-code>
-<app-highlight-code [code]="codeUseHtml" [language]="'html'"></app-highlight-code>
+<app-highlight-code [code]="codeUseTs" [language]="'typescript'" />
+<app-highlight-code [code]="codeUseHtml" [language]="'html'" />
 
 <app-heading title="Examples" size="lg" [border]="true" />
 
+<app-heading title="Default" size="sm" />
+<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
+  @if(activeTabs['tab1'] === 'Preview') {
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+      <button uiButton variant="primary">Button</button>
+    </div>
+  } @else {
+    <app-highlight-code [code]="code1" [language]="'typescript'" />
+  }
+</app-tabs>
 
 <!-- <div class="flex items-center justify-center mt-10 gap-4">
   <button uiButton>Primary</button>

@@ -1,0 +1,15 @@
+<div class="flex font-medium text-sm pt-2 border-b dark:border-zinc-800">
+  @for (tab of tabs; track tab) {
+  <button
+    class="py-2 px-4 border-b-2 border-transparent relative"
+    [class]="activeTab === tab ? 'text-zinc-900 dark:text-white border-zinc-900 dark:border-white' : 'dark:text-white/70'"
+    (click)="setActiveTab(tab)"
+  >
+    {{ tab }}
+  </button>
+  }
+</div>
+
+<div class="tab-content mt-6">
+  <ng-content></ng-content>
+</div>
