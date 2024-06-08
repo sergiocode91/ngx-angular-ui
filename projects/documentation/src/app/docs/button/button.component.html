@@ -20,25 +20,59 @@
   }
 </app-tabs>
 
-<!-- <div class="flex items-center justify-center mt-10 gap-4">
-  <button uiButton>Primary</button>
-  <button uiButton variant="secondary">Secondary</button>
-  <button uiButton variant="outline">Outline</button>
-  <button uiButton variant="destructive">Destructive</button>
-  <button uiButton variant="ghost">Get started</button>
-  <button uiButton variant="link">Don’t have an account?</button>
+<app-heading title="Secondary" size="sm" />
+<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab2', $event)">
+  @if(activeTabs['tab2'] === 'Preview') {
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+      <button uiButton variant="secondary">Secondary</button>
+    </div>
+  } @else {
+    <app-highlight-code [code]="code2" [language]="'typescript'" />
+  }
+</app-tabs>
 
-  <button uiButton variant="outline" size="icon">
-    <lucide-icon name="Moon" [size]="18"></lucide-icon>
-  </button>
 
-  <button uiButton variant="primary">
-    <lucide-icon name="Instagram" [size]="18" class="inline-flex mr-1"></lucide-icon>
-    Sign in with Instagram
-  </button>
+<app-heading title="Outline" size="sm" />
+<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab3', $event)">
+  @if(activeTabs['tab3'] === 'Preview') {
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+      <button uiButton variant="outline">Outline</button>
+    </div>
+  } @else {
+    <app-highlight-code [code]="code3" [language]="'typescript'" />
+  }
+</app-tabs>
 
-  <button uiButton variant="destructive" disabled="true">
-    <lucide-icon name="Trash" [size]="18" class="inline-flex mr-1"></lucide-icon>
-    Delete account
-  </button>
- </div> -->
+
+<app-heading title="Destructive" size="sm" />
+<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab4', $event)">
+  @if(activeTabs['tab4'] === 'Preview') {
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+      <button uiButton variant="destructive">Destructive</button>
+    </div>
+  } @else {
+    <app-highlight-code [code]="code4" [language]="'typescript'" />
+  }
+</app-tabs>
+
+<app-heading title="Ghost" size="sm" />
+<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab5', $event)">
+  @if(activeTabs['tab5'] === 'Preview') {
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+      <button uiButton variant="ghost">Get started</button>
+    </div>
+  } @else {
+    <app-highlight-code [code]="code5" [language]="'typescript'" />
+  }
+</app-tabs>
+
+<app-heading title="Link" size="sm" />
+<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab6', $event)">
+  @if(activeTabs['tab6'] === 'Preview') {
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+      <button uiButton variant="link">Don’t have an account?</button>
+    </div>
+  } @else {
+    <app-highlight-code [code]="code6" [language]="'typescript'" />
+  }
+</app-tabs>
