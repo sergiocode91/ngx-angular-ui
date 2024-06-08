@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
-import { HeadingComponent, PropsComponent } from '@components/index';
+import {
+  HeadingComponent,
+  HighlightCodeComponent,
+  PropsComponent,
+} from '@components/index';
 
 @Component({
   selector: 'app-button',
   standalone: true,
-  imports: [HeadingComponent, PropsComponent],
+  imports: [HeadingComponent, PropsComponent, HighlightCodeComponent],
   templateUrl: './button.component.html',
-  styles: ``
+  styles: ``,
 })
 export class ButtonComponent {
   public props = {
@@ -34,4 +38,17 @@ export class ButtonComponent {
       },
     ],
   };
+
+  public codeUseTs = `
+  import { HtmlButtonDirective } from 'ngx-angular-ui';
+
+  @Component({
+    standalone: true,
+    imports: [HtmlButtonDirective],
+  })
+  `;
+
+  public codeUseHtml = `
+  <button uiButton>Button</button>
+  `;
 }

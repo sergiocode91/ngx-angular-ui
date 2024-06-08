@@ -63,7 +63,8 @@
               "projects/documentation/src/assets"
             ],
             "styles": [
-              "projects/documentation/src/styles.scss"
+              "projects/documentation/src/styles.scss",
+              "node_modules/highlight.js/styles/hybrid.min.css"
             ],
             "scripts": []
           },

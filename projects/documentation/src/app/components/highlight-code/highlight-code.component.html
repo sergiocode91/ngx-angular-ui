@@ -1,0 +1,12 @@
+<div class="mt-6 mb-4 relative">
+  <pre><code [highlight]="code" [language]="language" class="text-sm !p-0 rounded-md"></code></pre>
+  <button
+    uiButton
+    variant="ghost"
+    size="icon"
+    class="top-0 right-0 absolute"
+    (click)="handleCopyCode()"
+  >
+    <lucide-icon [name]="copyIcon" [size]="12" class="text-white"></lucide-icon>
+  </button>
+</div>
