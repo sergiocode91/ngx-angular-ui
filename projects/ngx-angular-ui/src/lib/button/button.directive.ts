@@ -46,7 +46,7 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
       case 'primary':
         return 'text-white bg-zinc-900 hover:bg-zinc-900/90 focus-visible:ring-zinc-400 shadow dark:text-zinc-900 dark:bg-white dark:hover:bg-zinc-50/90';
       case 'secondary':
-        return 'text-zinc-900 bg-zinc-100 hover:bg-zinc-100/80 focus-visible:ring-zinc-400 shadow-sm';
+        return 'text-zinc-900 bg-zinc-100 hover:bg-zinc-100/80 focus-visible:ring-zinc-400 shadow-sm dark:text-white dark:bg-zinc-800 dark:hover:bg-zinc-800/80';
       case 'outline':
         return 'text-zinc-900 border border-zinc-200 bg-white hover:bg-zinc-100 focus-visible:ring-zinc-400 shadow-sm dark:text-white dark:border-zinc-800 dark:bg-transparent dark:hover:bg-zinc-800';
       case 'destructive':
@@ -54,7 +54,7 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
       case 'ghost':
         return 'text-zinc-900 hover:bg-zinc-100 focus-visible:ring-zinc-400 dark:text-white dark:hover:bg-zinc-800';
       case 'link':
-        return 'text-zinc-900 underline-offset-4 hover:underline focus-visible:ring-zinc-400';
+        return 'text-zinc-900 underline-offset-4 hover:underline focus-visible:ring-zinc-400 dark:text-white';
       default:
         return '';
     }
