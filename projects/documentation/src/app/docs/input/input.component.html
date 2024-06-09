@@ -2,3 +2,22 @@
   title="Input"
   description="Displays a form input field or a component that looks like an input field."
 ></app-heading>
+
+<app-heading title="Usage" size="lg" [border]="true" />
+<app-highlight-code [code]="codeUseTs" [language]="'typescript'" />
+<app-highlight-code [code]="codeUseHtml" [language]="'html'" />
+
+<app-heading title="Examples" size="lg" [border]="true" />
+
+<app-heading title="Default" size="sm" />
+<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
+  @if(activeTabs['tab1'] === 'Preview') {
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+      <div class="w-72 flex items-center space-x-4">
+        <input uiInput type="email" placeholder="Enter your email">
+      </div>
+    </div>
+  } @else {
+    <app-highlight-code [code]="code1" [language]="'typescript'" />
+  }
+</app-tabs>
