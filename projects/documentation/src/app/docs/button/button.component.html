@@ -103,3 +103,17 @@
     <app-highlight-code [code]="code8" [language]="'typescript'" />
   }
 </app-tabs>
+
+<app-heading title="Icon with text" size="sm" />
+<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab9', $event)">
+  @if(activeTabs['tab9'] === 'Preview') {
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+      <button uiButton variant="destructive" disabled="true">
+        <lucide-icon name="Trash" [size]="18" class="inline-flex mr-1"></lucide-icon>
+        Delete account
+      </button>
+    </div>
+  } @else {
+    <app-highlight-code [code]="code9" [language]="'typescript'" />
+  }
+</app-tabs>
