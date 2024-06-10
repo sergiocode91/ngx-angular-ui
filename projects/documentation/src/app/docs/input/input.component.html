@@ -13,11 +13,25 @@
 <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
   @if(activeTabs['tab1'] === 'Preview') {
     <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
-      <div class="w-72 flex items-center space-x-4">
+      <div class="w-72">
         <input uiInput type="email" placeholder="Enter your email">
       </div>
     </div>
   } @else {
     <app-highlight-code [code]="code1" [language]="'typescript'" />
+  }
+</app-tabs>
+
+<app-heading title="With Label" size="sm" />
+<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab2', $event)">
+  @if(activeTabs['tab2'] === 'Preview') {
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+      <div class="w-72 flex flex-col space-y-2">
+        <label uiLabel for="email">Email</label>
+        <input uiInput type="email" id="email" placeholder="Enter your email">
+      </div>
+    </div>
+  } @else {
+    <app-highlight-code [code]="code2" [language]="'typescript'" />
   }
 </app-tabs>
