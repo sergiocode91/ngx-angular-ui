@@ -2,3 +2,48 @@
   title="Textarea"
   description="Displays a form textarea or a component that looks like a textarea."
 ></app-heading>
+
+<app-heading title="Usage" size="lg" [border]="true" />
+<app-highlight-code [code]="codeUseTs" [language]="'typescript'" />
+<app-highlight-code [code]="codeUseHtml" [language]="'html'" />
+
+<app-heading title="Default" size="sm" />
+<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
+  @if(activeTabs['tab1'] === 'Preview') {
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+      <div class="w-96 flex items-center space-x-4">
+        <textarea uiTextarea placeholder="Type your message here."></textarea>
+      </div>
+    </div>
+  } @else {
+    <app-highlight-code [code]="code1" [language]="'typescript'" />
+  }
+</app-tabs>
+
+<app-heading title="With Label" size="sm" />
+<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab2', $event)">
+  @if(activeTabs['tab2'] === 'Preview') {
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+      <div class="w-96 flex flex-col space-y-2">
+        <label uiLabel for="email">Message</label>
+        <textarea uiTextarea placeholder="Type your message here."></textarea>
+      </div>
+    </div>
+  } @else {
+    <app-highlight-code [code]="code2" [language]="'typescript'" />
+  }
+</app-tabs>
+
+<app-heading title="With Button" size="sm" />
+<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab3', $event)">
+  @if(activeTabs['tab3'] === 'Preview') {
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+      <div class="w-96 flex flex-col items-end space-y-4">
+        <textarea uiTextarea placeholder="Type your message here."></textarea>
+        <button uiButton>Send</button>
+      </div>
+    </div>
+  } @else {
+    <app-highlight-code [code]="code3" [language]="'typescript'" />
+  }
+</app-tabs>
