@@ -2,3 +2,23 @@
   title="Label"
   description="Renders an accessible label associated with controls."
 ></app-heading>
+
+<app-heading title="Usage" size="lg" [border]="true" />
+<app-highlight-code [code]="codeUseTs" [language]="'typescript'" />
+<app-highlight-code [code]="codeUseHtml" [language]="'html'" />
+
+<app-heading title="Examples" size="lg" [border]="true" />
+
+<app-heading title="Default" size="sm" />
+<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
+  @if(activeTabs['tab1'] === 'Preview') {
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+      <div class="w-72 flex flex-col space-y-2">
+        <label uiLabel for="Username">Username</label>
+        <input uiInput type="text" id="Username" placeholder="Write your username">
+      </div>
+    </div>
+  } @else {
+    <app-highlight-code [code]="code" [language]="'typescript'" />
+  }
+</app-tabs>
