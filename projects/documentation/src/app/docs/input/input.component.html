@@ -35,3 +35,17 @@
     <app-highlight-code [code]="code2" [language]="'typescript'" />
   }
 </app-tabs>
+
+<app-heading title="With Button" size="sm" />
+<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab3', $event)">
+  @if(activeTabs['tab3'] === 'Preview') {
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+      <div class="w-72 flex space-x-2">
+        <input uiInput type="email" id="email" placeholder="Enter your email">
+        <button uiButton>Send</button>
+      </div>
+    </div>
+  } @else {
+    <app-highlight-code [code]="code3" [language]="'typescript'" />
+  }
+</app-tabs>

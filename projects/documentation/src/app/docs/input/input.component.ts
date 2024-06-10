@@ -6,6 +6,7 @@ import {
 } from '@components/index';
 import { HtmlInputDirective } from '../../../../../ngx-angular-ui/src/lib/input/input.directive';
 import { HtmlLabelDirective } from '../../../../../ngx-angular-ui/src/lib/label/label.directive';
+import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
 
 @Component({
   selector: 'app-input',
@@ -14,6 +15,7 @@ import { HtmlLabelDirective } from '../../../../../ngx-angular-ui/src/lib/label/
     HeadingComponent,
     HtmlInputDirective,
     HtmlLabelDirective,
+    HtmlButtonDirective,
     HighlightCodeComponent,
     TabsComponent,
   ],
@@ -58,6 +60,21 @@ export class InputComponent {
       <div class="flex flex-col space-y-2">
         <label uiLabel for="email">Email</label>
         <input uiInput type="email" id="email" placeholder="Enter your email">
+      </div>
+    \`
+  })
+  `;
+
+  public code3 = `
+  import { HtmlInputDirective, HtmlButtonDirective } from 'ngx-angular-ui';
+  
+  @Component({
+    standalone: true,
+    imports: [HtmlInputDirective, HtmlButtonDirective],
+    template: \`
+      <div class="w-72 flex space-x-2">
+        <input uiInput type="email" placeholder="Enter your email">
+        <button uiButton>Send</button>
       </div>
     \`
   })
