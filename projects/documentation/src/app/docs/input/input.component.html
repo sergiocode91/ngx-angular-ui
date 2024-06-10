@@ -49,3 +49,16 @@
     <app-highlight-code [code]="code3" [language]="'typescript'" />
   }
 </app-tabs>
+
+<app-heading title="Disabled" size="sm" />
+<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab4', $event)">
+  @if(activeTabs['tab4'] === 'Preview') {
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+      <div class="w-72">
+        <input uiInput type="email" id="email" placeholder="Enter your email" disabled>
+      </div>
+    </div>
+  } @else {
+    <app-highlight-code [code]="code4" [language]="'typescript'" />
+  }
+</app-tabs>

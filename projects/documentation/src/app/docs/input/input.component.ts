@@ -80,6 +80,18 @@ export class InputComponent {
   })
   `;
 
+  public code4 = `
+  import { HtmlInputDirective } from 'ngx-angular-ui';
+  
+  @Component({
+    standalone: true,
+    imports: [HtmlInputDirective],
+    template: \`
+      <input uiInput type="email" placeholder="Enter your email" disabled>
+    \`
+  })
+  `;
+
   constructor() {
     this.initializeTabs(4);
   }
