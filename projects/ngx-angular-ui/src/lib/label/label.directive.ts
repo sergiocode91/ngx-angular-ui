@@ -26,7 +26,7 @@ export class HtmlLabelDirective implements OnInit, OnChanges {
 
   private applyClasses() {
     const baseClasses =
-      'font-medium text-sm leading-none dark:text-white';
+      'font-medium text-sm leading-none dark:text-neutral-50';
     const classes = `${baseClasses} ${this.class}`;
 
     this.renderer.setAttribute(this.el.nativeElement, 'class', classes);

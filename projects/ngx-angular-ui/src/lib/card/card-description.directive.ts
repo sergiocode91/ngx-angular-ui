@@ -26,7 +26,7 @@ export class HtmlCardDescriptionDirective implements OnInit, OnChanges {
 
   private applyClasses() {
     const baseClasses =
-      'font-normal text-sm text-zinc-500';
+      'font-normal text-sm text-zinc-500 dark:text-white/70';
     const classes = `${baseClasses} ${this.class}`;
 
     this.renderer.setAttribute(this.el.nativeElement, 'class', classes);
