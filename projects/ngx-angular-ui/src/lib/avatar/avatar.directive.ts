@@ -24,9 +24,11 @@ export class HtmlAvatarDirective implements OnInit, OnChanges {
   @Input() class: string = '';
 
   private _border: boolean = false;
+  
   @Input() set border(value: boolean | string) {
     this._border = value === '' || value === 'true';
   }
+
   get border(): boolean {
     return this._border;
   }

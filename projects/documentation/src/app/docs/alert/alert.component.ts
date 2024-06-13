@@ -5,6 +5,10 @@ import {
   TabsComponent,
 } from '@components/index';
 import { LucideAngularModule } from 'lucide-angular';
+import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
+import { HtmlAlertDirective } from '../../../../../ngx-angular-ui/src/lib/alert/alert.directive';
+import { HtmlAlertTitleDirective } from '../../../../../ngx-angular-ui/src/lib/alert/alert-title.directive';
+import { HtmlAlertDescriptionDirective } from '../../../../../ngx-angular-ui/src/lib/alert/alert-description.directive';
 
 @Component({
   selector: 'app-alert',
@@ -12,6 +16,10 @@ import { LucideAngularModule } from 'lucide-angular';
   imports: [
     HeadingComponent,
     HighlightCodeComponent,
+    HtmlAlertDirective,
+    HtmlAlertTitleDirective,
+    HtmlAlertDescriptionDirective,
+    HtmlButtonDirective,
     TabsComponent,
     LucideAngularModule
   ],
@@ -22,28 +30,47 @@ export class AlertComponent {
   public activeTabs: { [key: string]: string } = {};
 
   public codeUseTs = `
-  import { HtmlLabelDirective } from 'ngx-angular-ui';
+  import { 
+    HtmlAlertDirective, 
+    HtmlAlertTitleDirective,
+    HtmlAlertDescriptionDirective
+  } from 'ngx-angular-ui';
 
   @Component({
     standalone: true,
-    imports: [HtmlLabelDirective],
+    imports: [
+      HtmlAlertDirective, 
+      HtmlAlertTitleDirective, 
+      HtmlAlertDescriptionDirective
+    ],
   })
   `;
 
   public codeUseHtml = `
-  <label uiLabel>Username</label>
+  <div uiAlert>
+    <div uiAlertTitle>Hello there!</div>
+    <div uiAlertDescription>Keep your app updated.</div>
+  </div>
   `;
 
   public code = `
-  import { HtmlLabelDirective, HtmlInputDirective } from 'ngx-angular-ui';
+  import { 
+    HtmlAlertDirective, 
+    HtmlAlertTitleDirective,
+    HtmlAlertDescriptionDirective
+  } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlLabelDirective, HtmlInputDirective],
+    imports: [
+      HtmlAlertDirective, 
+      HtmlAlertTitleDirective, 
+      HtmlAlertDescriptionDirective
+    ],
     template: \`
-      <div class="flex flex-col space-y-2">
-        <label uiLabel for="Username">Username</label>
-        <input uiInput type="text" id="Username" placeholder="Write your username">
+      <div uiAlert>
+        <div uiAlertTitle>Hello there!</div>
+        <div uiAlertDescription>Regular updates keep your app running smoothly.</div>
       </div>
     \`
   })

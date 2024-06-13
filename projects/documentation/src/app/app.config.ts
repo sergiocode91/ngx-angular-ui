@@ -18,6 +18,7 @@ import {
   TriangleAlert,
   CircleCheck,
   Info,
+  X,
 } from 'lucide-angular';
 import { routes } from './app.routes';
 
@@ -42,6 +43,7 @@ export const appConfig: ApplicationConfig = {
         TriangleAlert,
         CircleCheck,
         Info,
+        X,
       })
     ),
   ]

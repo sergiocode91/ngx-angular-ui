@@ -56,7 +56,7 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
       case 'link':
         return 'text-zinc-900 underline-offset-4 hover:underline focus-visible:ring-zinc-400 dark:text-neutral-50';
       default:
-        return '';
+        return 'primary';
     }
   }
 
@@ -71,7 +71,7 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
       case 'icon':
         return 'h-9 w-9';
       default:
-        return '';
+        return 'default';
     }
   }
 }
