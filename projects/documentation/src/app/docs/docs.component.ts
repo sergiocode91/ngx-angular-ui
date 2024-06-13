@@ -23,7 +23,7 @@ export class DocsComponent {
       links: [
         { title: 'Avatar', routerLink: '/docs/avatar', isSoon: false},
         { title: 'Alert', routerLink: '/docs/alert', isSoon: false},
-        { title: 'Breadcrumbs', routerLink: '/docs/breadcrumbs', isSoon: false},
+        { title: 'Breadcrumb', routerLink: '/docs/breadcrumb', isSoon: false},
         { title: 'Badge', routerLink: '/docs/badge', isSoon: false},
         { title: 'Button', routerLink: '/docs/button', isSoon: false},
         { title: 'Icon Button', routerLink: '/docs/icon-button', isSoon: false},
