@@ -89,7 +89,7 @@ export class HtmlAvatarDirective implements OnInit, OnChanges {
       case 'default':
         return 'ring-zinc-300';
       case 'primary':
-        return 'ring-blue-50';
+        return 'ring-blue-500';
       case 'secondary':
         return 'ring-violet-700';
       case 'success':

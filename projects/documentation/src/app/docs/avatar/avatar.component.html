@@ -4,3 +4,128 @@
 <app-props [props]="props" />
 
 <app-heading title="Usage" size="lg" [border]="true" />
+<app-highlight-code [code]="codeUseTs" [language]="'typescript'" />
+<app-highlight-code [code]="codeUseHtml" [language]="'html'" />
+
+<app-heading title="Examples" size="lg" [border]="true" />
+
+<app-heading title="Default" size="sm" />
+<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
+  @if(activeTabs['tab1'] === 'Preview') {
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+      <div uiAvatar>
+        <span>A</span>
+      </div>
+    </div>
+  } @else {
+    <app-highlight-code [code]="code1" [language]="'typescript'" />
+  }
+</app-tabs>
+
+<app-heading title="With Image" size="sm" />
+<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab2', $event)">
+  @if(activeTabs['tab2'] === 'Preview') {
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+      <div uiAvatar>
+        <img src="https://i.pravatar.cc/150?img=1" alt="avatar" />
+      </div>
+    </div>
+  } @else {
+    <app-highlight-code [code]="code2" [language]="'typescript'" />
+  }
+</app-tabs>
+
+<app-heading title="With Border" size="sm" />
+<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab3', $event)">
+  @if(activeTabs['tab3'] === 'Preview') {
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+      <div uiAvatar border>
+        <img src="https://i.pravatar.cc/150?img=57" alt="avatar" />
+      </div>
+    </div>
+  } @else {
+    <app-highlight-code [code]="code3" [language]="'typescript'" />
+  }
+</app-tabs>
+
+<app-heading title="Border Color" size="sm" />
+<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab4', $event)">
+  @if(activeTabs['tab4'] === 'Preview') {
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+      <div class="flex space-x-6">
+        <div uiAvatar border color="default">
+          <img src="https://i.pravatar.cc/150?img=45" alt="avatar" />
+        </div>
+        <div uiAvatar border color="primary">
+          <img src="https://i.pravatar.cc/150?img=40" alt="avatar" />
+        </div>
+        <div uiAvatar border color="secondary">
+          <img src="https://i.pravatar.cc/150?img=67" alt="avatar" />
+        </div>
+        <div uiAvatar border color="success">
+          <img src="https://i.pravatar.cc/150?img=35" alt="avatar" />
+        </div>
+        <div uiAvatar border color="warning">
+          <img src="https://i.pravatar.cc/150?img=39" alt="avatar" />
+        </div>
+        <div uiAvatar border color="danger">
+          <img src="https://i.pravatar.cc/150?img=67" alt="avatar" />
+        </div>
+      </div>
+    </div>
+  } @else {
+    <app-highlight-code [code]="code4" [language]="'typescript'" />
+  }
+</app-tabs>
+
+<app-heading title="Rounded" size="sm" />
+<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab5', $event)">
+  @if(activeTabs['tab5'] === 'Preview') {
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+      <div class="flex space-x-6">
+        <div uiAvatar radius="full" border>
+          <img src="https://i.pravatar.cc/150?img=23" alt="avatar" />
+        </div>
+        <div uiAvatar radius="lg" border>
+          <img src="https://i.pravatar.cc/150?img=10" alt="avatar" />
+        </div>
+        <div uiAvatar radius="md" border>
+          <img src="https://i.pravatar.cc/150?img=16" alt="avatar" />
+        </div>
+        <div uiAvatar radius="sm" border>
+          <img src="https://i.pravatar.cc/150?img=13" alt="avatar" />
+        </div>
+      </div>
+    </div>
+  } @else {
+    <app-highlight-code [code]="code5" [language]="'typescript'" />
+  }
+</app-tabs>
+
+<app-heading title="Sizes" size="sm" />
+<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab6', $event)">
+  @if(activeTabs['tab6'] === 'Preview') {
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+      <div class="flex items-center space-x-6">
+        <div uiAvatar size="xs">
+          <img src="https://i.pravatar.cc/150?img=21" alt="avatar" />
+        </div>
+        <div uiAvatar size="sm">
+          <img src="https://i.pravatar.cc/150?img=22" alt="avatar" />
+        </div>
+        <div uiAvatar size="md">
+          <img src="https://i.pravatar.cc/150?img=24" alt="avatar" />
+        </div>
+        <div uiAvatar size="lg">
+          <img src="https://i.pravatar.cc/150?img=27" alt="avatar" />
+        </div>
+        <div uiAvatar size="xl">
+          <img src="https://i.pravatar.cc/150?img=37" alt="avatar" />
+        </div>
+      </div>
+    </div>
+  } @else {
+    <app-highlight-code [code]="code6" [language]="'typescript'" />
+  }
+</app-tabs>
+
