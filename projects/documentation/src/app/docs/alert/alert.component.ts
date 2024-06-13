@@ -4,6 +4,7 @@ import {
   HighlightCodeComponent,
   TabsComponent,
 } from '@components/index';
+import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-alert',
@@ -12,6 +13,7 @@ import {
     HeadingComponent,
     HighlightCodeComponent,
     TabsComponent,
+    LucideAngularModule
   ],
   templateUrl: './alert.component.html',
   styles: ``,

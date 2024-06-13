@@ -17,14 +17,67 @@
         <label uiLabel for="Username">Username</label>
         <input uiInput type="text" id="Username" placeholder="Write your username">
       </div> -->
+      
 
-      <div class="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 dark:text-neutral-50">
-        <!-- title -->
-        <h5 class="font-medium text-sm leading-none tracking-tight mb-1">Heads up!</h5>
-        <!-- description -->
-        <div class="text-sm">You can add components to your app using the cli.</div>
+      <div class="w-full flex flex-col space-y-4">
+        <!-- TODO DEFAULT -->
+        <div class="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 dark:text-neutral-50">
+          <!-- title -->
+          <h5 class="font-medium text-sm leading-none tracking-tight mb-1">Heads up!</h5>
+          <!-- description -->
+          <div class="text-sm">You can add components to your app using the cli.</div>
+        </div>
+  
+        <!-- TODO WITH ICON: ml-7 relative absolute -->
+        <div class="w-full flex flex-col px-4 py-3 rounded-lg border border-zinc-200 relative dark:border-zinc-800 dark:text-neutral-50">
+          <!-- icon -->
+          <lucide-icon name="Megaphone" [size]="18" class="absolute"></lucide-icon>
+          <!-- title -->
+          <h5 class="font-medium text-sm leading-none tracking-tight mb-1 ml-7">Heads up!</h5>
+          <!-- description -->
+          <div class="text-sm ml-7">You can add components to your app using the cli.</div>
+        </div>
+
+        <!-- TODO DESTRUCTIVE: ml-7 relative absolute -->
+        <div class="w-full flex flex-col text-red-600 px-4 py-3 rounded-lg border border-red-600 relative dark:text-red-900 dark:border-red-900">
+          <!-- icon -->
+          <lucide-icon name="Ban" [size]="18" class="absolute"></lucide-icon>
+          <!-- title -->
+          <h5 class="font-medium text-sm leading-none tracking-tight mb-1 ml-7">Error!</h5>
+          <!-- description -->
+          <div class="text-sm ml-7">Your session has expired. Please log in again.</div>
+        </div>
+
+        <!-- TODO SUCCESS: ml-7 relative absolute -->
+        <div class="w-full flex flex-col text-lime-600 px-4 py-3 rounded-lg border border-lime-600 relative dark:text-lime-900 dark:border-lime-900">
+          <!-- icon -->
+          <lucide-icon name="CircleCheck" [size]="18" class="absolute"></lucide-icon>
+          <!-- title -->
+          <h5 class="font-medium text-sm leading-none tracking-tight mb-1 ml-7">Success!</h5>
+          <!-- description -->
+          <div class="text-sm ml-7">Your session has expired. Please log in again.</div>
+        </div>
+
+        <!-- TODO WARNING: ml-7 relative absolute -->
+        <div class="w-full flex flex-col text-amber-500 px-4 py-3 rounded-lg border border-amber-500 relative dark:text-amber-900 dark:border-amber-900">
+          <!-- icon -->
+          <lucide-icon name="TriangleAlert" [size]="18" class="absolute"></lucide-icon>
+          <!-- title -->
+          <h5 class="font-medium text-sm leading-none tracking-tight mb-1 ml-7">Warning!</h5>
+          <!-- description -->
+          <div class="text-sm ml-7">Your session has expired. Please log in again.</div>
+        </div>
+
+        <!-- TODO INFO: ml-7 relative absolute -->
+        <div class="w-full flex flex-col text-blue-500 px-4 py-3 rounded-lg border border-blue-500 relative dark:text-blue-900 dark:border-blue-900">
+          <!-- icon -->
+          <lucide-icon name="Info" [size]="18" class="absolute"></lucide-icon>
+          <!-- title -->
+          <h5 class="font-medium text-sm leading-none tracking-tight mb-1 ml-7">Info!</h5>
+          <!-- description -->
+          <div class="text-sm ml-7">Your session has expired. Please log in again.</div>
+        </div>
       </div>
-
 
     </div>
   } @else {

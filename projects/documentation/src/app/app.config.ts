@@ -13,6 +13,11 @@ import {
   Trash,
   Bell,
   Rss,
+  Megaphone,
+  Ban,
+  TriangleAlert,
+  CircleCheck,
+  Info,
 } from 'lucide-angular';
 import { routes } from './app.routes';
 
@@ -31,7 +36,12 @@ export const appConfig: ApplicationConfig = {
         Github,
         Trash,
         Bell,
-        Rss
+        Rss,
+        Megaphone,
+        Ban,
+        TriangleAlert,
+        CircleCheck,
+        Info,
       })
     ),
   ]
