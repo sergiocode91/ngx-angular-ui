@@ -6,17 +6,17 @@ import {
 } from '@components/index';
 
 @Component({
-  selector: 'app-breadcrumbs',
+  selector: 'app-breadcrumb',
   standalone: true,
   imports: [
     HeadingComponent,
     HighlightCodeComponent,
     TabsComponent,
   ],
-  templateUrl: './breadcrumbs.component.html',
+  templateUrl: './breadcrumb.component.html',
   styles: ``,
 })
-export class BreadcrumbsComponent {
+export class BreadcrumbComponent {
   public activeTabs: { [key: string]: string } = {};
 
   constructor() {
