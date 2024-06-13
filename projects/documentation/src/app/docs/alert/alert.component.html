@@ -3,6 +3,9 @@
   description="Displays a callout for user attention."
 ></app-heading>
 
+<app-heading title="Props" size="lg" />
+<app-props [props]="props" />
+
 <app-heading title="Usage" size="lg" [border]="true" />
 <app-highlight-code [code]="codeUseTs" [language]="'typescript'" />
 <app-highlight-code [code]="codeUseHtml" [language]="'html'" />
@@ -13,12 +16,55 @@
 <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
   @if(activeTabs['tab1'] === 'Preview') {
     <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">      
-      <div uiAlert>
+      <div uiAlert variant="primary">
         <div uiAlertTitle>Hello there!</div>
         <div uiAlertDescription>Regular updates keep your app running smoothly.</div>
       </div>
     </div>
   } @else {
-    <app-highlight-code [code]="code" [language]="'typescript'" />
+    <app-highlight-code [code]="code1" [language]="'typescript'" />
+  }
+</app-tabs>
+
+<app-heading title="With Icon" size="sm" />
+<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
+  @if(activeTabs['tab1'] === 'Preview') {
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">      
+      <div uiAlert variant="primary">
+        <div uiAlertTitle>Hello there!</div>
+        <div uiAlertDescription>Regular updates keep your app running smoothly.</div>
+      </div>
+    </div>
+  } @else {
+    <app-highlight-code [code]="code1" [language]="'typescript'" />
+  }
+</app-tabs>
+
+
+<app-heading title="Colors" size="sm" />
+<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab2', $event)">
+  @if(activeTabs['tab2'] === 'Preview') {
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+      <div class="w-full flex flex-col space-y-5">
+        <div uiAlert variant="success">
+          <div uiAlertTitle>Success!</div>
+          <div uiAlertDescription>Your changes have been saved successfully.</div>
+        </div>
+        <div uiAlert variant="destructive">
+          <div uiAlertTitle>Error!</div>
+          <div uiAlertDescription>Unexpected error. Please try again.</div>
+        </div>
+        <div uiAlert variant="warning">
+          <div uiAlertTitle>Warning!</div>
+          <div uiAlertDescription>Unsaved changes detected. Please save your work.</div>
+        </div>
+        <div uiAlert variant="info">
+          <div uiAlertTitle>Info!</div>
+          <div uiAlertDescription>Save your work regularly to avoid data loss.</div>
+        </div>
+      </div>
+    </div>
+  } @else {
+    <app-highlight-code [code]="code2" [language]="'typescript'" />
   }
 </app-tabs>
