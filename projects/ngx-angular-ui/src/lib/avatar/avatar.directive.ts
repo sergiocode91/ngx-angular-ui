@@ -45,9 +45,9 @@ export class HtmlAvatarDirective implements OnInit, OnChanges {
     const radiusClass = this.getRadiusClass(this.radius);
     const sizeClass = this.getSizeClass(this.size);
     const colorClass = this.getColorClass(this.color);
-    const borderClass = this.border ? 'ring-2 ring-offset-2' : '';
+    const borderClass = this.border ? 'ring-2 ring-offset-2 ring-offset-white dark:ring-offset-zinc-950' : '';
 
-    const classes = `${radiusClass} ${sizeClass} ${colorClass} ${borderClass} ${this.class} flex items-center justify-center text-zinc-800 overflow-hidden align-middle box-border bg-zinc-300`;
+    const classes = `${radiusClass} ${sizeClass} ${colorClass} ${borderClass} ${this.class} flex items-center justify-center text-zinc-800 overflow-hidden align-middle box-border bg-zinc-300 dark:bg-zinc-400`;
 
     this.renderer.setAttribute(this.el.nativeElement, 'class', classes);
   }

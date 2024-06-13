@@ -135,16 +135,16 @@ export class AvatarComponent {
     imports: [HtmlAvatarDirective],
     template: \`
     <div class="flex space-x-6">
-      <div uiAvatar radius="full" border>
+      <div uiAvatar radius="full">
         <img src="https://i.pravatar.cc/150?img=23" alt="avatar" />
       </div>
-      <div uiAvatar radius="lg" border>
+      <div uiAvatar radius="lg">
         <img src="https://i.pravatar.cc/150?img=10" alt="avatar" />
       </div>
-      <div uiAvatar radius="md" border>
+      <div uiAvatar radius="md">
         <img src="https://i.pravatar.cc/150?img=16" alt="avatar" />
       </div>
-      <div uiAvatar radius="sm" border>
+      <div uiAvatar radius="sm">
         <img src="https://i.pravatar.cc/150?img=13" alt="avatar" />
       </div>
     </div>\`
