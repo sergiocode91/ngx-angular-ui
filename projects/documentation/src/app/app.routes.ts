@@ -12,6 +12,7 @@ export const routes: Routes = [
       { path: 'introduction', loadComponent: () => import('./docs/introduction/introduction.component').then(m => m.IntroductionComponent) },
       { path: 'installation', loadComponent: () => import('./docs/installation/installation.component').then(m => m.InstallationComponent) },
       { path: 'avatar', loadComponent: () => import('./docs/avatar/avatar.component').then(m => m.AvatarComponent) },
+      { path: 'alert', loadComponent: () => import('./docs/alert/alert.component').then(m => m.AlertComponent) },
       { path: 'breadcrumbs', loadComponent: () => import('./docs/breadcrumbs/breadcrumbs.component').then(m => m.BreadcrumbsComponent) },
       { path: 'badge', loadComponent: () => import('./docs/badge/badge.component').then(m => m.BadgeComponent) },
       { path: 'button', loadComponent: () => import('./docs/button/button.component').then(m => m.ButtonComponent) },
