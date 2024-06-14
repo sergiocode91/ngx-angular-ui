@@ -1,9 +1,11 @@
 import {
   Directive,
   ElementRef,
+  EventEmitter,
   Input,
   OnChanges,
   OnInit,
+  Output,
   Renderer2,
 } from '@angular/core';
 
@@ -13,6 +15,8 @@ import {
 })
 
 export class HtmlAlertDirective implements OnInit, OnChanges {
+  private _icon: boolean = false;
+
   @Input() variant:
   | 'primary'
   | 'success'
@@ -20,16 +24,16 @@ export class HtmlAlertDirective implements OnInit, OnChanges {
   | 'warning'
   | 'info' = 'primary';
   @Input() class: string = '';
-
-  private _icon: boolean = false;
-  
   @Input() set icon(value: boolean | string) {
     this._icon = value === '' || value === 'true';
+    this.iconChange.emit(this._icon);
   }
 
   get icon(): boolean {
     return this._icon;
   }
+
+  @Output() iconChange = new EventEmitter<boolean>();
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 

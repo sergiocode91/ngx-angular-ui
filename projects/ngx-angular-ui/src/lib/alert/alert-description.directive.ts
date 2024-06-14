@@ -1,11 +1,14 @@
 import {
   Directive,
   ElementRef,
+  Host,
   Input,
   OnChanges,
   OnInit,
+  Optional,
   Renderer2,
 } from '@angular/core';
+import { HtmlAlertDirective } from './alert.directive';
 
 @Directive({
   selector: '[uiAlertDescription]',
@@ -14,17 +17,27 @@ import {
 export class HtmlAlertDescriptionDirective implements OnInit, OnChanges {
   @Input() class: string = '';
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(
+    private el: ElementRef, 
+    private renderer: Renderer2,
+    @Optional() @Host() private alert: HtmlAlertDirective
+  ) {
+    if (this.alert) {
+      this.alert.iconChange.subscribe(icon => {
+        this.applyClasses(icon);
+      });
+    }
+  }
 
   ngOnInit() {
-    this.applyClasses();
+    this.applyClasses(this.alert?.icon);
   }
 
   ngOnChanges() {
-    this.applyClasses();
+    this.applyClasses(this.alert?.icon);
   }
 
-  private applyClasses() {
+  private applyClasses(icon: boolean) {
     const baseClasses =
       'text-sm';
     const classes = `${baseClasses} ${this.class}`;
