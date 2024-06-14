@@ -12,7 +12,7 @@
 <app-heading title="With Reset password" size="sm" />
 <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
   @if(activeTabs['tab1'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
       <div uiCard class="w-[550px]">
         <div uiCardHeader>
           <div uiCardTitle>Reset your password</div>
@@ -35,7 +35,7 @@
 <app-heading title="With Sign in" size="sm" />
 <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab2', $event)">
   @if(activeTabs['tab2'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
       <div uiCard class="w-[350px]">
         <div uiCardHeader>
           <div uiCardTitle>Sign in</div>

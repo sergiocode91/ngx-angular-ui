@@ -12,7 +12,7 @@
 <app-heading title="With Avatar" size="sm" />
 <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
   @if(activeTabs['tab1'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
       <div class="flex items-center space-x-4">
         <div uiSkeleton class="w-12 h-12 rounded-full"></div>
         <div class="flex flex-col space-y-2">
@@ -29,7 +29,7 @@
 <app-heading title="With Card" size="sm" />
 <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab2', $event)">
   @if(activeTabs['tab2'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
       <div class="flex flex-col space-y-3">
         <div uiSkeleton class="w-[250px] h-[125px] rounded-xl"></div>
         <div class="flex flex-col space-y-2">

@@ -12,7 +12,7 @@
 <app-heading title="Default" size="sm" />
 <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
   @if(activeTabs['tab1'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
       <div class="w-72">
         <input uiInput type="email" placeholder="Enter your email">
       </div>
@@ -25,7 +25,7 @@
 <app-heading title="With Label" size="sm" />
 <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab2', $event)">
   @if(activeTabs['tab2'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
       <div class="w-72 flex flex-col space-y-2">
         <label uiLabel for="email">Email</label>
         <input uiInput type="email" id="email" placeholder="Enter your email">
@@ -39,7 +39,7 @@
 <app-heading title="With Button" size="sm" />
 <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab3', $event)">
   @if(activeTabs['tab3'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
       <div class="w-72 flex space-x-2">
         <input uiInput type="email" id="email" placeholder="Enter your email">
         <button uiButton>Send</button>
@@ -53,7 +53,7 @@
 <app-heading title="Disabled" size="sm" />
 <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab4', $event)">
   @if(activeTabs['tab4'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
       <div class="w-72">
         <input uiInput type="email" id="email" placeholder="Enter your email" disabled>
       </div>

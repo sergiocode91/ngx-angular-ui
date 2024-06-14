@@ -15,10 +15,10 @@
 <app-heading title="Default" size="sm" />
 <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
   @if(activeTabs['tab1'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">      
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">      
       <div uiAlert variant="primary">
         <div uiAlertTitle>Hello there!</div>
-        <div uiAlertDescription>Regular updates keep your app running smoothly.</div>
+        <div uiAlertDescription>Keep your app updated for best performance.</div>
       </div>
     </div>
   } @else {
@@ -27,25 +27,25 @@
 </app-tabs>
 
 <app-heading title="With Icon" size="sm" />
-<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
-  @if(activeTabs['tab1'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">      
+<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab2', $event)">
+  @if(activeTabs['tab2'] === 'Preview') {
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">      
       <div uiAlert variant="primary" showIcon>
         <lucide-icon name="Megaphone" [size]="18"></lucide-icon>
-        <div uiAlertTitle>Hello there!</div>
-        <div uiAlertDescription>Regular updates keep your app running smoothly.</div>
+        <div uiAlertTitle>Announcement!</div>
+        <div uiAlertDescription>Our new product launch is next week. Stay tuned for updates!</div>
       </div>
     </div>
   } @else {
-    <app-highlight-code [code]="code1" [language]="'typescript'" />
+    <app-highlight-code [code]="code2" [language]="'typescript'" />
   }
 </app-tabs>
 
 
 <app-heading title="Colors" size="sm" />
-<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab2', $event)">
-  @if(activeTabs['tab2'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab3', $event)">
+  @if(activeTabs['tab3'] === 'Preview') {
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
       <div class="w-full flex flex-col space-y-5">
         <div uiAlert variant="success" showIcon>
           <lucide-icon name="CircleCheck" [size]="18"></lucide-icon>
@@ -70,6 +70,6 @@
       </div>
     </div>
   } @else {
-    <app-highlight-code [code]="code2" [language]="'typescript'" />
+    <app-highlight-code [code]="code3" [language]="'typescript'" />
   }
 </app-tabs>

@@ -3,7 +3,7 @@
     <tr>
       @for (item of props.header; track $index) {
         <th class="font-medium text-sm leading-6 top-0 pb-3 sticky z-10">
-          <div class="py-2 pr-2 border-b border-slate-200 dark:text-neutral-50 dark:border-zinc-800">{{ item }}</div>
+          <div class="py-2 pr-2 border-b border-zinc-200 dark:text-neutral-50 dark:border-zinc-800">{{ item }}</div>
         </th>
       }
     </tr>
@@ -12,13 +12,13 @@
     @for (item of props.columns; track $index) {
       <tr>
         <td class="font-mono font-semibold text-[11px] text-zinc-500 leading-6 py-2.5 whitespace-nowrap dark:text-white/70">
-          <div class="inline-block px-2 rounded-md border bg-gray-100 dark:border-transparent dark:bg-transparent">{{ item.property }}</div>
+          <div class="inline-block px-2 rounded-md border border-zinc-200 bg-gray-100 dark:border-transparent dark:bg-transparent">{{ item.property }}</div>
         </td>
         <td class="font-mono text-[11px] text-purple-700 leading-6 py-2.5 whitespace-nowrap">
-          <div class="inline-block px-2 rounded-md border bg-gray-100 dark:text-white dark:border-transparent dark:bg-white/5">{{ item.type }}</div>
+          <div class="inline-block px-2 rounded-md border border-zinc-200 bg-gray-100 dark:text-white dark:border-transparent dark:bg-white/5">{{ item.type }}</div>
         </td>
         <td class="font-mono text-[11px] text-zinc-500 leading-6 py-2.5 whitespace-nowrap">
-          <div class="inline-block px-2 rounded-md border bg-gray-100 dark:text-white dark:border-transparent dark:bg-white/5">{{ item.default }}</div>
+          <div class="inline-block px-2 rounded-md border border-zinc-200 bg-gray-100 dark:text-white dark:border-transparent dark:bg-white/5">{{ item.default }}</div>
         </td>
       </tr>
     }

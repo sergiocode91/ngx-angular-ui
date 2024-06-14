@@ -12,7 +12,7 @@
 <app-heading title="Default" size="sm" />
 <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
   @if(activeTabs['tab1'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
       <div uiAvatar>
         <span>A</span>
       </div>
@@ -25,7 +25,7 @@
 <app-heading title="With Image" size="sm" />
 <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab2', $event)">
   @if(activeTabs['tab2'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
       <div uiAvatar>
         <img src="https://i.pravatar.cc/150?img=1" alt="avatar" />
       </div>
@@ -38,7 +38,7 @@
 <app-heading title="With Border" size="sm" />
 <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab3', $event)">
   @if(activeTabs['tab3'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
       <div uiAvatar border>
         <img src="https://i.pravatar.cc/150?img=52" alt="avatar" />
       </div>
@@ -51,7 +51,7 @@
 <app-heading title="Colors" size="sm" />
 <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab4', $event)">
   @if(activeTabs['tab4'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
       <div class="flex space-x-6">
         <div uiAvatar border color="default">
           <img src="https://i.pravatar.cc/150?img=45" alt="avatar" />
