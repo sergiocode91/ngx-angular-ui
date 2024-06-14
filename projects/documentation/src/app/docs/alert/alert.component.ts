@@ -40,7 +40,7 @@ export class AlertComponent {
         default: 'primary',
       },
       {
-        property: 'icon',
+        property: 'showIcon',
         type: 'boolean',
         default: 'false',
       },

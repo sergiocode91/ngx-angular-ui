@@ -1,11 +1,9 @@
 import {
   Directive,
   ElementRef,
-  EventEmitter,
   Input,
   OnChanges,
   OnInit,
-  Output,
   Renderer2,
 } from '@angular/core';
 
@@ -15,7 +13,7 @@ import {
 })
 
 export class HtmlAlertDirective implements OnInit, OnChanges {
-  private _icon: boolean = false;
+  public _showIcon: boolean = false;
 
   @Input() variant:
   | 'primary'
@@ -24,16 +22,13 @@ export class HtmlAlertDirective implements OnInit, OnChanges {
   | 'warning'
   | 'info' = 'primary';
   @Input() class: string = '';
-  @Input() set icon(value: boolean | string) {
-    this._icon = value === '' || value === 'true';
-    this.iconChange.emit(this._icon);
+  @Input() set showIcon(value: boolean | string) {
+    this._showIcon = value === '' || value === 'true';
   }
 
-  get icon(): boolean {
-    return this._icon;
+  get showIcon(): boolean {
+    return this._showIcon;
   }
-
-  @Output() iconChange = new EventEmitter<boolean>();
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
@@ -51,14 +46,14 @@ export class HtmlAlertDirective implements OnInit, OnChanges {
 
   private applyClasses() {
     const variantClass = this.getVariantClass(this.variant);
-    const iconClass = this.icon ? 'relative' : '';
+    const iconClass = this.showIcon ? '[&>div]:ml-8 relative' : '';
     const classes = `${variantClass} ${iconClass} ${this.class} w-full px-4 py-3 rounded-lg border`;
 
     this.renderer.setAttribute(this.el.nativeElement, 'class', classes);
   }
 
   private applyIconClass() {
-    if (this.icon) {
+    if (this._showIcon) {
       const svg = this.el.nativeElement.querySelector('svg');
       if (svg) {
         this.renderer.addClass(svg, 'absolute');

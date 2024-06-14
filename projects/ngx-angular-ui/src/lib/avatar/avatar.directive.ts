@@ -12,6 +12,8 @@ import {
   standalone: true,
 })
 export class HtmlAvatarDirective implements OnInit, OnChanges {
+  private _border: boolean = false;
+  
   @Input() radius: 'full' | 'lg' | 'md' | 'sm' = 'full';
   @Input() size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'lg';
   @Input() color:
@@ -23,7 +25,6 @@ export class HtmlAvatarDirective implements OnInit, OnChanges {
     | 'danger' = 'default';
   @Input() class: string = '';
 
-  private _border: boolean = false;
   
   @Input() set border(value: boolean | string) {
     this._border = value === '' || value === 'true';

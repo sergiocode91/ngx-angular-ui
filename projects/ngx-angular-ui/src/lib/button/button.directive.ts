@@ -35,7 +35,6 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
   private applyClasses() {
     const variantClass = this.getVariantClass(this.variant);
     const sizeClass = this.getSizeClass(this.size);
-
     const classes = `${variantClass} ${sizeClass} ${this.class} inline-flex items-center justify-center font-medium text-sm rounded-md transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:cursor-not-allowed disabled:opacity-50`;
 
     this.renderer.setAttribute(this.el.nativeElement, 'class', classes);
