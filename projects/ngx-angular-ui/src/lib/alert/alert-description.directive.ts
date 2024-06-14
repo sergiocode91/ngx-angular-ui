@@ -38,9 +38,9 @@ export class HtmlAlertDescriptionDirective implements OnInit, OnChanges {
   }
 
   private applyClasses(icon: boolean) {
-    const baseClasses =
-      'text-sm';
-    const classes = `${baseClasses} ${this.class}`;
+    const baseClasses = 'text-sm';
+    const iconClasses = icon ? 'ml-8' : '';
+    const classes = `${baseClasses} ${iconClasses} ${this.class}`;
 
     this.renderer.setAttribute(this.el.nativeElement, 'class', classes);
   }

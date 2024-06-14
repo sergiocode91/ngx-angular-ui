@@ -45,11 +45,25 @@ export class HtmlAlertDirective implements OnInit, OnChanges {
     this.applyClasses();
   }
 
+  ngAfterViewInit() {
+    this.applyIconClass();
+  }
+
   private applyClasses() {
     const variantClass = this.getVariantClass(this.variant);
-    const classes = `${variantClass} ${this.class} w-full px-4 py-3 rounded-lg border`;
+    const iconClass = this.icon ? 'relative' : '';
+    const classes = `${variantClass} ${iconClass} ${this.class} w-full px-4 py-3 rounded-lg border`;
 
     this.renderer.setAttribute(this.el.nativeElement, 'class', classes);
+  }
+
+  private applyIconClass() {
+    if (this.icon) {
+      const svg = this.el.nativeElement.querySelector('svg');
+      if (svg) {
+        this.renderer.addClass(svg, 'absolute');
+      }
+    }
   }
 
   private getVariantClass(variant: string): string {

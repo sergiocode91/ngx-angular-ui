@@ -30,7 +30,8 @@
 <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
   @if(activeTabs['tab1'] === 'Preview') {
     <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">      
-      <div uiAlert variant="primary">
+      <div uiAlert variant="primary" icon="true">
+        <lucide-icon name="Megaphone" [size]="18"></lucide-icon>
         <div uiAlertTitle>Hello there!</div>
         <div uiAlertDescription>Regular updates keep your app running smoothly.</div>
       </div>
@@ -46,19 +47,23 @@
   @if(activeTabs['tab2'] === 'Preview') {
     <div class="min-h-64 flex items-center justify-center p-10 rounded-md border dark:border-zinc-800">
       <div class="w-full flex flex-col space-y-5">
-        <div uiAlert variant="success">
+        <div uiAlert variant="success" icon="true">
+          <lucide-icon name="CircleCheck" [size]="18"></lucide-icon>
           <div uiAlertTitle>Success!</div>
           <div uiAlertDescription>Your changes have been saved successfully.</div>
         </div>
-        <div uiAlert variant="destructive">
+        <div uiAlert variant="destructive" icon="true">
+          <lucide-icon name="Ban" [size]="18"></lucide-icon>
           <div uiAlertTitle>Error!</div>
           <div uiAlertDescription>Unexpected error. Please try again.</div>
         </div>
-        <div uiAlert variant="warning">
+        <div uiAlert variant="warning" icon="true">
+          <lucide-icon name="TriangleAlert" [size]="18"></lucide-icon>
           <div uiAlertTitle>Warning!</div>
           <div uiAlertDescription>Unsaved changes detected. Please save your work.</div>
         </div>
-        <div uiAlert variant="info">
+        <div uiAlert variant="info" icon="true">
+          <lucide-icon name="Info" [size]="18"></lucide-icon>
           <div uiAlertTitle>Info!</div>
           <div uiAlertDescription>Save your work regularly to avoid data loss.</div>
         </div>
