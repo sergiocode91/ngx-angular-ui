@@ -19,6 +19,7 @@ import {
   CircleCheck,
   Info,
   X,
+  LoaderCircle
 } from 'lucide-angular';
 import { routes } from './app.routes';
 
@@ -44,6 +45,7 @@ export const appConfig: ApplicationConfig = {
         CircleCheck,
         Info,
         X,
+        LoaderCircle
       })
     ),
   ]

@@ -5,6 +5,7 @@ import {
   TabsComponent,
 } from '@components/index';
 import { HtmlSkeletonDirective } from '../../../../../ngx-angular-ui/src/lib/skeleton/skeleton.directive';
+import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
 
 @Component({
   selector: 'app-skeleton',
@@ -13,6 +14,7 @@ import { HtmlSkeletonDirective } from '../../../../../ngx-angular-ui/src/lib/ske
     HeadingComponent,
     HighlightCodeComponent,
     HtmlSkeletonDirective,
+    HtmlButtonDirective,
     TabsComponent,
   ],
   templateUrl: './skeleton.component.html',

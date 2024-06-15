@@ -6,6 +6,7 @@ import {
   TabsComponent,
 } from '@components/index';
 import { HtmlAvatarDirective } from '../../../../../ngx-angular-ui/src/lib/avatar/avatar.directive';
+import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
 
 @Component({
   selector: 'app-avatar',
@@ -15,6 +16,7 @@ import { HtmlAvatarDirective } from '../../../../../ngx-angular-ui/src/lib/avata
     PropsComponent,
     HighlightCodeComponent,
     HtmlAvatarDirective,
+    HtmlButtonDirective,
     TabsComponent
   ],
   templateUrl: './avatar.component.html',

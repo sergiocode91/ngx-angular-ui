@@ -6,6 +6,7 @@ import {
 } from '@components/index';
 import { HtmlLabelDirective } from '../../../../../ngx-angular-ui/src/lib/label/label.directive';
 import { HtmlInputDirective } from '../../../../../ngx-angular-ui/src/lib/input/input.directive';
+import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
 
 @Component({
   selector: 'app-label',
@@ -15,6 +16,7 @@ import { HtmlInputDirective } from '../../../../../ngx-angular-ui/src/lib/input/
     HighlightCodeComponent,
     HtmlLabelDirective,
     HtmlInputDirective,
+    HtmlButtonDirective,
     TabsComponent,
   ],
   templateUrl: './label.component.html',

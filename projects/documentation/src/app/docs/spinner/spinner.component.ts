@@ -3,25 +3,43 @@ import { LucideAngularModule } from 'lucide-angular';
 import {
   HeadingComponent,
   HighlightCodeComponent,
+  PropsComponent,
   TabsComponent,
 } from '@components/index';
 import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
 
 @Component({
-  selector: 'app-breadcrumb',
+  selector: 'app-spinner',
   standalone: true,
   imports: [
     HeadingComponent,
     HighlightCodeComponent,
     HtmlButtonDirective,
     TabsComponent,
-    LucideAngularModule
+    LucideAngularModule,
+    PropsComponent,
+    TabsComponent
   ],
-  templateUrl: './breadcrumb.component.html',
+  templateUrl: './spinner.component.html',
   styles: ``,
 })
-export class BreadcrumbComponent {
+export class SpinnerComponent {
   public activeTabs: { [key: string]: string } = {};
+  public props = {
+    header: ['Property', 'Type', 'Default'],
+    columns: [
+      {
+        property: 'size',
+        type: `'sm' | 'lg' | 'xl'`,
+        default: `sm`,
+      },
+      {
+        property: 'color',
+        type: `'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger'`,
+        default: `default`,
+      },
+    ],
+  };
 
   constructor() {
     this.initializeTabs(4);

@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { HeadingComponent, PropsComponent } from '@components/index';
+import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
 
 @Component({
   selector: 'app-badge',
   standalone: true,
-  imports: [HeadingComponent, PropsComponent],
+  imports: [HeadingComponent, PropsComponent, HtmlButtonDirective],
   templateUrl: './badge.component.html',
   styles: ``
 })
