@@ -66,7 +66,7 @@ export class HtmlAvatarDirective implements OnInit, OnChanges {
       case 'sm':
         return 'rounded-lg';
       default:
-        return '';
+        return 'full';
     }
   }
 
@@ -83,7 +83,7 @@ export class HtmlAvatarDirective implements OnInit, OnChanges {
       case 'xl':
         return 'w-20 h-20';
       default:
-        return '';
+        return 'lg';
     }
   }
 
@@ -102,7 +102,7 @@ export class HtmlAvatarDirective implements OnInit, OnChanges {
       case 'danger':
         return 'ring-red-600';
       default:
-        return '';
+        return 'default';
     }
   }
 }

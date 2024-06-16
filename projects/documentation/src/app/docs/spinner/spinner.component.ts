@@ -6,6 +6,7 @@ import {
   PropsComponent,
   TabsComponent,
 } from '@components/index';
+import { HtmlSpinnerComponent } from '../../../../../ngx-angular-ui/src/lib/spinner/spinner.component';
 import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
 
 @Component({
@@ -14,6 +15,7 @@ import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-ap
   imports: [
     HeadingComponent,
     HighlightCodeComponent,
+    HtmlSpinnerComponent,
     HtmlButtonDirective,
     TabsComponent,
     LucideAngularModule,
@@ -31,7 +33,7 @@ export class SpinnerComponent {
       {
         property: 'size',
         type: `'sm' | 'lg' | 'xl'`,
-        default: `sm`,
+        default: `lg`,
       },
       {
         property: 'color',
@@ -40,6 +42,24 @@ export class SpinnerComponent {
       },
     ],
   };
+
+  public code1 = `
+  import { HtmlSkeletonDirective } from 'ngx-angular-ui';
+  
+  @Component({
+    standalone: true,
+    imports: [HtmlSkeletonDirective],
+    template: \`
+      <div class="flex items-center space-x-4">
+        <div uiSkeleton class="w-12 h-12 rounded-full"></div>
+        <div class="flex flex-col space-y-2">
+          <div uiSkeleton class="w-[250px] h-4 rounded-md"></div>
+          <div uiSkeleton class="w-[200px] h-4 rounded-md"></div>
+        </div>
+      </div>
+    \`
+  })
+  `;
 
   constructor() {
     this.initializeTabs(4);
