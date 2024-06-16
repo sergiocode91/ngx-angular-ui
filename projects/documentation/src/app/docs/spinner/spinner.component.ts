@@ -32,7 +32,7 @@ export class SpinnerComponent {
     columns: [
       {
         property: 'size',
-        type: `'sm' | 'lg' | 'xl'`,
+        type: `'xs' | 'sm' | 'lg' | 'xl'`,
         default: `lg`,
       },
       {
@@ -43,20 +43,80 @@ export class SpinnerComponent {
     ],
   };
 
+  public codeUseTs = `
+  import { HtmlSpinnerComponent } from 'ngx-angular-ui';
+
+  @Component({
+    standalone: true,
+    imports: [HtmlSpinnerComponent],
+  })
+  `;
+
+  public codeUseHtml = `
+  <div uiSpinner></div>
+  `;
+
   public code1 = `
-  import { HtmlSkeletonDirective } from 'ngx-angular-ui';
+  import { HtmlSpinnerComponent } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlSkeletonDirective],
+    imports: [HtmlSpinnerComponent],
     template: \`
-      <div class="flex items-center space-x-4">
-        <div uiSkeleton class="w-12 h-12 rounded-full"></div>
-        <div class="flex flex-col space-y-2">
-          <div uiSkeleton class="w-[250px] h-4 rounded-md"></div>
-          <div uiSkeleton class="w-[200px] h-4 rounded-md"></div>
-        </div>
-      </div>
+      <div uiSpinner></div>
+    \`
+  })
+  `;
+
+  public code2 = `
+  import { HtmlSpinnerComponent } from 'ngx-angular-ui';
+  
+  @Component({
+    standalone: true,
+    imports: [HtmlSpinnerComponent],
+    template: \`
+      <div uiSpinner size="xs"></div>
+      <div uiSpinner size="sm"></div>
+      <div uiSpinner size="lg"></div>
+      <div uiSpinner size="xl"></div>
+    \`
+  })
+  `;
+
+  public code3 = `
+  import { HtmlSpinnerComponent } from 'ngx-angular-ui';
+  
+  @Component({
+    standalone: true,
+    imports: [HtmlSpinnerComponent],
+    template: \`
+      <div uiSpinner color="default"></div>
+      <div uiSpinner color="primary"></div>
+      <div uiSpinner color="secondary"></div>
+      <div uiSpinner color="success"></div>
+      <div uiSpinner color="warning"></div>
+      <div uiSpinner color="danger"></div>
+    \`
+  })
+  `;
+
+  public code4 = `
+  import { 
+    HtmlSpinnerComponent,
+    HtmlButtonDirective
+  } from 'ngx-angular-ui';
+  
+  @Component({
+    standalone: true,
+    imports: [
+      HtmlSpinnerComponent, 
+      HtmlButtonDirective
+    ],
+    template: \`
+      <button uiButton variant="secondary" disabled>
+        <div uiSpinner size="sm" class="mr-3"></div>
+        Loading
+      </button>
     \`
   })
   `;

@@ -69,7 +69,9 @@ export class ButtonComponent {
   @Component({
     standalone: true,
     imports: [HtmlButtonDirective],
-    template: \`<button uiButton variant="primary">Button</button>\`
+    template: \`
+      <button uiButton variant="primary">Button</button>
+    \`
   })
   `;
 
@@ -79,7 +81,9 @@ export class ButtonComponent {
   @Component({
     standalone: true,
     imports: [HtmlButtonDirective],
-    template: \`<button uiButton variant="secondary">Button</button>\`
+    template: \`
+      <button uiButton variant="secondary">Button</button>
+    \`
   })
   `;
 
@@ -89,7 +93,9 @@ export class ButtonComponent {
   @Component({
     standalone: true,
     imports: [HtmlButtonDirective],
-    template: \`<button uiButton variant="outline">Outline</button>\`
+    template: \`
+      <button uiButton variant="outline">Outline</button>
+    \`
   })
   `;
 
@@ -99,7 +105,9 @@ export class ButtonComponent {
   @Component({
     standalone: true,
     imports: [HtmlButtonDirective],
-    template: \`<button uiButton variant="destructive">Destructive</button>\`
+    template: \`
+      <button uiButton variant="destructive">Destructive</button>
+    \`
   })
   `;
 
@@ -109,7 +117,9 @@ export class ButtonComponent {
   @Component({
     standalone: true,
     imports: [HtmlButtonDirective],
-    template: \`<button uiButton variant="ghost">Get started</button>\`
+    template: \`
+      <button uiButton variant="ghost">Get started</button>
+    \`
   })
   `;
 
@@ -119,7 +129,9 @@ export class ButtonComponent {
   @Component({
     standalone: true,
     imports: [HtmlButtonDirective],
-    template: \`<button uiButton variant="link">Don’t have an account?</button>\`
+    template: \`
+      <button uiButton variant="link">Don’t have an account?</button>
+    \`
   })
   `;
 
@@ -131,9 +143,10 @@ export class ButtonComponent {
     standalone: true,
     imports: [LucideAngularModule, HtmlButtonDirective],
     template: \`
-    <button uiButton variant="outline" size="icon">
-      <lucide-icon name="Moon" [size]="18"></lucide-icon>
-    </button>\`
+      <button uiButton variant="outline" size="icon">
+        <lucide-icon name="Moon" [size]="18"></lucide-icon>
+      </button>
+    \`
   })
   `;
 
@@ -145,10 +158,11 @@ export class ButtonComponent {
     standalone: true,
     imports: [LucideAngularModule, HtmlButtonDirective],
     template: \`
-    <button uiButton variant="primary">
-      <lucide-icon name="Instagram" [size]="18" class="inline-flex mr-1"></lucide-icon>
-      Sign in with Instagram
-    </button>\`
+      <button uiButton variant="primary">
+        <lucide-icon name="Instagram" [size]="18" class="inline-flex mr-1"></lucide-icon>
+        Sign in with Instagram
+      </button>
+    \`
   })
   `;
 
@@ -160,10 +174,11 @@ export class ButtonComponent {
     standalone: true,
     imports: [LucideAngularModule, HtmlButtonDirective],
     template: \`
-    <button uiButton variant="destructive" disabled="true">
-      <lucide-icon name="Trash" [size]="18" class="inline-flex mr-1"></lucide-icon>
-      Delete account
-    </button>\`
+      <button uiButton variant="destructive" disabled="true">
+        <lucide-icon name="Trash" [size]="18" class="inline-flex mr-1"></lucide-icon>
+        Delete account
+      </button>
+    \`
   })
   `;
 

@@ -6,7 +6,7 @@ import { Component, Input, OnChanges, OnInit } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div [ngClass]="sizeClass + ' animate-spin relative ' + class">
+    <div [ngClass]="sizeClass + ' animate-spin relative'">
       <div class="flex justify-center items-center w-full h-full top-0 left-0 absolute">
         <svg class="transform -rotate-80" viewBox="0 0 36 36">
           <circle
@@ -28,7 +28,7 @@ import { Component, Input, OnChanges, OnInit } from '@angular/core';
   styles: ``,
 })
 export class HtmlSpinnerComponent implements OnInit, OnChanges {
-  @Input() size: 'sm' | 'lg' | 'xl' = 'lg';
+  @Input() size: | 'xs' | 'sm' | 'lg' | 'xl' = 'lg';
   @Input() color:
     | 'default'
     | 'primary'
@@ -36,7 +36,6 @@ export class HtmlSpinnerComponent implements OnInit, OnChanges {
     | 'success'
     | 'warning'
     | 'danger' = 'default';
-  @Input() class: string = '';
 
   sizeClass: string = '';
   colorClass: string = '';
@@ -56,6 +55,8 @@ export class HtmlSpinnerComponent implements OnInit, OnChanges {
 
   private getSizeClass(size: string): string {
     switch (size) {
+      case 'xs':
+        return 'w-3.5 h-3.5';
       case 'sm':
         return 'w-5 h-5';
       case 'lg':
@@ -70,7 +71,7 @@ export class HtmlSpinnerComponent implements OnInit, OnChanges {
   private getColorClass(color: string): string {
     switch (color) {
       case 'default':
-        return 'text-zinc-300 dark:text-zinc-400';
+        return 'text-zinc-400 dark:text-zinc-500';
       case 'primary':
         return 'text-blue-500';
       case 'secondary':
