@@ -19,7 +19,7 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
     | 'destructive'
     | 'ghost'
     | 'link' = 'primary';
-  @Input() size: 'default' | 'sm' | 'lg' | 'icon' = 'default';
+  @Input() size: 'sm' | 'md' | 'lg' | 'icon' = 'md';
   @Input() class: string = '';
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
@@ -61,16 +61,16 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
 
   private getSizeClass(size: string): string {
     switch (size) {
-      case 'default':
-        return 'h-9 px-4 py-2';
       case 'sm':
         return 'h-8 px-3 text-xs';
+      case 'md':
+        return 'h-9 px-4 py-2';
       case 'lg':
         return 'h-10 px-8';
       case 'icon':
         return 'h-9 w-9';
       default:
-        return 'default';
+        return 'md';
     }
   }
 }

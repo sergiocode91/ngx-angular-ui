@@ -29,18 +29,18 @@ export class ButtonComponent {
     columns: [
       {
         property: 'variant',
-        type: `'primary' | 'secondary' | 'outline' | 'destructive' | 'ghost' | 'link'`,
-        default: 'primary',
+        type: `'default' | 'outline' | 'ghost' | 'link' | 'icon`,
+        default: 'default',
       },
       {
-        property: 'type',
-        type: `'button' | 'submit' | 'reset'`,
-        default: 'button',
+        property: 'color',
+        type: `'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger'`,
+        default: 'default',
       },
       {
         property: 'size',
-        type: `'default' | 'sm' | 'lg' | 'icon'`,
-        default: 'default',
+        type: `'sm' | 'md' | 'lg'`,
+        default: 'md',
       },
       {
         property: 'disabled',
