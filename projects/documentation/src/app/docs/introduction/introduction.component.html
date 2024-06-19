@@ -3,3 +3,26 @@
   description="Beautifully designed components that you can copy and paste into your apps."
   size="xl"
 ></app-heading>
+
+<div class="flex space-x-1">
+  <button
+    *ngFor="let color of colors; let i = index"
+    (click)="setActive(i)"
+    [ngClass]="{
+      'border-2': activeIndex === i,
+      'border-none': activeIndex !== i,
+      'border-[#52525b]': color === '#52525b',
+      'border-[#3b82f6]': color === '#3b82f6',
+      'border-[#22c55e]': color === '#22c55e',
+      'border-[#6d28d9]': color === '#6d28d9',
+      'border-[#ea580c]': color === '#ea580c',
+      'border-[#dc2626]': color === '#dc2626'
+    }"
+    class="flex items-center justify-center w-7 h-7 rounded-full"
+  >
+    <span
+      class="flex w-4 h-4 rounded-full"
+      [ngStyle]="{ 'background-color': color }"
+    ></span>
+  </button>
+</div>
