@@ -20,7 +20,7 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
     | 'destructive'
     | 'ghost'
     | 'link';
-  @Input() color: 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger' = 'default';
+  @Input() color: 'primary' | 'secondary' | 'info' | 'success' | 'warning' | 'danger' = 'primary';
   @Input() size: 'sm' | 'md' | 'lg' | 'icon' = 'md';
   @Input() class: string = '';
 
@@ -67,13 +67,13 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
   private getColorClass(color: string): string {
     
     switch (color) {
-      case 'default':
+      case 'primary':
         return `${
             this.variant === 'outline' ? 
               'text-zinc-900 shadow-sm border border-zinc-200 bg-transparent hover:bg-zinc-100 dark:text-neutral-50 dark:border-zinc-800 dark:bg-transparent dark:hover:bg-zinc-800' : 
               'text-white shadow-sm bg-zinc-900 hover:bg-zinc-900/90 dark:text-zinc-900 dark:bg-neutral-50 dark:hover:bg-zinc-50/90'
         }`;
-      case 'primary':
+      case 'info':
         return `${
           this.variant === 'outline' ? 
             'text-blue-500 shadow-sm border border-blue-500 bg-transparent hover:bg-blue-500/5 dark:hover:bg-blue-500/10' : 
