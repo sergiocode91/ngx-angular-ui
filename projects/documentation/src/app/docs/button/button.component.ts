@@ -7,11 +7,13 @@ import {
   TabsComponent,
 } from '@components/index';
 import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-button',
   standalone: true,
   imports: [
+    CommonModule,
     HeadingComponent,
     PropsComponent,
     HighlightCodeComponent,
@@ -24,6 +26,18 @@ import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-ap
 })
 export class ButtonComponent {
   public activeTabs: { [key: string]: string } = {};
+
+  public activeIndex: number = 0;
+  public colors: { value: string, name: string }[] = [
+    { value: '#52525b', name: 'default' },
+    { value: '#3b82f6', name: 'primary' },
+    { value: '#22c55e', name: 'success' },
+    { value: '#6d28d9', name: 'secondary' },
+    { value: '#ea580c', name: 'warning' },
+    { value: '#dc2626', name: 'danger' }
+  ];
+  public activeColor: { value: string, name: string } = this.colors[0];
+
   public props = {
     header: ['Property', 'Type', 'Default'],
     columns: [
@@ -194,5 +208,10 @@ export class ButtonComponent {
 
   changeTab(tabId: string, newActiveTab: string) {
     this.activeTabs[tabId] = newActiveTab;
+  }
+
+  setActive(index: number) {
+    this.activeIndex = index;
+    this.activeColor = this.colors[index];
   }
 }

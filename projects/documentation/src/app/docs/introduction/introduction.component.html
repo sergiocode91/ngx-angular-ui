@@ -4,25 +4,49 @@
   size="xl"
 ></app-heading>
 
-<div class="flex space-x-1">
+<!-- <div class="flex space-x-1">
   <button
     *ngFor="let color of colors; let i = index"
     (click)="setActive(i)"
     [ngClass]="{
       'border-2': activeIndex === i,
       'border-none': activeIndex !== i,
-      'border-[#52525b]': color === '#52525b',
-      'border-[#3b82f6]': color === '#3b82f6',
-      'border-[#22c55e]': color === '#22c55e',
-      'border-[#6d28d9]': color === '#6d28d9',
-      'border-[#ea580c]': color === '#ea580c',
-      'border-[#dc2626]': color === '#dc2626'
+      'border-[#fafafa] dark:border-white': color.value === '#52525b',
+      'border-[#3b82f6]': color.value === '#3b82f6',
+      'border-[#27272a]': color.value === '#27272a',
+      'border-[#22c55e]': color.value === '#22c55e',
+      'border-[#ea580c]': color.value === '#ea580c',
+      'border-[#dc2626]': color.value === '#dc2626'
     }"
     class="flex items-center justify-center w-7 h-7 rounded-full"
   >
     <span
       class="flex w-4 h-4 rounded-full"
-      [ngStyle]="{ 'background-color': color }"
+      [ngStyle]="{ 'background-color': color.value }"
     ></span>
   </button>
+</div> -->
+
+<br>
+
+<!-- colors: default, primary, secondary, success, warning, danger -->
+<h1 class="font-medium text-sm mb-4 dark:text-white">Default</h1>
+<div class="flex space-x-5 mb-10">
+  <button uiButton size="sm">Button</button>
+  <button uiButton size="sm" color="primary">Button</button>
+  <button uiButton size="sm" color="secondary">Button</button>
+  <button uiButton size="sm" color="success">Button</button>
+  <button uiButton size="sm" color="warning">Button</button>
+  <button uiButton size="sm" color="danger">Button</button>
 </div>
+  
+<h1 class="font-medium text-sm mb-4 dark:text-white">Outline</h1>
+<div class="flex space-x-5">
+  <button uiButton variant="outline" size="sm">Button</button>
+  <button uiButton variant="outline" size="sm" color="primary">Button</button>
+  <button uiButton variant="outline" size="sm" color="secondary">Button</button>
+  <button uiButton variant="outline" size="sm" color="success">Button</button>
+  <button uiButton variant="outline" size="sm" color="warning">Button</button>
+  <button uiButton variant="outline" size="sm" color="danger">Button</button>
+</div>
+

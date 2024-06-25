@@ -17,7 +17,42 @@
 
 <app-heading title="Examples" size="lg" [border]="true" />
 
-<app-heading title="Default" size="sm" />
+<div>
+  <app-heading title="Colors" size="sm" />
+  <div class="flex space-x-1">
+    <button
+      *ngFor="let color of colors; let i = index"
+      (click)="setActive(i)"
+      [ngClass]="{
+        'border-2': activeIndex === i,
+        'border-none': activeIndex !== i,
+        'border-[#52525b]': color.value === '#52525b',
+        'border-[#3b82f6]': color.value === '#3b82f6',
+        'border-[#22c55e]': color.value === '#22c55e',
+        'border-[#6d28d9]': color.value === '#6d28d9',
+        'border-[#ea580c]': color.value === '#ea580c',
+        'border-[#dc2626]': color.value === '#dc2626'
+      }"
+      class="flex items-center justify-center w-7 h-7 rounded-full"
+    >
+      <span
+        class="flex w-4 h-4 rounded-full"
+        [ngStyle]="{ 'background-color': color.value }"
+      ></span>
+    </button>
+  </div>
+</div>
+<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
+  @if(activeTabs['tab1'] === 'Preview') {
+    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+      <button uiButton>Button</button>
+    </div>
+  } @else {
+    <app-highlight-code [code]="code1" [language]="'typescript'" />
+  }
+</app-tabs>
+
+<!-- <app-heading title="Default" size="sm" />
 <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
   @if(activeTabs['tab1'] === 'Preview') {
     <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
@@ -175,4 +210,4 @@
   } @else {
     <app-highlight-code [code]="code9" [language]="'typescript'" />
   }
-</app-tabs>
+</app-tabs> -->
