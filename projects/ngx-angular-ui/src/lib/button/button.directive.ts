@@ -20,7 +20,7 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
     | 'destructive'
     | 'ghost'
     | 'link';
-  @Input() color: 'primary' | 'secondary' | 'info' | 'success' | 'warning' | 'danger' = 'primary';
+  @Input() color: 'primary' | 'secondary' | 'gray' | 'info' | 'success' | 'warning' | 'danger' = 'primary';
   @Input() size: 'sm' | 'md' | 'lg' | 'icon' = 'md';
   @Input() class: string = '';
 
