@@ -82,8 +82,8 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
       case 'secondary':
         return `${
           this.variant === 'outline' ? 
-            'text-zinc-800 shadow-sm border border-zinc-800 bg-transparent hover:bg-blue-500/5 dark:hover:bg-blue-500/10' : 
-            'text-zinc-900 bg-zinc-100 hover:bg-zinc-100/80 shadow-sm dark:text-white dark:bg-violet-700 dark:hover:bg-violet-700/90'
+            'text-violet-700 shadow-sm border border-violet-800 bg-transparent hover:bg-violet-500/5 dark:hover:bg-violet-500/10' : 
+            'text-white shadow-sm bg-violet-700 hover:bg-violet-700/90'
         }`;
       case 'gray':
         return `${
