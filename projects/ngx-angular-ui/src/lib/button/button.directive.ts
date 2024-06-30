@@ -20,7 +20,7 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
     | 'destructive'
     | 'ghost'
     | 'link';
-  @Input() color: 'primary' | 'secondary' | 'gray' | 'info' | 'success' | 'warning' | 'danger' = 'primary';
+  @Input() color!: 'primary' | 'secondary' | 'help' | 'info' | 'success' | 'warning' | 'danger';
   @Input() size: 'sm' | 'md' | 'lg' | 'icon' = 'md';
   @Input() class: string = '';
 
@@ -82,14 +82,14 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
       case 'secondary':
         return `${
           this.variant === 'outline' ? 
-            'text-violet-700 shadow-sm border border-violet-800 bg-transparent hover:bg-violet-500/5 dark:hover:bg-violet-500/10' : 
-            'text-white shadow-sm bg-violet-700 hover:bg-violet-700/90'
+            'text-gray-800 shadow-sm border border-gray-800 bg-transparent hover:bg-gray-100 dark:text-gray-50 dark:border-zinc-800 dark:hover:bg-gray-800/10' : 
+            'text-zinc-900 bg-zinc-100 hover:bg-zinc-100/80 shadow-sm dark:text-white dark:bg-zinc-800 dark:hover:bg-zinc-800/80'
         }`;
-      case 'gray':
+      case 'help':
         return `${
           this.variant === 'outline' ? 
-            'text-zinc-800 shadow-sm border border-zinc-800 bg-transparent hover:bg-blue-500/5 dark:hover:bg-blue-500/10' : 
-            'text-zinc-900 bg-zinc-100 hover:bg-zinc-100/80 shadow-sm dark:text-white dark:bg-zinc-800 dark:hover:bg-zinc-800/80'
+            'text-violet-700 shadow-sm border border-violet-800 bg-transparent hover:bg-violet-500/5 dark:hover:bg-violet-500/10' : 
+            'text-white shadow-sm bg-violet-700 hover:bg-violet-700/90'
         }`;
       case 'success':
         return `${
