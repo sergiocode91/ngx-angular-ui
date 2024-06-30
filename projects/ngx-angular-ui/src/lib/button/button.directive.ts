@@ -48,7 +48,7 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
       case 'secondary':
         return 'text-zinc-900 bg-zinc-100 hover:bg-zinc-100/80 focus-visible:ring-zinc-400 shadow-sm dark:text-white dark:bg-zinc-800 dark:hover:bg-zinc-800/80';
       case 'outline':
-        return 'text-zinc-900 border border-zinc-200 bg-white hover:bg-zinc-100 focus-visible:ring-zinc-400 shadow-sm dark:text-neutral-50 dark:border-zinc-800 dark:bg-transparent dark:hover:bg-zinc-800';
+        return `focus-visible:ring-zinc-400 shadow-sm ${this.color ? '' : 'text-zinc-900 border border-zinc-200 bg-white hover:bg-zinc-100 dark:text-neutral-50 dark:border-zinc-800 dark:bg-transparent dark:hover:bg-zinc-800'}`;
       case 'ghost':
         return 'text-zinc-900 hover:bg-zinc-100 focus-visible:ring-zinc-400 dark:text-neutral-50 dark:hover:bg-zinc-800';
       case 'link':
@@ -64,26 +64,26 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
       case 'info':
         return `${
           this.variant === 'outline' ? 
-            'text-blue-500 border border-blue-500 bg-transparent hover:bg-blue-500/5 dark:hover:bg-blue-500/10' : 
-            'text-white bg-blue-500 hover:bg-blue-500/90 dark:text-white dark:bg-blue-500 dark:hover:bg-blue-500/90'
+            'text-blue-600 border border-blue-600 bg-transparent hover:bg-blue-600/5 dark:hover:bg-blue-600/10' : 
+            'text-white bg-blue-600 hover:bg-blue-600/90 dark:text-white dark:bg-blue-600 dark:hover:bg-blue-600/90'
         }`;
       case 'help':
         return `${
           this.variant === 'outline' ? 
-            'text-violet-700 border border-violet-800 bg-transparent hover:bg-violet-500/5 dark:hover:bg-violet-500/10' : 
-            'text-white bg-violet-500 hover:bg-violet-500/90 dark:text-white dark:bg-violet-500 dark:hover:bg-violet-500/90'
+            'text-violet-600 border border-violet-600 bg-transparent hover:bg-violet-600/5 dark:hover:bg-violet-600/10' : 
+            'text-white bg-violet-600 hover:bg-violet-600/90 dark:text-white dark:bg-violet-600 dark:hover:bg-violet-600/90'
         }`;
       case 'success':
         return `${
           this.variant === 'outline' ? 
-            'text-green-500 border border-green-500 bg-transparent hover:bg-green-500/5 dark:hover:bg-green-500/10' : 
-            'text-white bg-green-500 hover:bg-green-500/90 dark:text-white dark:bg-green-500 dark:hover:bg-green-500/90'
+            'text-green-600 border border-green-600 bg-transparent hover:bg-green-600/5 dark:hover:bg-green-600/10' : 
+            'text-white bg-green-600 hover:bg-green-600/90 dark:text-white dark:bg-green-600 dark:hover:bg-green-600/90'
         }`;
       case 'warning':
         return `${
           this.variant === 'outline' ? 
             'text-orange-600 border border-orange-600 bg-transparent hover:bg-orange-600/5 dark:hover:bg-orange-600/10' : 
-            'text-white bg-orange-500 hover:bg-orange-500/90 dark:text-white dark:bg-orange-500 dark:hover:bg-orange-500/90'
+            'text-white bg-orange-600 hover:bg-orange-600/90 dark:text-white dark:bg-orange-600 dark:hover:bg-orange-600/90'
         }`;
       case 'danger':
         return `${
