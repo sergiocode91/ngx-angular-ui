@@ -64,32 +64,32 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
       case 'info':
         return `${
           this.variant === 'outline' ? 
-            'text-blue-500 shadow-sm border border-blue-500 bg-transparent hover:bg-blue-500/5 dark:hover:bg-blue-500/10' : 
-            'text-white shadow-sm bg-blue-500 hover:bg-blue-500/90'
+            'text-blue-500 border border-blue-500 bg-transparent hover:bg-blue-500/5 dark:hover:bg-blue-500/10' : 
+            'text-white bg-blue-500 hover:bg-blue-500/90'
         }`;
       case 'help':
         return `${
           this.variant === 'outline' ? 
-            'text-violet-700 shadow-sm border border-violet-800 bg-transparent hover:bg-violet-500/5 dark:hover:bg-violet-500/10' : 
-            'text-white shadow-sm bg-violet-700 hover:bg-violet-700/90'
+            'text-violet-700 border border-violet-800 bg-transparent hover:bg-violet-500/5 dark:hover:bg-violet-500/10' : 
+            'text-white bg-violet-700 hover:bg-violet-700/90'
         }`;
       case 'success':
         return `${
           this.variant === 'outline' ? 
-            'text-green-500 shadow-sm border border-green-500 bg-transparent hover:bg-green-500/5 dark:hover:bg-green-500/10' : 
-            'text-white shadow-sm bg-green-500 hover:bg-green-500/90'
+            'text-green-500 border border-green-500 bg-transparent hover:bg-green-500/5 dark:hover:bg-green-500/10' : 
+            'text-white bg-green-500 hover:bg-green-500/90'
         }`;
       case 'warning':
         return `${
           this.variant === 'outline' ? 
-            'text-orange-600 shadow-sm border border-orange-600 bg-transparent hover:bg-orange-600/5 dark:hover:bg-orange-600/10' : 
-            'text-white shadow-sm bg-orange-600 hover:bg-orange-600/90'
+            'text-orange-600 border border-orange-600 bg-transparent hover:bg-orange-600/5 dark:hover:bg-orange-600/10' : 
+            'text-white bg-orange-600 hover:bg-orange-600/90'
         }`;
       case 'danger':
         return `${
           this.variant === 'outline' ? 
-            'text-red-600 shadow-sm border border-red-600 bg-transparent hover:bg-red-600/5 dark:hover:bg-red-600/10' : 
-            'text-white shadow-sm bg-red-600 hover:bg-red-600/90'
+            'text-red-600 border border-red-600 bg-transparent hover:bg-red-600/5 dark:hover:bg-red-600/10' : 
+            'text-white bg-red-600 hover:bg-red-600/90'
         }`;
       default:
         return '';
