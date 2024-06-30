@@ -44,7 +44,7 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
   private getVariantClass(variant: string): string {
     switch (variant) {
       case 'primary':
-        return 'text-white bg-zinc-900 hover:bg-zinc-900/90 focus-visible:ring-zinc-400 shadow dark:text-zinc-900 dark:bg-neutral-50 dark:hover:bg-zinc-50/90';
+        return `focus-visible:ring-zinc-400 shadow-sm ${this.color ? '' : 'text-white bg-zinc-900 hover:bg-zinc-900/90 dark:text-zinc-900 dark:bg-neutral-50 dark:hover:bg-zinc-50/90'}`;
       case 'secondary':
         return 'text-zinc-900 bg-zinc-100 hover:bg-zinc-100/80 focus-visible:ring-zinc-400 shadow-sm dark:text-white dark:bg-zinc-800 dark:hover:bg-zinc-800/80';
       case 'outline':
@@ -65,31 +65,31 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
         return `${
           this.variant === 'outline' ? 
             'text-blue-500 border border-blue-500 bg-transparent hover:bg-blue-500/5 dark:hover:bg-blue-500/10' : 
-            'text-white bg-blue-500 hover:bg-blue-500/90'
+            'text-white bg-blue-500 hover:bg-blue-500/90 dark:text-white dark:bg-blue-500 dark:hover:bg-blue-500/90'
         }`;
       case 'help':
         return `${
           this.variant === 'outline' ? 
             'text-violet-700 border border-violet-800 bg-transparent hover:bg-violet-500/5 dark:hover:bg-violet-500/10' : 
-            'text-white bg-violet-700 hover:bg-violet-700/90'
+            'text-white bg-violet-500 hover:bg-violet-500/90 dark:text-white dark:bg-violet-500 dark:hover:bg-violet-500/90'
         }`;
       case 'success':
         return `${
           this.variant === 'outline' ? 
             'text-green-500 border border-green-500 bg-transparent hover:bg-green-500/5 dark:hover:bg-green-500/10' : 
-            'text-white bg-green-500 hover:bg-green-500/90'
+            'text-white bg-green-500 hover:bg-green-500/90 dark:text-white dark:bg-green-500 dark:hover:bg-green-500/90'
         }`;
       case 'warning':
         return `${
           this.variant === 'outline' ? 
             'text-orange-600 border border-orange-600 bg-transparent hover:bg-orange-600/5 dark:hover:bg-orange-600/10' : 
-            'text-white bg-orange-600 hover:bg-orange-600/90'
+            'text-white bg-orange-500 hover:bg-orange-500/90 dark:text-white dark:bg-orange-500 dark:hover:bg-orange-500/90'
         }`;
       case 'danger':
         return `${
           this.variant === 'outline' ? 
             'text-red-600 border border-red-600 bg-transparent hover:bg-red-600/5 dark:hover:bg-red-600/10' : 
-            'text-white bg-red-600 hover:bg-red-600/90'
+            'text-white bg-red-600 hover:bg-red-600/90 dark:text-white dark:bg-red-600 dark:hover:bg-red-600/90'
         }`;
       default:
         return '';
