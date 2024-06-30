@@ -107,7 +107,7 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
       case 'icon':
         return 'h-9 w-9';
       default:
-        return 'md';
+        return 'h-9 px-4 py-2';
     }
   }
 }
