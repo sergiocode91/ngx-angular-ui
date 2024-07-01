@@ -38,7 +38,7 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
     const sizeClass = this.getSizeClass(this.size);
     const colorClass = this.getColorClass(this.color);
     const roundedClass = this.getRoundedClass(this.rounded);
-    const classes = `${variantClass} ${sizeClass} ${colorClass} ${this.class} inline-flex items-center justify-center font-medium text-sm rounded-md transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:cursor-not-allowed disabled:opacity-50`;
+    const classes = `${variantClass} ${sizeClass} ${colorClass} ${roundedClass} ${this.class} inline-flex items-center justify-center font-medium text-sm transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:cursor-not-allowed disabled:opacity-50`;
 
     this.renderer.setAttribute(this.el.nativeElement, 'class', classes);
   }

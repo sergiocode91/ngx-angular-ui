@@ -52,7 +52,7 @@
       }
     </app-tabs>
     
-    <app-heading title="Colors" size="sm" />
+    <app-heading title="Solid color" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
       @if(activeTabs['tab1'] === 'Preview') {
         <div class="min-h-64 flex items-center justify-center p-10 rounded-md space-x-6 border border-zinc-200 dark:border-zinc-800">
@@ -61,6 +61,21 @@
           <button uiButton variant="primary" color="success">Success</button>
           <button uiButton variant="primary" color="warning">Warning</button>
           <button uiButton variant="primary" color="danger">Danger</button>
+        </div>
+      } @else {
+        <app-highlight-code [code]="code1" [language]="'typescript'" />
+      }
+    </app-tabs>
+
+    <app-heading title="Outline color" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
+      @if(activeTabs['tab1'] === 'Preview') {
+        <div class="min-h-64 flex items-center justify-center p-10 rounded-md space-x-6 border border-zinc-200 dark:border-zinc-800">
+          <button uiButton variant="outline" color="info">Info</button>
+          <button uiButton variant="outline" color="help">Help</button>
+          <button uiButton variant="outline" color="success">Success</button>
+          <button uiButton variant="outline" color="warning">Warning</button>
+          <button uiButton variant="outline" color="danger">Danger</button>
         </div>
       } @else {
         <app-highlight-code [code]="code1" [language]="'typescript'" />
@@ -84,10 +99,8 @@
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
       @if(activeTabs['tab1'] === 'Preview') {
         <div class="min-h-64 flex items-center justify-center p-10 rounded-md space-x-6 border border-zinc-200 dark:border-zinc-800">
-          <button uiButton variant="secondary">Full</button>
-          <button uiButton variant="secondary">Large</button>
-          <button uiButton variant="secondary">Medium</button>
-          <button uiButton variant="secondary">Small</button>
+          <button uiButton variant="primary" rounded="full">Button</button>
+          <button uiButton variant="primary" rounded="md">Button</button>
         </div>
       } @else {
         <app-highlight-code [code]="code1" [language]="'typescript'" />
@@ -166,8 +179,10 @@
         <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 pl-3.5 dark:text-white/70 dark:hover:text-neutral-50">Primary</a>
         <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 pl-3.5 dark:text-white/70 dark:hover:text-neutral-50">Secondary</a>
         <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 pl-3.5 dark:text-white/70 dark:hover:text-neutral-50">Outline</a>
-        <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 pl-3.5 dark:text-white/70 dark:hover:text-neutral-50">Colors</a>
+        <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 pl-3.5 dark:text-white/70 dark:hover:text-neutral-50">Solid colors</a>
+        <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 pl-3.5 dark:text-white/70 dark:hover:text-neutral-50">Outline colors</a>
         <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 pl-3.5 dark:text-white/70 dark:hover:text-neutral-50">Sizes</a>
+        <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 pl-3.5 dark:text-white/70 dark:hover:text-neutral-50">Rounded</a>
         <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 pl-3.5 dark:text-white/70 dark:hover:text-neutral-50">Ghost</a>
         <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 pl-3.5 dark:text-white/70 dark:hover:text-neutral-50">Link</a>
         <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 pl-3.5 dark:text-white/70 dark:hover:text-neutral-50">Icon</a>
