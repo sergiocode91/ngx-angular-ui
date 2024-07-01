@@ -1,168 +1,163 @@
-<app-heading 
-  title="Button" 
-  description="A vertically stacked set of interactive headings that each reveal a section of content." 
-/>
+<div class="flex gap-16">
+  <div class="w-[calc(100%-17rem)]">
+    <app-heading 
+      title="Button" 
+      description="A vertically stacked set of interactive headings that each reveal a section of content." 
+    />
+    
+    <a href="/" target="_blank" uiButton variant="secondary" size="sm">
+      <img src="../../../assets/storybook.svg" width="13" height="13" alt="Storybook" class="mr-2">
+      Storybook
+    </a>
+    
+    <app-heading title="Props" size="lg" />
+    <app-props [props]="props" />
+    
+    <app-heading title="Usage" size="lg" [border]="true" />
+    <app-highlight-code [code]="codeUseTs" [language]="'typescript'" />
+    <app-highlight-code [code]="codeUseHtml" [language]="'html'" />
+    
+    <app-heading title="Examples" size="lg" [border]="true" />
+     
+    <app-heading title="Primary" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
+      @if(activeTabs['tab1'] === 'Preview') {
+        <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <button uiButton>Button</button>
+        </div>
+      } @else {
+        <app-highlight-code [code]="code1" [language]="'typescript'" />
+      }
+    </app-tabs>
+    
+    <app-heading title="Secondary" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab2', $event)">
+      @if(activeTabs['tab2'] === 'Preview') {
+        <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <button uiButton variant="secondary">Secondary</button>
+        </div>
+      } @else {
+        <app-highlight-code [code]="code2" [language]="'typescript'" />
+      }
+    </app-tabs>
+    
+    <app-heading title="Outline" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab3', $event)">
+      @if(activeTabs['tab3'] === 'Preview') {
+        <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <button uiButton variant="outline">Outline</button>
+        </div>
+      } @else {
+        <app-highlight-code [code]="code3" [language]="'typescript'" />
+      }
+    </app-tabs>
+    
+    <app-heading title="Colors" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
+      @if(activeTabs['tab1'] === 'Preview') {
+        <div class="min-h-64 flex items-center justify-center p-10 rounded-md space-x-6 border border-zinc-200 dark:border-zinc-800">
+          <button uiButton variant="primary" color="info">Info</button>
+          <button uiButton variant="primary" color="help">Help</button>
+          <button uiButton variant="primary" color="success">Success</button>
+          <button uiButton variant="primary" color="warning">Warning</button>
+          <button uiButton variant="primary" color="danger">Danger</button>
+        </div>
+      } @else {
+        <app-highlight-code [code]="code1" [language]="'typescript'" />
+      }
+    </app-tabs>
 
-<a href="/" target="_blank" uiButton variant="secondary" size="sm">
-  <img src="../../../assets/storybook.svg" width="13" height="13" alt="Storybook" class="mr-2">
-  Storybook
-</a>
-
-<app-heading title="Props" size="lg" />
-<app-props [props]="props" />
-
-<app-heading title="Usage" size="lg" [border]="true" />
-<app-highlight-code [code]="codeUseTs" [language]="'typescript'" />
-<app-highlight-code [code]="codeUseHtml" [language]="'html'" />
-
-<app-heading title="Examples" size="lg" [border]="true" />
- 
-<app-heading title="Primary" size="sm" />
-<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
-  @if(activeTabs['tab1'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
-      <button uiButton>Button</button>
+    <app-heading title="Sizes" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
+      @if(activeTabs['tab1'] === 'Preview') {
+        <div class="min-h-64 flex items-center justify-center p-10 rounded-md space-x-6 border border-zinc-200 dark:border-zinc-800">
+          <button uiButton variant="secondary" size="sm">Small</button>
+          <button uiButton variant="secondary" size="md">Medium</button>
+          <button uiButton variant="secondary" size="lg">Large</button>
+        </div>
+      } @else {
+        <app-highlight-code [code]="code1" [language]="'typescript'" />
+      }
+    </app-tabs>
+    
+    <app-heading title="Ghost" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab5', $event)">
+      @if(activeTabs['tab5'] === 'Preview') {
+        <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <button uiButton variant="ghost">Get started</button>
+        </div>
+      } @else {
+        <app-highlight-code [code]="code5" [language]="'typescript'" />
+      }
+    </app-tabs>
+    
+    <app-heading title="Link" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab6', $event)">
+      @if(activeTabs['tab6'] === 'Preview') {
+        <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <button uiButton variant="link">Don’t have an account?</button>
+        </div>
+      } @else {
+        <app-highlight-code [code]="code6" [language]="'typescript'" />
+      }
+    </app-tabs>
+    
+    <app-heading title="Icon" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab7', $event)">
+      @if(activeTabs['tab7'] === 'Preview') {
+        <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <button uiButton variant="outline" size="icon">
+            <lucide-icon name="Moon" [size]="18"></lucide-icon>
+          </button>
+        </div>
+      } @else {
+        <app-highlight-code [code]="code7" [language]="'typescript'" />
+      }
+    </app-tabs>
+    
+    <app-heading title="Icon with text" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab8', $event)">
+      @if(activeTabs['tab8'] === 'Preview') {
+        <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <button uiButton variant="primary">
+            <lucide-icon name="Instagram" [size]="18" class="inline-flex mr-1"></lucide-icon>
+            Sign in with Instagram
+          </button>
+        </div>
+      } @else {
+        <app-highlight-code [code]="code8" [language]="'typescript'" />
+      }
+    </app-tabs>
+    
+    <app-heading title="Disabled" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab9', $event)">
+      @if(activeTabs['tab9'] === 'Preview') {
+        <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <button uiButton variant="primary" color="danger" disabled="true">
+            <lucide-icon name="Trash" [size]="18" class="inline-flex mr-1"></lucide-icon>
+            Delete account
+          </button>
+        </div>
+      } @else {
+        <app-highlight-code [code]="code9" [language]="'typescript'" />
+      }
+    </app-tabs>
+  </div>
+  <div class="w-44 text-white top-24 ml-auto size-fit sticky">
+    <h3 class="font-medium text-sm py-1 mb-1 dark:font-semibold dark:text-neutral-50">On this page</h3>
+    <div class="grid grid-flow-row auto-rows-max text-sm">
+      <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 dark:text-white/70 dark:hover:text-neutral-50">Props</a>
+      <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 dark:text-white/70 dark:hover:text-neutral-50">Usage</a>
+      <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 dark:text-white/70 dark:hover:text-neutral-50">Examples</a>
+        <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 pl-3.5 dark:text-white/70 dark:hover:text-neutral-50">Primary</a>
+        <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 pl-3.5 dark:text-white/70 dark:hover:text-neutral-50">Secondary</a>
+        <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 pl-3.5 dark:text-white/70 dark:hover:text-neutral-50">Outline</a>
+        <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 pl-3.5 dark:text-white/70 dark:hover:text-neutral-50">Colors</a>
+        <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 pl-3.5 dark:text-white/70 dark:hover:text-neutral-50">Ghost</a>
+        <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 pl-3.5 dark:text-white/70 dark:hover:text-neutral-50">Link</a>
+        <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 pl-3.5 dark:text-white/70 dark:hover:text-neutral-50">Icon</a>
+        <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 pl-3.5 dark:text-white/70 dark:hover:text-neutral-50">Icon with text</a>
+        <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 pl-3.5 dark:text-white/70 dark:hover:text-neutral-50">Disabled</a>
     </div>
-  } @else {
-    <app-highlight-code [code]="code1" [language]="'typescript'" />
-  }
-</app-tabs>
-
-<app-heading title="Secondary" size="sm" />
-<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab2', $event)">
-  @if(activeTabs['tab2'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
-      <button uiButton variant="secondary">Secondary</button>
-    </div>
-  } @else {
-    <app-highlight-code [code]="code2" [language]="'typescript'" />
-  }
-</app-tabs>
-
-<app-heading title="Outline" size="sm" />
-<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab3', $event)">
-  @if(activeTabs['tab3'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
-      <button uiButton variant="outline">Outline</button>
-    </div>
-  } @else {
-    <app-highlight-code [code]="code3" [language]="'typescript'" />
-  }
-</app-tabs>
-
-
-
-<app-heading title="Ghost" size="sm" />
-<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab5', $event)">
-  @if(activeTabs['tab5'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
-      <button uiButton variant="ghost">Get started</button>
-    </div>
-  } @else {
-    <app-highlight-code [code]="code5" [language]="'typescript'" />
-  }
-</app-tabs>
-
-
-<app-heading title="Link" size="sm" />
-<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab6', $event)">
-  @if(activeTabs['tab6'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
-      <button uiButton variant="link">Don’t have an account?</button>
-    </div>
-  } @else {
-    <app-highlight-code [code]="code6" [language]="'typescript'" />
-  }
-</app-tabs>
-
-<app-heading title="Icon" size="sm" />
-<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab7', $event)">
-  @if(activeTabs['tab7'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
-      <button uiButton variant="outline" size="icon">
-        <lucide-icon name="Moon" [size]="18"></lucide-icon>
-      </button>
-    </div>
-  } @else {
-    <app-highlight-code [code]="code7" [language]="'typescript'" />
-  }
-</app-tabs>
-
-<app-heading title="Icon with text" size="sm" />
-<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab8', $event)">
-  @if(activeTabs['tab8'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
-      <button uiButton variant="primary">
-        <lucide-icon name="Instagram" [size]="18" class="inline-flex mr-1"></lucide-icon>
-        Sign in with Instagram
-      </button>
-    </div>
-  } @else {
-    <app-highlight-code [code]="code8" [language]="'typescript'" />
-  }
-</app-tabs>
-<!--
-<app-heading title="Disabled" size="sm" />
-<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab9', $event)">
-  @if(activeTabs['tab9'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
-      <button uiButton variant="destructive" disabled="true">
-        <lucide-icon name="Trash" [size]="18" class="inline-flex mr-1"></lucide-icon>
-        Delete account
-      </button>
-    </div>
-  } @else {
-    <app-highlight-code [code]="code9" [language]="'typescript'" />
-  }
-</app-tabs>
-
-<app-heading title="Colors" size="sm" />
-<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab9', $event)">
-  @if(activeTabs['tab9'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
-      <div class="flex items-center space-x-3">
-        <button uiButton>
-          Default
-        </button>
-        <button uiButton>
-          Primary
-        </button>
-        <button uiButton variant="secondary">
-          Secondary
-        </button>
-        <button uiButton>
-          success
-        </button>
-        <button uiButton>
-          warning
-        </button>
-        <button uiButton>
-          danger
-        </button>
-      </div>
-    </div>
-  } @else {
-    <app-highlight-code [code]="code9" [language]="'typescript'" />
-  }
-</app-tabs>
-
-<app-heading title="Sizes" size="sm" />
-<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab9', $event)">
-  @if(activeTabs['tab9'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
-      <div class="flex items-center space-x-3">
-        <button uiButton size="sm">
-          Small
-        </button>
-        <button uiButton size="md">
-          Medium
-        </button>
-        <button uiButton size="lg">
-          Large
-        </button>
-      </div>
-    </div>
-  } @else {
-    <app-highlight-code [code]="code9" [language]="'typescript'" />
-  }
-</app-tabs> -->
+  </div>
+</div>

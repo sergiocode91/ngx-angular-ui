@@ -26,18 +26,6 @@ import { CommonModule } from '@angular/common';
 })
 export class ButtonComponent {
   public activeTabs: { [key: string]: string } = {};
-
-  public activeIndex: number = 0;
-  public colors: { value: string, name: string }[] = [
-    { value: '#52525b', name: 'default' },
-    { value: '#3b82f6', name: 'primary' },
-    { value: '#22c55e', name: 'success' },
-    { value: '#6d28d9', name: 'secondary' },
-    { value: '#ea580c', name: 'warning' },
-    { value: '#dc2626', name: 'danger' }
-  ];
-  public activeColor: { value: string, name: string } = this.colors[0];
-
   public props = {
     header: ['Property', 'Type', 'Default'],
     columns: [
@@ -188,7 +176,7 @@ export class ButtonComponent {
     standalone: true,
     imports: [LucideAngularModule, HtmlButtonDirective],
     template: \`
-      <button uiButton variant="destructive" disabled="true">
+      <button uiButton variant="primary" color="danger" disabled="true">
         <lucide-icon name="Trash" [size]="18" class="inline-flex mr-1"></lucide-icon>
         Delete account
       </button>
@@ -208,10 +196,5 @@ export class ButtonComponent {
 
   changeTab(tabId: string, newActiveTab: string) {
     this.activeTabs[tabId] = newActiveTab;
-  }
-
-  setActive(index: number) {
-    this.activeIndex = index;
-    this.activeColor = this.colors[index];
   }
 }
