@@ -1,12 +1,12 @@
 <div class="mt-6 mb-4 relative">
   <pre><code [highlight]="code" [language]="language" class="text-sm !p-0 rounded-md"></code></pre>
-  <button
-    uiButton
-    variant="ghost"
-    size="icon"
-    class="top-0 right-0 absolute"
-    (click)="handleCopyCode()"
-  >
-    <lucide-icon [name]="copyIcon" [size]="12" class="text-white"></lucide-icon>
-  </button>
+  <div class="flex top-1 right-1 absolute">
+    <button class="flex items-center justify-center w-8 h-8 rounded-md hover:bg-white/20 dark:hover:bg-black/20">
+      <lucide-icon name="Bug" [size]="16" class="text-neutral-100 dark:text-zinc-500"></lucide-icon>
+    </button>
+    <button class="flex items-center justify-center w-8 h-8 rounded-md hover:bg-white/20 dark:hover:bg-black/20" (click)="handleCopyCode()">
+      <lucide-icon [name]="copyIcon" [size]="16" class="text-neutral-100 dark:text-zinc-500"></lucide-icon>
+    </button>
+  </div>
 </div>
+
