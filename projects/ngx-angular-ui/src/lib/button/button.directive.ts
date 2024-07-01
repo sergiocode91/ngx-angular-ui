@@ -12,12 +12,7 @@ import {
   standalone: true,
 })
 export class HtmlButtonDirective implements OnInit, OnChanges {
-  @Input() variant:
-    | 'primary'
-    | 'secondary'
-    | 'outline'
-    | 'ghost'
-    | 'link' = 'primary';
+  @Input() variant: 'primary' | 'secondary' | 'outline' | 'ghost' | 'link' = 'primary';
   @Input() color!: 'info' | 'help' | 'success' | 'warning' | 'danger';
   @Input() size: 'sm' | 'md' | 'lg' | 'icon' = 'md';
   @Input() rounded: 'full' | 'md' = 'md';

@@ -31,17 +31,22 @@ export class ButtonComponent {
     columns: [
       {
         property: 'variant',
-        type: `'default' | 'outline' | 'ghost' | 'link' | 'icon`,
-        default: 'default',
+        type: `'primary' | 'outline' | 'ghost' | 'link' | 'icon`,
+        default: 'primary',
       },
       {
         property: 'color',
-        type: `'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger'`,
-        default: 'default',
+        type: `'info' | 'help' | 'success' | 'warning' | 'danger'`,
+        default: 'none',
       },
       {
         property: 'size',
-        type: `'sm' | 'md' | 'lg'`,
+        type: `'sm' | 'md' | 'lg' | 'icon'`,
+        default: 'md',
+      },
+      {
+        property: 'rounded',
+        type: `'full' | 'md'`,
         default: 'md',
       },
       {
