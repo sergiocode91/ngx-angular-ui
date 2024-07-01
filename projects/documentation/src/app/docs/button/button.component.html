@@ -71,9 +71,23 @@
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
       @if(activeTabs['tab1'] === 'Preview') {
         <div class="min-h-64 flex items-center justify-center p-10 rounded-md space-x-6 border border-zinc-200 dark:border-zinc-800">
-          <button uiButton variant="secondary" size="sm">Small</button>
-          <button uiButton variant="secondary" size="md">Medium</button>
-          <button uiButton variant="secondary" size="lg">Large</button>
+          <button uiButton variant="primary" size="sm">Small</button>
+          <button uiButton variant="primary" size="md">Medium</button>
+          <button uiButton variant="primary" size="lg">Large</button>
+        </div>
+      } @else {
+        <app-highlight-code [code]="code1" [language]="'typescript'" />
+      }
+    </app-tabs>
+
+    <app-heading title="Rounded" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
+      @if(activeTabs['tab1'] === 'Preview') {
+        <div class="min-h-64 flex items-center justify-center p-10 rounded-md space-x-6 border border-zinc-200 dark:border-zinc-800">
+          <button uiButton variant="secondary">Full</button>
+          <button uiButton variant="secondary">Large</button>
+          <button uiButton variant="secondary">Medium</button>
+          <button uiButton variant="secondary">Small</button>
         </div>
       } @else {
         <app-highlight-code [code]="code1" [language]="'typescript'" />
@@ -153,6 +167,7 @@
         <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 pl-3.5 dark:text-white/70 dark:hover:text-neutral-50">Secondary</a>
         <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 pl-3.5 dark:text-white/70 dark:hover:text-neutral-50">Outline</a>
         <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 pl-3.5 dark:text-white/70 dark:hover:text-neutral-50">Colors</a>
+        <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 pl-3.5 dark:text-white/70 dark:hover:text-neutral-50">Sizes</a>
         <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 pl-3.5 dark:text-white/70 dark:hover:text-neutral-50">Ghost</a>
         <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 pl-3.5 dark:text-white/70 dark:hover:text-neutral-50">Link</a>
         <a class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 pl-3.5 dark:text-white/70 dark:hover:text-neutral-50">Icon</a>

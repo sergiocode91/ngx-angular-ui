@@ -20,6 +20,7 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
     | 'link' = 'primary';
   @Input() color!: 'info' | 'help' | 'success' | 'warning' | 'danger';
   @Input() size: 'sm' | 'md' | 'lg' | 'icon' = 'md';
+  @Input() rounded: 'full' | 'md' = 'md';
   @Input() class: string = '';
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
@@ -36,6 +37,7 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
     const variantClass = this.getVariantClass(this.variant);
     const sizeClass = this.getSizeClass(this.size);
     const colorClass = this.getColorClass(this.color);
+    const roundedClass = this.getRoundedClass(this.rounded);
     const classes = `${variantClass} ${sizeClass} ${colorClass} ${this.class} inline-flex items-center justify-center font-medium text-sm rounded-md transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:cursor-not-allowed disabled:opacity-50`;
 
     this.renderer.setAttribute(this.el.nativeElement, 'class', classes);
@@ -59,7 +61,6 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
   }
 
   private getColorClass(color: string): string {
-    
     switch (color) {
       case 'info':
         return `${
@@ -108,6 +109,17 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
         return 'h-9 w-9';
       default:
         return 'h-9 px-4 py-2';
+    }
+  }
+
+  private getRoundedClass(rounded: string): string {
+    switch (rounded) {
+      case 'full':
+        return 'rounded-full';
+      case 'md':
+        return 'rounded-md';
+      default:
+        return 'rounded-md';
     }
   }
 }
