@@ -86,9 +86,9 @@
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab6', $event)">
       @if(activeTabs['tab6'] === 'Preview') {
         <div class="min-h-64 flex items-center justify-center p-10 rounded-md space-x-6 border border-zinc-200 dark:border-zinc-800">
-          <button uiButton variant="primary" size="sm">Small</button>
-          <button uiButton variant="primary" size="md">Medium</button>
-          <button uiButton variant="primary" size="lg">Large</button>
+          <button uiButton variant="primary" color="help" size="sm">Small</button>
+          <button uiButton variant="primary" color="help" size="md">Medium</button>
+          <button uiButton variant="primary" color="help" size="lg">Large</button>
         </div>
       } @else {
         <app-highlight-code [code]="code6" [language]="'typescript'" />
@@ -99,8 +99,9 @@
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab7', $event)">
       @if(activeTabs['tab7'] === 'Preview') {
         <div class="min-h-64 flex items-center justify-center p-10 rounded-md space-x-6 border border-zinc-200 dark:border-zinc-800">
-          <button uiButton variant="primary" rounded="full">Button</button>
-          <button uiButton variant="primary" rounded="md">Button</button>
+          <button uiButton variant="primary" color="info" rounded="md">Medium</button>
+          <button uiButton variant="primary" color="info" rounded="lg">Large</button>
+          <button uiButton variant="primary" color="info" rounded="full">Full</button>
         </div>
       } @else {
         <app-highlight-code [code]="code7" [language]="'typescript'" />

@@ -15,7 +15,7 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
   @Input() variant: 'primary' | 'secondary' | 'outline' | 'ghost' | 'link' = 'primary';
   @Input() color!: 'info' | 'help' | 'success' | 'warning' | 'danger';
   @Input() size: 'sm' | 'md' | 'lg' | 'icon' = 'md';
-  @Input() rounded: 'full' | 'md' = 'md';
+  @Input() rounded: 'md' | 'lg' | 'full' = 'md';
   @Input() class: string = '';
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
@@ -47,9 +47,9 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
       case 'outline':
         return `focus-visible:ring-zinc-400 shadow-sm ${this.color ? '' : 'text-zinc-900 border border-zinc-200 bg-white hover:bg-zinc-100 dark:text-neutral-50 dark:border-zinc-800 dark:bg-transparent dark:hover:bg-zinc-800'}`;
       case 'ghost':
-        return 'text-zinc-900 hover:bg-zinc-100 focus-visible:ring-zinc-400 dark:text-neutral-50 dark:hover:bg-zinc-800';
+        return `focus-visible:ring-zinc-400 ${this.color ? '' : 'text-zinc-900 hover:bg-zinc-100 dark:text-neutral-50 dark:hover:bg-zinc-800'} `;
       case 'link':
-        return 'text-zinc-900 underline-offset-4 hover:underline focus-visible:ring-zinc-400 dark:text-neutral-50';
+        return `underline-offset-4 hover:underline focus-visible:ring-zinc-400 ${this.color ? '' : 'text-zinc-900 dark:text-neutral-50'}`;
       default:
         return 'text-white shadow-sm bg-zinc-900 hover:bg-zinc-900/90 dark:text-zinc-900 dark:bg-neutral-50 dark:hover:bg-zinc-50/90';
     }
@@ -60,31 +60,51 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
       case 'info':
         return `${
           this.variant === 'outline' ? 
-            'text-blue-600 border border-blue-600 bg-transparent hover:bg-blue-600/5 dark:hover:bg-blue-600/10' : 
+            'text-blue-600 border border-blue-600 bg-transparent hover:bg-blue-600/5 dark:hover:bg-blue-600/10' :
+          this.variant === 'ghost' ?
+            'text-zinc-900 dark:text-white hover:text-white hover:bg-blue-600' :
+          this.variant === 'link' ?
+            'text-blue-600' :
             'text-white bg-blue-600 hover:bg-blue-600/90 dark:text-white dark:bg-blue-600 dark:hover:bg-blue-600/90'
         }`;
       case 'help':
         return `${
           this.variant === 'outline' ? 
             'text-violet-600 border border-violet-600 bg-transparent hover:bg-violet-600/5 dark:hover:bg-violet-600/10' : 
+          this.variant === 'ghost' ?
+            'text-zinc-900 dark:text-white hover:text-white hover:bg-violet-600' :
+          this.variant === 'link' ?
+            'text-violet-600' :
             'text-white bg-violet-600 hover:bg-violet-600/90 dark:text-white dark:bg-violet-600 dark:hover:bg-violet-600/90'
         }`;
       case 'success':
         return `${
           this.variant === 'outline' ? 
             'text-green-600 border border-green-600 bg-transparent hover:bg-green-600/5 dark:hover:bg-green-600/10' : 
+          this.variant === 'ghost' ?
+            'text-zinc-900 dark:text-white hover:text-white hover:bg-green-600' :
+          this.variant === 'link' ?
+            'text-green-600' :
             'text-white bg-green-600 hover:bg-green-600/90 dark:text-white dark:bg-green-600 dark:hover:bg-green-600/90'
         }`;
       case 'warning':
         return `${
           this.variant === 'outline' ? 
             'text-orange-600 border border-orange-600 bg-transparent hover:bg-orange-600/5 dark:hover:bg-orange-600/10' : 
+          this.variant === 'ghost' ?
+            'text-zinc-900 dark:text-white hover:text-white hover:bg-orange-600' :
+          this.variant === 'link' ?
+            'text-orange-600' :
             'text-white bg-orange-600 hover:bg-orange-600/90 dark:text-white dark:bg-orange-600 dark:hover:bg-orange-600/90'
         }`;
       case 'danger':
         return `${
           this.variant === 'outline' ? 
             'text-red-600 border border-red-600 bg-transparent hover:bg-red-600/5 dark:hover:bg-red-600/10' : 
+          this.variant === 'ghost' ?
+            'text-zinc-900 dark:text-white hover:text-white hover:bg-red-600' :
+          this.variant === 'link' ?
+            'text-red-600' :
             'text-white bg-red-600 hover:bg-red-600/90 dark:text-white dark:bg-red-600 dark:hover:bg-red-600/90'
         }`;
       default:
@@ -111,6 +131,8 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
     switch (rounded) {
       case 'full':
         return 'rounded-full';
+      case 'lg':
+        return 'rounded-lg';
       case 'md':
         return 'rounded-md';
       default:
