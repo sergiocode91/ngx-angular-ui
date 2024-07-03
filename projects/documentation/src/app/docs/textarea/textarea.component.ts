@@ -1,8 +1,15 @@
 import { Component } from '@angular/core';
-import { HeadingComponent, HighlightCodeComponent, TabsComponent } from '@components/index';
+import {
+  HeadingComponent,
+  HighlightCodeComponent,
+  LinksContentComponent,
+  TabsComponent,
+} from '@components/index';
 import { HtmlTextareaDirective } from '../../../../../ngx-angular-ui/src/lib/textarea/textarea.directive';
 import { HtmlLabelDirective } from '../../../../../ngx-angular-ui/src/lib/label/label.directive';
 import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
+import { CodeExamples, LinksContent } from '../../models';
+import { TextareaService } from '../../services/code-example';
 
 @Component({
   selector: 'app-textarea',
@@ -10,85 +17,31 @@ import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-ap
   imports: [
     HeadingComponent,
     HighlightCodeComponent,
+    LinksContentComponent,
     HtmlTextareaDirective,
     HtmlLabelDirective,
     HtmlButtonDirective,
     TabsComponent,
   ],
   templateUrl: './textarea.component.html',
-  styles: ``
+  styles: ``,
 })
 export class TextareaComponent {
   public activeTabs: { [key: string]: string } = {};
 
-  public codeUseTs = `
-  import { HtmlTextareaDirective } from 'ngx-angular-ui';
+  public linksContent: LinksContent[] = [
+    { title: 'Usage', link: '#usage' },
+    { title: 'Examples', link: '#examples' },
+    { title: 'Default', link: '#default', isSubmenu: true },
+    { title: 'With Label', link: '#with-label', isSubmenu: true },
+    { title: 'With Button', link: '#with-button', isSubmenu: true },
+    { title: 'Disabled', link: '#disabled', isSubmenu: true },
+  ];
 
-  @Component({
-    standalone: true,
-    imports: [HtmlTextareaDirective],
-  })
-  `;
+  public examples: CodeExamples;
 
-  public codeUseHtml = `
-  <textarea uiTextarea placeholder="Type your message here."></textarea>
-  `;
-
-  public code1 = `
-  import { HtmlTextareaDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [HtmlTextareaDirective],
-    template: \`
-      <textarea uiTextarea placeholder="Type your message here."></textarea>
-    \`
-  })
-  `;
-
-  public code2 = `
-  import { HtmlTextareaDirective, HtmlLabelDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [HtmlTextareaDirective, HtmlLabelDirective],
-    template: \`
-      <div class="flex flex-col space-y-2">
-        <label uiLabel for="email">Message</label>
-        <textarea uiTextarea placeholder="Type your message here."></textarea>
-      </div>
-    \`
-  })
-  `;
-
-  public code3 = `
-  import { HtmlInputDirective, HtmlButtonDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [HtmlInputDirective, HtmlButtonDirective],
-    template: \`
-      <div class="flex flex-col items-end space-y-4">
-        <textarea uiTextarea placeholder="Type your message here."></textarea>
-        <button uiButton>Send</button>
-      </div>
-    \`
-  })
-  `;
-
-  public code4 = `
-  import { HtmlTextareaDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [HtmlTextareaDirective],
-    template: \`
-      <textarea uiTextarea placeholder="Type your message here." disabled></textarea>
-    \`
-  })
-  `;
-
-  constructor() {
+  constructor(private _textareaService: TextareaService) {
+    this.examples = this._textareaService.getExamples();
     this.initializeTabs(4);
   }
 
