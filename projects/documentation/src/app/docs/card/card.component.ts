@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {
   HeadingComponent,
   HighlightCodeComponent,
+  LinksContentComponent,
   TabsComponent,
 } from '@components/index';
 import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
@@ -13,7 +14,8 @@ import { HtmlCardFooterDirective } from '../../../../../ngx-angular-ui/src/lib/c
 import { HtmlCardHeaderDirective } from '../../../../../ngx-angular-ui/src/lib/card/card-header.directive';
 import { HtmlCardTitleDirective } from '../../../../../ngx-angular-ui/src/lib/card/card-title.directive';
 import { HtmlCardDirective } from '../../../../../ngx-angular-ui/src/lib/card/card.directive';
-
+import { CodeExamples, LinksContent } from '../../models';
+import { CardService } from '../../services/code-example';
 @Component({
   selector: 'app-card',
   standalone: true,
@@ -29,6 +31,7 @@ import { HtmlCardDirective } from '../../../../../ngx-angular-ui/src/lib/card/ca
     HtmlCardContentDirective,
     HtmlCardFooterDirective,
     HighlightCodeComponent,
+    LinksContentComponent,
     TabsComponent
   ],
   templateUrl: './card.component.html',
@@ -37,123 +40,17 @@ import { HtmlCardDirective } from '../../../../../ngx-angular-ui/src/lib/card/ca
 export class CardComponent {
   public activeTabs: { [key: string]: string } = {};
 
-  public codeUseTs = `
-  import { 
-    HtmlCardDirective,
-    HtmlCardHeaderDirective,
-    HtmlCardTitleDirective,
-    HtmlCardDescriptionDirective,
-    HtmlCardContentDirective,
-    HtmlCardFooterDirective,
-  } from 'ngx-angular-ui';
+  public linksContent: LinksContent[] = [
+    { title: 'Usage', link: '#usage' },
+    { title: 'Examples', link: '#examples' },
+    { title: 'With Reset password', link: '#with-reset-password', isSubmenu: true },
+    { title: 'With Sign in', link: '#with-sign-in', isSubmenu: true },
+  ];
 
-  @Component({
-    standalone: true,
-    imports: [
-      HtmlCardDirective,
-      HtmlCardHeaderDirective,
-      HtmlCardTitleDirective,
-      HtmlCardDescriptionDirective,
-      HtmlCardContentDirective,
-      HtmlCardFooterDirective,
-    ],
-  })
-  `;
+  public examples: CodeExamples;
 
-  public codeUseHtml = `
-  <div uiCard>
-    <div uiCardHeader>
-      <div uiCardTitle>Card Title</div>
-      <div uiCardDescription>Card Description</div>
-    </div>
-    <div uiCardContent>Card Content</div>
-    <div uiCardFooter>Card Footer</div>
-  </div>
-  `;
-
-  public code1 = `
-  import { 
-    HtmlCardDirective,
-    HtmlCardHeaderDirective,
-    HtmlCardTitleDirective,
-    HtmlCardDescriptionDirective,
-    HtmlCardContentDirective,
-    HtmlCardFooterDirective
-  } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [
-      HtmlCardDirective,
-      HtmlCardHeaderDirective,
-      HtmlCardTitleDirective,
-      HtmlCardDescriptionDirective,
-      HtmlCardContentDirective,
-      HtmlCardFooterDirective,
-    ],
-    template: \`
-      <div uiCard class="w-[550px]">
-        <div uiCardHeader>
-          <div uiCardTitle>Reset your password</div>
-          <div uiCardDescription>Enter your verified email to receive a password reset link.</div>
-        </div>
-        <div uiCardContent>
-          <input uiInput type="email" placeholder="Enter your email address">
-        </div>
-        <div uiCardFooter class="flex justify-between">
-          <button uiButton variant="outline">Cancel</button>
-          <button uiButton>Reset password</button>
-        </div>
-      </div>
-    \`
-  })
-  `;
-
-  public code2 = `
-  import { 
-    HtmlCardDirective,
-    HtmlCardHeaderDirective,
-    HtmlCardTitleDirective,
-    HtmlCardDescriptionDirective,
-    HtmlCardContentDirective,
-    HtmlCardFooterDirective
-  } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [
-      HtmlCardDirective,
-      HtmlCardHeaderDirective,
-      HtmlCardTitleDirective,
-      HtmlCardDescriptionDirective,
-      HtmlCardContentDirective,
-      HtmlCardFooterDirective,
-    ],
-    template: \`
-      <div uiCard class="w-[350px]">
-        <div uiCardHeader>
-          <div uiCardTitle>Sign in</div>
-          <div uiCardDescription>Enter your account details.</div>
-        </div>
-        <div uiCardContent class="grid items-center gap-4">
-          <div class="flex flex-col space-y-2">
-            <label uiLabel for="email">Email address</label>
-            <input uiInput type="email" id="email" placeholder="Enter your email address">
-          </div>
-          <div class="flex flex-col space-y-2">
-            <label uiLabel for="password">Password</label>
-            <input uiInput type="password" id="password" placeholder="Enter your password">
-          </div>
-        </div>
-        <div uiCardFooter>
-          <button uiButton class="w-full">Sign in</button>
-        </div>
-      </div>
-    \`
-  })
-  `;
-
-  constructor() {
+  constructor(private _cardService: CardService) {
+    this.examples = this._cardService.getExamples();
     this.initializeTabs(4);
   }
 

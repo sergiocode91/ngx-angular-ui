@@ -1,67 +1,72 @@
-<app-heading
-  title="Card"
-  description="Displays a card with header, content, and footer."
-></app-heading>
-
-<a href="/" target="_blank" uiButton variant="secondary" size="sm">
-  <img src="../../../assets/storybook.svg" width="13" height="13" alt="Storybook" class="mr-2">
-  Storybook
-</a>
-
-<app-heading title="Usage" size="lg" [border]="true" />
-<app-highlight-code [code]="codeUseTs" [language]="'typescript'" />
-<app-highlight-code [code]="codeUseHtml" [language]="'html'" />
-
-<app-heading title="Examples" size="lg" [border]="true" />
-
-<app-heading title="With Reset password" size="sm" />
-<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
-  @if(activeTabs['tab1'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
-      <div uiCard class="w-[550px]">
-        <div uiCardHeader>
-          <div uiCardTitle>Reset your password</div>
-          <div uiCardDescription>Enter your verified email to receive a password reset link.</div>
-        </div>
-        <div uiCardContent>
-          <input uiInput type="email" placeholder="Enter your email address">
-        </div>
-        <div uiCardFooter class="flex justify-between">
-          <button uiButton variant="outline">Cancel</button>
-          <button uiButton>Reset password</button>
-        </div>
-      </div>
-    </div>
-  } @else {
-    <app-highlight-code [code]="code1" [language]="'typescript'" />
-  }
-</app-tabs>
-
-<app-heading title="With Sign in" size="sm" />
-<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab2', $event)">
-  @if(activeTabs['tab2'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
-      <div uiCard class="w-[350px]">
-        <div uiCardHeader>
-          <div uiCardTitle>Sign in</div>
-          <div uiCardDescription>Enter your account details.</div>
-        </div>
-        <div uiCardContent class="grid items-center gap-4">
-          <div class="flex flex-col space-y-2">
-            <label uiLabel for="email">Email address</label>
-            <input uiInput type="email" id="email" placeholder="Enter your email address">
-          </div>
-          <div class="flex flex-col space-y-2">
-            <label uiLabel for="password">Password</label>
-            <input uiInput type="password" id="password" placeholder="Enter your password">
+<div class="flex gap-16">
+  <div class="w-[calc(100%-17rem)]">
+    <app-heading
+      title="Card"
+      description="Displays a card with header, content, and footer."
+    ></app-heading>
+    
+    <a href="/" target="_blank" uiButton variant="secondary" size="sm">
+      <img src="../../../assets/storybook.svg" width="13" height="13" alt="Storybook" class="mr-2">
+      Storybook
+    </a>
+    
+    <app-heading id="usage" title="Usage" size="lg" [border]="true" />
+    <app-highlight-code [code]="examples.codeUseTs ?? ''" [language]="'typescript'" />
+    <app-highlight-code [code]="examples.codeUseHtml ?? ''" [language]="'html'" />
+    
+    <app-heading id="examples" title="Examples" size="lg" [border]="true" />
+    
+    <app-heading id="with-reset-password" title="With Reset password" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
+      @if(activeTabs['tab1'] === 'Preview') {
+        <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <div uiCard class="w-[550px]">
+            <div uiCardHeader>
+              <div uiCardTitle>Reset your password</div>
+              <div uiCardDescription>Enter your verified email to receive a password reset link.</div>
+            </div>
+            <div uiCardContent>
+              <input uiInput type="email" placeholder="Enter your email address">
+            </div>
+            <div uiCardFooter class="flex justify-between">
+              <button uiButton variant="outline">Cancel</button>
+              <button uiButton>Reset password</button>
+            </div>
           </div>
         </div>
-        <div uiCardFooter>
-          <button uiButton class="w-full">Sign in</button>
+      } @else {
+        <app-highlight-code [code]="examples.code1 ?? ''" [language]="'typescript'" />
+      }
+    </app-tabs>
+    
+    <app-heading id="with-sign-in" title="With Sign in" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab2', $event)">
+      @if(activeTabs['tab2'] === 'Preview') {
+        <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <div uiCard class="w-[350px]">
+            <div uiCardHeader>
+              <div uiCardTitle>Sign in</div>
+              <div uiCardDescription>Enter your account details.</div>
+            </div>
+            <div uiCardContent class="grid items-center gap-4">
+              <div class="flex flex-col space-y-2">
+                <label uiLabel for="email">Email address</label>
+                <input uiInput type="email" id="email" placeholder="Enter your email address">
+              </div>
+              <div class="flex flex-col space-y-2">
+                <label uiLabel for="password">Password</label>
+                <input uiInput type="password" id="password" placeholder="Enter your password">
+              </div>
+            </div>
+            <div uiCardFooter>
+              <button uiButton class="w-full">Sign in</button>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  } @else {
-    <app-highlight-code [code]="code2" [language]="'typescript'" />
-  }
-</app-tabs>
+      } @else {
+        <app-highlight-code [code]="examples.code2 ?? ''" [language]="'typescript'" />
+      }
+    </app-tabs>
+  </div>
+  <app-links-content [linksContent]="linksContent" />
+</div>

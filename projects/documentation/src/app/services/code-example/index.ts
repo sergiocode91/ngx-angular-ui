@@ -1,4 +1,5 @@
 export * from './button.service';
+export * from './card.service';
 export * from './input.service';
 export * from './label.service';
 export * from './skeleton.service';
