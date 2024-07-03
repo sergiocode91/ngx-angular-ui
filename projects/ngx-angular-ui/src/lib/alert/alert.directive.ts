@@ -68,7 +68,7 @@ export class HtmlAlertDirective implements OnInit, OnChanges {
       case 'info':
         return 'text-blue-600 border-blue-600 dark:text-blue-800 dark:border-blue-800';
       case 'success':
-        return 'text-green-600 border-green-600 dark:text-green-800 dark:border-green-800';
+        return 'text-green-600 border-green-600 dark:text-lime-700 dark:border-lime-700';
       case 'warning':
         return 'text-orange-600 border-orange-600 dark:text-orange-800 dark:border-orange-800';
       case 'danger':
