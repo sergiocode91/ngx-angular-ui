@@ -73,13 +73,13 @@ export class HtmlSpinnerComponent implements OnInit, OnChanges {
       case 'default':
         return 'text-zinc-400 dark:text-zinc-500';
       case 'primary':
-        return 'text-blue-500';
+        return 'text-blue-600';
       case 'secondary':
-        return 'text-violet-700';
+        return 'text-violet-600';
       case 'success':
-        return 'text-green-500';
+        return 'text-green-600';
       case 'warning':
-        return 'text-amber-500';
+        return 'text-orange-600';
       case 'danger':
         return 'text-red-600';
       default:
