@@ -1,49 +1,54 @@
-<app-heading
-  title="Skeleton"
-  description="Use to show a placeholder while content is loading."
-></app-heading>
-
-<a href="/" target="_blank" uiButton variant="secondary" size="sm">
-  <img src="../../../assets/storybook.svg" width="13" height="13" alt="Storybook" class="mr-2">
-  Storybook
-</a>
-
-<app-heading title="Usage" size="lg" [border]="true" />
-<app-highlight-code [code]="codeUseTs" [language]="'typescript'" />
-<app-highlight-code [code]="codeUseHtml" [language]="'html'" />
-
-<app-heading title="Examples" size="lg" [border]="true" />
-
-<app-heading title="With Avatar" size="sm" />
-<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
-  @if(activeTabs['tab1'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
-      <div class="flex items-center space-x-4">
-        <div uiSkeleton class="w-12 h-12 rounded-full"></div>
-        <div class="flex flex-col space-y-2">
-          <div uiSkeleton class="w-[250px] h-4 rounded-md"></div>
-          <div uiSkeleton class="w-[200px] h-4 rounded-md"></div>
+<div class="flex gap-16">
+  <div class="w-[calc(100%-17rem)]">
+    <app-heading
+      title="Skeleton"
+      description="Use to show a placeholder while content is loading."
+    ></app-heading>
+    
+    <a href="/" target="_blank" uiButton variant="secondary" size="sm">
+      <img src="../../../assets/storybook.svg" width="13" height="13" alt="Storybook" class="mr-2">
+      Storybook
+    </a>
+    
+    <app-heading id="usage" title="Usage" size="lg" [border]="true" />
+    <app-highlight-code [code]="examples.codeUseTs ?? ''" [language]="'typescript'" />
+    <app-highlight-code [code]="examples.codeUseHtml ?? ''" [language]="'html'" />
+    
+    <app-heading id="examples" title="Examples" size="lg" [border]="true" />
+    
+    <app-heading id="with-avatar" title="With Avatar" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
+      @if(activeTabs['tab1'] === 'Preview') {
+        <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <div class="flex items-center space-x-4">
+            <div uiSkeleton class="w-12 h-12 rounded-full"></div>
+            <div class="flex flex-col space-y-2">
+              <div uiSkeleton class="w-[250px] h-4 rounded-md"></div>
+              <div uiSkeleton class="w-[200px] h-4 rounded-md"></div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  } @else {
-    <app-highlight-code [code]="code1" [language]="'typescript'" />
-  }
-</app-tabs>
-
-<app-heading title="With Card" size="sm" />
-<app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab2', $event)">
-  @if(activeTabs['tab2'] === 'Preview') {
-    <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
-      <div class="flex flex-col space-y-3">
-        <div uiSkeleton class="w-[250px] h-[125px] rounded-xl"></div>
-        <div class="flex flex-col space-y-2">
-          <div uiSkeleton class="w-[250px] h-4 rounded-md"></div>
-          <div uiSkeleton class="w-[200px] h-4 rounded-md"></div>
+      } @else {
+        <app-highlight-code [code]="examples.code1 ?? ''" [language]="'typescript'" />
+      }
+    </app-tabs>
+    
+    <app-heading id="with-card" title="With Card" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab2', $event)">
+      @if(activeTabs['tab2'] === 'Preview') {
+        <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <div class="flex flex-col space-y-3">
+            <div uiSkeleton class="w-[250px] h-[125px] rounded-xl"></div>
+            <div class="flex flex-col space-y-2">
+              <div uiSkeleton class="w-[250px] h-4 rounded-md"></div>
+              <div uiSkeleton class="w-[200px] h-4 rounded-md"></div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  } @else {
-    <app-highlight-code [code]="code2" [language]="'typescript'" />
-  }
-</app-tabs>
+      } @else {
+        <app-highlight-code [code]="examples.code2 ?? ''" [language]="'typescript'" />
+      }
+    </app-tabs>
+  </div>
+  <app-links-content [linksContent]="linksContent" />
+</div>

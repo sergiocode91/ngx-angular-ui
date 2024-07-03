@@ -2,10 +2,13 @@ import { Component } from '@angular/core';
 import {
   HeadingComponent,
   HighlightCodeComponent,
+  LinksContentComponent,
   TabsComponent,
 } from '@components/index';
 import { HtmlSkeletonDirective } from '../../../../../ngx-angular-ui/src/lib/skeleton/skeleton.directive';
 import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
+import { CodeExamples, LinksContent } from '../../models';
+import { SkeletonService } from '../../services/code-example';
 
 @Component({
   selector: 'app-skeleton',
@@ -13,9 +16,10 @@ import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-ap
   imports: [
     HeadingComponent,
     HighlightCodeComponent,
+    TabsComponent,
+    LinksContentComponent,
     HtmlSkeletonDirective,
     HtmlButtonDirective,
-    TabsComponent,
   ],
   templateUrl: './skeleton.component.html',
   styles: ``,
@@ -23,56 +27,17 @@ import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-ap
 export class SkeletonComponent {
   public activeTabs: { [key: string]: string } = {};
 
-  public codeUseTs = `
-  import { HtmlSkeletonDirective } from 'ngx-angular-ui';
+  public linksContent: LinksContent[] = [
+    { title: 'Usage', link: '#usage' },
+    { title: 'Examples', link: '#examples' },
+    { title: 'With Avatar', link: '#with-avatar', isSubmenu: true },
+    { title: 'With Card', link: '#with-card', isSubmenu: true },
+  ];
 
-  @Component({
-    standalone: true,
-    imports: [HtmlSkeletonDirective],
-  })
-  `;
+  public examples: CodeExamples;
 
-  public codeUseHtml = `
-  <div uiSkeleton class="w-[250px] h-[125px] rounded-xl"></div>
-  `;
-
-  public code1 = `
-  import { HtmlSkeletonDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [HtmlSkeletonDirective],
-    template: \`
-      <div class="flex items-center space-x-4">
-        <div uiSkeleton class="w-12 h-12 rounded-full"></div>
-        <div class="flex flex-col space-y-2">
-          <div uiSkeleton class="w-[250px] h-4 rounded-md"></div>
-          <div uiSkeleton class="w-[200px] h-4 rounded-md"></div>
-        </div>
-      </div>
-    \`
-  })
-  `;
-
-  public code2 = `
-  import { HtmlSkeletonDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [HtmlSkeletonDirective],
-    template: \`
-      <div class="flex flex-col space-y-3">
-        <div uiSkeleton class="w-[250px] h-[125px] rounded-xl"></div>
-        <div class="flex flex-col space-y-2">
-          <div uiSkeleton class="w-[250px] h-4 rounded-md"></div>
-          <div uiSkeleton class="w-[200px] h-4 rounded-md"></div>
-        </div>
-      </div>
-    \`
-  })
-  `;
-
-  constructor() {
+  constructor(private _skeletonService: SkeletonService) {
+    this.examples = this._skeletonService.getExamples();
     this.initializeTabs(4);
   }
 
