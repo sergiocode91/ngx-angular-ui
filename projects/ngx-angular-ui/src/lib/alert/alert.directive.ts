@@ -17,10 +17,10 @@ export class HtmlAlertDirective implements OnInit, OnChanges {
 
   @Input() variant:
   | 'primary'
+  | 'info'
   | 'success'
-  | 'destructive'
   | 'warning'
-  | 'info' = 'primary';
+  | 'danger' = 'primary';
   @Input() class: string = '';
   @Input() set showIcon(value: boolean | string) {
     this._showIcon = value === '' || value === 'true';
@@ -65,16 +65,16 @@ export class HtmlAlertDirective implements OnInit, OnChanges {
     switch (variant) {
       case 'primary':
         return 'border-zinc-200 dark:border-zinc-800 dark:text-neutral-50';
-      case 'success':
-        return 'border-lime-600 dark:text-lime-900 dark:border-lime-900';
-      case 'destructive':
-        return 'border-red-600 dark:text-red-900 dark:border-red-900';
-      case 'warning':
-        return 'border-amber-500 dark:text-amber-900 dark:border-amber-900';
       case 'info':
-        return 'border-blue-500 dark:text-blue-900 dark:border-blue-900';
+        return 'text-blue-600 border-blue-600 dark:text-blue-800 dark:border-blue-800';
+      case 'success':
+        return 'text-green-600 border-green-600 dark:text-green-800 dark:border-green-800';
+      case 'warning':
+        return 'text-orange-600 border-orange-600 dark:text-orange-800 dark:border-orange-800';
+      case 'danger':
+        return 'text-red-600 border-red-600 dark:text-red-800 dark:border-red-800';
       default:
-        return 'primary';
+        return 'border-zinc-200 dark:border-zinc-800 dark:text-neutral-50';
     }
   }
 }

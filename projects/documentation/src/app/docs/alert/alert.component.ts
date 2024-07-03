@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {
   HeadingComponent,
   HighlightCodeComponent,
+  LinksContentComponent,
   PropsComponent,
   TabsComponent,
 } from '@components/index';
@@ -10,6 +11,8 @@ import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-ap
 import { HtmlAlertDirective } from '../../../../../ngx-angular-ui/src/lib/alert/alert.directive';
 import { HtmlAlertTitleDirective } from '../../../../../ngx-angular-ui/src/lib/alert/alert-title.directive';
 import { HtmlAlertDescriptionDirective } from '../../../../../ngx-angular-ui/src/lib/alert/alert-description.directive';
+import { AlertService } from '../../services/code-example';
+import { CodeExamples, LinksContent, Props } from '../../models';
 
 @Component({
   selector: 'app-alert',
@@ -24,6 +27,7 @@ import { HtmlAlertDescriptionDirective } from '../../../../../ngx-angular-ui/src
     TabsComponent,
     LucideAngularModule,
     PropsComponent,
+    LinksContentComponent,
     TabsComponent
   ],
   templateUrl: './alert.component.html',
@@ -31,7 +35,7 @@ import { HtmlAlertDescriptionDirective } from '../../../../../ngx-angular-ui/src
 })
 export class AlertComponent {
   public activeTabs: { [key: string]: string } = {};
-  public props = {
+  public props: Props = {
     header: ['Property', 'Type', 'Default'],
     columns: [
       {
@@ -47,117 +51,19 @@ export class AlertComponent {
     ],
   };
 
-  public codeUseTs = `
-  import { 
-    HtmlAlertDirective, 
-    HtmlAlertTitleDirective,
-    HtmlAlertDescriptionDirective
-  } from 'ngx-angular-ui';
+  public linksContent: LinksContent[] = [
+    { title: 'Props', link: '#props' },
+    { title: 'Usage', link: '#usage' },
+    { title: 'Examples', link: '#examples' },
+    { title: 'Default', link: '#default', isSubmenu: true },
+    { title: 'With Icon', link: '#with-icon', isSubmenu: true },
+    { title: 'Colors', link: '#colors', isSubmenu: true },
+  ];
 
-  @Component({
-    standalone: true,
-    imports: [
-      HtmlAlertDirective, 
-      HtmlAlertTitleDirective, 
-      HtmlAlertDescriptionDirective
-    ],
-  })
-  `;
+  public examples: CodeExamples;
 
-  public codeUseHtml = `
-  <div uiAlert variant="primary">
-    <div uiAlertTitle>Hello there!</div>
-    <div uiAlertDescription>Keep your app updated.</div>
-  </div>
-  `;
-
-  public code1 = `
-  import { 
-    HtmlAlertDirective, 
-    HtmlAlertTitleDirective,
-    HtmlAlertDescriptionDirective
-  } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [
-      HtmlAlertDirective, 
-      HtmlAlertTitleDirective, 
-      HtmlAlertDescriptionDirective
-    ],
-    template: \`
-      <div uiAlert variant="primary">
-        <div uiAlertTitle>Hello there!</div>
-        <div uiAlertDescription>Keep your app updated for best performance.</div>
-      </div>
-    \`
-  })
-  `;
-
-  public code2 = `
-  import { 
-    HtmlAlertDirective, 
-    HtmlAlertTitleDirective,
-    HtmlAlertDescriptionDirective
-  } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [
-      HtmlAlertDirective, 
-      HtmlAlertTitleDirective, 
-      HtmlAlertDescriptionDirective
-    ],
-    template: \`
-      <div uiAlert variant="primary" showIcon>
-        <lucide-icon name="Megaphone" [size]="18"></lucide-icon>
-        <div uiAlertTitle>Hello there!</div>
-        <div uiAlertDescription>Regular updates keep your app running smoothly.</div>
-      </div>
-    \`
-  })
-  `;
-
-  public code3 = `
-  import { 
-    HtmlAlertDirective, 
-    HtmlAlertTitleDirective,
-    HtmlAlertDescriptionDirective
-  } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [
-      HtmlAlertDirective, 
-      HtmlAlertTitleDirective, 
-      HtmlAlertDescriptionDirective
-    ],
-    template: \`
-      <div uiAlert variant="success" showIcon>
-        <lucide-icon name="CircleCheck" [size]="18"></lucide-icon>
-        <div uiAlertTitle>Success!</div>
-        <div uiAlertDescription>Your changes have been saved successfully.</div>
-      </div>
-      <div uiAlert variant="destructive" showIcon>
-        <lucide-icon name="Ban" [size]="18"></lucide-icon>
-        <div uiAlertTitle>Error!</div>
-        <div uiAlertDescription>Unexpected error. Please try again.</div>
-      </div>
-      <div uiAlert variant="warning" showIcon>
-        <lucide-icon name="TriangleAlert" [size]="18"></lucide-icon>
-        <div uiAlertTitle>Warning!</div>
-        <div uiAlertDescription>Unsaved changes detected. Please save your work.</div>
-      </div>
-      <div uiAlert variant="info" showIcon>
-        <lucide-icon name="Info" [size]="18"></lucide-icon>
-        <div uiAlertTitle>Info!</div>
-        <div uiAlertDescription>Save your work regularly to avoid data loss.</div>
-      </div>
-    \`
-  })
-  `;
-
-  constructor() {
+  constructor(private _alertService: AlertService) {
+    this.examples = this._alertService.getExamples();
     this.initializeTabs(4);
   }
 
