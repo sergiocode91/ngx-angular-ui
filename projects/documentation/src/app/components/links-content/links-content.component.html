@@ -5,7 +5,7 @@
       <a 
         [href]="getFullLink(item.link)"
         [ngClass]="{
-          '!text-black dark:!text-white': selectedLinkIndex === $index,
+          'font-medium !text-black dark:!text-white': selectedLinkIndex === $index,
           'pl-3.5': item.isSubmenu,
           'text-zinc-500 hover:text-zinc-900 dark:text-white/60 dark:hover:text-neutral-50': selectedLinkIndex !== $index
         }"
