@@ -2,11 +2,14 @@ import { Component } from '@angular/core';
 import {
   HeadingComponent,
   HighlightCodeComponent,
+  LinksContentComponent,
   TabsComponent,
 } from '@components/index';
 import { HtmlInputDirective } from '../../../../../ngx-angular-ui/src/lib/input/input.directive';
 import { HtmlLabelDirective } from '../../../../../ngx-angular-ui/src/lib/label/label.directive';
 import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
+import { CodeExamples, LinksContent } from '../../models';
+import { InputService } from '../../services/code-example';
 
 @Component({
   selector: 'app-input',
@@ -17,6 +20,7 @@ import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-ap
     HtmlLabelDirective,
     HtmlButtonDirective,
     HighlightCodeComponent,
+    LinksContentComponent,
     TabsComponent,
   ],
   templateUrl: './input.component.html',
@@ -25,74 +29,19 @@ import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-ap
 export class InputComponent {
   public activeTabs: { [key: string]: string } = {};
 
-  public codeUseTs = `
-  import { HtmlInputDirective } from 'ngx-angular-ui';
+  public linksContent: LinksContent[] = [
+    { title: 'Usage', link: '#usage' },
+    { title: 'Examples', link: '#examples' },
+    { title: 'Default', link: '#default', isSubmenu: true },
+    { title: 'With Label', link: '#with-label', isSubmenu: true },
+    { title: 'With Button', link: '#with-button', isSubmenu: true },
+    { title: 'Disabled', link: '#disabled', isSubmenu: true }
+  ];
 
-  @Component({
-    standalone: true,
-    imports: [HtmlInputDirective],
-  })
-  `;
+  public examples: CodeExamples;
 
-  public codeUseHtml = `
-  <input uiInput type="email" placeholder="Email">
-  `;
-
-  public code1 = `
-  import { HtmlInputDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [HtmlInputDirective],
-    template: \`
-      <input uiInput type="email" placeholder="Enter your email">
-    \`
-  })
-  `;
-
-  public code2 = `
-  import { HtmlInputDirective, HtmlLabelDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [HtmlInputDirective, HtmlLabelDirective],
-    template: \`
-      <div class="flex flex-col space-y-2">
-        <label uiLabel for="email">Email</label>
-        <input uiInput type="email" id="email" placeholder="Enter your email">
-      </div>
-    \`
-  })
-  `;
-
-  public code3 = `
-  import { HtmlInputDirective, HtmlButtonDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [HtmlInputDirective, HtmlButtonDirective],
-    template: \`
-      <div class="w-72 flex space-x-2">
-        <input uiInput type="email" placeholder="Enter your email">
-        <button uiButton>Send</button>
-      </div>
-    \`
-  })
-  `;
-
-  public code4 = `
-  import { HtmlInputDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [HtmlInputDirective],
-    template: \`
-      <input uiInput type="email" placeholder="Enter your email" disabled>
-    \`
-  })
-  `;
-
-  constructor() {
+  constructor(private _inputService: InputService) {
+    this.examples = this._inputService.getExamples();
     this.initializeTabs(4);
   }
 

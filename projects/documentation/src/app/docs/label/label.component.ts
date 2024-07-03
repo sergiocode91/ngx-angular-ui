@@ -2,11 +2,14 @@ import { Component } from '@angular/core';
 import {
   HeadingComponent,
   HighlightCodeComponent,
+  LinksContentComponent,
   TabsComponent,
 } from '@components/index';
 import { HtmlLabelDirective } from '../../../../../ngx-angular-ui/src/lib/label/label.directive';
 import { HtmlInputDirective } from '../../../../../ngx-angular-ui/src/lib/input/input.directive';
 import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
+import { CodeExamples, LinksContent } from '../../models';
+import { LabelService } from '../../services/code-example';
 
 @Component({
   selector: 'app-label',
@@ -17,6 +20,7 @@ import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-ap
     HtmlLabelDirective,
     HtmlInputDirective,
     HtmlButtonDirective,
+    LinksContentComponent,
     TabsComponent,
   ],
   templateUrl: './label.component.html',
@@ -25,35 +29,16 @@ import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-ap
 export class LabelComponent {
   public activeTabs: { [key: string]: string } = {};
 
-  public codeUseTs = `
-  import { HtmlLabelDirective } from 'ngx-angular-ui';
+  public linksContent: LinksContent[] = [
+    { title: 'Usage', link: '#usage' },
+    { title: 'Examples', link: '#examples' },
+    { title: 'Default', link: '#default', isSubmenu: true },
+  ];
 
-  @Component({
-    standalone: true,
-    imports: [HtmlLabelDirective],
-  })
-  `;
+  public examples: CodeExamples;
 
-  public codeUseHtml = `
-  <label uiLabel>Username</label>
-  `;
-
-  public code = `
-  import { HtmlLabelDirective, HtmlInputDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [HtmlLabelDirective, HtmlInputDirective],
-    template: \`
-      <div class="flex flex-col space-y-2">
-        <label uiLabel for="Username">Username</label>
-        <input uiInput type="text" id="Username" placeholder="Write your username">
-      </div>
-    \`
-  })
-  `;
-
-  constructor() {
+  constructor(private _labelService: LabelService) {
+    this.examples = this._labelService.getExamples();
     this.initializeTabs(4);
   }
 
