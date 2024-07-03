@@ -1,0 +1,16 @@
+<div class="w-44 text-white top-24 ml-auto size-fit sticky">
+  <h3 class="font-medium text-black text-sm py-1 mb-1 dark:font-semibold dark:text-neutral-50">On this page</h3>
+  <div class="grid grid-flow-row auto-rows-max text-sm">
+    @for (item of linksContent; track $index) {
+      <a 
+        [href]="getFullLink(item.link)"
+        [ngClass]="{
+          '!text-black dark:!text-white': selectedLinkIndex === $index,
+          'pl-3.5': item.isSubmenu,
+          'text-zinc-500 hover:text-zinc-900 dark:text-white/60 dark:hover:text-neutral-50': selectedLinkIndex !== $index
+        }"
+        (click)="onLinkClick($event, $index, item.link)"
+        class="w-full flex items-center py-1.5">{{ item.title }}</a>
+    }
+  </div>
+</div>

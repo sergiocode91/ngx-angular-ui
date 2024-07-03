@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { LucideAngularModule } from 'lucide-angular';
 import {
   HeadingComponent,
   HighlightCodeComponent,
+  LinksContentComponent,
   PropsComponent,
   TabsComponent,
 } from '@components/index';
 import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
-import { CommonModule } from '@angular/common';
+import { ButtonService } from '../../services/code-example';
+import { CodeExamples, LinksContent, Props } from '../../models';
 
 @Component({
   selector: 'app-button',
@@ -19,6 +22,7 @@ import { CommonModule } from '@angular/common';
     HighlightCodeComponent,
     LucideAngularModule,
     TabsComponent,
+    LinksContentComponent,
     HtmlButtonDirective
   ],
   templateUrl: './button.component.html',
@@ -26,7 +30,7 @@ import { CommonModule } from '@angular/common';
 })
 export class ButtonComponent {
   public activeTabs: { [key: string]: string } = {};
-  public props = {
+  public props: Props = {
     header: ['Property', 'Type', 'Default'],
     columns: [
       {
@@ -57,186 +61,28 @@ export class ButtonComponent {
     ],
   };
 
-  public codeUseTs = `
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
+  public linksContent: LinksContent[] = [
+    { title: 'Props', link: '#props' },
+    { title: 'Usage', link: '#usage' },
+    { title: 'Examples', link: '#examples' },
+    { title: 'Primary', link: '#primary', isSubmenu: true },
+    { title: 'Secondary', link: '#secondary', isSubmenu: true },
+    { title: 'Outline', link: '#outline', isSubmenu: true },
+    { title: 'Solid colors', link: '#solid-colors', isSubmenu: true },
+    { title: 'Outline colors', link: '#outline-colors', isSubmenu: true },
+    { title: 'Sizes', link: '#sizes', isSubmenu: true },
+    { title: 'Rounded', link: '#rounded', isSubmenu: true },
+    { title: 'Ghost', link: '#ghost', isSubmenu: true },
+    { title: 'Link', link: '#link', isSubmenu: true },
+    { title: 'Icon', link: '#icon', isSubmenu: true },
+    { title: 'Icon with text', link: '#icon-with-text', isSubmenu: true },
+    { title: 'Disabled', link: '#disabled', isSubmenu: true },
+  ];
 
-  @Component({
-    standalone: true,
-    imports: [HtmlButtonDirective],
-  })
-  `;
+  public examples: CodeExamples;
 
-  public codeUseHtml = `
-  <button uiButton>Button</button>
-  `;
-
-  public code1 = `
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [HtmlButtonDirective],
-    template: \`
-      <button uiButton variant="primary">Button</button>
-    \`
-  })
-  `;
-
-  public code2 = `
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [HtmlButtonDirective],
-    template: \`
-      <button uiButton variant="secondary">Button</button>
-    \`
-  })
-  `;
-
-  public code3 = `
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [HtmlButtonDirective],
-    template: \`
-      <button uiButton variant="outline">Outline</button>
-    \`
-  })
-  `;
-
-  public code4 = `
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [HtmlButtonDirective],
-    template: \`
-      <button uiButton variant="primary" color="info">Info</button>
-      <button uiButton variant="primary" color="help">Help</button>
-      <button uiButton variant="primary" color="success">Success</button>
-      <button uiButton variant="primary" color="warning">Warning</button>
-      <button uiButton variant="primary" color="danger">Danger</button>
-    \`
-  })
-  `;
-
-  public code5 = `
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [HtmlButtonDirective],
-    template: \`
-      <button uiButton variant="outline" color="info">Info</button>
-      <button uiButton variant="outline" color="help">Help</button>
-      <button uiButton variant="outline" color="success">Success</button>
-      <button uiButton variant="outline" color="warning">Warning</button>
-      <button uiButton variant="outline" color="danger">Danger</button>
-    \`
-  })
-  `;
-
-  public code6 = `
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [HtmlButtonDirective],
-    template: \`
-      <button uiButton variant="primary" size="sm">Small</button>
-      <button uiButton variant="primary" size="md">Medium</button>
-      <button uiButton variant="primary" size="lg">Large</button>
-    \`
-  })
-  `;
-
-  public code7 = `
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [HtmlButtonDirective],
-    template: \`
-      <button uiButton variant="primary" rounded="full">Button</button>
-      <button uiButton variant="primary" rounded="md">Button</button>
-    \`
-  })
-  `;
-
-  public code8 = `
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [HtmlButtonDirective],
-    template: \`
-      <button uiButton variant="ghost">Get started</button>
-    \`
-  })
-  `;
-
-  public code9 = `
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [HtmlButtonDirective],
-    template: \`
-      <button uiButton variant="link">Don’t have an account?</button>
-    \`
-  })
-  `;
-
-  public code10 = `
-  import { LucideAngularModule } from 'lucide-angular';
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [LucideAngularModule, HtmlButtonDirective],
-    template: \`
-      <button uiButton variant="outline" size="icon">
-        <lucide-icon name="Moon" [size]="18"></lucide-icon>
-      </button>
-    \`
-  })
-  `;
-
-  public code11 = `
-  import { LucideAngularModule } from 'lucide-angular';
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [LucideAngularModule, HtmlButtonDirective],
-    template: \`
-      <button uiButton variant="primary">
-        <lucide-icon name="Instagram" [size]="18" class="inline-flex mr-1"></lucide-icon>
-        Sign in with Instagram
-      </button>
-    \`
-  })
-  `;
-
-  public code12 = `
-  import { LucideAngularModule } from 'lucide-angular';
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [LucideAngularModule, HtmlButtonDirective],
-    template: \`
-      <button uiButton variant="primary" color="danger" disabled="true">
-        <lucide-icon name="Trash" [size]="18" class="inline-flex mr-1"></lucide-icon>
-        Delete account
-      </button>
-    \`
-  })
-  `;
-
-  constructor() {
+  constructor(private _buttonService: ButtonService) {
+    this.examples = this._buttonService.getExamples();
     this.initializeTabs(12);
   }
 
