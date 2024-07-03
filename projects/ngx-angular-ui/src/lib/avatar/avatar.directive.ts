@@ -92,13 +92,13 @@ export class HtmlAvatarDirective implements OnInit, OnChanges {
       case 'default':
         return 'ring-zinc-300';
       case 'primary':
-        return 'ring-blue-500';
+        return 'ring-blue-600';
       case 'secondary':
-        return 'ring-violet-700';
+        return 'ring-violet-600';
       case 'success':
-        return 'ring-green-500';
+        return 'ring-green-600';
       case 'warning':
-        return 'ring-amber-500';
+        return 'ring-orange-600';
       case 'danger':
         return 'ring-red-600';
       default:

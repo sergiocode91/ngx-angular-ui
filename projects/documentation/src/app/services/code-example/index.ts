@@ -1,3 +1,4 @@
+export * from './avatar.service';
 export * from './button.service';
 export * from './card.service';
 export * from './input.service';

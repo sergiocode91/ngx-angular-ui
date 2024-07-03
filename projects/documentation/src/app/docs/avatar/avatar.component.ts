@@ -2,11 +2,14 @@ import { Component } from '@angular/core';
 import {
   HeadingComponent,
   HighlightCodeComponent,
+  LinksContentComponent,
   PropsComponent,
   TabsComponent,
 } from '@components/index';
 import { HtmlAvatarDirective } from '../../../../../ngx-angular-ui/src/lib/avatar/avatar.directive';
 import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
+import { AvatarService } from '../../services/code-example';
+import { CodeExamples, LinksContent, Props } from '../../models';
 
 @Component({
   selector: 'app-avatar',
@@ -17,6 +20,7 @@ import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-ap
     HighlightCodeComponent,
     HtmlAvatarDirective,
     HtmlButtonDirective,
+    LinksContentComponent,
     TabsComponent
   ],
   templateUrl: './avatar.component.html',
@@ -24,7 +28,7 @@ import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-ap
 })
 export class AvatarComponent {
   public activeTabs: { [key: string]: string } = {};
-  public props = {
+  public props: Props = {
     header: ['Property', 'Type', 'Default'],
     columns: [
       {
@@ -45,142 +49,22 @@ export class AvatarComponent {
     ],
   };
 
-  public codeUseTs = `
-  import { HtmlAvatarDirective } from 'ngx-angular-ui';
+  public linksContent: LinksContent[] = [
+    { title: 'Props', link: '#props' },
+    { title: 'Usage', link: '#usage' },
+    { title: 'Examples', link: '#examples' },
+    { title: 'Default', link: '#default', isSubmenu: true },
+    { title: 'With Image', link: '#with-image', isSubmenu: true },
+    { title: 'With Border', link: '#with-border', isSubmenu: true },
+    { title: 'Colors', link: '#colors', isSubmenu: true },
+    { title: 'Rounded', link: '#rounded', isSubmenu: true },
+    { title: 'Sizes', link: '#sizes', isSubmenu: true },
+  ];
 
-  @Component({
-    standalone: true,
-    imports: [HtmlAvatarDirective],
-  })
-  `;
+  public examples: CodeExamples;
 
-  public codeUseHtml = `
-  <div uiAvatar>
-    <img src="..." alt="avatar" />
-  </div>
-  `;
-
-  public code1 = `
-  import { HtmlAvatarDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [HtmlAvatarDirective],
-    template: \`
-      <div uiAvatar>
-        <span>A</span>
-      </div>
-    \`
-  })
-  `;
-
-  public code2 = `
-  import { HtmlAvatarDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [HtmlAvatarDirective],
-    template: \`
-      <div uiAvatar>
-        <img src="https://i.pravatar.cc/150?img=1" alt="avatar" />
-      </div>
-    \`
-  })
-  `;
-
-  public code3 = `
-  import { HtmlAvatarDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [HtmlAvatarDirective],
-    template: \`
-      <div uiAvatar border>
-        <img src="https://i.pravatar.cc/150?img=57" alt="avatar" />
-      </div>
-    \`
-  })
-  `;
-
-  public code4 = `
-  import { HtmlAvatarDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [HtmlAvatarDirective],
-    template: \`
-      <div uiAvatar border color="default">
-        <img src="https://i.pravatar.cc/150?img=45" alt="avatar" />
-      </div>
-      <div uiAvatar border color="primary">
-        <img src="https://i.pravatar.cc/150?img=40" alt="avatar" />
-      </div>
-      <div uiAvatar border color="secondary">
-        <img src="https://i.pravatar.cc/150?img=67" alt="avatar" />
-      </div>
-      <div uiAvatar border color="success">
-        <img src="https://i.pravatar.cc/150?img=35" alt="avatar" />
-      </div>
-      <div uiAvatar border color="warning">
-        <img src="https://i.pravatar.cc/150?img=39" alt="avatar" />
-      </div>
-      <div uiAvatar border color="danger">
-        <img src="https://i.pravatar.cc/150?img=67" alt="avatar" />
-      </div>
-    \`
-  })
-  `;
-
-  public code5 = `
-  import { HtmlAvatarDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [HtmlAvatarDirective],
-    template: \`
-      <div uiAvatar radius="full">
-        <img src="https://i.pravatar.cc/150?img=23" alt="avatar" />
-      </div>
-      <div uiAvatar radius="lg">
-        <img src="https://i.pravatar.cc/150?img=10" alt="avatar" />
-      </div>
-      <div uiAvatar radius="md">
-        <img src="https://i.pravatar.cc/150?img=16" alt="avatar" />
-      </div>
-      <div uiAvatar radius="sm">
-        <img src="https://i.pravatar.cc/150?img=13" alt="avatar" />
-      </div>
-    \`
-  })
-  `;
-
-  public code6 = `
-  import { HtmlAvatarDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [HtmlAvatarDirective],
-    template: \`
-      <div uiAvatar size="xs">
-        <img src="https://i.pravatar.cc/150?img=21" alt="avatar" />
-      </div>
-      <div uiAvatar size="sm">
-        <img src="https://i.pravatar.cc/150?img=22" alt="avatar" />
-      </div>
-      <div uiAvatar size="md">
-        <img src="https://i.pravatar.cc/150?img=24" alt="avatar" />
-      </div>
-      <div uiAvatar size="lg">
-        <img src="https://i.pravatar.cc/150?img=27" alt="avatar" />
-      </div>
-      <div uiAvatar size="xl">
-        <img src="https://i.pravatar.cc/150?img=37" alt="avatar" />
-      </div>
-    \`
-  })
-  `;
-
-  constructor() {
+  constructor(private _avatarService: AvatarService) {
+    this.examples = this._avatarService.getExamples();
     this.initializeTabs(9);
   }
 
