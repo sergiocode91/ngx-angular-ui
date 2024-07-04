@@ -9,6 +9,7 @@ export const routes: Routes = [
     path: 'docs',
     loadComponent: () => import('./docs/docs.component').then(m => m.DocsComponent),
     children: [
+      { path: '', redirectTo: 'introduction', pathMatch: 'full' },
       { path: 'introduction', loadComponent: () => import('./docs/introduction/introduction.component').then(m => m.IntroductionComponent) },
       { path: 'installation', loadComponent: () => import('./docs/installation/installation.component').then(m => m.InstallationComponent) },
       { path: 'alert', loadComponent: () => import('./docs/alert/alert.component').then(m => m.AlertComponent) },
