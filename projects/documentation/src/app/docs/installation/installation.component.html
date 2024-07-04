@@ -1,14 +1,18 @@
-<app-heading
-  title="Installation"
-  description="A vertically stacked set of interactive headings that each reveal a section of content."
-  size="xl"
-></app-heading>
-
-<app-nav-buttons
-  [labelLeft]="'Introduction'"
-  [labelRight]="'Alert'"
-  [positionLeft]="true"
-  [positionRight]="true"
-  routerLeft="/docs/introduction"
-  routerRight="/docs/alert"
-/>
+<div class="flex gap-16">
+  <div class="w-[calc(100%-17rem)]">
+    <app-heading
+      title="Installation"
+      description="A vertically stacked set of interactive headings that each reveal a section of content."
+      size="xl"
+    ></app-heading>
+    
+    <app-nav-buttons
+      [labelLeft]="'Introduction'"
+      [labelRight]="'Alert'"
+      [positionLeft]="true"
+      [positionRight]="true"
+      routerLeft="/docs/introduction"
+      routerRight="/docs/alert"
+    />
+  </div>
+</div>

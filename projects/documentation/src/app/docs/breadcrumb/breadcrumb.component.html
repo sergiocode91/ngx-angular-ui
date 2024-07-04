@@ -1,18 +1,22 @@
-<app-heading
-  title="Breadcrumb"
-  description="Displays the path to the current resource using a hierarchy of links."
-></app-heading>
-
-<a href="/" target="_blank" uiButton variant="secondary" size="sm">
-  <img src="../../../assets/storybook.svg" width="13" height="13" alt="Storybook" class="mr-2">
-  Storybook
-</a>
-
-<app-nav-buttons
-  [labelLeft]="'Badge'"
-  [labelRight]="'Button'"
-  [positionLeft]="true"
-  [positionRight]="true"
-  routerLeft="/docs/badge"
-  routerRight="/docs/button"
-/>
+<div class="flex gap-16">
+  <div class="w-[calc(100%-17rem)]">
+    <app-heading
+      title="Breadcrumb"
+      description="Displays the path to the current resource using a hierarchy of links."
+    ></app-heading>
+    
+    <a href="/" target="_blank" uiButton variant="secondary" size="sm">
+      <img src="../../../assets/storybook.svg" width="13" height="13" alt="Storybook" class="mr-2">
+      Storybook
+    </a>
+    
+    <app-nav-buttons
+      [labelLeft]="'Badge'"
+      [labelRight]="'Button'"
+      [positionLeft]="true"
+      [positionRight]="true"
+      routerLeft="/docs/badge"
+      routerRight="/docs/button"
+    />
+  </div>
+</div>

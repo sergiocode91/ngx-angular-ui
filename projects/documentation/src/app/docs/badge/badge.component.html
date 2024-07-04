@@ -1,23 +1,27 @@
-<app-heading
-  title="Badge"
-  description="Displays a badge or a component that looks like a badge."
-></app-heading>
-
-<a href="/" target="_blank" uiButton variant="secondary" size="sm">
-  <img src="../../../assets/storybook.svg" width="13" height="13" alt="Storybook" class="mr-2">
-  Storybook
-</a>
-
-<app-heading title="Props" size="lg" />
-<app-props [props]="props" />
-
-<app-heading title="Usage" size="lg" [border]="true" />
-
-<app-nav-buttons
-  [labelLeft]="'Avatar'"
-  [labelRight]="'Breadcrumb'"
-  [positionLeft]="true"
-  [positionRight]="true"
-  routerLeft="/docs/avatar"
-  routerRight="/docs/breadcrumb"
-/>
+<div class="flex gap-16">
+  <div class="w-[calc(100%-17rem)]">
+    <app-heading
+      title="Badge"
+      description="Displays a badge or a component that looks like a badge."
+    ></app-heading>
+    
+    <a href="/" target="_blank" uiButton variant="secondary" size="sm">
+      <img src="../../../assets/storybook.svg" width="13" height="13" alt="Storybook" class="mr-2">
+      Storybook
+    </a>
+    
+    <app-heading title="Props" size="lg" />
+    <app-props [props]="props" />
+    
+    <app-heading title="Usage" size="lg" [border]="true" />
+    
+    <app-nav-buttons
+      [labelLeft]="'Avatar'"
+      [labelRight]="'Breadcrumb'"
+      [positionLeft]="true"
+      [positionRight]="true"
+      routerLeft="/docs/avatar"
+      routerRight="/docs/breadcrumb"
+    />
+  </div>
+</div>
