@@ -5,6 +5,7 @@ import {
   HighlightCodeComponent,
   LinksContentComponent,
   TabsComponent,
+  NavButtonsComponent,
 } from '@components/index';
 import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
 import { HtmlInputDirective } from '../../../../../ngx-angular-ui/src/lib/input/input.directive';
@@ -34,7 +35,8 @@ import { CardService } from '../../services/code-example';
     HtmlCardFooterDirective,
     HighlightCodeComponent,
     LinksContentComponent,
-    TabsComponent
+    TabsComponent,
+    NavButtonsComponent
   ],
   templateUrl: './card.component.html',
   styles: ``,
