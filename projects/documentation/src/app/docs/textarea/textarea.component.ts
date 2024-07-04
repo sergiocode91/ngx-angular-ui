@@ -5,6 +5,7 @@ import {
   HighlightCodeComponent,
   LinksContentComponent,
   TabsComponent,
+  NavButtonsComponent,
 } from '@components/index';
 import { HtmlTextareaDirective } from '../../../../../ngx-angular-ui/src/lib/textarea/textarea.directive';
 import { HtmlLabelDirective } from '../../../../../ngx-angular-ui/src/lib/label/label.directive';
@@ -24,6 +25,7 @@ import { TextareaService } from '../../services/code-example';
     HtmlLabelDirective,
     HtmlButtonDirective,
     TabsComponent,
+    NavButtonsComponent,
   ],
   templateUrl: './textarea.component.html',
   styles: ``,

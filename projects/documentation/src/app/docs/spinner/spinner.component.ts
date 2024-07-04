@@ -7,6 +7,7 @@ import {
   LinksContentComponent,
   PropsComponent,
   TabsComponent,
+  NavButtonsComponent,
 } from '@components/index';
 import { HtmlSpinnerComponent } from '../../../../../ngx-angular-ui/src/lib/spinner/spinner.component';
 import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
@@ -27,6 +28,7 @@ import { CodeExamples, LinksContent, Props } from '../../models';
     LinksContentComponent,
     HtmlSpinnerComponent,
     HtmlButtonDirective,
+    NavButtonsComponent,
   ],
   templateUrl: './spinner.component.html',
   styles: ``,
