@@ -5,6 +5,7 @@ import {
   HighlightCodeComponent,
   LinksContentComponent,
   TabsComponent,
+  NavButtonsComponent,
 } from '@components/index';
 import { HtmlInputDirective } from '../../../../../ngx-angular-ui/src/lib/input/input.directive';
 import { HtmlLabelDirective } from '../../../../../ngx-angular-ui/src/lib/label/label.directive';
@@ -24,6 +25,7 @@ import { InputService } from '../../services/code-example';
     HighlightCodeComponent,
     LinksContentComponent,
     TabsComponent,
+    NavButtonsComponent,
   ],
   templateUrl: './input.component.html',
   styles: ``,
