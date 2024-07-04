@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { HeadingComponent, PropsComponent } from '@components/index';
+import { HeadingComponent, NavButtonsComponent, PropsComponent } from '@components/index';
 import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
 
 @Component({
@@ -9,7 +9,8 @@ import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-ap
   imports: [
     RouterModule,
     HeadingComponent, 
-    PropsComponent, 
+    PropsComponent,
+    NavButtonsComponent,
     HtmlButtonDirective
   ],
   templateUrl: './badge.component.html',

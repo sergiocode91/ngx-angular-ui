@@ -4,6 +4,7 @@ import { LucideAngularModule } from 'lucide-angular';
 import {
   HeadingComponent,
   HighlightCodeComponent,
+  NavButtonsComponent,
   TabsComponent,
 } from '@components/index';
 import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
@@ -17,6 +18,7 @@ import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-ap
     HighlightCodeComponent,
     HtmlButtonDirective,
     TabsComponent,
+    NavButtonsComponent,
     LucideAngularModule
   ],
   templateUrl: './breadcrumb.component.html',

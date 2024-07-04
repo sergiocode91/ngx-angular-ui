@@ -12,3 +12,12 @@
 <app-props [props]="props" />
 
 <app-heading title="Usage" size="lg" [border]="true" />
+
+<app-nav-buttons
+  [labelLeft]="'Avatar'"
+  [labelRight]="'Breadcrumb'"
+  [positionLeft]="true"
+  [positionRight]="true"
+  routerLeft="/docs/avatar"
+  routerRight="/docs/breadcrumb"
+/>

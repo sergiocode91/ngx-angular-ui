@@ -6,6 +6,7 @@ import {
   LinksContentComponent,
   PropsComponent,
   TabsComponent,
+  NavButtonsComponent,
 } from '@components/index';
 import { HtmlAvatarDirective } from '../../../../../ngx-angular-ui/src/lib/avatar/avatar.directive';
 import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
@@ -23,7 +24,8 @@ import { CodeExamples, LinksContent, Props } from '../../models';
     HtmlAvatarDirective,
     HtmlButtonDirective,
     LinksContentComponent,
-    TabsComponent
+    TabsComponent,
+    NavButtonsComponent,
   ],
   templateUrl: './avatar.component.html',
   styles: ``,
