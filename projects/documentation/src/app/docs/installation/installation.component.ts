@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { HeadingComponent } from '@components/index';
+import { HeadingComponent, NavButtonsComponent } from '@components/index';
 
 @Component({
   selector: 'app-installation',
   standalone: true,
   imports: [
     RouterModule,
-    HeadingComponent
+    HeadingComponent,
+    NavButtonsComponent
   ],
   templateUrl: './installation.component.html',
   styles: ``
