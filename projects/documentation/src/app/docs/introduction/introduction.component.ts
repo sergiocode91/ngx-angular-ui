@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { HeadingComponent } from '@components/index';
+import { HeadingComponent, NavButtonsComponent } from '@components/index';
 import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
@@ -9,7 +9,8 @@ import { LucideAngularModule } from 'lucide-angular';
   imports: [
     RouterModule,
     HeadingComponent, 
-    LucideAngularModule, 
+    LucideAngularModule,
+    NavButtonsComponent
   ],
   templateUrl: './introduction.component.html',
   styles: ``
