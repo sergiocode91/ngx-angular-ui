@@ -5,6 +5,7 @@ import {
   HighlightCodeComponent,
   LinksContentComponent,
   TabsComponent,
+  NavButtonsComponent,
 } from '@components/index';
 import { HtmlSkeletonDirective } from '../../../../../ngx-angular-ui/src/lib/skeleton/skeleton.directive';
 import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
@@ -22,6 +23,7 @@ import { SkeletonService } from '../../services/code-example';
     LinksContentComponent,
     HtmlSkeletonDirective,
     HtmlButtonDirective,
+    NavButtonsComponent,
   ],
   templateUrl: './skeleton.component.html',
   styles: ``,
