@@ -1,11 +1,18 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
+import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-links-content',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    LucideAngularModule,
+    HtmlButtonDirective,
+    RouterModule
+  ],
   templateUrl: './links-content.component.html',
   styles: ``
 })
