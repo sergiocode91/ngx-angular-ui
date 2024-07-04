@@ -5,6 +5,7 @@ import {
   HeadingComponent,
   HighlightCodeComponent,
   LinksContentComponent,
+  NavButtonsComponent,
   PropsComponent,
   TabsComponent,
 } from '@components/index';
@@ -23,6 +24,7 @@ import { CodeExamples, LinksContent, Props } from '../../models';
     LucideAngularModule,
     TabsComponent,
     LinksContentComponent,
+    NavButtonsComponent,
     HtmlButtonDirective
   ],
   templateUrl: './button.component.html',

@@ -1,0 +1,14 @@
+<div class="flex items-center justify-between mt-20 pt-10 border-t border-zinc-200 dark:border-zinc-800">
+  @if (positionLeft) {
+    <button [routerLink]="routerLeft" uiButton variant="outline">
+      <lucide-icon name="ChevronLeft" [size]="18" class="inline-flex mr-1"></lucide-icon>
+      {{ labelLeft }}
+    </button>
+  }
+  @if (positionRight) {
+    <button [routerLink]="routerRight" uiButton variant="outline">
+      {{ labelRight }}
+      <lucide-icon name="ChevronRight" [size]="18" class="inline-flex ml-1"></lucide-icon>
+    </button>
+  }
+</div>
