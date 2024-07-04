@@ -6,6 +6,7 @@ import {
   LinksContentComponent,
   PropsComponent,
   TabsComponent,
+  NavButtonsComponent,
 } from '@components/index';
 import { LucideAngularModule } from 'lucide-angular';
 import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
@@ -30,7 +31,8 @@ import { CodeExamples, LinksContent, Props } from '../../models';
     LucideAngularModule,
     PropsComponent,
     LinksContentComponent,
-    TabsComponent
+    TabsComponent,
+    NavButtonsComponent,
   ],
   templateUrl: './alert.component.html',
   styles: ``,
