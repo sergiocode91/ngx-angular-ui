@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import {
   HeadingComponent,
   HighlightCodeComponent,
@@ -20,6 +21,7 @@ import { CardService } from '../../services/code-example';
   selector: 'app-card',
   standalone: true,
   imports: [
+    RouterModule,
     HeadingComponent,
     HtmlButtonDirective,
     HtmlInputDirective,

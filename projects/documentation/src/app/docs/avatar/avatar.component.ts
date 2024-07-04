@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import {
   HeadingComponent,
   HighlightCodeComponent,
@@ -15,6 +16,7 @@ import { CodeExamples, LinksContent, Props } from '../../models';
   selector: 'app-avatar',
   standalone: true,
   imports: [
+    RouterModule,
     HeadingComponent,
     PropsComponent,
     HighlightCodeComponent,

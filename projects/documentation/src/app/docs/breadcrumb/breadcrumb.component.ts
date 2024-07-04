@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
 import {
   HeadingComponent,
@@ -11,6 +12,7 @@ import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-ap
   selector: 'app-breadcrumb',
   standalone: true,
   imports: [
+    RouterModule,
     HeadingComponent,
     HighlightCodeComponent,
     HtmlButtonDirective,

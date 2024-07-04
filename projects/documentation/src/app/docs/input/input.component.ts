@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import {
   HeadingComponent,
   HighlightCodeComponent,
@@ -15,6 +16,7 @@ import { InputService } from '../../services/code-example';
   selector: 'app-input',
   standalone: true,
   imports: [
+    RouterModule,
     HeadingComponent,
     HtmlInputDirective,
     HtmlLabelDirective,

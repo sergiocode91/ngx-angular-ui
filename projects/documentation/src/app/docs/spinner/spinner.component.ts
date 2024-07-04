@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
 import {
   HeadingComponent,
@@ -16,6 +17,7 @@ import { CodeExamples, LinksContent, Props } from '../../models';
   selector: 'app-spinner',
   standalone: true,
   imports: [
+    RouterModule,
     HeadingComponent,
     HighlightCodeComponent,
     TabsComponent,

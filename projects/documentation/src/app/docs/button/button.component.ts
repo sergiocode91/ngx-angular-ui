@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
 import {
   HeadingComponent,
@@ -16,7 +16,7 @@ import { CodeExamples, LinksContent, Props } from '../../models';
   selector: 'app-button',
   standalone: true,
   imports: [
-    CommonModule,
+    RouterModule,
     HeadingComponent,
     PropsComponent,
     HighlightCodeComponent,

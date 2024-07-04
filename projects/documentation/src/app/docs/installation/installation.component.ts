@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { HeadingComponent } from '@components/index';
 
 @Component({
   selector: 'app-installation',
   standalone: true,
-  imports: [HeadingComponent],
+  imports: [
+    RouterModule,
+    HeadingComponent
+  ],
   templateUrl: './installation.component.html',
   styles: ``
 })

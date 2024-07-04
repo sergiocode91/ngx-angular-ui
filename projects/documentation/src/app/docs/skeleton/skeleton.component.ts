@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import {
   HeadingComponent,
   HighlightCodeComponent,
@@ -14,6 +15,7 @@ import { SkeletonService } from '../../services/code-example';
   selector: 'app-skeleton',
   standalone: true,
   imports: [
+    RouterModule,
     HeadingComponent,
     HighlightCodeComponent,
     TabsComponent,

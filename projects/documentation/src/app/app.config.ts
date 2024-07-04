@@ -20,7 +20,9 @@ import {
   Info,
   X,
   LoaderCircle,
-  Bug
+  Bug,
+  ChevronLeft,
+  ChevronRight,
 } from 'lucide-angular';
 import { routes } from './app.routes';
 
@@ -47,7 +49,9 @@ export const appConfig: ApplicationConfig = {
         Info,
         X,
         LoaderCircle,
-        Bug
+        Bug,
+        ChevronLeft,
+        ChevronRight,
       })
     ),
   ]

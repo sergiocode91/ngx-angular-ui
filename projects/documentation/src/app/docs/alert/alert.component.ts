@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import {
   HeadingComponent,
   HighlightCodeComponent,
@@ -18,6 +19,7 @@ import { CodeExamples, LinksContent, Props } from '../../models';
   selector: 'app-alert',
   standalone: true,
   imports: [
+    RouterModule,
     HeadingComponent,
     HighlightCodeComponent,
     HtmlAlertDirective,

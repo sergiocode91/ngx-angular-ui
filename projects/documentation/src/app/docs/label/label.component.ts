@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import {
   HeadingComponent,
   HighlightCodeComponent,
@@ -15,6 +16,7 @@ import { LabelService } from '../../services/code-example';
   selector: 'app-label',
   standalone: true,
   imports: [
+    RouterModule,
     HeadingComponent,
     HighlightCodeComponent,
     HtmlLabelDirective,
