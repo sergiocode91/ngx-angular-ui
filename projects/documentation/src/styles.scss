@@ -61,3 +61,18 @@ body {
   font-family: 'Geist Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+
+p {
+  color: #1a202c;
+  text-align: justify;
+  line-height: 1.625;
+  margin-bottom: 18px;
+}
+
+.dark p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.bg-pattern {
+  background-image: url(./assets/pattern.webp);
+}
