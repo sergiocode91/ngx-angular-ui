@@ -1,6 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { HeadingComponent, NavButtonsComponent } from '@components/index';
+import {
+  HeadingComponent,
+  HighlightCodeComponent,
+  LinksContentComponent,
+  NavButtonsComponent,
+} from '@components/index';
+import { LinksContent } from '../../models';
+import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-installation',
@@ -8,11 +15,35 @@ import { HeadingComponent, NavButtonsComponent } from '@components/index';
   imports: [
     RouterModule,
     HeadingComponent,
-    NavButtonsComponent
+    NavButtonsComponent,
+    LinksContentComponent,
+    LucideAngularModule,
+    HighlightCodeComponent
   ],
   templateUrl: './installation.component.html',
-  styles: ``
+  styles: ``,
 })
 export class InstallationComponent {
+  public linksContent: LinksContent[] = [
+    { title: 'Requirements', link: '#requirements' },
+    { title: 'Optional requirements', link: '#optional-requirements' },
+    { title: 'Installation guide', link: '#installation-guide' },
+  ];
 
+  public code1 = `
+  npm install @angular-ui/core
+  `;
+
+  public code2 = `
+  module.exports = {
+    darkMode: 'class',
+    content: [
+      "./projects/**/*.{html,ts}"
+    ],
+    theme: {
+      extend: {},
+    },
+    plugins: [],
+  }
+  `;
 }

@@ -2,9 +2,38 @@
   <div class="w-[calc(100%-17rem)]">
     <app-heading
       title="Installation"
-      description="A vertically stacked set of interactive headings that each reveal a section of content."
+      description="Learn how to install AngularUI in your project."
       size="xl"
     ></app-heading>
+
+    <app-heading id="requirements" title="Requirements:" size="lg" />
+    <div class="flex flex-col space-y-2">
+      <a href="https://angular.dev/" target="_blank" class="flex items-center dark:text-white underline underline-offset-4">
+        Angular 16
+        <lucide-icon name="ArrowUpRight" [size]="16" class="ml-1"></lucide-icon>
+      </a>
+      <a href="https://tailwindcss.com/" target="_blank" class="flex items-center dark:text-white underline underline-offset-4">
+        Tailwind CSS 3.4
+        <lucide-icon name="ArrowUpRight" [size]="16" class="ml-1"></lucide-icon>
+      </a>
+    </div>
+
+    <app-heading id="optional-requirements" title="Optional requirements:" size="lg" />
+    <div class="flex flex-col space-y-2">
+      <a href="https://lucide.dev/guide/packages/lucide-angular" target="_blank" class="flex items-center dark:text-white underline underline-offset-4">
+        Lucide 0.3
+        <lucide-icon name="ArrowUpRight" [size]="16" class="ml-1"></lucide-icon>
+      </a>
+      <a href="https://fontsource.org/" target="_blank" class="flex items-center dark:text-white underline underline-offset-4">
+        Fontsource 5.0
+        <lucide-icon name="ArrowUpRight" [size]="16" class="ml-1"></lucide-icon>
+      </a>
+    </div>
+
+    <app-heading id="installation-guide" title="Installation guide" size="lg" [border]="true" />
+    <app-highlight-code [code]="code1" [language]="'coffeescript'" />
+    <app-highlight-code [code]="code2" [language]="'typescript'" />
+
     
     <app-nav-buttons
       [labelLeft]="'Introduction'"
@@ -15,4 +44,5 @@
       routerRight="/docs/alert"
     />
   </div>
+  <app-links-content [linksContent]="linksContent" />
 </div>

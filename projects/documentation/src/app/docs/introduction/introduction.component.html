@@ -13,7 +13,7 @@
       </h1>
     </div>
 
-    <app-heading id="examples" title="What is AngularUI?" size="lg" />
+    <app-heading id="what-is-angularui" title="What is AngularUI?" size="lg" />
     <p>
       AngularUI is a UI component library for <a href="https://angular.dev/" class="dark:text-white underline underline-offset-4" target="_blank">Angular</a> that helps you build
       beautiful and accessible user interfaces. Built on top of <a href="https://tailwindcss.com/" class="dark:text-white underline underline-offset-4" target="_blank">Tailwind CSS</a>,
@@ -26,10 +26,15 @@
       enables you to create modern and efficient applications effortlessly.
     </p>
 
+    <app-heading id="contributing" title="Contributing" size="lg" />
+
+    <app-heading id="credits" title="Credits" size="lg" />
+
     <app-nav-buttons
       [labelRight]="'Installation'"
       [positionRight]="true"
       routerRight="/docs/installation"
     />
   </div>
+  <app-links-content [linksContent]="linksContent" />
 </div>
