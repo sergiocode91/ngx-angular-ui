@@ -76,7 +76,7 @@ export class BadgeComponent {
 
   constructor(private _badgeService: BadgeService) {
     this.examples = this._badgeService.getExamples();
-    this.initializeTabs(12);
+    this.initializeTabs(7);
   }
 
   initializeTabs(numberOfTabs: number) {

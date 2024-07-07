@@ -10,10 +10,10 @@
       Storybook
     </a>
     
-    <app-heading title="Props" size="lg" />
+    <app-heading id="props" title="Props" size="lg" />
     <app-props [props]="props" />
     
-    <app-heading title="Usage" size="lg" [border]="true" />
+    <app-heading id="usage" title="Usage" size="lg" [border]="true" />
     <app-highlight-code [code]="examples.codeUseTs ?? ''" [language]="'typescript'" />
     <app-highlight-code [code]="examples.codeUseHtml ?? ''" [language]="'html'" />
 
@@ -29,21 +29,83 @@
       }
     </app-tabs>
 
-    <!-- todo -->
-    
-    <div class="space-x-4">
+    <app-heading id="secondary" title="Secondary" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab2', $event)">
+      @if(activeTabs['tab2'] === 'Preview') {
+        <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <div uiBadge variant="secondary">Badge</div>
+        </div>
+      } @else {
+        <app-highlight-code [code]="examples.code2 ?? ''" [language]="'typescript'" />
+      }
+    </app-tabs>
 
-      <div uiBadge>Badge</div>
-      <div uiBadge variant="secondary">Badge</div>
-      <div uiBadge variant="outline">Badge</div>
+    <app-heading id="outline" title="Outline" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab3', $event)">
+      @if(activeTabs['tab3'] === 'Preview') {
+        <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <div uiBadge variant="outline">Badge</div>
+        </div>
+      } @else {
+        <app-highlight-code [code]="examples.code3 ?? ''" [language]="'typescript'" />
+      }
+    </app-tabs>
 
-      <div uiBadge color="info">Badge</div>
-      <div uiBadge color="help">Badge</div>
-      <div uiBadge color="success">Badge</div>
-      <div uiBadge color="warning">Badge</div>
-      <div uiBadge color="danger">Badge</div>
-    </div>
+    <app-heading id="solid-colors" title="Solid color" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab4', $event)">
+      @if(activeTabs['tab4'] === 'Preview') {
+        <div class="min-h-64 flex items-center justify-center p-10 rounded-md space-x-6 border border-zinc-200 dark:border-zinc-800">
+          <div uiBadge variant="primary" color="info">Info</div>
+          <div uiBadge variant="primary" color="help">Help</div>
+          <div uiBadge variant="primary" color="success">Success</div>
+          <div uiBadge variant="primary" color="warning">Warning</div>
+          <div uiBadge variant="primary" color="danger">Danger</div>
+        </div>
+      } @else {
+        <app-highlight-code [code]="examples.code4 ?? ''" [language]="'typescript'" />
+      }
+    </app-tabs>
 
+    <app-heading id="outline-colors" title="Outline color" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab5', $event)">
+      @if(activeTabs['tab5'] === 'Preview') {
+        <div class="min-h-64 flex items-center justify-center p-10 rounded-md space-x-6 border border-zinc-200 dark:border-zinc-800">
+          <div uiBadge variant="outline" color="info">Info</div>
+          <div uiBadge variant="outline" color="help">Help</div>
+          <div uiBadge variant="outline" color="success">Success</div>
+          <div uiBadge variant="outline" color="warning">Warning</div>
+          <div uiBadge variant="outline" color="danger">Danger</div>
+        </div>
+      } @else {
+        <app-highlight-code [code]="examples.code5 ?? ''" [language]="'typescript'" />
+      }
+    </app-tabs>
+
+    <app-heading id="sizes" title="Sizes" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab6', $event)">
+      @if(activeTabs['tab6'] === 'Preview') {
+        <div class="min-h-64 flex items-center justify-center p-10 rounded-md space-x-6 border border-zinc-200 dark:border-zinc-800">
+          <div uiBadge variant="primary" color="help" size="sm">Small</div>
+          <div uiBadge variant="primary" color="help" size="md">Medium</div>
+          <div uiBadge variant="primary" color="help" size="lg">Large</div>
+        </div>
+      } @else {
+        <app-highlight-code [code]="examples.code6 ?? ''" [language]="'typescript'" />
+      }
+    </app-tabs>
+
+    <app-heading id="rounded" title="Rounded" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab7', $event)">
+      @if(activeTabs['tab7'] === 'Preview') {
+        <div class="min-h-64 flex items-center justify-center p-10 rounded-md space-x-6 border border-zinc-200 dark:border-zinc-800">
+          <div uiBadge variant="primary" color="info" rounded="md">Medium</div>
+          <div uiBadge variant="primary" color="info" rounded="lg">Large</div>
+          <div uiBadge variant="primary" color="info" rounded="full">Full</div>
+        </div>
+      } @else {
+        <app-highlight-code [code]="examples.code7 ?? ''" [language]="'typescript'" />
+      }
+    </app-tabs>
     
     <app-nav-buttons
       [labelLeft]="'Avatar'"

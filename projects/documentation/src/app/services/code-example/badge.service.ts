@@ -28,145 +28,80 @@ export class BadgeService {
   })
   `,
   code2: `
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
+  import { HtmlBadgeDirective } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlButtonDirective],
+    imports: [HtmlBadgeDirective],
     template: \`
-      <button uiButton variant="secondary">Button</button>
+      <div uiBadge variant="secondary">Badge</div>
     \`
   })
   `,
   code3: `
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
+  import { HtmlBadgeDirective } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlButtonDirective],
+    imports: [HtmlBadgeDirective],
     template: \`
-      <button uiButton variant="outline">Outline</button>
+      <div uiBadge variant="outline">Badge</div>
     \`
   })
   `,
   code4: `
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
+  import { HtmlBadgeDirective } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlButtonDirective],
+    imports: [HtmlBadgeDirective],
     template: \`
-      <button uiButton variant="primary" color="info">Info</button>
-      <button uiButton variant="primary" color="help">Help</button>
-      <button uiButton variant="primary" color="success">Success</button>
-      <button uiButton variant="primary" color="warning">Warning</button>
-      <button uiButton variant="primary" color="danger">Danger</button>
+      <div uiBadge variant="primary" color="info">Info</div>
+      <div uiBadge variant="primary" color="help">Help</div>
+      <div uiBadge variant="primary" color="success">Success</div>
+      <div uiBadge variant="primary" color="warning">Warning</div>
+      <div uiBadge variant="primary" color="danger">Danger</div>
     \`
   })
   `,
   code5: `
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
+  import { HtmlBadgeDirective } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlButtonDirective],
+    imports: [HtmlBadgeDirective],
     template: \`
-      <button uiButton variant="outline" color="info">Info</button>
-      <button uiButton variant="outline" color="help">Help</button>
-      <button uiButton variant="outline" color="success">Success</button>
-      <button uiButton variant="outline" color="warning">Warning</button>
-      <button uiButton variant="outline" color="danger">Danger</button>
+      <div uiBadge variant="outline" color="info">Info</div>
+      <div uiBadge variant="outline" color="help">Help</div>
+      <div uiBadge variant="outline" color="success">Success</div>
+      <div uiBadge variant="outline" color="warning">Warning</div>
+      <div uiBadge variant="outline" color="danger">Danger</div>
     \`
   })
   `,
   code6: `
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
+  import { HtmlBadgeDirective } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlButtonDirective],
+    imports: [HtmlBadgeDirective],
     template: \`
-      <button uiButton variant="primary" size="sm">Small</button>
-      <button uiButton variant="primary" size="md">Medium</button>
-      <button uiButton variant="primary" size="lg">Large</button>
+      <div uiBadge variant="primary" color="help" size="sm">Small</div>
+      <div uiBadge variant="primary" color="help" size="md">Medium</div>
+      <div uiBadge variant="primary" color="help" size="lg">Large</div>
     \`
   })
   `,
   code7: `
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
+  import { HtmlBadgeDirective } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlButtonDirective],
+    imports: [HtmlBadgeDirective],
     template: \`
-      <button uiButton variant="primary" rounded="full">Button</button>
-      <button uiButton variant="primary" rounded="md">Button</button>
-    \`
-  })
-  `,
-  code8: `
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [HtmlButtonDirective],
-    template: \`
-      <button uiButton variant="ghost">Get started</button>
-    \`
-  })
-  `,
-  code9: `
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [HtmlButtonDirective],
-    template: \`
-      <button uiButton variant="link">Don’t have an account?</button>
-    \`
-  })
-  `,
-  code10: `
-  import { LucideAngularModule } from 'lucide-angular';
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [LucideAngularModule, HtmlButtonDirective],
-    template: \`
-      <button uiButton variant="outline" size="icon">
-        <lucide-icon name="Moon" [size]="18"></lucide-icon>
-      </button>
-    \`
-  })
-  `,
-  code11: `
-  import { LucideAngularModule } from 'lucide-angular';
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [LucideAngularModule, HtmlButtonDirective],
-    template: \`
-      <button uiButton variant="primary">
-        <lucide-icon name="Instagram" [size]="18" class="inline-flex mr-1"></lucide-icon>
-        Sign in with Instagram
-      </button>
-    \`
-  })
-  `,
-  code12: `
-  import { LucideAngularModule } from 'lucide-angular';
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
-  
-  @Component({
-    standalone: true,
-    imports: [LucideAngularModule, HtmlButtonDirective],
-    template: \`
-      <button uiButton variant="primary" color="danger" disabled="true">
-        <lucide-icon name="Trash" [size]="18" class="inline-flex mr-1"></lucide-icon>
-        Delete account
-      </button>
+      <div uiBadge variant="primary" color="info" rounded="md">Medium</div>
+      <div uiBadge variant="primary" color="info" rounded="lg">Large</div>
+      <div uiBadge variant="primary" color="info" rounded="full">Full</div>
     \`
   })
   `,
