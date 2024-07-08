@@ -86,9 +86,9 @@ export class ButtonService {
     standalone: true,
     imports: [HtmlButtonDirective],
     template: \`
-      <button uiButton variant="primary" size="sm">Small</button>
-      <button uiButton variant="primary" size="md">Medium</button>
-      <button uiButton variant="primary" size="lg">Large</button>
+      <button uiButton variant="primary" color="help" size="sm">Button</button>
+      <button uiButton variant="primary" color="help" size="md">Button</button>
+      <button uiButton variant="primary" color="help" size="lg">Button</button>
     \`
   })
   `,
@@ -99,8 +99,9 @@ export class ButtonService {
     standalone: true,
     imports: [HtmlButtonDirective],
     template: \`
-      <button uiButton variant="primary" rounded="full">Button</button>
-      <button uiButton variant="primary" rounded="md">Button</button>
+      <button uiButton variant="primary" color="info" rounded="md">Button</button>
+      <button uiButton variant="primary" color="info" rounded="lg">Button</button>
+      <button uiButton variant="primary" color="info" rounded="full">Button</button>
     \`
   })
   `,
