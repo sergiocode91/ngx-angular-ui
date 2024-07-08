@@ -9,12 +9,13 @@ import {
   TabsComponent,
 } from '@components/index';
 import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
-import { HtmlBadgeDirective } from '../../../../../ngx-angular-ui/src/lib/badge/badge.directive';
-import { BadgeService } from '../../services/code-example/badge.service';
+import { HtmlBadgeStatusDirective } from '../../../../../ngx-angular-ui/src/lib/badge-status/badge-status.directive';
+import { BadgeStatusService } from '../../services/code-example/badge-status.service';
 import { CodeExamples, LinksContent } from '../../models';
 
+
 @Component({
-  selector: 'app-badge',
+  selector: 'app-badge-status',
   standalone: true,
   imports: [
     RouterModule,
@@ -22,17 +23,16 @@ import { CodeExamples, LinksContent } from '../../models';
     PropsComponent,
     NavButtonsComponent,
     HtmlButtonDirective,
-    HtmlBadgeDirective,
+    HtmlBadgeStatusDirective,
     LinksContentComponent,
     HighlightCodeComponent,
     TabsComponent,
   ],
-  templateUrl: './badge.component.html',
+  templateUrl: './badge-status.component.html',
   styles: ``,
 })
-export class BadgeComponent {
+export class BadgeStatusComponent {
   public activeTabs: { [key: string]: string } = {};
-
   public props = {
     header: ['Property', 'Type', 'Default'],
     columns: [
@@ -58,7 +58,6 @@ export class BadgeComponent {
       },
     ],
   };
-
   public linksContent: LinksContent[] = [
     { title: 'Props', link: '#props' },
     { title: 'Usage', link: '#usage' },
@@ -73,8 +72,8 @@ export class BadgeComponent {
 
   public examples: CodeExamples;
 
-  constructor(private _badgeService: BadgeService) {
-    this.examples = this._badgeService.getExamples();
+  constructor(private _badgeStatusService: BadgeStatusService) {
+    this.examples = this._badgeStatusService.getExamples();
     this.initializeTabs(7);
   }
 
