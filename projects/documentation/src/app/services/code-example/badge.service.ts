@@ -99,9 +99,9 @@ export class BadgeService {
     standalone: true,
     imports: [HtmlBadgeDirective],
     template: \`
-      <div uiBadge variant="primary" color="info" rounded="md">Medium</div>
-      <div uiBadge variant="primary" color="info" rounded="lg">Large</div>
-      <div uiBadge variant="primary" color="info" rounded="full">Full</div>
+      <div uiBadge variant="primary" color="info" rounded="md">Badge</div>
+      <div uiBadge variant="primary" color="info" rounded="lg">Badge</div>
+      <div uiBadge variant="primary" color="info" rounded="full">Badge</div>
     \`
   })
   `,
