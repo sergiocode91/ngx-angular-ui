@@ -105,6 +105,22 @@ export class BadgeService {
     \`
   })
   `,
+  code8: `
+  import { HtmlBadgeDirective } from 'ngx-angular-ui';
+  
+  @Component({
+    standalone: true,
+    imports: [
+      HtmlBadgeDirective,
+      HtmlButtonDirective
+    ],
+    template: \`
+      <button uiButton variant="secondary" rounded="full">
+        Inbox <div uiBadge variant="primary" color="danger" rounded="full" class="ml-2">99+</div>
+      </button>
+    \`
+  })
+  `,
   };
 
   getExamples() {

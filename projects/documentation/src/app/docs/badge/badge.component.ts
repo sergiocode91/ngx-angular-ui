@@ -69,13 +69,14 @@ export class BadgeComponent {
     { title: 'Solid colors', link: '#solid-colors', isSubmenu: true },
     { title: 'Outline colors', link: '#outline-colors', isSubmenu: true },
     { title: 'Rounded', link: '#rounded', isSubmenu: true },
+    { title: 'With button', link: '#with-button', isSubmenu: true },
   ];
 
   public examples: CodeExamples;
 
   constructor(private _badgeService: BadgeService) {
     this.examples = this._badgeService.getExamples();
-    this.initializeTabs(7);
+    this.initializeTabs(8);
   }
 
   initializeTabs(numberOfTabs: number) {
