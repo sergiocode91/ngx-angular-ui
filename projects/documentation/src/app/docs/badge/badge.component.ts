@@ -70,7 +70,7 @@ export class BadgeComponent {
     { title: 'Outline', link: '#outline', isSubmenu: true },
     { title: 'Solid colors', link: '#solid-colors', isSubmenu: true },
     { title: 'Outline colors', link: '#outline-colors', isSubmenu: true },
-    { title: 'Size', link: '#size', isSubmenu: true },
+    { title: 'Sizes', link: '#sizes', isSubmenu: true },
     { title: 'Rounded', link: '#rounded', isSubmenu: true },
     { title: 'With icon', link: '#with-icon', isSubmenu: true },
     { title: 'With button', link: '#with-button', isSubmenu: true },
