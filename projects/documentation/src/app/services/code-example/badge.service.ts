@@ -99,13 +99,48 @@ export class BadgeService {
     standalone: true,
     imports: [HtmlBadgeDirective],
     template: \`
-      <div uiBadge variant="primary" rounded="md">Badge</div>
-      <div uiBadge variant="primary" rounded="lg">Badge</div>
-      <div uiBadge variant="primary" rounded="full">Badge</div>
+      <div uiBadge size="sm">Small</div>
+      <div uiBadge size="md">Medium</div>
+      <div uiBadge size="lg">Large</div>
     \`
   })
   `,
   code8: `
+  import { HtmlBadgeDirective } from 'ngx-angular-ui';
+  
+  @Component({
+    standalone: true,
+    imports: [HtmlBadgeDirective],
+    template: \`
+      <div uiBadge rounded="md">Medium</div>
+      <div uiBadge rounded="lg">Large</div>
+      <div uiBadge rounded="full">Full</div>
+    \`
+  })
+  `,
+  code9: `
+  import { HtmlBadgeDirective } from 'ngx-angular-ui';
+  
+  @Component({
+    standalone: true,
+    imports: [HtmlBadgeDirective],
+    template: \`
+      <div uiBadge size="sm">
+        <lucide-icon name="Shield" [size]="12"></lucide-icon>
+        Small
+      </div>
+      <div uiBadge size="md">
+        <lucide-icon name="Shield" [size]="14"></lucide-icon>
+        Medium
+      </div>
+      <div uiBadge size="lg">
+        <lucide-icon name="Shield" [size]="16"></lucide-icon>
+        Large
+      </div>
+    \`
+  })
+  `,
+  code10: `
   import { HtmlBadgeDirective } from 'ngx-angular-ui';
   
   @Component({

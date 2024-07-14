@@ -12,9 +12,12 @@ import {
   standalone: true,
 })
 export class HtmlBadgeDirective implements OnInit, OnChanges {
-  @Input() variant: 'primary' | 'secondary' | 'outline' | 'indicator' = 'primary';
+  public _showIcon: boolean = false;
+
+  @Input() variant: 'primary' | 'secondary' | 'outline' = 'primary';
   @Input() color!: 'info' | 'help' | 'success' | 'warning' | 'danger';
   @Input() rounded: 'md' | 'lg' | 'full' = 'md';
+  @Input() size: 'sm' | 'md' | 'lg' = 'sm';
   @Input() class: string = '';
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
@@ -27,13 +30,25 @@ export class HtmlBadgeDirective implements OnInit, OnChanges {
     this.applyClasses();
   }
 
+  ngAfterViewInit() {
+    this.applyIconClass();
+  }
+
   private applyClasses() {
     const variantClass = this.getVariantClass(this.variant, this.color);
     const colorClass = this.getColorClass(this.variant, this.color);
     const roundedClass = this.getRoundedClass(this.rounded);
-    const classes = `${variantClass} ${colorClass} ${roundedClass} ${this.class} inline-flex items-center justify-center font-medium text-xs transition-colors px-2.5 py-0.5`;
+    const sizeClass = this.getSizeClass(this.size);
+    const classes = `${variantClass} ${colorClass} ${roundedClass} ${sizeClass} ${this.class} inline-flex items-center justify-center font-medium transition-colors`;
 
     this.renderer.setAttribute(this.el.nativeElement, 'class', classes);
+  }
+
+  private applyIconClass() {
+    const svg = this.el.nativeElement.querySelector('svg');
+    if (svg) {
+      this.renderer.addClass(svg, 'mr-1');
+    }
   }
 
   private getVariantClass(variant: string, color: string): string {
@@ -96,6 +111,19 @@ export class HtmlBadgeDirective implements OnInit, OnChanges {
         return 'rounded-full';
       default:
         return 'rounded-md';
+    }
+  }
+
+  private getSizeClass(size: string): string {
+    switch (size) {
+      case 'sm':
+        return 'text-xs px-2.5 py-0.5';
+      case 'md':
+        return 'text-xs px-3 py-1';
+      case 'lg':
+        return 'text-sm px-3.5 py-1';
+      default:
+        return 'text-xs px-2.5 py-0.5';
     }
   }
 }

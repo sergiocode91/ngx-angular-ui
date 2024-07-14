@@ -8,6 +8,7 @@ import {
   HighlightCodeComponent,
   TabsComponent,
 } from '@components/index';
+import { LucideAngularModule } from 'lucide-angular';
 import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
 import { HtmlBadgeDirective } from '../../../../../ngx-angular-ui/src/lib/badge/badge.directive';
 import { BadgeService } from '../../services/code-example/badge.service';
@@ -18,6 +19,7 @@ import { CodeExamples, LinksContent } from '../../models';
   standalone: true,
   imports: [
     RouterModule,
+    LucideAngularModule,
     HeadingComponent,
     PropsComponent,
     NavButtonsComponent,
@@ -37,24 +39,24 @@ export class BadgeComponent {
     header: ['Property', 'Type', 'Default'],
     columns: [
       {
+        property: 'variant',
+        type: `'primary' | 'secondary' | 'outline'`,
+        default: 'primary',
+      },
+      {
         property: 'color',
-        type: `'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger'`,
-        default: 'default',
+        type: `'info' | 'help' | 'success' | 'warning' | 'danger'`,
+        default: 'none',
       },
       {
-        property: 'position',
-        type: `'top-right' | 'top-left' | 'bottom-right' | 'bottom-left'`,
-        default: 'top-right',
+        property: 'size',
+        type: `'sm' | 'md' | 'lg'`,
+        default: 'sm',
       },
       {
-        property: 'alert',
-        type: 'boolean',
-        default: 'false',
-      },
-      {
-        property: 'border',
-        type: 'boolean',
-        default: 'false',
+        property: 'rounded',
+        type: `'md' | 'lg' | 'full'`,
+        default: 'md',
       },
     ],
   };
@@ -68,7 +70,9 @@ export class BadgeComponent {
     { title: 'Outline', link: '#outline', isSubmenu: true },
     { title: 'Solid colors', link: '#solid-colors', isSubmenu: true },
     { title: 'Outline colors', link: '#outline-colors', isSubmenu: true },
+    { title: 'Size', link: '#size', isSubmenu: true },
     { title: 'Rounded', link: '#rounded', isSubmenu: true },
+    { title: 'With icon', link: '#with-icon', isSubmenu: true },
     { title: 'With button', link: '#with-button', isSubmenu: true },
   ];
 
@@ -76,7 +80,7 @@ export class BadgeComponent {
 
   constructor(private _badgeService: BadgeService) {
     this.examples = this._badgeService.getExamples();
-    this.initializeTabs(8);
+    this.initializeTabs(10);
   }
 
   initializeTabs(numberOfTabs: number) {

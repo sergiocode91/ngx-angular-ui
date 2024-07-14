@@ -24,6 +24,7 @@ import {
   ChevronLeft,
   ChevronRight,
   ArrowUpRight,
+  Shield,
 } from 'lucide-angular';
 import { routes } from './app.routes';
 
@@ -53,7 +54,8 @@ export const appConfig: ApplicationConfig = {
         Bug,
         ChevronLeft,
         ChevronRight,
-        ArrowUpRight
+        ArrowUpRight,
+        Shield
       })
     ),
   ]
