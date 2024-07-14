@@ -47,8 +47,13 @@ export class AvatarComponent {
       },
       {
         property: 'color',
-        type: `'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger'`,
-        default: `default`,
+        type: `'primary' | 'info' | 'help' | 'success' | 'warning' | 'danger'`,
+        default: `primary`,
+      },
+      {
+        property: 'status',
+        type: `'top-right' | 'top-left' | 'bottom-right' | 'bottom-left'`,
+        default: `top-right`,
       },
     ],
   };
@@ -63,13 +68,15 @@ export class AvatarComponent {
     { title: 'Colors', link: '#colors', isSubmenu: true },
     { title: 'Rounded', link: '#rounded', isSubmenu: true },
     { title: 'Sizes', link: '#sizes', isSubmenu: true },
+    { title: 'Status Position', link: '#status-position', isSubmenu: true },
+    { title: 'Status Colors', link: '#status-colors', isSubmenu: true },
   ];
 
   public examples: CodeExamples;
 
   constructor(private _avatarService: AvatarService) {
     this.examples = this._avatarService.getExamples();
-    this.initializeTabs(9);
+    this.initializeTabs(8);
   }
 
   initializeTabs(numberOfTabs: number) {

@@ -64,13 +64,13 @@ export class AvatarService {
     standalone: true,
     imports: [HtmlAvatarDirective],
     template: \`
-      <div uiAvatar border color="default">
+      <div uiAvatar border color="primary">
         <img src="https://i.pravatar.cc/150?img=45" alt="avatar" />
       </div>
-      <div uiAvatar border color="primary">
+      <div uiAvatar border color="info">
         <img src="https://i.pravatar.cc/150?img=40" alt="avatar" />
       </div>
-      <div uiAvatar border color="secondary">
+      <div uiAvatar border color="help">
         <img src="https://i.pravatar.cc/150?img=67" alt="avatar" />
       </div>
       <div uiAvatar border color="success">
@@ -114,20 +114,70 @@ export class AvatarService {
     standalone: true,
     imports: [HtmlAvatarDirective],
     template: \`
-      <div uiAvatar size="xs">
+      <div uiAvatar size="xs" status="top-right" color="success">
         <img src="https://i.pravatar.cc/150?img=21" alt="avatar" />
       </div>
-      <div uiAvatar size="sm">
+      <div uiAvatar size="sm" status="top-right" color="success">
         <img src="https://i.pravatar.cc/150?img=22" alt="avatar" />
       </div>
-      <div uiAvatar size="md">
+      <div uiAvatar size="md" status="top-right" color="success">
         <img src="https://i.pravatar.cc/150?img=24" alt="avatar" />
       </div>
-      <div uiAvatar size="lg">
+      <div uiAvatar size="lg" status="top-right" color="success">
         <img src="https://i.pravatar.cc/150?img=27" alt="avatar" />
       </div>
-      <div uiAvatar size="xl">
+      <div uiAvatar size="xl" status="top-right" color="success">
         <img src="https://i.pravatar.cc/150?img=37" alt="avatar" />
+      </div>
+    \`
+  })
+  `,
+  code7: `
+  import { HtmlAvatarDirective } from 'ngx-angular-ui';
+  
+  @Component({
+    standalone: true,
+    imports: [HtmlAvatarDirective],
+    template: \`
+      <div uiAvatar status="top-right" color="success">
+        <img src="https://i.pravatar.cc/150?img=29" alt="avatar" />
+      </div>
+      <div uiAvatar status="bottom-right" color="success">
+        <img src="https://i.pravatar.cc/150?img=26" alt="avatar" />
+      </div>
+      <div uiAvatar status="top-left" color="success">
+        <img src="https://i.pravatar.cc/150?img=25" alt="avatar" />
+      </div>
+      <div uiAvatar status="bottom-left" color="success">
+        <img src="https://i.pravatar.cc/150?img=28" alt="avatar" />
+      </div>
+    \`
+  })
+  `,
+  code8: `
+  import { HtmlAvatarDirective } from 'ngx-angular-ui';
+  
+  @Component({
+    standalone: true,
+    imports: [HtmlAvatarDirective],
+    template: \`
+      <div uiAvatar status="top-right" color="primary">
+        <img src="https://i.pravatar.cc/150?img=60" alt="avatar" />
+      </div>
+      <div uiAvatar status="top-right" color="info">
+        <img src="https://i.pravatar.cc/150?img=61" alt="avatar" />
+      </div>
+      <div uiAvatar status="top-right" color="help">
+        <img src="https://i.pravatar.cc/150?img=62" alt="avatar" />
+      </div>
+      <div uiAvatar status="top-right" color="success">
+        <img src="https://i.pravatar.cc/150?img=63" alt="avatar" />
+      </div>
+      <div uiAvatar status="top-right" color="warning">
+        <img src="https://i.pravatar.cc/150?img=64" alt="avatar" />
+      </div>
+      <div uiAvatar status="top-right" color="danger">
+        <img src="https://i.pravatar.cc/150?img=65" alt="avatar" />
       </div>
     \`
   })

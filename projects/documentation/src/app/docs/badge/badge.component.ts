@@ -72,8 +72,8 @@ export class BadgeComponent {
     { title: 'Outline colors', link: '#outline-colors', isSubmenu: true },
     { title: 'Sizes', link: '#sizes', isSubmenu: true },
     { title: 'Rounded', link: '#rounded', isSubmenu: true },
-    { title: 'With icon', link: '#with-icon', isSubmenu: true },
-    { title: 'With button', link: '#with-button', isSubmenu: true },
+    { title: 'With Icon', link: '#with-icon', isSubmenu: true },
+    { title: 'With Button', link: '#with-button', isSubmenu: true },
   ];
 
   public examples: CodeExamples;
