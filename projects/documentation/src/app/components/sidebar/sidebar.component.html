@@ -1,4 +1,4 @@
-<div class="w-48 h-[calc(100dvh-6.5rem)] overflow-hidden py-10 fixed">
+<div class="hidden lg:flex lg:flex-col lg:w-48 lg:h-[calc(100dvh-6.5rem)] overflow-hidden py-10 fixed">
   @for (nav of navigations; track nav.title) {
     <div class="pb-4">
       <h3 class="font-medium text-sm py-1 mb-1 dark:font-semibold dark:text-neutral-50">{{ nav.title }}</h3>
@@ -11,7 +11,7 @@
           >
             {{ link.title }}
             @if (link?.isSoon) {
-              <span class="text-[9px] text-purple-700 px-2 ml-3 rounded-full border border-purple-700">Soon</span>
+              <span class="text-[9px] text-purple-700 px-2 ml-3 rounded-fullxl:flex xl:gap-16 border border-purple-700">Soon</span>
             }
           </a>
         }
