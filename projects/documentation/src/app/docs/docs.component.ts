@@ -19,7 +19,7 @@ export class DocsComponent {
       ],
     },
     {
-      title: 'All Components',
+      title: 'Components',
       links: [
         { title: 'Alert', routerLink: '/docs/alert', isSoon: false },
         { title: 'Avatar', routerLink: '/docs/avatar', isSoon: false },
@@ -35,5 +35,4 @@ export class DocsComponent {
       ],
     },
   ]
-
 }

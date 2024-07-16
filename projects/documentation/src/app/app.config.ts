@@ -25,6 +25,9 @@ import {
   ChevronRight,
   ArrowUpRight,
   Shield,
+  EllipsisVertical,
+  Menu,
+  CircleX
 } from 'lucide-angular';
 import { routes } from './app.routes';
 
@@ -55,7 +58,10 @@ export const appConfig: ApplicationConfig = {
         ChevronLeft,
         ChevronRight,
         ArrowUpRight,
-        Shield
+        Shield,
+        EllipsisVertical,
+        Menu,
+        CircleX
       })
     ),
   ]
