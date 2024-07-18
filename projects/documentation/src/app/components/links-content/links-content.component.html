@@ -7,7 +7,7 @@
         [ngClass]="{
           'font-medium !text-black dark:!text-white': selectedLinkIndex === $index,
           'pl-3.5': item.isSubmenu,
-          'text-zinc-500 hover:text-zinc-900 dark:text-white/60 dark:hover:text-neutral-50': selectedLinkIndex !== $index
+          'text-zinc-500 hover:text-zinc-900 transition-all dark:text-white/60 dark:hover:text-neutral-50': selectedLinkIndex !== $index
         }"
         (click)="onLinkClick($event, $index, item.link)"
         class="w-full flex items-center py-1.5">{{ item.title }}</a>

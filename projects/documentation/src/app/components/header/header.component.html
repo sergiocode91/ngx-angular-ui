@@ -42,21 +42,6 @@
   '-left-full': !menuOpen,
   'w-full left-0': menuOpen,
 }">
-  <!-- <div class="flex items-center justify-between h-20 mb-6 border-b border-zinc-200/30 dark:border-zinc-800/50">
-    <div class="flex items-center space-x-2">
-      <a href="https://github.com/sergiocode91" target="_blank" uiButton variant="outline" size="sm" class="flex lg:hidden">
-        Github
-        <lucide-icon name="Github" [size]="18" class="ml-1"></lucide-icon>
-      </a>
-      <a href="https://x.com/sergiocode_" target="_blank" uiButton variant="outline" size="sm" class="flex lg:hidden">
-        Follow on
-        <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 1200 1227">
-          <path fill="currentColor" d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z"/>
-        </svg>
-      </a>
-    </div>
-    <lucide-icon name="CircleX" [size]="18" (click)="toggleMenu()" class="dark:text-white"></lucide-icon>
-  </div> -->
   @for (nav of navigations; track nav.title) {
     <div class="pb-4">
       <h3 class="font-medium text-sm py-1 mb-1 dark:font-semibold dark:text-neutral-50">{{ nav.title }}</h3>

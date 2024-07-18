@@ -62,6 +62,20 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+body::-webkit-scrollbar {
+  width: 14px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #27272a;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  border: 3px solid #27272a;
+  background-color: #454647;
+}
+
 p {
   color: #1a202c;
   text-align: justify;
