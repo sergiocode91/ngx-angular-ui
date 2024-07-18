@@ -8,5 +8,15 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sergiocode91/ngx-angular-ui.git"
+  },
+  "author": "Sergio Rojas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sergiocode91/ngx-angular-ui/issues"
+  },
+  "homepage": "https://github.com/sergiocode91/ngx-angular-ui#readme"
 }
