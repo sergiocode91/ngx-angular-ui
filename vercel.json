@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "public": false,
+  "builds": [
+    {
+      "src": "dist/documentation/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
