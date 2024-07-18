@@ -15,7 +15,7 @@ export const routes: Routes = [
       { path: 'alert', loadComponent: () => import('./docs/alert/alert.component').then(m => m.AlertComponent) },
       { path: 'avatar', loadComponent: () => import('./docs/avatar/avatar.component').then(m => m.AvatarComponent) },
       { path: 'badge', loadComponent: () => import('./docs/badge/badge.component').then(m => m.BadgeComponent) },
-      { path: 'breadcrumb', loadComponent: () => import('./docs/breadcrumb/breadcrumb.component').then(m => m.BreadcrumbComponent) },
+      // { path: 'breadcrumb', loadComponent: () => import('./docs/breadcrumb/breadcrumb.component').then(m => m.BreadcrumbComponent) },
       { path: 'button', loadComponent: () => import('./docs/button/button.component').then(m => m.ButtonComponent) },
       { path: 'card', loadComponent: () => import('./docs/card/card.component').then(m => m.CardComponent) },
       { path: 'input', loadComponent: () => import('./docs/input/input.component').then(m => m.InputComponent) },
