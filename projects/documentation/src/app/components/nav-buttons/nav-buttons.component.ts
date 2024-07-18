@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
-import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
+import { HtmlButtonDirective } from 'ngx-angular-ui';
 
 @Component({
   selector: 'app-nav-buttons',

@@ -7,8 +7,7 @@ import {
   TabsComponent,
   NavButtonsComponent,
 } from '@components/index';
-import { HtmlSkeletonDirective } from '../../../../../ngx-angular-ui/src/lib/skeleton/skeleton.directive';
-import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
+import { HtmlButtonDirective, HtmlSkeletonDirective } from 'ngx-angular-ui';
 import { CodeExamples, LinksContent } from '../../models';
 import { SkeletonService } from '../../services/code-example';
 

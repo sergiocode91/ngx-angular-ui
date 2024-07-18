@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
-import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
-
+import { HtmlButtonDirective } from 'ngx-angular-ui';
 @Component({
   selector: 'app-hero',
   standalone: true,

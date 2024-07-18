@@ -9,8 +9,7 @@ import {
   TabsComponent,
   NavButtonsComponent,
 } from '@components/index';
-import { HtmlSpinnerComponent } from '../../../../../ngx-angular-ui/src/lib/spinner/spinner.component';
-import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
+import { HtmlButtonDirective, HtmlSpinnerComponent } from 'ngx-angular-ui';
 import { SpinnerService } from '../../services/code-example';
 import { CodeExamples, LinksContent, Props } from '../../models';
 

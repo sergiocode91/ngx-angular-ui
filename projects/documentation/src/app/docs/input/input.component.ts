@@ -7,9 +7,11 @@ import {
   TabsComponent,
   NavButtonsComponent,
 } from '@components/index';
-import { HtmlInputDirective } from '../../../../../ngx-angular-ui/src/lib/input/input.directive';
-import { HtmlLabelDirective } from '../../../../../ngx-angular-ui/src/lib/label/label.directive';
-import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
+import {
+  HtmlButtonDirective,
+  HtmlLabelDirective,
+  HtmlInputDirective,
+} from 'ngx-angular-ui';
 import { CodeExamples, LinksContent } from '../../models';
 import { InputService } from '../../services/code-example';
 
@@ -39,7 +41,7 @@ export class InputComponent {
     { title: 'Default', link: '#default', isSubmenu: true },
     { title: 'With Label', link: '#with-label', isSubmenu: true },
     { title: 'With Button', link: '#with-button', isSubmenu: true },
-    { title: 'Disabled', link: '#disabled', isSubmenu: true }
+    { title: 'Disabled', link: '#disabled', isSubmenu: true },
   ];
 
   public examples: CodeExamples;

@@ -9,8 +9,7 @@ import {
   TabsComponent,
 } from '@components/index';
 import { LucideAngularModule } from 'lucide-angular';
-import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
-import { HtmlBadgeDirective } from '../../../../../ngx-angular-ui/src/lib/badge/badge.directive';
+import { HtmlButtonDirective, HtmlBadgeDirective } from 'ngx-angular-ui';
 import { BadgeService } from '../../services/code-example/badge.service';
 import { CodeExamples, LinksContent } from '../../models';
 

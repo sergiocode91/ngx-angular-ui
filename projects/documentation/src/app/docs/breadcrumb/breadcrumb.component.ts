@@ -7,7 +7,7 @@ import {
   NavButtonsComponent,
   TabsComponent,
 } from '@components/index';
-import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
+import { HtmlButtonDirective } from 'ngx-angular-ui';
 
 @Component({
   selector: 'app-breadcrumb',

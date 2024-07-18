@@ -31,7 +31,7 @@ export class InstallationComponent {
   ];
 
   public code1 = `
-  npm install @angular-ui/core
+  npm i ngx-angular-ui@latest
   `;
 
   public code2 = `

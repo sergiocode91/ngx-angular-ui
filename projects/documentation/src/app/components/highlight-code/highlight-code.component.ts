@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { HighlightModule } from 'ngx-highlightjs';
 import { LucideAngularModule } from 'lucide-angular';
-import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
+import { HtmlButtonDirective } from 'ngx-angular-ui';
 
 @Component({
   selector: 'app-highlight-code',

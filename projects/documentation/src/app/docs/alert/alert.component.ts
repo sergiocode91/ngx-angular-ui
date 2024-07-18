@@ -9,10 +9,12 @@ import {
   NavButtonsComponent,
 } from '@components/index';
 import { LucideAngularModule } from 'lucide-angular';
-import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
-import { HtmlAlertDirective } from '../../../../../ngx-angular-ui/src/lib/alert/alert.directive';
-import { HtmlAlertTitleDirective } from '../../../../../ngx-angular-ui/src/lib/alert/alert-title.directive';
-import { HtmlAlertDescriptionDirective } from '../../../../../ngx-angular-ui/src/lib/alert/alert-description.directive';
+import {
+  HtmlButtonDirective,
+  HtmlAlertDirective,
+  HtmlAlertTitleDirective,
+  HtmlAlertDescriptionDirective,
+} from 'ngx-angular-ui';
 import { AlertService } from '../../services/code-example';
 import { CodeExamples, LinksContent, Props } from '../../models';
 

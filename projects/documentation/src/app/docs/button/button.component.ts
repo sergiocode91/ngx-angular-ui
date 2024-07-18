@@ -9,7 +9,7 @@ import {
   PropsComponent,
   TabsComponent,
 } from '@components/index';
-import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
+import { HtmlButtonDirective } from 'ngx-angular-ui';
 import { ButtonService } from '../../services/code-example';
 import { CodeExamples, LinksContent, Props } from '../../models';
 
@@ -25,7 +25,7 @@ import { CodeExamples, LinksContent, Props } from '../../models';
     TabsComponent,
     LinksContentComponent,
     NavButtonsComponent,
-    HtmlButtonDirective
+    HtmlButtonDirective,
   ],
   templateUrl: './button.component.html',
   styles: ``,

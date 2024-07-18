@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
-import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
+import { HtmlButtonDirective } from 'ngx-angular-ui';
 import { LucideAngularModule } from 'lucide-angular';
 
 @Component({

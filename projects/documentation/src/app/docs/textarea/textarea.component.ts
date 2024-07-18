@@ -7,9 +7,11 @@ import {
   TabsComponent,
   NavButtonsComponent,
 } from '@components/index';
-import { HtmlTextareaDirective } from '../../../../../ngx-angular-ui/src/lib/textarea/textarea.directive';
-import { HtmlLabelDirective } from '../../../../../ngx-angular-ui/src/lib/label/label.directive';
-import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
+import {
+  HtmlButtonDirective,
+  HtmlTextareaDirective,
+  HtmlLabelDirective,
+} from 'ngx-angular-ui';
 import { CodeExamples, LinksContent } from '../../models';
 import { TextareaService } from '../../services/code-example';
 

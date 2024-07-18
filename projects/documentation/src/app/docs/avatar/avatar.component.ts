@@ -8,8 +8,7 @@ import {
   TabsComponent,
   NavButtonsComponent,
 } from '@components/index';
-import { HtmlAvatarDirective } from '../../../../../ngx-angular-ui/src/lib/avatar/avatar.directive';
-import { HtmlButtonDirective } from '../../../../../ngx-angular-ui/src/public-api';
+import { HtmlButtonDirective, HtmlAvatarDirective } from 'ngx-angular-ui';
 import { AvatarService } from '../../services/code-example';
 import { CodeExamples, LinksContent, Props } from '../../models';
 
