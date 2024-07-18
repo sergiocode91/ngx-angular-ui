@@ -1,5 +1,4 @@
-<!-- <header class="w-full top-0 left-0 border-b border-zinc-200/30 backdrop-blur bg-white/70 dark:border-zinc-800/50 dark:bg-zinc-950 absolute z-50"> -->
-<header class="w-full top-0 left-0 border-b border-zinc-200/30 backdrop-blur bg-white/70 dark:border-zinc-800/50 dark:bg-zinc-950/80 sticky z-50">
+<header class="w-full top-0 left-0 border-b border-zinc-200/30 bg-white dark:border-zinc-800/50 dark:bg-zinc-950 sticky z-50">
   <div class="max-w-[76rem] h-14 lg:h-16 flex items-center justify-between mx-auto px-8 xl:px-0">
     <div class="flex items-center space-x-6">
       <a href="/" class="font-bold text-xl lg:text-2xl dark:text-white">
@@ -33,17 +32,17 @@
         </Button>
       }
       <div (click)="toggleMenu()" class="lg:hidden">
-        <lucide-icon name="Menu" [size]="18" class="dark:text-white"></lucide-icon>
+        <lucide-icon [name]="iconMenu" [size]="18" class="dark:text-white"></lucide-icon>
       </div>
     </div>
   </div>
 </header>
 
-<div class="h-screen top-0 px-8 transition-all duration-500 bg-white dark:bg-zinc-950 z-50 fixed" [ngClass]="{
+<div class="h-screen top-[57px] p-8 transition-all duration-500 bg-white dark:bg-zinc-950 z-50 fixed" [ngClass]="{
   '-left-full': !menuOpen,
   'w-full left-0': menuOpen,
 }">
-  <div class="flex items-center justify-between h-20 mb-6 border-b border-zinc-200/30 dark:border-zinc-800/50">
+  <!-- <div class="flex items-center justify-between h-20 mb-6 border-b border-zinc-200/30 dark:border-zinc-800/50">
     <div class="flex items-center space-x-2">
       <a href="https://github.com/sergiocode91" target="_blank" uiButton variant="outline" size="sm" class="flex lg:hidden">
         Github
@@ -57,14 +56,15 @@
       </a>
     </div>
     <lucide-icon name="CircleX" [size]="18" (click)="toggleMenu()" class="dark:text-white"></lucide-icon>
-  </div>
+  </div> -->
   @for (nav of navigations; track nav.title) {
     <div class="pb-4">
       <h3 class="font-medium text-sm py-1 mb-1 dark:font-semibold dark:text-neutral-50">{{ nav.title }}</h3>
       <div class="grid grid-flow-row auto-rows-max text-sm">
         @for (link of nav.links; track link.title ) {
           <a 
-            [routerLink]="link.routerLink" 
+            (click)="toggleMenu()"
+            [routerLink]="link.routerLink"
             routerLinkActive="font-medium !text-black dark:!text-white"
             class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 dark:text-white/60 dark:hover:text-neutral-50"
           >

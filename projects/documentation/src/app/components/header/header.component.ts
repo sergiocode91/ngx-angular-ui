@@ -15,6 +15,7 @@ import { DarkmodeService } from '../../services/darkmode.service';
 export class HeaderComponent {
   public _darkModeService: DarkmodeService = inject(DarkmodeService);
   public menuOpen: boolean = false;
+  public iconMenu: string = 'Menu';
   public navigations = [
     {
       title: 'Getting Started',
@@ -47,5 +48,6 @@ export class HeaderComponent {
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
+    this.iconMenu = this.menuOpen ? 'X' : 'Menu';
   }
 }
