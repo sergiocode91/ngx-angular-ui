@@ -4,8 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "build:documentation": "ng build --project=documentation --configuration production",
+    "build": "ng build --project=documentation --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "commit": "git add . && gitmoji -c"
