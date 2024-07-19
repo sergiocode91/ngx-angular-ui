@@ -19,7 +19,7 @@
     <app-heading id="default" title="Default" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
       @if(activeTabs['tab1'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
           <div class="w-72 flex flex-col space-y-2">
             <label uiLabel for="Username">Username</label>
             <input uiInput type="text" id="Username" placeholder="Write your username">

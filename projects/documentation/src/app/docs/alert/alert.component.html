@@ -22,7 +22,7 @@
     <app-heading id="default" title="Default" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
       @if(activeTabs['tab1'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">      
+        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">      
           <div uiAlert variant="primary">
             <div uiAlertTitle>Hello there!</div>
             <div uiAlertDescription>Keep your app updated for best performance.</div>
@@ -36,7 +36,7 @@
     <app-heading id="with-icon" title="With Icon" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab2', $event)">
       @if(activeTabs['tab2'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">      
+        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">      
           <div uiAlert variant="primary" showIcon>
             <lucide-icon name="Megaphone" [size]="18"></lucide-icon>
             <div uiAlertTitle>Announcement!</div>
@@ -52,7 +52,7 @@
     <app-heading id="colors" title="Colors" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab3', $event)">
       @if(activeTabs['tab3'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-center p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
           <div class="w-full flex flex-col space-y-5">
             <div uiAlert variant="info" showIcon>
               <lucide-icon name="Info" [size]="18"></lucide-icon>
