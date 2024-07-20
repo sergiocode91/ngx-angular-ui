@@ -1,7 +1,7 @@
 <header class="w-full top-0 left-0 border-b border-zinc-200/30 bg-white dark:border-zinc-800/50 dark:bg-zinc-950 sticky z-50">
   <div class="max-w-[76rem] h-14 lg:h-16 flex items-center justify-between mx-auto px-5 xl:px-0">
     <div class="flex items-center space-x-6">
-      <a href="/" class="font-bold text-xl lg:text-2xl dark:text-white">
+      <a routerLink="/" class="font-bold text-xl lg:text-2xl dark:text-white">
         Angular<span class="text-transparent to-purple-600 from-pink-600 bg-gradient-to-r bg-clip-text">UI</span>
       </a>
       <span class="inline-block font-mono font-semibold text-zinc-500 text-[11px] !ml-2 py-0.5 px-2.5 rounded-md border border-zinc-200 bg-gray-100 dark:text-neutral-50 dark:border-zinc-800 dark:bg-zinc-800">
@@ -9,7 +9,7 @@
       </span>
       <a routerLink="/docs" class="hidden lg:block font-medium text-sm text-zinc-500 transition-all hover:text-zinc-900 dark:hover:text-neutral-50 dark:text-white/70">Docs</a>
       <a routerLink="/docs/avatar" class="hidden lg:block font-medium text-sm text-zinc-500 transition-all hover:text-zinc-900 dark:hover:text-neutral-50 dark:text-white/70">Components</a>
-      <a routerLink="/docs/examples" class="hidden lg:block font-medium text-sm text-zinc-500 transition-all hover:text-zinc-900 dark:hover:text-neutral-50 dark:text-white/70">Examples</a>
+      <!-- <a routerLink="/docs/examples" class="hidden lg:block font-medium text-sm text-zinc-500 transition-all hover:text-zinc-900 dark:hover:text-neutral-50 dark:text-white/70">Examples</a> -->
     </div>
     <div class="flex items-center space-x-2">
       <a href="https://github.com/sergiocode91" target="_blank" uiButton variant="outline" size="sm" class="hidden lg:flex">
@@ -55,7 +55,7 @@
           >
             {{ link.title }}
             @if (link?.isSoon) {
-              <span class="text-[9px] text-purple-700 px-2 ml-3 rounded-fullxl:flex xl:gap-16 border border-purple-700">Soon</span>
+              <span class="h-4 font-semibold text-[9px] text-white leading-4 px-2 ml-3 rounded-full bg-zinc-900 dark:bg-zinc-800">Soon</span>
             }
           </a>
         }

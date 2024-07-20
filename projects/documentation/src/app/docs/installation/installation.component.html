@@ -7,7 +7,65 @@
     ></app-heading>
 
     <app-heading id="requirements" title="Requirements:" size="sm" />
-    <div class="flex flex-col space-y-2">
+    <div class="flex flex-col lg:flex-row mt-6 gap-6">
+      <a href="https://angular.dev/" target="_blank" class="flex p-4 rounded-xl hover:dark:bg-zinc-900/50 hover:bg-zinc-50">
+        <div class="flex items-center justify-center min-w-14 h-14 rounded-full ring-1 ring-slate-900/5 shadow bg-white dark:shadow-none dark:ring-0 dark:bg-zinc-800">
+          <img src="../../../assets/angular.svg" width="25" height="25" alt="Angular">
+        </div>
+        <div class="ml-6">
+          <h4 class="flex items-center font-medium text-sm text-black dark:text-neutral-50 mb-2">
+            Angular
+            <lucide-icon name="ArrowUpRight" [size]="16" class="ml-1"></lucide-icon>
+          </h4>
+          <p class="text-sm mb-0 text-zinc-500 dark:text-white/60">Platform for building mobile and desktop web applications.</p>
+        </div>
+      </a>
+      <a href="https://tailwindcss.com/" target="_blank" class="flex p-4 rounded-xl hover:dark:bg-zinc-900/50 hover:bg-zinc-50">
+        <div class="flex items-center justify-center min-w-14 h-14 rounded-full ring-1 ring-slate-900/5 shadow bg-white dark:shadow-none dark:ring-0 dark:bg-zinc-800">
+          <img src="../../../assets/tailwindcss.svg" width="25" height="25" alt="Angular">         
+        </div>
+        <div class="ml-6">
+          <h4 class="flex items-center font-medium text-sm text-black leading-6 dark:text-neutral-50">
+            Tailwind CSS
+            <lucide-icon name="ArrowUpRight" [size]="16" class="ml-1"></lucide-icon>
+          </h4>
+          <p class="text-sm mb-0 text-zinc-500 dark:text-white/60">Utility-first CSS framework for rapid UI design.</p>
+        </div>
+      </a>
+    </div>
+
+    <app-heading id="optional-requirements" title="Optional requirements:" size="sm" />
+    <div class="flex flex-col lg:flex-row mt-6 gap-6">
+      <a href="https://fontsource.org/" target="_blank" class="flex p-4 rounded-xl hover:dark:bg-zinc-900/50 hover:bg-zinc-50">
+        <div class="flex items-center justify-center min-w-14 h-14 rounded-full ring-1 ring-slate-900/5 shadow bg-white dark:shadow-none dark:ring-0 dark:bg-zinc-800">
+          <svg height="25" width="25" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="0.5" width="30" height="30" rx="4" fill="#625BF8"></rect>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.7 7.7H20.1L22.5 7.7V13.1H20.1V10.1L11.7 10.1V14.3L17.1 14.3V16.7H11.7V20.9H13.5V23.3H11.7H9.3L7.5 23.3V20.9H9.3V16.7H7.5V14.3H9.3V10.1H7.5V7.7L9.3 7.7H11.7Z" fill="#fff"></path>
+          </svg>          
+        </div>
+        <div class="ml-6">
+          <h4 class="flex items-centerfont-medium text-sm text-black leading-6 dark:text-neutral-50">
+            Fontsource
+            <lucide-icon name="ArrowUpRight" [size]="16" class="ml-1"></lucide-icon>
+          </h4>
+          <p class="text-sm mb-0 text-zinc-500 dark:text-white/60">Self-host Open Source fonts for developers.</p>
+        </div>
+      </a>
+      <a href="https://lucide.dev/" target="_blank" class="flex p-4 rounded-xl hover:dark:bg-zinc-900/50 hover:bg-zinc-50">
+        <div class="flex items-center justify-center min-w-14 h-14 rounded-full ring-1 ring-slate-900/5 shadow bg-white dark:shadow-none dark:ring-0 dark:bg-zinc-800">
+          <img src="../../../assets/lucide.svg" width="25" height="25" alt="Angular">
+        </div>
+        <div class="ml-6">
+          <h4 class="flex items-centerfont-medium text-sm text-black leading-6 dark:text-neutral-50">
+            Lucide Icons
+            <lucide-icon name="ArrowUpRight" [size]="16" class="ml-1"></lucide-icon>
+          </h4>
+          <p class="text-sm mb-0 text-zinc-500 dark:text-white/60">Open-source icon library for designers.</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- <div class="flex flex-col space-y-2">
       <a href="https://angular.dev/" target="_blank" class="flex items-center dark:text-white underline underline-offset-4">
         Angular 16
         <lucide-icon name="ArrowUpRight" [size]="16" class="ml-1"></lucide-icon>
@@ -16,9 +74,9 @@
         Tailwind CSS 3.4
         <lucide-icon name="ArrowUpRight" [size]="16" class="ml-1"></lucide-icon>
       </a>
-    </div>
+    </div> -->
 
-    <app-heading id="optional-requirements" title="Optional requirements:" size="sm" />
+    <!-- <app-heading id="optional-requirements" title="Optional requirements:" size="sm" />
     <div class="flex flex-col space-y-2">
       <a href="https://lucide.dev/guide/packages/lucide-angular" target="_blank" class="flex items-center dark:text-white underline underline-offset-4">
         Lucide 0.3
@@ -28,11 +86,13 @@
         Fontsource 5.0
         <lucide-icon name="ArrowUpRight" [size]="16" class="ml-1"></lucide-icon>
       </a>
-    </div>
+    </div> -->
 
     <app-heading id="installation-guide" title="Installation guide" size="lg" [border]="true" />
     <app-highlight-code [code]="code1" [language]="'coffeescript'" />
-    <app-highlight-code [code]="code2" [language]="'typescript'" />
+    <app-highlight-code [code]="code2" [language]="'coffeescript'" />
+    <app-highlight-code [code]="code3" [language]="'typescript'" />
+    <app-highlight-code [code]="code4" [language]="'css'" />
 
     
     <app-nav-buttons

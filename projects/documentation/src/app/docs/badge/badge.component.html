@@ -54,14 +54,12 @@
     <app-heading id="solid-colors" title="Solid color" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab4', $event)">
       @if(activeTabs['tab4'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md space-x-6 border border-zinc-200 dark:border-zinc-800">
-          <div class="flex justify-center flex-wrap gap-6">
-            <div uiBadge variant="primary" color="info">Info</div>
-            <div uiBadge variant="primary" color="help">Help</div>
-            <div uiBadge variant="primary" color="success">Success</div>
-            <div uiBadge variant="primary" color="warning">Warning</div>
-            <div uiBadge variant="primary" color="danger">Danger</div>
-          </div>
+        <div class="min-h-64 flex items-center justify-start sm:justify-center overflow-auto space-x-6 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <div uiBadge variant="primary" color="info">Info</div>
+          <div uiBadge variant="primary" color="help">Help</div>
+          <div uiBadge variant="primary" color="success">Success</div>
+          <div uiBadge variant="primary" color="warning">Warning</div>
+          <div uiBadge variant="primary" color="danger">Danger</div>
         </div>
       } @else {
         <app-highlight-code [code]="examples.code4 ?? ''" [language]="'typescript'" />
@@ -71,14 +69,12 @@
     <app-heading id="outline-colors" title="Outline color" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab5', $event)">
       @if(activeTabs['tab5'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md space-x-6 border border-zinc-200 dark:border-zinc-800">
-          <div class="flex justify-center flex-wrap gap-6">
-            <div uiBadge variant="outline" color="info">Info</div>
-            <div uiBadge variant="outline" color="help">Help</div>
-            <div uiBadge variant="outline" color="success">Success</div>
-            <div uiBadge variant="outline" color="warning">Warning</div>
-            <div uiBadge variant="outline" color="danger">Danger</div>
-          </div>
+        <div class="min-h-64 flex items-center justify-start sm:justify-center overflow-auto space-x-6 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <div uiBadge variant="outline" color="info">Info</div>
+          <div uiBadge variant="outline" color="help">Help</div>
+          <div uiBadge variant="outline" color="success">Success</div>
+          <div uiBadge variant="outline" color="warning">Warning</div>
+          <div uiBadge variant="outline" color="danger">Danger</div>
         </div>
       } @else {
         <app-highlight-code [code]="examples.code5 ?? ''" [language]="'typescript'" />

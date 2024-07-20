@@ -73,17 +73,17 @@ export class HtmlAvatarDirective implements OnInit, OnChanges {
   private getSizeClass(size: string): string {
     switch (size) {
       case 'xs':
-        return 'w-6 h-6';
+        return 'w-6 h-6 min-w-6 min-h-6';
       case 'sm':
-        return 'w-8 h-8';
+        return 'w-8 h-8 min-w-8 min-h-8';
       case 'md':
-        return 'w-10 h-10';
+        return 'w-10 h-10 min-w-10 min-h-10';
       case 'lg':
-        return 'w-14 h-14';
+        return 'w-14 h-14 min-w-14 min-h-14';
       case 'xl':
-        return 'w-20 h-20';
+        return 'w-20 h-20 min-w-20 min-h-20';
       default:
-        return 'w-14 h-14';
+        return 'w-14 h-14 min-w-14 min-h-14';
     }
   }
 

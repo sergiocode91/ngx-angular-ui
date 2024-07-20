@@ -61,26 +61,24 @@
     <app-heading id="colors" title="Colors" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab4', $event)">
       @if(activeTabs['tab4'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
-          <div class="flex justify-center flex-wrap gap-6">
-            <div uiAvatar border color="primary">
-              <img src="https://i.pravatar.cc/150?img=45" alt="avatar" />
-            </div>
-            <div uiAvatar border color="info">
-              <img src="https://i.pravatar.cc/150?img=40" alt="avatar" />
-            </div>
-            <div uiAvatar border color="help">
-              <img src="https://i.pravatar.cc/150?img=67" alt="avatar" />
-            </div>
-            <div uiAvatar border color="success">
-              <img src="https://i.pravatar.cc/150?img=35" alt="avatar" />
-            </div>
-            <div uiAvatar border color="warning">
-              <img src="https://i.pravatar.cc/150?img=39" alt="avatar" />
-            </div>
-            <div uiAvatar border color="danger">
-              <img src="https://i.pravatar.cc/150?img=67" alt="avatar" />
-            </div>
+        <div class="min-h-64 flex items-center justify-start sm:justify-center overflow-auto space-x-6 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <div uiAvatar border color="primary">
+            <img src="https://i.pravatar.cc/150?img=45" alt="avatar" />
+          </div>
+          <div uiAvatar border color="info">
+            <img src="https://i.pravatar.cc/150?img=40" alt="avatar" />
+          </div>
+          <div uiAvatar border color="help">
+            <img src="https://i.pravatar.cc/150?img=67" alt="avatar" />
+          </div>
+          <div uiAvatar border color="success">
+            <img src="https://i.pravatar.cc/150?img=35" alt="avatar" />
+          </div>
+          <div uiAvatar border color="warning">
+            <img src="https://i.pravatar.cc/150?img=39" alt="avatar" />
+          </div>
+          <div uiAvatar border color="danger">
+            <img src="https://i.pravatar.cc/150?img=67" alt="avatar" />
           </div>
         </div>
       } @else {
@@ -115,23 +113,21 @@
     <app-heading id="sizes" title="Sizes" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab6', $event)">
       @if(activeTabs['tab6'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md border dark:border-zinc-800">
-          <div class="flex items-center space-x-6">
-            <div uiAvatar size="xs" status="top-right" color="success">
-              <img src="https://i.pravatar.cc/150?img=21" alt="avatar" />
-            </div>
-            <div uiAvatar size="sm" status="top-right" color="success">
-              <img src="https://i.pravatar.cc/150?img=22" alt="avatar" />
-            </div>
-            <div uiAvatar size="md" status="top-right" color="success">
-              <img src="https://i.pravatar.cc/150?img=24" alt="avatar" />
-            </div>
-            <div uiAvatar size="lg" status="top-right" color="success">
-              <img src="https://i.pravatar.cc/150?img=27" alt="avatar" />
-            </div>
-            <div uiAvatar size="xl" status="top-right" color="success">
-              <img src="https://i.pravatar.cc/150?img=37" alt="avatar" />
-            </div>
+        <div class="min-h-64 flex items-center justify-start sm:justify-center overflow-auto space-x-6 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <div uiAvatar size="xs" status="top-right" color="success">
+            <img src="https://i.pravatar.cc/150?img=21" alt="avatar" />
+          </div>
+          <div uiAvatar size="sm" status="top-right" color="success">
+            <img src="https://i.pravatar.cc/150?img=22" alt="avatar" />
+          </div>
+          <div uiAvatar size="md" status="top-right" color="success">
+            <img src="https://i.pravatar.cc/150?img=24" alt="avatar" />
+          </div>
+          <div uiAvatar size="lg" status="top-right" color="success">
+            <img src="https://i.pravatar.cc/150?img=27" alt="avatar" />
+          </div>
+          <div uiAvatar size="xl" status="top-right" color="success">
+            <img src="https://i.pravatar.cc/150?img=37" alt="avatar" />
           </div>
         </div>
       } @else {
@@ -142,20 +138,18 @@
     <app-heading id="status-position" title="Status Position" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab7', $event)">
       @if(activeTabs['tab7'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md border dark:border-zinc-800">
-          <div class="flex items-center space-x-6">
-            <div uiAvatar status="top-right" color="success">
-              <img src="https://i.pravatar.cc/150?img=29" alt="avatar" />
-            </div>
-            <div uiAvatar status="bottom-right" color="success">
-              <img src="https://i.pravatar.cc/150?img=26" alt="avatar" />
-            </div>
-            <div uiAvatar status="top-left" color="success">
-              <img src="https://i.pravatar.cc/150?img=25" alt="avatar" />
-            </div>
-            <div uiAvatar status="bottom-left" color="success">
-              <img src="https://i.pravatar.cc/150?img=28" alt="avatar" />
-            </div>
+        <div class="min-h-64 flex items-center justify-start sm:justify-center overflow-auto space-x-6 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <div uiAvatar status="top-right" color="success">
+            <img src="https://i.pravatar.cc/150?img=29" alt="avatar" />
+          </div>
+          <div uiAvatar status="bottom-right" color="success">
+            <img src="https://i.pravatar.cc/150?img=26" alt="avatar" />
+          </div>
+          <div uiAvatar status="top-left" color="success">
+            <img src="https://i.pravatar.cc/150?img=25" alt="avatar" />
+          </div>
+          <div uiAvatar status="bottom-left" color="success">
+            <img src="https://i.pravatar.cc/150?img=28" alt="avatar" />
           </div>
         </div>
       } @else {
@@ -166,26 +160,24 @@
     <app-heading id="status-colors" title="Status Colors" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab8', $event)">
       @if(activeTabs['tab8'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md border dark:border-zinc-800">
-          <div class="flex justify-center flex-wrap gap-6">
-            <div uiAvatar status="top-right" color="primary">
-              <img src="https://i.pravatar.cc/150?img=60" alt="avatar" />
-            </div>
-            <div uiAvatar status="top-right" color="info">
-              <img src="https://i.pravatar.cc/150?img=61" alt="avatar" />
-            </div>
-            <div uiAvatar status="top-right" color="help">
-              <img src="https://i.pravatar.cc/150?img=62" alt="avatar" />
-            </div>
-            <div uiAvatar status="top-right" color="success">
-              <img src="https://i.pravatar.cc/150?img=63" alt="avatar" />
-            </div>
-            <div uiAvatar status="top-right" color="warning">
-              <img src="https://i.pravatar.cc/150?img=64" alt="avatar" />
-            </div>
-            <div uiAvatar status="top-right" color="danger">
-              <img src="https://i.pravatar.cc/150?img=65" alt="avatar" />
-            </div>
+        <div class="min-h-64 flex items-center justify-start sm:justify-center overflow-auto space-x-6 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <div uiAvatar status="top-right" color="primary">
+            <img src="https://i.pravatar.cc/150?img=60" alt="avatar" />
+          </div>
+          <div uiAvatar status="top-right" color="info">
+            <img src="https://i.pravatar.cc/150?img=61" alt="avatar" />
+          </div>
+          <div uiAvatar status="top-right" color="help">
+            <img src="https://i.pravatar.cc/150?img=62" alt="avatar" />
+          </div>
+          <div uiAvatar status="top-right" color="success">
+            <img src="https://i.pravatar.cc/150?img=63" alt="avatar" />
+          </div>
+          <div uiAvatar status="top-right" color="warning">
+            <img src="https://i.pravatar.cc/150?img=64" alt="avatar" />
+          </div>
+          <div uiAvatar status="top-right" color="danger">
+            <img src="https://i.pravatar.cc/150?img=65" alt="avatar" />
           </div>
         </div>
       } @else {

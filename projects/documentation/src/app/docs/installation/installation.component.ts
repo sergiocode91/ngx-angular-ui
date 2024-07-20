@@ -18,7 +18,7 @@ import { LucideAngularModule } from 'lucide-angular';
     NavButtonsComponent,
     LinksContentComponent,
     LucideAngularModule,
-    HighlightCodeComponent
+    HighlightCodeComponent,
   ],
   templateUrl: './installation.component.html',
   styles: ``,
@@ -28,22 +28,35 @@ export class InstallationComponent {
     { title: 'Requirements', link: '#requirements' },
     { title: 'Optional requirements', link: '#optional-requirements' },
     { title: 'Installation guide', link: '#installation-guide' },
+    { title: 'Angular UI', link: '#ngx-angular-ui', isSubmenu: true },
+    { title: 'Tailwind CSS', link: '#tailwind-css', isSubmenu: true },
+
   ];
 
   public code1 = `
-  npm i ngx-angular-ui@latest
+  npm install ngx-angular-ui@latest
   `;
 
   public code2 = `
+  npm install -D tailwindcss postcss autoprefixer
+  npx tailwindcss init
+  `;
+
+  public code3 = `
   module.exports = {
-    darkMode: 'class',
     content: [
-      "./projects/**/*.{html,ts}"
+      "./src/**/*.{html,ts}",
     ],
     theme: {
       extend: {},
     },
     plugins: [],
   }
+  `;
+
+  public code4 = `
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
   `;
 }
