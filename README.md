@@ -25,7 +25,7 @@ AngularUI is a UI component library for `Angular` that allows you to effortlessl
 npm install ngx-angular-ui@latest
 ```
 
-#### 2- Install TailwindCSS:
+#### 2- Install Tailwind CSS:
 
 ```bash
 npm install -D tailwindcss postcss autoprefixer
