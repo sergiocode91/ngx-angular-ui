@@ -32,7 +32,7 @@ npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init
 ```
 
-Configure `tailwind.config.js` to enable dark mode and define the content, including the path to ngx-angular-ui components:
+Configure `tailwind.config.js` to enable `darkMode` and define the content, including the path to ngx-angular-ui components:
 
 ```javascript
 module.exports = {
