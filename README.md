@@ -34,7 +34,7 @@ npx tailwindcss init
 
 Configure `tailwind.config.js` to enable dark mode and define the content, including the path to ngx-angular-ui components:
 
-```bash
+```javascript
 module.exports = {
   darkMode: 'class',
   content: [
@@ -52,7 +52,7 @@ module.exports = {
 
 Add the following directives to your main CSS file to include Tailwind CSS base styles, components, and utilities:
 
-```bash
+```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -68,7 +68,7 @@ npm install @fontsource/geist-sans
 
 Add the font imports to your main styles file (e.g., styles.css or styles.scss):
 
-```bash
+```css
 @import '@fontsource/geist-sans/300.css';
 @import '@fontsource/geist-sans/400.css';
 @import '@fontsource/geist-sans/500.css';
@@ -80,7 +80,7 @@ Add the font imports to your main styles file (e.g., styles.css or styles.scss):
 
 Add the following CSS to ensure the font is applied throughout your application:
 
-```bash
+```css
 body {
   font-family: 'Geist Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
