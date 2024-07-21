@@ -19,7 +19,7 @@ You can find the AngularUI documentation on our [website.](https://www.angularui
 
 ### Optional Requirements:
 
-* [Fontsource](https://fontsource.org/) 0.5 or later.
+* [Fontsource](https://fontsource.org/) 5.0 or later.
 * [Lucide](https://lucide.dev/) 0.3 or later.
 
 ## What is AngularUI
