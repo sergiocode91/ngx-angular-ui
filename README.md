@@ -14,13 +14,13 @@ You can find the AngularUI documentation on our [website.](https://www.angularui
 
 ### Requirements:
 
-* [Angular](https://www.angular.dev/) v17 or later.
-* [Tailwind CSS](https://tailwindcss.com/) v3.4 or later.
+* [Angular](https://www.angular.dev/) 17 or later.
+* [Tailwind CSS](https://tailwindcss.com/) 3.4 or later.
 
 ### Optional Requirements:
 
-* [Fontsource](https://fontsource.org/) v0.5 or later.
-* [Lucide](https://lucide.dev/) v0.3 or later.
+* [Fontsource](https://fontsource.org/) 0.5 or later.
+* [Lucide](https://lucide.dev/) 0.3 or later.
 
 ## What is AngularUI
 
