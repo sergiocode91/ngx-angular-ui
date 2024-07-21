@@ -1,4 +1,4 @@
-# AngularUI
+# Getting Started
 
 AngularUI is an open-source collection of prebuilt UI components, based on the utility-first Tailwind CSS framework.
 
@@ -17,7 +17,7 @@ You can find the AngularUI documentation on our [website.](https://www.angularui
 
 AngularUI is a UI component library for `Angular` that allows you to effortlessly create beautiful and accessible interfaces. Built on `Tailwind CSS`, it offers seamless integration and great flexibility. Simplify development with customizable, modern components, enhancing the user experience.
 
-## Getting Started
+## Installation Guide
 
 #### 1- Install Library:
 
@@ -56,6 +56,35 @@ Add the following directives to your main CSS file to include Tailwind CSS base 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+```
+
+## Installation Optional
+
+For a better visual experience, we recommend using the `Geist Sans font`. You can install it and add it to your project by following these steps:
+
+```bash
+npm install @fontsource/geist-sans
+```
+
+Add the font imports to your main styles file (e.g., styles.css or styles.scss):
+
+```bash
+@import '@fontsource/geist-sans/300.css';
+@import '@fontsource/geist-sans/400.css';
+@import '@fontsource/geist-sans/500.css';
+@import '@fontsource/geist-sans/600.css';
+@import '@fontsource/geist-sans/700.css';
+@import '@fontsource/geist-sans/800.css';
+@import '@fontsource/geist-sans/900.css';
+```
+
+Add the following CSS to ensure the font is applied throughout your application:
+
+```bash
+body {
+  font-family: 'Geist Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
 ```
 
 ## Licence
