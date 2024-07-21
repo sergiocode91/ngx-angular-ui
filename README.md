@@ -1,27 +1,57 @@
-# AngularComponentLibrary
+# AngularUI
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+AngularUI is an open-source collection of prebuilt UI components, based on the utility-first Tailwind CSS framework.
 
-## Development server
+[![LicenceMIT](https://camo.githubusercontent.com/a4426cbe5c21edb002526331c7a8fbfa089e84a550567b02a0d829a98b136ad0/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d4d49542d79656c6c6f772e737667)](https://opensource.org/license/MIT)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![LicenceMIT](https://raw.githubusercontent.com/sergiocode91/ngx-angular-ui/main/projects/documentation/src/assets/cover-readme.webp)
 
-## Code scaffolding
+## Documentation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+You can find the AngularUI documentation on our [website.](https://www.angularui.dev/)
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## What is AngularUI
 
-## Running unit tests
+AngularUI is a UI component library for `Angular` that allows you to effortlessly create beautiful and accessible interfaces. Built on `Tailwind CSS`, it offers seamless integration and great flexibility. Simplify development with customizable, modern components, enhancing the user experience.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Getting Started
 
-## Running end-to-end tests
+#### 1- Install Library:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+npm install ngx-angular-ui@latest
+```
 
-## Further help
+#### 2- Install TailwindCSS:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init
+```
+
+Configure `tailwind.config.js` to enable dark mode and define the content, including the path to ngx-angular-ui components:
+
+```bash
+module.exports = {
+  darkMode: 'class',
+  content: [
+    "./src/**/*.{html,ts}",
+    "./node_modules/ngx-angular-ui/**/*.{html,ts,js,mjs}"
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+#### 3- Include tailwind import:
+
+Add the following directives to your main CSS file to include Tailwind CSS base styles, components, and utilities:
+
+```bash
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
