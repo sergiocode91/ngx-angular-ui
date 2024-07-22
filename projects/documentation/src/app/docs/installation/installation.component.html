@@ -6,15 +6,18 @@
       size="xl"
     ></app-heading>
 
-    <app-heading id="requirements" title="Requirements:" size="sm" />
-    <div class="flex flex-col lg:flex-row mt-6 gap-6">
+    <h3 id="requirements" class="font-semibold dark:text-neutral-50 text-[17px] mt-12">Requirements:</h3>
+    <div class="flex flex-col lg:flex-row mt-4 gap-6">
       <a href="https://angular.dev/" target="_blank" class="flex p-4 rounded-xl hover:dark:bg-zinc-900/50 hover:bg-zinc-50">
         <div class="flex items-center justify-center min-w-14 h-14 rounded-full ring-1 ring-slate-900/5 shadow bg-white dark:shadow-none dark:ring-0 dark:bg-zinc-800">
           <img src="../../../assets/angular.svg" width="25" height="25" alt="Angular">
         </div>
         <div class="ml-6">
-          <h4 class="flex items-center font-medium text-sm text-black dark:text-neutral-50 mb-2">
+          <h4 class="flex items-center font-medium text-sm text-black mb-2 dark:text-neutral-50">
             Angular
+            <span class="inline-block font-mono font-semibold text-zinc-500 text-[11px] py-0.5 px-2 ml-2 rounded-md border border-zinc-200 bg-gray-100 dark:text-neutral-50 dark:border-zinc-800 dark:bg-zinc-800">
+              17 +
+            </span>
             <lucide-icon name="ArrowUpRight" [size]="16" class="ml-1"></lucide-icon>
           </h4>
           <p class="text-sm mb-0 text-zinc-500 dark:text-white/60">Platform for building mobile and desktop web applications.</p>
@@ -25,8 +28,11 @@
           <img src="../../../assets/tailwindcss.svg" width="25" height="25" alt="Angular">         
         </div>
         <div class="ml-6">
-          <h4 class="flex items-center font-medium text-sm text-black leading-6 dark:text-neutral-50">
+          <h4 class="flex items-center font-medium text-sm text-black mb-2 dark:text-neutral-50">
             Tailwind CSS
+            <span class="inline-block font-mono font-semibold text-zinc-500 text-[11px] py-0.5 px-2 ml-2 rounded-md border border-zinc-200 bg-gray-100 dark:text-neutral-50 dark:border-zinc-800 dark:bg-zinc-800">
+              3.4 +
+            </span>
             <lucide-icon name="ArrowUpRight" [size]="16" class="ml-1"></lucide-icon>
           </h4>
           <p class="text-sm mb-0 text-zinc-500 dark:text-white/60">Utility-first CSS framework for rapid UI design.</p>
@@ -34,8 +40,8 @@
       </a>
     </div>
 
-    <app-heading id="optional-requirements" title="Optional requirements:" size="sm" />
-    <div class="flex flex-col lg:flex-row mt-6 gap-6">
+    <h3 id="optional-requirements" class="font-semibold dark:text-neutral-50 text-[17px] mt-12">Optional Requirements:</h3>
+    <div class="flex flex-col lg:flex-row mt-4 gap-6">
       <a href="https://fontsource.org/" target="_blank" class="flex p-4 rounded-xl hover:dark:bg-zinc-900/50 hover:bg-zinc-50">
         <div class="flex items-center justify-center min-w-14 h-14 rounded-full ring-1 ring-slate-900/5 shadow bg-white dark:shadow-none dark:ring-0 dark:bg-zinc-800">
           <svg height="25" width="25" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,20 +50,26 @@
           </svg>          
         </div>
         <div class="ml-6">
-          <h4 class="flex items-centerfont-medium text-sm text-black leading-6 dark:text-neutral-50">
+          <h4 class="flex items-center font-medium text-sm text-black mb-2 dark:text-neutral-50">
             Fontsource
+            <span class="inline-block font-mono font-semibold text-zinc-500 text-[11px] py-0.5 px-2 ml-2 rounded-md border border-zinc-200 bg-gray-100 dark:text-neutral-50 dark:border-zinc-800 dark:bg-zinc-800">
+              5.0 +
+            </span>
             <lucide-icon name="ArrowUpRight" [size]="16" class="ml-1"></lucide-icon>
           </h4>
           <p class="text-sm mb-0 text-zinc-500 dark:text-white/60">Self-host Open Source fonts for developers.</p>
         </div>
       </a>
-      <a href="https://lucide.dev/" target="_blank" class="flex p-4 rounded-xl hover:dark:bg-zinc-900/50 hover:bg-zinc-50">
-        <div class="flex items-center justify-center min-w-14 h-14 rounded-full ring-1 ring-slate-900/5 shadow bg-white dark:shadow-none dark:ring-0 dark:bg-zinc-800">
-          <img src="../../../assets/lucide.svg" width="25" height="25" alt="Angular">
+      <a href="https://lucide.dev/" target="_blank" class="flex p-4 rounded-xl hover:dark:bg-zinc-900/50 hover:bg-zinc-50 dark:hover:bg-zinc-800">
+        <div class="flex items-center justify-center min-w-14 h-14 rounded-full ring-1 ring-zinc-200 shadow bg-white dark:shadow-none dark:ring-0 dark:bg-zinc-800">
+          <img src="../../../assets/lucide.svg" width="25" height="25" alt="Lucide">
         </div>
         <div class="ml-6">
-          <h4 class="flex items-centerfont-medium text-sm text-black leading-6 dark:text-neutral-50">
+          <h4 class="flex items-center font-medium text-sm text-black mb-2 dark:text-neutral-50">
             Lucide Icons
+            <span class="inline-block font-mono font-semibold text-zinc-500 text-[11px] py-0.5 px-2 ml-2 rounded-md border border-zinc-200 bg-gray-100 dark:text-neutral-50 dark:border-zinc-800 dark:bg-zinc-800">
+              0.3 +
+            </span>
             <lucide-icon name="ArrowUpRight" [size]="16" class="ml-1"></lucide-icon>
           </h4>
           <p class="text-sm mb-0 text-zinc-500 dark:text-white/60">Open-source icon library for designers.</p>
@@ -65,36 +77,41 @@
       </a>
     </div>
 
-    <!-- <div class="flex flex-col space-y-2">
-      <a href="https://angular.dev/" target="_blank" class="flex items-center dark:text-white underline underline-offset-4">
-        Angular 16
-        <lucide-icon name="ArrowUpRight" [size]="16" class="ml-1"></lucide-icon>
-      </a>
-      <a href="https://tailwindcss.com/" target="_blank" class="flex items-center dark:text-white underline underline-offset-4">
-        Tailwind CSS 3.4
-        <lucide-icon name="ArrowUpRight" [size]="16" class="ml-1"></lucide-icon>
-      </a>
-    </div> -->
+    <app-heading id="installation-guide" title="Installation Guide" size="lg" [border]="true" />
 
-    <!-- <app-heading id="optional-requirements" title="Optional requirements:" size="sm" />
-    <div class="flex flex-col space-y-2">
-      <a href="https://lucide.dev/guide/packages/lucide-angular" target="_blank" class="flex items-center dark:text-white underline underline-offset-4">
-        Lucide 0.3
-        <lucide-icon name="ArrowUpRight" [size]="16" class="ml-1"></lucide-icon>
-      </a>
-      <a href="https://fontsource.org/" target="_blank" class="flex items-center dark:text-white underline underline-offset-4">
-        Fontsource 5.0
-        <lucide-icon name="ArrowUpRight" [size]="16" class="ml-1"></lucide-icon>
-      </a>
-    </div> -->
+    <div class="flex items-center pb-2 mt-12 space-x-3">
+      <div class="flex items-center justify-center min-w-6 h-6 font-semibold text-xs text-black rounded-full bg-zinc-100 dark:text-white dark:bg-zinc-800">1</div>
+      <h3 id="step-1" class="font-semibold dark:text-neutral-50 text-[17px]">Install Library:</h3>
+    </div>
+    <app-highlight-code [code]="code1" [language]="'coffeescript'" class="[&>div]:mt-4" />
 
-    <app-heading id="installation-guide" title="Installation guide" size="lg" [border]="true" />
-    <app-highlight-code [code]="code1" [language]="'coffeescript'" />
-    <app-highlight-code [code]="code2" [language]="'coffeescript'" />
+    <div class="flex items-center pb-2 mt-12 space-x-3">
+      <div class="flex items-center justify-center min-w-6 h-6 font-semibold text-xs text-black rounded-full bg-zinc-100 dark:text-white dark:bg-zinc-800">2</div>
+      <h3 id="step-2" class="font-semibold dark:text-neutral-50 text-[17px]">Install Tailwind CSS:</h3>
+    </div>
+    <app-highlight-code [code]="code2" [language]="'coffeescript'" class="[&>div]:mt-4" />
+
+    <p class="text-sm lg:text-base mt-[24px]">Configure <span class="font-medium dark:text-white underline underline-offset-4">tailwind.config.js</span> to enable <span class="font-medium dark:text-white underline underline-offset-4">darkMode</span> and define the content, including the path to ngx-angular-ui components:</p>
     <app-highlight-code [code]="code3" [language]="'typescript'" />
+
+    <div class="flex items-center pb-2 mt-12 space-x-3">
+      <div class="flex items-center justify-center min-w-6 h-6 font-semibold text-xs text-black rounded-full bg-zinc-100 dark:text-white dark:bg-zinc-800">3</div>
+      <h3 id="step-3" class="font-semibold dark:text-neutral-50 text-[17px]">Include tailwind import:</h3>
+    </div>
+    <p class="text-sm lg:text-base">Add the following directives to your main CSS file to include Tailwind CSS base styles, components, and utilities:</p>
     <app-highlight-code [code]="code4" [language]="'css'" />
 
-    
+    <app-heading id="installation-optional" title="Installation Optional" size="lg" [border]="true" />
+
+    <p class="text-sm lg:text-base mt-12">For a better visual experience, we recommend using the <span class="font-medium dark:text-white underline underline-offset-4">Geist Sans</span> font. You can install it and add it to your project by following these steps:</p>
+    <app-highlight-code [code]="code5" [language]="'coffeescript'" />
+
+    <p class="text-sm lg:text-base mt-[24px]">Add the font imports to your main styles file (e.g., styles.css or styles.scss):</p>
+    <app-highlight-code [code]="code6" [language]="'css'" />
+
+    <p class="text-sm lg:text-base mt-[24px]">Add the following CSS to ensure the font is applied throughout your application:</p>
+    <app-highlight-code [code]="code7" [language]="'css'" />
+
     <app-nav-buttons
       [labelLeft]="'Introduction'"
       [labelRight]="'Alert'"
