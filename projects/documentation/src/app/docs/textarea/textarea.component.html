@@ -2,13 +2,13 @@
   <div class="xl:w-[calc(100%-17rem)]">
     <app-heading
       title="Textarea"
-      description="Displays a form textarea or a component that looks like a textarea."
+      description="Renders a multi-line input field for user text entry."
     ></app-heading>
     
-    <a href="/" target="_blank" uiButton variant="secondary" size="sm">
+    <button uiButton variant="secondary" size="sm" disabled>
       <img src="../../../assets/storybook.svg" width="13" height="13" alt="Storybook" class="mr-2">
       Storybook
-    </a>
+    </button>
     
     <app-heading id="usage" title="Usage" size="lg" [border]="true" />
     <app-highlight-code [code]="examples.codeUseTs ?? ''" [language]="'typescript'" />

@@ -1,4 +1,4 @@
-<header class="w-full top-0 left-0 border-b border-zinc-200/30 bg-white dark:border-zinc-800/50 dark:bg-zinc-950 sticky z-50">
+<header class="w-full top-0 left-0 border-b border-zinc-200/30 bg-white dark:border-zinc-800/50 dark:bg-zinc-950 fixed z-50">
   <div class="max-w-[76rem] h-14 lg:h-16 flex items-center justify-between mx-auto px-5 xl:px-0">
     <div class="flex items-center space-x-6">
       <a routerLink="/" class="font-bold text-xl lg:text-2xl dark:text-white">
@@ -47,17 +47,23 @@
       <h3 class="font-medium text-sm py-1 mb-1 dark:font-semibold dark:text-neutral-50">{{ nav.title }}</h3>
       <div class="grid grid-flow-row auto-rows-max text-sm">
         @for (link of nav.links; track link.title ) {
-          <a 
-            (click)="toggleMenu()"
-            [routerLink]="link.routerLink"
-            routerLinkActive="font-medium !text-black dark:!text-white"
-            class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 dark:text-white/60 dark:hover:text-neutral-50"
-          >
-            {{ link.title }}
-            @if (link?.isSoon) {
-              <span class="h-4 font-semibold text-[9px] text-white leading-4 px-2 ml-3 rounded-full bg-zinc-900 dark:bg-zinc-800">Soon</span>
-            }
-          </a>
+          @if (!link.isSoon) {
+            <a 
+              (click)="toggleMenu()"
+              [routerLink]="link.routerLink"
+              routerLinkActive="font-medium !text-black dark:!text-white"
+              class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 dark:text-white/60 dark:hover:text-neutral-50"
+            >
+              {{ link.title }}
+            </a>
+          } @else {
+            <button class="w-full flex items-center text-zinc-500 hover:text-zinc-900 py-1.5 dark:text-white/60 dark:hover:text-neutral-50">
+              {{ link.title }}
+              @if (link?.isSoon) {
+                <span class="h-4 font-semibold text-[9px] text-white leading-4 px-2 ml-3 rounded-full bg-zinc-900 dark:bg-zinc-800">Soon</span>
+              }
+            </button>
+          }
         }
       </div>
     </div>

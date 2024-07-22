@@ -2,13 +2,13 @@
   <div class="xl:w-[calc(100%-17rem)]">
     <app-heading
       title="Label"
-      description="Renders an accessible label associated with controls."
+      description="Provides a placeholder during content loading."
     ></app-heading>
     
-    <a href="/" target="_blank" uiButton variant="secondary" size="sm">
+    <button uiButton variant="secondary" size="sm" disabled>
       <img src="../../../assets/storybook.svg" width="13" height="13" alt="Storybook" class="mr-2">
       Storybook
-    </a>
+    </button>
     
     <app-heading id="usage" title="Usage" size="lg" [border]="true" />
     <app-highlight-code [code]="examples.codeUseTs ?? ''" [language]="'typescript'" />

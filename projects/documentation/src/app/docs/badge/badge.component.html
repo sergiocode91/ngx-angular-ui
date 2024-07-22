@@ -2,13 +2,13 @@
   <div class="xl:w-[calc(100%-17rem)]">
     <app-heading
       title="Badge"
-      description="Displays a badge or a component that looks like a badge."
+      description="Renders a badge-like element for highlighting important information."
     ></app-heading>
     
-    <a href="/" target="_blank" uiButton variant="secondary" size="sm">
+    <button uiButton variant="secondary" size="sm" disabled>
       <img src="../../../assets/storybook.svg" width="13" height="13" alt="Storybook" class="mr-2">
       Storybook
-    </a>
+    </button>
     
     <app-heading id="props" title="Props" size="lg" />
     <app-props [props]="props" />
@@ -144,11 +144,11 @@
     
     <app-nav-buttons
       [labelLeft]="'Avatar'"
-      [labelRight]="'Breadcrumb'"
+      [labelRight]="'Button'"
       [positionLeft]="true"
       [positionRight]="true"
       routerLeft="/docs/avatar"
-      routerRight="/docs/breadcrumb"
+      routerRight="/docs/button"
     />
   </div>
   <app-links-content class="hidden xl:block" [linksContent]="linksContent" />

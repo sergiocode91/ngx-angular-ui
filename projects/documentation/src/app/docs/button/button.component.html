@@ -2,13 +2,13 @@
   <div class="xl:w-[calc(100%-17rem)]">
     <app-heading 
       title="Button" 
-      description="A vertically stacked set of interactive headings that each reveal a section of content." 
+      description="Allows users to take actions with a single tap." 
     />
     
-    <a href="/" target="_blank" uiButton variant="secondary" size="sm">
+    <button uiButton variant="secondary" size="sm" disabled>
       <img src="../../../assets/storybook.svg" width="13" height="13" alt="Storybook" class="mr-2">
       Storybook
-    </a>
+    </button>
     
     <app-heading id="props" title="Props" size="lg" />
     <app-props [props]="props" />
@@ -171,11 +171,11 @@
       }
     </app-tabs>
     <app-nav-buttons
-      [labelLeft]="'Breadcrumb'"
+      [labelLeft]="'Badge'"
       [labelRight]="'Card'"
       [positionLeft]="true"
       [positionRight]="true"
-      routerLeft="/docs/breadcrumb"
+      routerLeft="/docs/badge"
       routerRight="/docs/card"
     />
   </div>
