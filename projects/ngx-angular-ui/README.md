@@ -5,7 +5,7 @@ AngularUI is an open-source collection of prebuilt UI components, based on the u
 [![LicenceMIT](https://camo.githubusercontent.com/a4426cbe5c21edb002526331c7a8fbfa089e84a550567b02a0d829a98b136ad0/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d4d49542d79656c6c6f772e737667)](https://opensource.org/license/MIT)
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/sergiocode91/ngx-angular-ui/main/projects/documentation/src/assets/cover-readme.webp" alt="AngularUI" width="700">
+  <img src="https://raw.githubusercontent.com/sergiocode91/ngx-angular-ui/main/projects/documentation/src/assets/og.webp" alt="AngularUI" width="700">
 </div>
 
 ## Documentation
