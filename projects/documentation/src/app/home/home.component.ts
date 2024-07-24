@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HtmlButtonDirective } from '../../../../ngx-angular-ui/src/public-api';
 import { HeroComponent } from '@components/index';
+import { RouterModule } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
 import { HtmlSkeletonDirective } from 'ngx-angular-ui';
 
@@ -12,6 +13,7 @@ import { HtmlSkeletonDirective } from 'ngx-angular-ui';
     HeroComponent,
     LucideAngularModule,
     HtmlSkeletonDirective,
+    RouterModule,
   ],
   templateUrl: './home.component.html',
   styles: ``,
