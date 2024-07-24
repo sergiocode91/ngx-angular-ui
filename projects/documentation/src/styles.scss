@@ -18,7 +18,7 @@ body {
 
 body::-webkit-scrollbar,
 .sidebar-scroll::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 body::-webkit-scrollbar-track,
@@ -28,6 +28,12 @@ body::-webkit-scrollbar-track,
 
 body::-webkit-scrollbar-thumb,
 .sidebar-scroll::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: #d9d9dd;
+}
+
+.dark body::-webkit-scrollbar-thumb,
+.dark .sidebar-scroll::-webkit-scrollbar-thumb {
   border-radius: 50px;
   background-color: #454647;
 }
