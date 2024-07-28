@@ -1,6 +1,7 @@
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import { provideRouter, withViewTransitions } from '@angular/router';
 import { provideClientHydration } from '@angular/platform-browser';
+import { routes } from './app.routes';
 import {
   LucideAngularModule,
   Files,
@@ -15,11 +16,9 @@ import {
   Rss,
   Megaphone,
   Ban,
-  TriangleAlert,
   CircleCheck,
   Info,
   X,
-  LoaderCircle,
   Bug,
   ChevronLeft,
   ChevronRight,
@@ -27,8 +26,16 @@ import {
   Shield,
   EllipsisVertical,
   Menu,
+  CircleUser,
+  TriangleAlert,
+  MousePointerClick,
+  MessageSquareDot,
+  LoaderCircle,
+  LayoutTemplate,
+  TextCursorInput,
+  Captions,
+  WholeWord,
 } from 'lucide-angular';
-import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -52,7 +59,6 @@ export const appConfig: ApplicationConfig = {
         CircleCheck,
         Info,
         X,
-        LoaderCircle,
         Bug,
         ChevronLeft,
         ChevronRight,
@@ -60,7 +66,15 @@ export const appConfig: ApplicationConfig = {
         Shield,
         EllipsisVertical,
         Menu,
+        CircleUser,
+        MousePointerClick,
+        MessageSquareDot,
+        LoaderCircle,
+        LayoutTemplate,
+        TextCursorInput,
+        Captions,
+        WholeWord,
       })
     ),
-  ]
+  ],
 };
