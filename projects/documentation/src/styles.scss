@@ -48,6 +48,10 @@ p {
   color: rgba(255, 255, 255, 0.9);
 }
 
+.mask-image {
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
 .bg-pattern {
   background: url(./assets/pattern.webp) repeat bottom center;
 }

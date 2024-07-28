@@ -35,6 +35,7 @@ import {
   TextCursorInput,
   Captions,
   WholeWord,
+  ArrowRight,
 } from 'lucide-angular';
 
 export const appConfig: ApplicationConfig = {
@@ -74,6 +75,7 @@ export const appConfig: ApplicationConfig = {
         TextCursorInput,
         Captions,
         WholeWord,
+        ArrowRight,
       })
     ),
   ],

@@ -14,7 +14,7 @@
   </p>
 </div>
 <div class="px-5 xl:px-0">
-  <div class="max-w-[76rem] mx-auto grid gap-px lg:grid-cols-3 text-left border-x border-y border-zinc-200 bg-zinc-200 dark:border-zinc-900 dark:bg-zinc-900">
+  <div class="max-w-[76rem] mx-auto grid gap-px lg:grid-cols-3 text-left mask-image border-x border-y border-zinc-200 bg-zinc-200 dark:border-zinc-900 dark:bg-zinc-900">
     @for (component of components; track $index) {
       <a routerLink="{{ component.link }}" class="px-8 py-7 transition-all bg-white dark:bg-zinc-950 hover:dark:bg-zinc-950/80 hover:bg-zinc-50">
         <lucide-icon [name]="component.icon" [size]="24" [strokeWidth]="1.5" class="dark:text-neutral-50" />
@@ -22,6 +22,12 @@
         <h2 class="text-sm lg:text-base text-zinc-500 dark:text-white/70">{{ component.description }}</h2>
       </a>
     }
+  </div>
+  <div class="max-w-[76rem] mx-auto flex flex-col md:flex-row justify-center pt-16">
+    <a routerLink="/docs/avatar" uiButton size="lg" variant="outline">
+      All components
+      <lucide-icon name="ArrowRight" [size]="18" class="inline-flex ml-1"></lucide-icon>
+    </a>
   </div>
 </div>
 
@@ -35,22 +41,6 @@
       Our code is open on GitHub – you're welcome to explore, review, or
       contribute as you like.
     </p>
-    <div class="flex md:items-center pt-10 md:pt-14">
-      <a
-        href="https://github.com/sergiocode91/ngx-angular-ui"
-        target="_blank"
-        uiButton
-        size="lg"
-        variant="outline"
-      >
-        Give a start
-        <lucide-icon
-          name="Github"
-          [size]="18"
-          class="inline-flex ml-1"
-        ></lucide-icon>
-      </a>
-    </div>
   </div>
   <div class="flex flex-col items-start justify-start space-y-6 lg:space-y-0 lg:items-center lg:flex-row lg:justify-between">
     <div class="flex items-center space-x-6">
