@@ -115,15 +115,15 @@ export class HtmlButtonDirective implements OnInit, OnChanges {
   private getSizeClass(size: string): string {
     switch (size) {
       case 'sm':
-        return 'h-8 px-3 text-xs';
+        return 'min-h-8 px-3 text-xs';
       case 'md':
-        return 'h-9 px-4 py-2';
+        return 'min-h-9 px-4 py-2';
       case 'lg':
-        return 'h-10 px-8';
+        return 'min-h-10 px-8';
       case 'icon':
-        return 'h-9 w-9';
+        return 'min-w-9 min-h-9';
       default:
-        return 'h-9 px-4 py-2';
+        return 'min-h-9 px-4 py-2';
     }
   }
 

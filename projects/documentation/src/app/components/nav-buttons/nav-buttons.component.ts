@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
 import { HtmlButtonDirective } from 'ngx-angular-ui';
 
+
 @Component({
   selector: 'app-nav-buttons',
   standalone: true,
