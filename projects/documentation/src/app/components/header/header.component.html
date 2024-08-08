@@ -11,14 +11,21 @@
       <a routerLink="/docs/avatar" class="hidden lg:block font-medium text-sm text-zinc-500 transition-all hover:text-zinc-900 dark:hover:text-neutral-50 dark:text-white/70">Components</a>
       <!-- <a routerLink="/docs/examples" class="hidden lg:block font-medium text-sm text-zinc-500 transition-all hover:text-zinc-900 dark:hover:text-neutral-50 dark:text-white/70">Examples</a> -->
     </div>
-    <div class="flex items-center space-x-2">
-      <a href="https://github.com/sergiocode91/ngx-angular-ui" target="_blank" uiButton variant="outline" size="sm" class="hidden lg:flex">
-          Github
-        <lucide-icon name="Github" [size]="18" class="ml-1"></lucide-icon>
+    <div class="flex items-center space-x-0.5">
+      <button class="inline-flex items-center w-64 h-8 text-sm text-white/60 mr-2 px-4 py-2 pr-12 rounded-md transition-colors border border-zinc-200 bg-gray-100 dark:text-white/60 dark:border-zinc-800 dark:bg-white/5 dark:hover:bg-zinc-800 relative">
+        Search documentation...
+        <div class="flex items-center h-5 text-xs px-1.5 right-[0.3rem] rounded gap-1 bg-zinc-800 absolute">
+          <lucide-icon name="Command" [size]="10"></lucide-icon>
+          <span class="font-medium font-mono text-[10px] rounded">K</span>
+        </div>
+      </button>
+      <a href="https://github.com/sergiocode91/ngx-angular-ui" target="_blank" uiButton variant="ghost" size="sm" class="hidden lg:flex">
+        <!-- Github -->
+        <lucide-icon name="Github" [size]="18"></lucide-icon>
       </a>
-      <a href="https://x.com/sergiocode_" target="_blank" uiButton variant="outline" size="sm" class="hidden lg:flex">
-          Follow on
-        <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 1200 1227">
+      <a href="https://x.com/sergiocode_" target="_blank" uiButton variant="ghost" size="sm" class="hidden lg:flex">
+        <!-- Follow on -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 1200 1227">
           <path fill="currentColor" d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z"/>
         </svg>
       </a>

@@ -8,7 +8,12 @@ import { DarkmodeService } from '../../services/darkmode.service';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, LucideAngularModule, HtmlButtonDirective, RouterModule],
+  imports: [
+    CommonModule,
+    LucideAngularModule,
+    HtmlButtonDirective,
+    RouterModule,
+  ],
   templateUrl: './header.component.html',
   styles: ``,
 })
@@ -20,8 +25,16 @@ export class HeaderComponent {
     {
       title: 'Getting Started',
       links: [
-        { title: 'Introduction', routerLink: '/docs/introduction', isSoon: false },
-        { title: 'Installation', routerLink: '/docs/installation', isSoon: false },
+        {
+          title: 'Introduction',
+          routerLink: '/docs/introduction',
+          isSoon: false,
+        },
+        {
+          title: 'Installation',
+          routerLink: '/docs/installation',
+          isSoon: false,
+        },
       ],
     },
     {
@@ -42,7 +55,7 @@ export class HeaderComponent {
         { title: 'Tooltip', routerLink: '/docs/tooltip', isSoon: true },
       ],
     },
-  ]
+  ];
 
   toggleDarkmode() {
     this._darkModeService.toggleDarkmode();

@@ -36,6 +36,7 @@ import {
   Captions,
   WholeWord,
   ArrowRight,
+  Command,
 } from 'lucide-angular';
 
 export const appConfig: ApplicationConfig = {
@@ -76,6 +77,7 @@ export const appConfig: ApplicationConfig = {
         Captions,
         WholeWord,
         ArrowRight,
+        Command,
       })
     ),
   ],

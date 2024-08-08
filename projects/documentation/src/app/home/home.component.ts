@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
 import { HeroComponent } from '@components/index';
-import { HtmlButtonDirective, HtmlSkeletonDirective } from 'ngx-angular-ui';
+import { HtmlBadgeDirective, HtmlButtonDirective, HtmlSkeletonDirective } from 'ngx-angular-ui';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +13,7 @@ import { HtmlButtonDirective, HtmlSkeletonDirective } from 'ngx-angular-ui';
     HeroComponent,
     HtmlButtonDirective,
     HtmlSkeletonDirective,
+    HtmlBadgeDirective
   ],
   templateUrl: './home.component.html',
   styles: ``,
