@@ -37,6 +37,8 @@ import {
   WholeWord,
   ArrowRight,
   Command,
+  File,
+  Search,
 } from 'lucide-angular';
 
 export const appConfig: ApplicationConfig = {
@@ -78,6 +80,8 @@ export const appConfig: ApplicationConfig = {
         WholeWord,
         ArrowRight,
         Command,
+        File,
+        Search,
       })
     ),
   ],
