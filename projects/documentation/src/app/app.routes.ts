@@ -37,6 +37,12 @@ export const routes: Routes = [
           import('./docs/alert/alert.component').then((m) => m.AlertComponent),
       },
       {
+        path: 'alert-dialog',
+        title: 'Alert Dialog' + ' | ' + baseTitle,
+        loadComponent: () =>
+          import('./docs/alert-dialog/alert-dialog.component').then((m) => m.AlertDialogComponent),
+      },
+      {
         path: 'avatar',
         title: 'Avatar' + ' | ' + baseTitle,
         loadComponent: () =>
@@ -63,6 +69,12 @@ export const routes: Routes = [
         title: 'Card' + ' | ' + baseTitle,
         loadComponent: () =>
           import('./docs/card/card.component').then((m) => m.CardComponent),
+      },
+      {
+        path: 'dialog',
+        title: 'Dialog' + ' | ' + baseTitle,
+        loadComponent: () =>
+          import('./docs/dialog/dialog.component').then((m) => m.DialogComponent),
       },
       {
         path: 'input',

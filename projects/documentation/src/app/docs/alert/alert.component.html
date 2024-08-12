@@ -5,10 +5,17 @@
       description="Displays a notice that captures the user's attention."
     ></app-heading>
     
-    <button uiButton variant="secondary" size="sm" disabled>
-      <img src="../../../assets/storybook.svg" width="13" height="13" alt="Storybook" class="mr-2">
-      Storybook
-    </button>
+    <div class="flex space-x-2">
+      <button uiButton variant="secondary" size="sm" disabled>
+        <img src="../../../assets/storybook.svg" width="13" height="13" alt="Storybook" class="mr-2">
+        Storybook
+      </button>
+  
+      <button uiButton variant="secondary" size="sm" disabled>
+        <img src="../../../assets/stackblitz.svg" width="13" height="13" alt="Storybook" class="mr-2">
+        Stackblitz
+      </button>
+    </div>
     
     <app-heading id="props" title="Props" size="lg" />
     <app-props [props]="props" />
