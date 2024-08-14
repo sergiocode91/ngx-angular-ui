@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LucideAngularModule } from 'lucide-angular';
 import {
   HeadingComponent,
   HighlightCodeComponent,
@@ -10,6 +11,9 @@ import {
   HtmlInputDirective,
   HtmlLabelDirective,
   HtmlButtonDirective,
+  HtmlAlertDirective, 
+  HtmlAlertTitleDirective,
+  HtmlAlertDescriptionDirective,
 
   HtmlDialogCloseDirective,
   HtmlDialogContentDirective,
@@ -32,10 +36,14 @@ import { DialogService } from '../../services/code-example';
     LinksContentComponent,
     TabsComponent,
     NavButtonsComponent,
+    LucideAngularModule,
 
     HtmlInputDirective,
     HtmlLabelDirective,
     HtmlButtonDirective,
+    HtmlAlertDirective, 
+    HtmlAlertTitleDirective,
+    HtmlAlertDescriptionDirective,
     
     HtmlDialogCloseDirective,
     HtmlDialogContentDirective,
