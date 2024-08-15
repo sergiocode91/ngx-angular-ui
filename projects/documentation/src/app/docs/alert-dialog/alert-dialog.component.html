@@ -1,0 +1,25 @@
+
+<button uiButton uiDialogTrigger size="sm">Open dialog</button>
+
+<div uiDialog>
+  <div uiDialogContent>
+    <div uiDialogHeader>
+      <div uiDialogTitle>Edit profile</div>
+      <div uiDialogDescription>Make changes to your profile here.</div>
+    </div>
+    <div class="grid items-center gap-4">
+      <div class="flex flex-col space-y-2">
+        <label uiLabel for="email">Email address</label>
+        <input uiInput type="email" id="email" placeholder="Enter your email address">
+      </div>
+      <div class="flex flex-col space-y-2">
+        <label uiLabel for="password">Password</label>
+        <input uiInput type="password" id="password" placeholder="Enter your password">
+      </div>
+    </div>
+    <div uiDialogFooter class="flex justify-end space-x-2">
+      <button uiButton variant="outline" size="sm" uiDialogClose>Cancel</button>
+      <button uiButton size="sm" uiDialogClose>Accept</button>
+    </div>
+  </div>
+</div>
