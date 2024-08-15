@@ -15,12 +15,16 @@ import {
 export class HtmlDialogDirective implements OnInit, OnChanges {
   @Input() size: 'sm' | 'md' | 'lg' | 'xl' = 'md';
   @Input() isOpenDialog: boolean = false;
+  @Input() dialogId: string = '';
   @Input() class: string = '';
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   ngOnInit() {
     this.applyClasses();
+    if (this.dialogId) {
+      this.renderer.setAttribute(this.el.nativeElement, 'data-dialog-id', this.dialogId);
+    }
   }
 
   ngOnChanges() {

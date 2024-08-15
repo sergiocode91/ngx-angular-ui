@@ -5,6 +5,7 @@ import { Directive, HostListener } from '@angular/core';
   standalone: true,
 })
 export class HtmlDialogCloseDirective {
+  
   @HostListener('click', ['$event'])
   onClick(event: Event) {
     const dialog = (event.target as HTMLElement).closest('[uiDialog]');
