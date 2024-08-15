@@ -53,7 +53,7 @@
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
       @if(activeTabs['tab1'] === 'Preview') {
         <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
-          <button uiButton uiDialogTrigger dialogId="dialog2" variant="outline">Delete project</button>
+          <button uiButton uiDialogTrigger color="danger" dialogId="dialog2">Delete project</button>
           <div uiDialog dialogId="dialog2">
             <div uiDialogContent>
               <div uiDialogHeader>
@@ -74,6 +74,84 @@
                 <button uiButton variant="outline" uiDialogClose>Cancel</button>
                 <button uiButton color="danger" uiDialogClose>Delete project</button>
               </div>
+            </div>
+          </div>
+        </div>
+      } @else {
+        <app-highlight-code [code]="examples.code1 ?? ''" [language]="'typescript'" />
+      }
+    </app-tabs>
+
+    <app-heading id="with-reset-password" title="With Reset password" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
+      @if(activeTabs['tab1'] === 'Preview') {
+        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <button uiButton uiDialogTrigger dialogId="dialog3" variant="outline">Privacy Policy</button>
+          <div uiDialog dialogId="dialog3">
+            <div uiDialogContent>
+              <div uiDialogHeader>
+                <div uiDialogTitle>Privacy Policy</div>
+              </div>
+              <div class="text-sm lg:text-base">
+                <p>
+                  At [Company], we are dedicated to protecting your privacy. We collect information to provide, maintain, 
+                  and improve our services, as well as ensure the safety of our users. This data helps us develop new features 
+                  and protect public safety.
+                </p>
+                <p>
+                  In some cases, we may share your information with third parties, such as with your consent, with service 
+                  providers and partners, or to meet legal obligations. We take measures to secure your data, but cannot 
+                  guarantee complete protection.
+                </p>                              
+              </div>
+              <div uiDialogFooter class="flex justify-end space-x-2">
+                <button uiButton variant="outline" uiDialogClose>Cancel</button>
+                <button uiButton uiDialogClose>Accept</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      } @else {
+        <app-highlight-code [code]="examples.code1 ?? ''" [language]="'typescript'" />
+      }
+    </app-tabs>
+
+    <app-heading id="sizes" title="Sizes" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
+      @if(activeTabs['tab1'] === 'Preview') {
+        <div class="min-h-64 flex items-center overflow-auto p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <div class="flex flex-wrap items-center justify-start sm:justify-center gap-4 lg:gap-6">
+            <button uiButton uiDialogTrigger dialogId="dialog3" variant="outline">Open xs</button>
+            <button uiButton uiDialogTrigger dialogId="dialog3" variant="outline">Open sm</button>
+            <button uiButton uiDialogTrigger dialogId="dialog3" variant="outline">Open md</button>
+            <button uiButton uiDialogTrigger dialogId="dialog3" variant="outline">Open lg</button>
+            <button uiButton uiDialogTrigger dialogId="dialog3" variant="outline">Open xl</button>
+            <button uiButton uiDialogTrigger dialogId="dialog3" variant="outline">Open 2xl</button>
+            <button uiButton uiDialogTrigger dialogId="dialog3" variant="outline">Open 3xl</button>
+            <button uiButton uiDialogTrigger dialogId="dialog3" variant="outline">Open 4xl</button>
+            <button uiButton uiDialogTrigger dialogId="dialog3" variant="outline">Open 5xl</button>
+          </div>
+        </div>
+        <div uiDialog dialogId="dialog3">
+          <div uiDialogContent>
+            <div uiDialogHeader>
+              <div uiDialogTitle>Privacy Policy</div>
+            </div>
+            <div class="text-sm lg:text-base">
+              <p>
+                At [Company], we are dedicated to protecting your privacy. We collect information to provide, maintain, 
+                and improve our services, as well as ensure the safety of our users. This data helps us develop new features 
+                and protect public safety.
+              </p>
+              <p>
+                In some cases, we may share your information with third parties, such as with your consent, with service 
+                providers and partners, or to meet legal obligations. We take measures to secure your data, but cannot 
+                guarantee complete protection.
+              </p>                              
+            </div>
+            <div uiDialogFooter class="flex justify-end space-x-2">
+              <button uiButton variant="outline" uiDialogClose>Cancel</button>
+              <button uiButton uiDialogClose>Accept</button>
             </div>
           </div>
         </div>
