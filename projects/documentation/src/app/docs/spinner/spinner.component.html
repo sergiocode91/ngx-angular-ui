@@ -22,7 +22,7 @@
     <app-heading id="default" title="Default" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
       @if(activeTabs['tab1'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+        <div class="min-h-36 flex flex-wrap items-center justify-start overflow-auto gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
           <div uiSpinner></div>
         </div>
       } @else {
@@ -33,7 +33,7 @@
     <app-heading id="sizes" title="Sizes" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab2', $event)">
       @if(activeTabs['tab2'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+        <div class="min-h-36 flex flex-wrap items-center justify-start overflow-auto gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
           <div class="flex items-center space-x-6">
             <div uiSpinner size="xs"></div>
             <div uiSpinner size="sm"></div>
@@ -49,7 +49,7 @@
     <app-heading id="colors" title="Colors" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab3', $event)">
       @if(activeTabs['tab3'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+        <div class="min-h-36 flex flex-wrap items-center justify-start overflow-auto gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
           <div class="flex items-center space-x-6">
             <div uiSpinner color="default"></div>
             <div uiSpinner color="primary"></div>
@@ -67,7 +67,7 @@
     <app-heading id="with-label" title="With Label" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab4', $event)">
       @if(activeTabs['tab4'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+        <div class="min-h-36 flex flex-wrap items-center justify-start overflow-auto gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
           <button uiButton variant="secondary" disabled>
             <div uiSpinner size="sm" class="mr-3"></div>
             Loading
