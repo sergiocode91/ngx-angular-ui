@@ -22,7 +22,7 @@
     <app-heading id="default" title="Default" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
       @if(activeTabs['tab1'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+        <div class="min-h-36 flex flex-wrap items-center justify-start overflow-auto gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
           <div uiAvatar>
             <span>A</span>
           </div>
@@ -35,7 +35,7 @@
     <app-heading id="with-image" title="With Image" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab2', $event)">
       @if(activeTabs['tab2'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+        <div class="min-h-36 flex flex-wrap items-center justify-start overflow-auto gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
           <div uiAvatar>
             <img src="https://i.pravatar.cc/150?img=1" alt="avatar" />
           </div>
@@ -48,7 +48,7 @@
     <app-heading id="with-border" title="With Border" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab3', $event)">
       @if(activeTabs['tab3'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+        <div class="min-h-36 flex items-center justify-start p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
           <div uiAvatar border>
             <img src="https://i.pravatar.cc/150?img=52" alt="avatar" />
           </div>
@@ -61,7 +61,7 @@
     <app-heading id="colors" title="Colors" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab4', $event)">
       @if(activeTabs['tab4'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-start sm:justify-center overflow-auto space-x-6 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+        <div class="min-h-36 flex flex-wrap items-center justify-start overflow-auto gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
           <div uiAvatar border color="primary">
             <img src="https://i.pravatar.cc/150?img=45" alt="avatar" />
           </div>
@@ -89,7 +89,7 @@
     <app-heading id="rounded" title="Rounded" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab5', $event)">
       @if(activeTabs['tab5'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md border dark:border-zinc-800">
+        <div class="min-h-36 flex flex-wrap items-center justify-start overflow-auto gap-4 p-4 lg:p-10 rounded-md border dark:border-zinc-800">
           <div class="flex space-x-6">
             <div uiAvatar radius="full">
               <img src="https://i.pravatar.cc/150?img=23" alt="avatar" />
@@ -113,7 +113,7 @@
     <app-heading id="sizes" title="Sizes" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab6', $event)">
       @if(activeTabs['tab6'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-start sm:justify-center overflow-auto space-x-6 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+        <div class="min-h-36 flex flex-wrap items-center justify-start overflow-auto gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
           <div uiAvatar size="xs" status="top-right" color="success">
             <img src="https://i.pravatar.cc/150?img=21" alt="avatar" />
           </div>
@@ -138,7 +138,7 @@
     <app-heading id="status-position" title="Status Position" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab7', $event)">
       @if(activeTabs['tab7'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-start sm:justify-center overflow-auto space-x-6 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+        <div class="min-h-36 flex flex-wrap items-center justify-start overflow-auto gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
           <div uiAvatar status="top-right" color="success">
             <img src="https://i.pravatar.cc/150?img=29" alt="avatar" />
           </div>
@@ -160,7 +160,7 @@
     <app-heading id="status-colors" title="Status Colors" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab8', $event)">
       @if(activeTabs['tab8'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-start sm:justify-center overflow-auto space-x-6 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+        <div class="min-h-36 flex flex-wrap items-center justify-start overflow-auto gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
           <div uiAvatar status="top-right" color="primary">
             <img src="https://i.pravatar.cc/150?img=60" alt="avatar" />
           </div>
