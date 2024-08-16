@@ -22,7 +22,7 @@
     <app-heading id="primary" title="Primary" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
       @if(activeTabs['tab1'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+        <div class="min-h-36 flex flex-wrap items-center justify-start overflow-auto gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
           <button uiButton>Button</button>
         </div>
       } @else {
@@ -33,7 +33,7 @@
     <app-heading id="secondary" title="Secondary" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab2', $event)">
       @if(activeTabs['tab2'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+        <div class="min-h-36 flex flex-wrap items-center justify-start overflow-auto gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
           <button uiButton variant="secondary">Secondary</button>
         </div>
       } @else {
@@ -44,7 +44,7 @@
     <app-heading id="outline" title="Outline" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab3', $event)">
       @if(activeTabs['tab3'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+        <div class="min-h-36 flex flex-wrap items-center justify-start overflow-auto gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
           <button uiButton variant="outline">Outline</button>
         </div>
       } @else {
@@ -55,7 +55,7 @@
     <app-heading id="solid-colors" title="Solid color" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab4', $event)">
       @if(activeTabs['tab4'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-start sm:justify-center overflow-auto space-x-6 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+        <div class="min-h-36 flex flex-wrap items-center justify-start overflow-auto gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
           <button uiButton variant="primary" color="info">Info</button>
           <button uiButton variant="primary" color="help">Help</button>
           <button uiButton variant="primary" color="success">Success</button>
@@ -70,7 +70,7 @@
     <app-heading id="outline-colors" title="Outline color" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab5', $event)">
       @if(activeTabs['tab5'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-start sm:justify-center overflow-auto space-x-6 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+        <div class="min-h-36 flex flex-wrap items-center justify-start overflow-auto gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
           <button uiButton variant="outline" color="info">Info</button>
           <button uiButton variant="outline" color="help">Help</button>
           <button uiButton variant="outline" color="success">Success</button>
@@ -85,7 +85,7 @@
     <app-heading id="sizes" title="Sizes" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab6', $event)">
       @if(activeTabs['tab6'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md space-x-6 border border-zinc-200 dark:border-zinc-800">
+        <div class="min-h-36 flex flex-wrap items-center justify-start overflow-auto gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
           <button uiButton size="sm">Small</button>
           <button uiButton size="md">Medium</button>
           <button uiButton size="lg">Large</button>
@@ -98,7 +98,7 @@
     <app-heading id="rounded" title="Rounded" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab7', $event)">
       @if(activeTabs['tab7'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md space-x-6 border border-zinc-200 dark:border-zinc-800">
+        <div class="min-h-36 flex flex-wrap items-center justify-start overflow-auto gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
           <button uiButton rounded="md">Medium</button>
           <button uiButton rounded="lg">Large</button>
           <button uiButton rounded="full">Full</button>
@@ -111,7 +111,7 @@
     <app-heading id="ghost" title="Ghost" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab8', $event)">
       @if(activeTabs['tab8'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+        <div class="min-h-36 flex flex-wrap items-center justify-start overflow-auto gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
           <button uiButton variant="ghost">Get started</button>
         </div>
       } @else {
@@ -122,7 +122,7 @@
     <app-heading id="link" title="Link" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab9', $event)">
       @if(activeTabs['tab9'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+        <div class="min-h-36 flex flex-wrap items-center justify-start overflow-auto gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
           <button uiButton variant="link">Don’t have an account?</button>
         </div>
       } @else {
@@ -133,7 +133,7 @@
     <app-heading id="icon" title="Icon" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab10', $event)">
       @if(activeTabs['tab10'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+        <div class="min-h-36 flex flex-wrap items-center justify-start overflow-auto gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
           <button uiButton variant="outline" size="icon">
             <lucide-icon name="Moon" [size]="18"></lucide-icon>
           </button>
@@ -146,7 +146,7 @@
     <app-heading id="icon-with-text" title="Icon with text" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab11', $event)">
       @if(activeTabs['tab11'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+        <div class="min-h-36 flex flex-wrap items-center justify-start overflow-auto gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
           <button uiButton variant="primary">
             <lucide-icon name="Instagram" [size]="18" class="inline-flex mr-1"></lucide-icon>
             Sign in with Instagram
@@ -160,7 +160,7 @@
     <app-heading id="disabled" title="Disabled" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab12', $event)">
       @if(activeTabs['tab12'] === 'Preview') {
-        <div class="min-h-64 flex items-center justify-center p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+        <div class="min-h-36 flex flex-wrap items-center justify-start overflow-auto gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
           <button uiButton variant="primary" color="danger" disabled="true">
             <lucide-icon name="Trash" [size]="18" class="inline-flex mr-1"></lucide-icon>
             Delete account
