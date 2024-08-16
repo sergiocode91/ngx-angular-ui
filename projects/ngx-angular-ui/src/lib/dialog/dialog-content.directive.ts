@@ -27,7 +27,7 @@ export class HtmlDialogContentDirective implements OnInit, OnChanges {
 
   private applyClasses() {
     const sizeClass = this.getSizeClass(this.size);
-    const classes = `${sizeClass} ${this.class} grid max-w-md shadow-md p-6 gap-5 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950`;
+    const classes = `${sizeClass} ${this.class} grid shadow-md p-6 gap-5 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950`;
 
     this.renderer.setAttribute(this.el.nativeElement, 'class', classes);
   }
