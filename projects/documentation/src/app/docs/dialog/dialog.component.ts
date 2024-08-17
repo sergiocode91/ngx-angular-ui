@@ -57,7 +57,7 @@ import { DialogService } from '../../services/code-example';
 })
 export class DialogComponent {
   @ViewChild('dialogRef') dialogRef!: Dialog;
-  @ViewChildren('dialogRef') dialogRefs!: QueryList<Dialog>;
+  @ViewChildren('dialogSizeRef') dialogSizeRefs!: QueryList<Dialog>;
 
   public activeTabs: { [key: string]: string } = {};
   public props: Props = {
@@ -100,7 +100,7 @@ export class DialogComponent {
     { size: '4xl', buttonLabel: 'Masive' },
     { size: '5xl', buttonLabel: 'Gigantic' },
   ] as const;
-
+  public activeIndex: number | null = null;
   public examples: CodeExamples;
 
   constructor(private _dialogService: DialogService) {
@@ -119,14 +119,14 @@ export class DialogComponent {
   }
 
   openDialog(index: number) {
-    const dialog = this.dialogRefs.toArray()[index];
+    const dialog = this.dialogSizeRefs.toArray()[index]; // Usa el índice correcto
     if (dialog) {
       dialog.open();
     }
   }
 
   closeDialog(index: number) {
-    const dialog = this.dialogRefs.toArray()[index];
+    const dialog = this.dialogSizeRefs.toArray()[index];
     if (dialog) {
       dialog.close();
     }

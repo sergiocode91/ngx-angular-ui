@@ -12,20 +12,17 @@ export class DialogService {
     DialogFooter,
     DialogHeader,
     DialogTitle,
-    DialogTrigger,
     Dialog,
   } from 'ngx-angular-ui';
 
   @Component({
     standalone: true,
     imports: [
-
       DialogContent,
       DialogDescription,
       DialogFooter,
       DialogHeader,
       DialogTitle,
-      DialogTrigger,
       Dialog,
     ],
   })
