@@ -1,17 +1,19 @@
 import { Directive, HostListener, Input } from '@angular/core';
+import { Dialog } from './dialog.directive';
 
 @Directive({
   selector: '[uiDialogTrigger]',
   standalone: true,
 })
-export class HtmlDialogTriggerDirective {
-  @Input() dialogId: string = '';
+export class DialogTrigger {
+  @Input() dialog?: Dialog;
 
   @HostListener('click')
   onClick() {
-    const dialog = document.querySelector(`[uiDialog][data-dialog-id="${this.dialogId}"]`);
-    if (dialog) {
-      dialog.dispatchEvent(new CustomEvent('uiDialogOpen'));
+    if (this.dialog) {
+      this.dialog.open();
+    } else {
+      console.error('DialogTrigger: No dialog found');
     }
   }
 }

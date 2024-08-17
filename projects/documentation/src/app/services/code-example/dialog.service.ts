@@ -7,27 +7,26 @@ export class DialogService {
   public codeExamples = {
   codeUseTs: `
   import { 
-    HtmlDialogCloseDirective,
-    HtmlDialogContentDirective,
-    HtmlDialogDescriptionDirective,
-    HtmlDialogFooterDirective,
-    HtmlDialogHeaderDirective,
-    HtmlDialogTitleDirective,
-    HtmlDialogTriggerDirective,
-    HtmlDialogDirective,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+    Dialog,
   } from 'ngx-angular-ui';
 
   @Component({
     standalone: true,
     imports: [
-      HtmlDialogCloseDirective,
-      HtmlDialogContentDirective,
-      HtmlDialogDescriptionDirective,
-      HtmlDialogFooterDirective,
-      HtmlDialogHeaderDirective,
-      HtmlDialogTitleDirective,
-      HtmlDialogTriggerDirective,
-      HtmlDialogDirective,
+
+      DialogContent,
+      DialogDescription,
+      DialogFooter,
+      DialogHeader,
+      DialogTitle,
+      DialogTrigger,
+      Dialog,
     ],
   })
   `,

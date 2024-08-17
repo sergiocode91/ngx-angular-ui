@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { LucideAngularModule } from 'lucide-angular';
 import {
   HeadingComponent,
@@ -15,14 +15,13 @@ import {
   HtmlAlertDirective,
   HtmlAlertTitleDirective,
   HtmlAlertDescriptionDirective,
-  HtmlDialogCloseDirective,
-  HtmlDialogContentDirective,
-  HtmlDialogDescriptionDirective,
-  HtmlDialogFooterDirective,
-  HtmlDialogHeaderDirective,
-  HtmlDialogTitleDirective,
-  HtmlDialogTriggerDirective,
-  HtmlDialogDirective,
+
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  Dialog,
 } from '../../../../../ngx-angular-ui/src/public-api';
 import { CodeExamples, LinksContent, Props } from '../../models';
 import { DialogService } from '../../services/code-example';
@@ -46,19 +45,20 @@ import { DialogService } from '../../services/code-example';
     HtmlAlertTitleDirective,
     HtmlAlertDescriptionDirective,
 
-    HtmlDialogCloseDirective,
-    HtmlDialogContentDirective,
-    HtmlDialogDescriptionDirective,
-    HtmlDialogFooterDirective,
-    HtmlDialogHeaderDirective,
-    HtmlDialogTitleDirective,
-    HtmlDialogTriggerDirective,
-    HtmlDialogDirective,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    Dialog,
   ],
   templateUrl: './dialog.component.html',
   styles: ``,
 })
 export class DialogComponent {
+  @ViewChild('dialogRef') dialogRef!: Dialog;
+  @ViewChildren('dialogRef') dialogRefs!: QueryList<Dialog>;
+
   public activeTabs: { [key: string]: string } = {};
   public props: Props = {
     header: ['Property', 'Type', 'Default'],
@@ -68,6 +68,16 @@ export class DialogComponent {
         type: `'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl'`,
         default: 'md',
       },
+      {
+        property: 'dialogId',
+        type: 'string',
+        default: 'none',
+      },
+      {
+        property: 'uiDialogClose',
+        type: 'boolean | EventEmitter<void>',
+        default: 'false',
+      }
     ],
   };
   public linksContent: LinksContent[] = [
@@ -80,15 +90,15 @@ export class DialogComponent {
     { title: 'Sizes', link: '#sizes', isSubmenu: true },
   ];
   public dialogConfigs = [
-    { id: 'dialog5', size: 'xs', buttonLabel: 'Extra small' },
-    { id: 'dialog6', size: 'sm', buttonLabel: 'Small' },
-    { id: 'dialog7', size: 'md', buttonLabel: 'Medium' },
-    { id: 'dialog8', size: 'lg', buttonLabel: 'Large' },
-    { id: 'dialog9', size: 'xl', buttonLabel: 'Very Large' },
-    { id: 'dialog10', size: '2xl', buttonLabel: 'Extra Large' },
-    { id: 'dialog11', size: '3xl', buttonLabel: 'Huge' },
-    { id: 'dialog12', size: '4xl', buttonLabel: 'Masive' },
-    { id: 'dialog13', size: '5xl', buttonLabel: 'Gigantic' },
+    { size: 'xs', buttonLabel: 'Extra small' },
+    { size: 'sm', buttonLabel: 'Small' },
+    { size: 'md', buttonLabel: 'Medium' },
+    { size: 'lg', buttonLabel: 'Large' },
+    { size: 'xl', buttonLabel: 'Very Large' },
+    { size: '2xl', buttonLabel: 'Extra Large' },
+    { size: '3xl', buttonLabel: 'Huge' },
+    { size: '4xl', buttonLabel: 'Masive' },
+    { size: '5xl', buttonLabel: 'Gigantic' },
   ] as const;
 
   public examples: CodeExamples;
@@ -106,5 +116,19 @@ export class DialogComponent {
 
   changeTab(tabId: string, newActiveTab: string) {
     this.activeTabs[tabId] = newActiveTab;
+  }
+
+  openDialog(index: number) {
+    const dialog = this.dialogRefs.toArray()[index];
+    if (dialog) {
+      dialog.open();
+    }
+  }
+
+  closeDialog(index: number) {
+    const dialog = this.dialogRefs.toArray()[index];
+    if (dialog) {
+      dialog.close();
+    }
   }
 }

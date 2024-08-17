@@ -23,8 +23,8 @@
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
       @if(activeTabs['tab1'] === 'Preview') {
         <div class="min-h-36 flex items-center justify-start p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
-          <button uiButton uiDialogTrigger dialogId="dialog1" variant="outline">Open dialog</button>
-          <div uiDialog dialogId="dialog1">
+          <button uiButton variant="outline" (click)="this.dialogRef.open()">Open dialog</button>
+          <div uiDialog #dialogRef="uiDialog">
             <div uiDialogContent>
               <div uiDialogHeader>
                 <div uiDialogTitle>Dialog Title</div>
@@ -34,8 +34,8 @@
                 <p>Your content here.</p>
               </div>
               <div uiDialogFooter class="flex justify-end space-x-2">
-                <button uiButton variant="outline" uiDialogClose>Cancel</button>
-                <button uiButton uiDialogClose>Action</button>
+                <button uiButton variant="outline" (click)="this.dialogRef.close()">Cancel</button>
+                <button uiButton (click)="this.dialogRef.close()">Action</button>
               </div>
             </div>
           </div>
@@ -49,8 +49,8 @@
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
       @if(activeTabs['tab1'] === 'Preview') {
         <div class="min-h-36 flex items-center justify-start p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
-          <button uiButton uiDialogTrigger dialogId="dialog2" variant="outline">Edit profile</button>
-          <div uiDialog dialogId="dialog2">
+          <button uiButton variant="outline" (click)="this.dialogRef.open()">Edit profile</button>
+          <div uiDialog #dialogRef="uiDialog">
             <div uiDialogContent>
               <div uiDialogHeader>
                 <div uiDialogTitle>Edit profile</div>
@@ -67,8 +67,8 @@
                 </div>
               </div>
               <div uiDialogFooter class="flex justify-end space-x-2">
-                <button uiButton variant="outline" uiDialogClose>Cancel</button>
-                <button uiButton uiDialogClose>Save changes</button>
+                <button uiButton variant="outline" (click)="this.dialogRef.close()">Cancel</button>
+                <button uiButton (click)="this.dialogRef.close()">Save changes</button>
               </div>
             </div>
           </div>
@@ -82,8 +82,8 @@
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
       @if(activeTabs['tab1'] === 'Preview') {
         <div class="min-h-36 flex items-center justify-start p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
-          <button uiButton uiDialogTrigger color="danger" dialogId="dialog3">Delete project</button>
-          <div uiDialog dialogId="dialog3">
+          <button uiButton uiDialogTrigger color="danger" (click)="this.dialogRef.open()">Delete project</button>
+          <div uiDialog #dialogRef="uiDialog">
             <div uiDialogContent>
               <div uiDialogHeader>
                 <div uiDialogTitle>Delete Project</div>
@@ -100,8 +100,8 @@
                 </div>
               </div>
               <div uiDialogFooter class="flex justify-end space-x-2">
-                <button uiButton variant="outline" uiDialogClose>Cancel</button>
-                <button uiButton color="danger" uiDialogClose>Delete project</button>
+                <button uiButton variant="outline" (click)="this.dialogRef.close()">Cancel</button>
+                <button uiButton color="danger" (click)="this.dialogRef.close()">Delete project</button>
               </div>
             </div>
           </div>
@@ -115,8 +115,8 @@
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
       @if(activeTabs['tab1'] === 'Preview') {
         <div class="min-h-36 flex items-center justify-start p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
-          <button uiButton uiDialogTrigger dialogId="dialog4" variant="outline">Privacy Policy</button>
-          <div uiDialog dialogId="dialog4">
+          <button uiButton uiDialogTrigger variant="outline" (click)="this.dialogRef.open()">Privacy Policy</button>
+          <div uiDialog #dialogRef="uiDialog">
             <div uiDialogContent>
               <div uiDialogHeader>
                 <div uiDialogTitle>Privacy Policy</div>
@@ -134,8 +134,8 @@
                 </p>                              
               </div>
               <div uiDialogFooter class="flex justify-end space-x-2">
-                <button uiButton variant="outline" uiDialogClose>Cancel</button>
-                <button uiButton uiDialogClose>Accept</button>
+                <button uiButton variant="outline" (click)="this.dialogRef.close()">Cancel</button>
+                <button uiButton (click)="this.dialogRef.close()">Accept</button>
               </div>
             </div>
           </div>
@@ -145,18 +145,18 @@
       }
     </app-tabs>
 
-    <app-heading id="sizes" title="Sizes" size="sm" />
+    <!-- <app-heading id="sizes" title="Sizes" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
       @if(activeTabs['tab1'] === 'Preview') {
         <div class="min-h-36 flex items-center overflow-auto p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
           <div class="flex flex-wrap items-center justify-start gap-4">
             @for (dialog of dialogConfigs; track $index) {
-              <button uiButton uiDialogTrigger dialogId="{{ dialog.id }}" variant="outline">{{ dialog.buttonLabel }}</button>
+              <button uiButton uiDialogTrigger variant="outline" (click)="openDialog($index)">{{ dialog.buttonLabel }}</button>
             }
           </div>
         </div>
         @for (dialog of dialogConfigs; track $index) {
-          <div uiDialog [dialogId]="dialog.id">
+          <div uiDialog #dialogRef{{ $index }}="uiDialog">
             <div uiDialogContent [size]="dialog.size">
               <div uiDialogHeader>
                 <div uiDialogTitle>Dialog Title</div>
@@ -170,8 +170,8 @@
                 </p>                              
               </div>
               <div uiDialogFooter class="flex justify-end space-x-2">
-                <button uiButton variant="outline" uiDialogClose>Cancel</button>
-                <button uiButton uiDialogClose>Accept</button>
+                <button uiButton variant="outline" (click)="closeDialog($index)">Cancel</button>
+                <button uiButton (click)="closeDialog($index)">Accept</button>
               </div>
             </div>
           </div>
@@ -179,7 +179,7 @@
       } @else {
         <app-highlight-code [code]="examples.code1 ?? ''" [language]="'typescript'" />
       }
-    </app-tabs>
+    </app-tabs> -->
     
     <app-nav-buttons
       [labelLeft]="'Button'"

@@ -11,7 +11,7 @@ import {
   selector: '[uiDialogFooter]',
   standalone: true,
 })
-export class HtmlDialogFooterDirective implements OnInit, OnChanges {
+export class DialogFooter implements OnInit, OnChanges {
   @Input() class: string = '';
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}

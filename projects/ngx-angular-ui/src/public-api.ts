@@ -20,7 +20,6 @@ export * from './lib/card/card-header.directive';
 export * from './lib/card/card-title.directive';
 export * from './lib/card/card.directive';
 // Dialog
-export * from './lib/dialog/dialog-close.directive';
 export * from './lib/dialog/dialog-content.directive';
 export * from './lib/dialog/dialog-description.directive';
 export * from './lib/dialog/dialog-footer.directive';

@@ -3,15 +3,6 @@ import {
   HtmlInputDirective,
   HtmlLabelDirective,
   HtmlButtonDirective,
-
-  HtmlDialogCloseDirective,
-  HtmlDialogContentDirective,
-  HtmlDialogDescriptionDirective,
-  HtmlDialogFooterDirective,
-  HtmlDialogHeaderDirective,
-  HtmlDialogTitleDirective,
-  HtmlDialogTriggerDirective,
-  HtmlDialogDirective,
 } from '../../../../../ngx-angular-ui/src/public-api';
 
 @Component({
@@ -20,16 +11,7 @@ import {
   imports: [
     HtmlInputDirective,
     HtmlLabelDirective,
-    HtmlButtonDirective,
-    
-    HtmlDialogCloseDirective,
-    HtmlDialogContentDirective,
-    HtmlDialogDescriptionDirective,
-    HtmlDialogFooterDirective,
-    HtmlDialogHeaderDirective,
-    HtmlDialogTitleDirective,
-    HtmlDialogTriggerDirective,
-    HtmlDialogDirective,    
+    HtmlButtonDirective, 
   ],
   templateUrl: './alert-dialog.component.html',
   styles: ``,

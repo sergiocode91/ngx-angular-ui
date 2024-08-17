@@ -12,7 +12,7 @@ import {
   selector: '[uiDialogContent]',
   standalone: true,
 })
-export class HtmlDialogContentDirective implements OnInit, OnChanges {
+export class DialogContent implements OnInit, OnChanges {
   @Input() size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' = 'md';
   @Input() class: string = '';
 

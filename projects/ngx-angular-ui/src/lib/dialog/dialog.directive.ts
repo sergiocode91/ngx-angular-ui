@@ -11,20 +11,17 @@ import {
 @Directive({
   selector: '[uiDialog]',
   standalone: true,
+  exportAs: 'uiDialog'
 })
-export class HtmlDialogDirective implements OnInit, OnChanges {
+export class Dialog implements OnInit, OnChanges {
   @Input() size: 'sm' | 'md' | 'lg' | 'xl' = 'md';
   @Input() isOpenDialog: boolean = false;
-  @Input() dialogId: string = '';
   @Input() class: string = '';
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   ngOnInit() {
     this.applyClasses();
-    if (this.dialogId) {
-      this.renderer.setAttribute(this.el.nativeElement, 'data-dialog-id', this.dialogId);
-    }
   }
 
   ngOnChanges() {
@@ -42,23 +39,21 @@ export class HtmlDialogDirective implements OnInit, OnChanges {
     this.renderer.setAttribute(this.el.nativeElement, 'class', classes);
   }
 
+  open() {
+    this.isOpenDialog = true;
+    this.applyClasses();
+  }
+
+  close() {
+    this.isOpenDialog = false;
+    this.applyClasses();
+  }
+
   @HostListener('click', ['$event'])
   onCloseDialog(event: MouseEvent) {
     if (event.target === this.el.nativeElement) {
       this.isOpenDialog = false;
       this.applyClasses();
     }
-  }
-
-  @HostListener('uiDialogOpen')
-  openDialog() {
-    this.isOpenDialog = true;
-    this.applyClasses();
-  }
-
-  @HostListener('uiDialogClose')
-  closeDialog() {
-    this.isOpenDialog = false;
-    this.applyClasses();
   }
 }
