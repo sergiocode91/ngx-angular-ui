@@ -23,8 +23,8 @@
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
       @if(activeTabs['tab1'] === 'Preview') {
         <div class="min-h-36 flex items-center justify-start p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
-          <button uiButton variant="outline" (click)="this.dialogRef.open()">Open dialog</button>
-          <div uiDialog #dialogRef="uiDialog">
+          <button uiButton variant="outline" (click)="openDialog('dialog1')">Open dialog</button>
+          <div uiDialog dialogId="dialog1">
             <div uiDialogContent>
               <div uiDialogHeader>
                 <div uiDialogTitle>Dialog Title</div>
@@ -34,8 +34,8 @@
                 <p>Your content here.</p>
               </div>
               <div uiDialogFooter class="flex justify-end space-x-2">
-                <button uiButton variant="outline" (click)="this.dialogRef.close()">Cancel</button>
-                <button uiButton (click)="this.dialogRef.close()">Action</button>
+                <button uiButton variant="outline" (click)="closeDialog('dialog1')">Cancel</button>
+                <button uiButton (click)="closeDialog('dialog1')">Action</button>
               </div>
             </div>
           </div>
@@ -46,11 +46,11 @@
     </app-tabs>
 
     <app-heading id="with-form" title="With Form" size="sm" />
-    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
-      @if(activeTabs['tab1'] === 'Preview') {
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab2', $event)">
+      @if(activeTabs['tab2'] === 'Preview') {
         <div class="min-h-36 flex items-center justify-start p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
-          <button uiButton variant="outline" (click)="this.dialogRef.open()">Edit profile</button>
-          <div uiDialog #dialogRef="uiDialog">
+          <button uiButton variant="outline" (click)="openDialog('dialog2')">Edit profile</button>
+          <div uiDialog dialogId="dialog2">
             <div uiDialogContent>
               <div uiDialogHeader>
                 <div uiDialogTitle>Edit profile</div>
@@ -67,23 +67,23 @@
                 </div>
               </div>
               <div uiDialogFooter class="flex justify-end space-x-2">
-                <button uiButton variant="outline" (click)="this.dialogRef.close()">Cancel</button>
-                <button uiButton (click)="this.dialogRef.close()">Save changes</button>
+                <button uiButton variant="outline" (click)="closeDialog('dialog2')">Cancel</button>
+                <button uiButton (click)="closeDialog('dialog2')">Save changes</button>
               </div>
             </div>
           </div>
         </div>
       } @else {
-        <app-highlight-code [code]="examples.code1 ?? ''" [language]="'typescript'" />
+        <app-highlight-code [code]="examples.code2 ?? ''" [language]="'typescript'" />
       }
     </app-tabs>
 
     <app-heading id="with-delete-project" title="With Delete Project" size="sm" />
-    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
-      @if(activeTabs['tab1'] === 'Preview') {
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab3', $event)">
+      @if(activeTabs['tab3'] === 'Preview') {
         <div class="min-h-36 flex items-center justify-start p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
-          <button uiButton uiDialogTrigger color="danger" (click)="this.dialogRef.open()">Delete project</button>
-          <div uiDialog #dialogRef="uiDialog">
+          <button uiButton color="danger" (click)="openDialog('dialog3')">Delete project</button>
+          <div uiDialog dialogId="dialog3">
             <div uiDialogContent>
               <div uiDialogHeader>
                 <div uiDialogTitle>Delete Project</div>
@@ -100,23 +100,23 @@
                 </div>
               </div>
               <div uiDialogFooter class="flex justify-end space-x-2">
-                <button uiButton variant="outline" (click)="this.dialogRef.close()">Cancel</button>
-                <button uiButton color="danger" (click)="this.dialogRef.close()">Delete project</button>
+                <button uiButton variant="outline" (click)="closeDialog('dialog3')">Cancel</button>
+                <button uiButton color="danger" (click)="closeDialog('dialog3')">Delete project</button>
               </div>
             </div>
           </div>
         </div>
       } @else {
-        <app-highlight-code [code]="examples.code1 ?? ''" [language]="'typescript'" />
+        <app-highlight-code [code]="examples.code3 ?? ''" [language]="'typescript'" />
       }
     </app-tabs>
 
     <app-heading id="with-content" title="With Content" size="sm" />
-    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
-      @if(activeTabs['tab1'] === 'Preview') {
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab4', $event)">
+      @if(activeTabs['tab4'] === 'Preview') {
         <div class="min-h-36 flex items-center justify-start p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
-          <button uiButton uiDialogTrigger variant="outline" (click)="this.dialogRef.open()">Privacy Policy</button>
-          <div uiDialog #dialogRef="uiDialog">
+          <button uiButton variant="outline" (click)="openDialog('dialog4')">Privacy Policy</button>
+          <div uiDialog dialogId="dialog4">
             <div uiDialogContent>
               <div uiDialogHeader>
                 <div uiDialogTitle>Privacy Policy</div>
@@ -134,29 +134,29 @@
                 </p>                              
               </div>
               <div uiDialogFooter class="flex justify-end space-x-2">
-                <button uiButton variant="outline" (click)="this.dialogRef.close()">Cancel</button>
-                <button uiButton (click)="this.dialogRef.close()">Accept</button>
+                <button uiButton variant="outline" (click)="closeDialog('dialog4')">Cancel</button>
+                <button uiButton (click)="closeDialog('dialog4')">Accept</button>
               </div>
             </div>
           </div>
         </div>
       } @else {
-        <app-highlight-code [code]="examples.code1 ?? ''" [language]="'typescript'" />
+        <app-highlight-code [code]="examples.code4 ?? ''" [language]="'typescript'" />
       }
     </app-tabs>
 
     <app-heading id="sizes" title="Sizes" size="sm" />
-    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
-      @if(activeTabs['tab1'] === 'Preview') {
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab5', $event)">
+      @if(activeTabs['tab5'] === 'Preview') {
         <div class="min-h-36 flex items-center overflow-auto p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
           <div class="flex flex-wrap items-center justify-start gap-4">
             @for (dialog of dialogConfigs; track $index) {
-              <button uiButton uiDialogTrigger variant="outline" (click)="openDialog($index)">{{ dialog.buttonLabel }}</button>
+              <button uiButton variant="outline" (click)="openDialog(dialog.size)">{{ dialog.buttonLabel }}</button>
             }
           </div>
         </div>
         @for (dialog of dialogConfigs; track $index) {
-          <div uiDialog #dialogSizeRef="uiDialog">
+          <div uiDialog [dialogId]="dialog.size">
             <div uiDialogContent [size]="dialog.size">
               <div uiDialogHeader>
                 <div uiDialogTitle>{{ dialog.buttonLabel }}</div>
@@ -170,14 +170,14 @@
                 </p>                              
               </div>
               <div uiDialogFooter class="flex justify-end space-x-2">
-                <button uiButton variant="outline" (click)="closeDialog($index)">Cancel</button>
-                <button uiButton (click)="closeDialog($index)">Accept</button>
+                <button uiButton variant="outline" (click)="closeDialog(dialog.size)">Cancel</button>
+                <button uiButton (click)="closeDialog(dialog.size)">Accept</button>
               </div>
             </div>
           </div>
         }
       } @else {
-        <app-highlight-code [code]="examples.code1 ?? ''" [language]="'typescript'" />
+        <app-highlight-code [code]="examples.code5 ?? ''" [language]="'typescript'" />
       }
     </app-tabs>
     

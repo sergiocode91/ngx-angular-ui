@@ -27,6 +27,7 @@ export * from './lib/dialog/dialog-header.directive';
 export * from './lib/dialog/dialog-title.directive';
 export * from './lib/dialog/dialog-trigger.directive';
 export * from './lib/dialog/dialog.directive';
+export * from './lib/dialog/dialog.service';
 // Input
 export * from './lib/input/input.directive';
 // Label

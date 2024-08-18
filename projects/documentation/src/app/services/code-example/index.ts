@@ -3,7 +3,7 @@ export * from './avatar.service';
 export * from './badge.service';
 export * from './button.service';
 export * from './card.service';
-export * from './dialog.service';
+export * from './dialog-code.service';
 export * from './input.service';
 export * from './label.service';
 export * from './skeleton.service';

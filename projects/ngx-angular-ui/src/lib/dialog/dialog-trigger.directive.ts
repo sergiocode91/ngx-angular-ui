@@ -1,19 +1,17 @@
 import { Directive, HostListener, Input } from '@angular/core';
-import { Dialog } from './dialog.directive';
+import { DialogService } from './dialog.service';
 
 @Directive({
   selector: '[uiDialogTrigger]',
   standalone: true,
 })
 export class DialogTrigger {
-  @Input() dialog?: Dialog;
+  @Input() dialogId!: string;
+
+  constructor(private dialogService: DialogService) {}
 
   @HostListener('click')
   onClick() {
-    if (this.dialog) {
-      this.dialog.open();
-    } else {
-      console.error('DialogTrigger: No dialog found');
-    }
+    this.dialogService.open(this.dialogId);
   }
 }

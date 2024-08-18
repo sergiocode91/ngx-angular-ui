@@ -1,4 +1,4 @@
-import { Component, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { Component} from '@angular/core';
 import { LucideAngularModule } from 'lucide-angular';
 import {
   HeadingComponent,
@@ -15,17 +15,16 @@ import {
   HtmlAlertDirective,
   HtmlAlertTitleDirective,
   HtmlAlertDescriptionDirective,
-
+  Dialog,
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
-  Dialog,
+  DialogService,
 } from '../../../../../ngx-angular-ui/src/public-api';
 import { CodeExamples, LinksContent, Props } from '../../models';
-import { DialogService } from '../../services/code-example';
-
+import { DialogCodeService } from '../../services/code-example';
 @Component({
   selector: 'app-dialog',
   standalone: true,
@@ -45,20 +44,18 @@ import { DialogService } from '../../services/code-example';
     HtmlAlertTitleDirective,
     HtmlAlertDescriptionDirective,
 
+    Dialog,
     DialogContent,
     DialogDescription,
     DialogFooter,
     DialogHeader,
     DialogTitle,
-    Dialog,
   ],
+  providers: [DialogService],
   templateUrl: './dialog.component.html',
   styles: ``,
 })
 export class DialogComponent {
-  @ViewChild('dialogRef') dialogRef!: Dialog;
-  @ViewChildren('dialogSizeRef') dialogSizeRefs!: QueryList<Dialog>;
-
   public activeTabs: { [key: string]: string } = {};
   public props: Props = {
     header: ['Property', 'Type', 'Default'],
@@ -73,11 +70,6 @@ export class DialogComponent {
         type: 'string',
         default: 'none',
       },
-      {
-        property: 'uiDialogClose',
-        type: 'boolean | EventEmitter<void>',
-        default: 'false',
-      }
     ],
   };
   public linksContent: LinksContent[] = [
@@ -85,7 +77,11 @@ export class DialogComponent {
     { title: 'Examples', link: '#examples' },
     { title: 'Simple', link: '#simple', isSubmenu: true },
     { title: 'With Form', link: '#with-form', isSubmenu: true },
-    { title: 'With Delete Project', link: '#with-delete-project', isSubmenu: true },
+    {
+      title: 'With Delete Project',
+      link: '#with-delete-project',
+      isSubmenu: true,
+    },
     { title: 'With Content', link: '#with-content', isSubmenu: true },
     { title: 'Sizes', link: '#sizes', isSubmenu: true },
   ];
@@ -103,9 +99,12 @@ export class DialogComponent {
   public activeIndex: number | null = null;
   public examples: CodeExamples;
 
-  constructor(private _dialogService: DialogService) {
-    this.examples = this._dialogService.getExamples();
-    this.initializeTabs(4);
+  constructor(
+    private _dialogCodeService: DialogCodeService,
+    private _dialogService: DialogService
+  ) {
+    this.examples = this._dialogCodeService.getExamples();
+    this.initializeTabs(5);
   }
 
   initializeTabs(numberOfTabs: number) {
@@ -118,17 +117,11 @@ export class DialogComponent {
     this.activeTabs[tabId] = newActiveTab;
   }
 
-  openDialog(index: number) {
-    const dialog = this.dialogSizeRefs.toArray()[index]; // Usa el índice correcto
-    if (dialog) {
-      dialog.open();
-    }
+  openDialog(dialogId: string) {
+    this._dialogService.open(dialogId);
   }
 
-  closeDialog(index: number) {
-    const dialog = this.dialogSizeRefs.toArray()[index];
-    if (dialog) {
-      dialog.close();
-    }
+  closeDialog(dialogId: string) {
+    this._dialogService.close(dialogId);
   }
 }

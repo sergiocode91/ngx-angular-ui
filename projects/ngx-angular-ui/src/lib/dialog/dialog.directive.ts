@@ -7,53 +7,61 @@ import {
   OnInit,
   Renderer2,
 } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { DialogService } from './dialog.service';
 
 @Directive({
   selector: '[uiDialog]',
   standalone: true,
-  exportAs: 'uiDialog'
 })
 export class Dialog implements OnInit, OnChanges {
   @Input() size: 'sm' | 'md' | 'lg' | 'xl' = 'md';
   @Input() isOpenDialog: boolean = false;
   @Input() class: string = '';
+  @Input() dialogId!: string;
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  private dialogSubscription!: Subscription;
+
+  constructor(
+    private el: ElementRef,
+    private renderer: Renderer2,
+    private dialogService: DialogService
+  ) {}
 
   ngOnInit() {
-    this.applyClasses();
+    this.updateClasses('opacity-0 pointer-events-none');
+
+    this.dialogSubscription = this.dialogService
+      .getDialogState(this.dialogId)
+      .subscribe((isOpen) => {
+        this.updateClasses(
+          isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        );
+      });
   }
 
   ngOnChanges() {
-    this.applyClasses();
+    this.updateClasses('opacity-0 pointer-events-none');
   }
 
-  private applyClasses() {
+  ngOnDestroy() {
+    if (this.dialogSubscription) {
+      this.dialogSubscription.unsubscribe();
+    }
+  }
+
+  private updateClasses(visibilityClasses: string) {
     const baseClasses =
       'flex items-center justify-center px-5 xl:px-0 transition-opacity duration-300 bg-white/80 dark:bg-black/80 inset-0 fixed z-50';
-    const visibilityClasses = this.isOpenDialog
-      ? 'opacity-100'
-      : 'opacity-0 pointer-events-none';
     const classes = `${baseClasses} ${visibilityClasses} ${this.class}`;
 
     this.renderer.setAttribute(this.el.nativeElement, 'class', classes);
   }
 
-  open() {
-    this.isOpenDialog = true;
-    this.applyClasses();
-  }
-
-  close() {
-    this.isOpenDialog = false;
-    this.applyClasses();
-  }
-
   @HostListener('click', ['$event'])
   onCloseDialog(event: MouseEvent) {
     if (event.target === this.el.nativeElement) {
-      this.isOpenDialog = false;
-      this.applyClasses();
+      this.dialogService.close(this.dialogId);
     }
   }
 }
