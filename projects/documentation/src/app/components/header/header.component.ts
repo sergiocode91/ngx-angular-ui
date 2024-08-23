@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { debounceTime, Subject } from 'rxjs';
 import { LucideAngularModule } from 'lucide-angular';
-import { HtmlButtonDirective } from 'ngx-angular-ui';
+import { ButtonElement } from 'ngx-angular-ui';
 import { DarkmodeService } from '../../services/darkmode.service';
 
 type Navigation = {
@@ -17,7 +17,7 @@ type Navigation = {
   imports: [
     CommonModule,
     LucideAngularModule,
-    HtmlButtonDirective,
+    ButtonElement,
     RouterModule,
     FormsModule,
   ],

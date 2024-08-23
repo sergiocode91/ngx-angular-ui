@@ -11,7 +11,7 @@ import {
   selector: '[uiTextarea]',
   standalone: true,
 })
-export class HtmlTextareaDirective implements OnInit, OnChanges {
+export class TextareaElement implements OnInit, OnChanges {
   @Input() class: string = '';
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}

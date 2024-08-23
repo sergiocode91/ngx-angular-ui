@@ -11,7 +11,7 @@ import {
   selector: '[uiBadge]',
   standalone: true,
 })
-export class HtmlBadgeDirective implements OnInit, OnChanges {
+export class BadgeElement implements OnInit, OnChanges {
   public _showIcon: boolean = false;
 
   @Input() variant: 'primary' | 'secondary' | 'outline' = 'primary';
@@ -39,7 +39,7 @@ export class HtmlBadgeDirective implements OnInit, OnChanges {
     const colorClass = this.getColorClass(this.variant, this.color);
     const roundedClass = this.getRoundedClass(this.rounded);
     const sizeClass = this.getSizeClass(this.size);
-    const classes = `${variantClass} ${colorClass} ${roundedClass} ${sizeClass} ${this.class} inline-flex items-center justify-center font-medium transition-colors`;
+    const classes = `${variantClass} ${colorClass} ${roundedClass} ${sizeClass} ${this.class} inline-flex items-center justify-center font-medium transition-colors border`;
 
     this.renderer.setAttribute(this.el.nativeElement, 'class', classes);
   }
@@ -56,7 +56,7 @@ export class HtmlBadgeDirective implements OnInit, OnChanges {
       case 'primary':
         return `shadow-sm ${color ? '' : 'text-white bg-zinc-900 hover:bg-zinc-900/90 dark:text-zinc-900 dark:bg-neutral-50 dark:hover:bg-zinc-50/90'}`;
       case 'secondary':
-        return 'text-zinc-900 bg-zinc-100 hover:bg-zinc-100/80 shadow-sm dark:text-white dark:bg-zinc-800 dark:hover:bg-zinc-800/80';
+        return 'text-zinc-900 bg-zinc-100 hover:bg-zinc-100/80 shadow-sm dark:text-white dark:border-zinc-800 dark:bg-zinc-800 dark:hover:bg-zinc-800/80';
       case 'outline':
         return `shadow-sm ${color ? '' : 'text-zinc-900 border border-zinc-200 bg-white hover:bg-zinc-100 dark:text-neutral-50 dark:border-zinc-800 dark:bg-transparent dark:hover:bg-zinc-800'}`;
       default:
@@ -69,32 +69,32 @@ export class HtmlBadgeDirective implements OnInit, OnChanges {
       case 'info':
         return `${
           variant === 'outline' ? 
-            'text-blue-600 border border-blue-600 bg-transparent hover:bg-blue-600/5 dark:hover:bg-blue-600/10' :
-            'text-white bg-blue-600 hover:bg-blue-600/90 dark:text-white dark:bg-blue-600 dark:hover:bg-blue-600/90'
+            'text-blue-600 border-blue-600 dark:text-blue-700 dark:border-blue-700' :
+            'text-blue-200 border-blue-800 bg-blue-800'
         }`;
       case 'help':
         return `${
           variant === 'outline' ? 
-            'text-violet-600 border border-violet-600 bg-transparent hover:bg-violet-600/5 dark:hover:bg-violet-600/10' : 
-            'text-white bg-violet-600 hover:bg-violet-600/90 dark:text-white dark:bg-violet-600 dark:hover:bg-violet-600/90'
+            'text-violet-600 border-violet-600 dark:text-violet-700 dark:border-violet-700' : 
+            'text-violet-200 border-violet-800 bg-violet-800'
         }`;
       case 'success':
         return `${
           variant === 'outline' ? 
-            'text-green-600 border border-green-600 bg-transparent hover:bg-green-600/5 dark:hover:bg-green-600/10' : 
-            'text-white bg-green-600 hover:bg-green-600/90 dark:text-white dark:bg-green-600 dark:hover:bg-green-600/90'
+            'text-green-600 border-green-600 dark:text-lime-700 dark:border-lime-700' : 
+            'text-lime-200 border-lime-800 bg-lime-800'
         }`;
       case 'warning':
         return `${
           variant === 'outline' ? 
-            'text-orange-600 border border-orange-600 bg-transparent hover:bg-orange-600/5 dark:hover:bg-orange-600/10' : 
-            'text-white bg-orange-600 hover:bg-orange-600/90 dark:text-white dark:bg-orange-600 dark:hover:bg-orange-600/90'
+            'text-orange-600 border-orange-600 dark:text-orange-700 dark:border-orange-700' : 
+            'text-orange-200 border-orange-800 bg-orange-800'
         }`;
       case 'danger':
         return `${
           variant === 'outline' ? 
-            'text-red-600 border border-red-600 bg-transparent hover:bg-red-600/5 dark:hover:bg-red-600/10' : 
-            'text-white bg-red-600 hover:bg-red-600/90 dark:text-white dark:bg-red-600 dark:hover:bg-red-600/90'
+            'text-red-600 border-red-600 dark:text-red-700 dark:border-red-700' : 
+            'text-red-200 border-red-800 bg-red-800'
         }`;
       default:
         return '';

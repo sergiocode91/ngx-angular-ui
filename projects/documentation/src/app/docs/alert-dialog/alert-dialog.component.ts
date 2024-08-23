@@ -1,18 +1,10 @@
 import { Component } from '@angular/core';
-import {
-  HtmlInputDirective,
-  HtmlLabelDirective,
-  HtmlButtonDirective,
-} from '../../../../../ngx-angular-ui/src/public-api';
+import { InputElement, LabelElement, ButtonElement } from 'ngx-angular-ui';
 
 @Component({
   selector: 'app-alert-dialog',
   standalone: true,
-  imports: [
-    HtmlInputDirective,
-    HtmlLabelDirective,
-    HtmlButtonDirective, 
-  ],
+  imports: [InputElement, LabelElement, ButtonElement],
   templateUrl: './alert-dialog.component.html',
   styles: ``,
 })

@@ -11,7 +11,7 @@ import {
   selector: '[uiCardTitle]',
   standalone: true,
 })
-export class HtmlCardTitleDirective implements OnInit, OnChanges {
+export class CardTitleElement implements OnInit, OnChanges {
   @Input() class: string = '';
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}

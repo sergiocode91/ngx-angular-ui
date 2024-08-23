@@ -5,7 +5,7 @@ import { DialogService } from './dialog.service';
   selector: '[uiDialogTrigger]',
   standalone: true,
 })
-export class DialogTrigger {
+export class DialogTriggerElement {
   @Input() dialogId!: string;
 
   constructor(private dialogService: DialogService) {}

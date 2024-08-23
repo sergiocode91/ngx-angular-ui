@@ -11,7 +11,7 @@ import {
   selector: '[uiCardContent]',
   standalone: true,
 })
-export class HtmlCardContentDirective implements OnInit, OnChanges {
+export class CardContentElement implements OnInit, OnChanges {
   @Input() class: string = '';
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}

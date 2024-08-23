@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
-import { HtmlButtonDirective } from 'ngx-angular-ui';
+import { ButtonElement } from 'ngx-angular-ui';
 
 
 @Component({
@@ -12,7 +12,7 @@ import { HtmlButtonDirective } from 'ngx-angular-ui';
     CommonModule,
     RouterModule,
     LucideAngularModule,
-    HtmlButtonDirective
+    ButtonElement
   ],
   templateUrl: './nav-buttons.component.html',
   styles: ``

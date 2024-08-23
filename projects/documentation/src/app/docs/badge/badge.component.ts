@@ -9,7 +9,7 @@ import {
   TabsComponent,
 } from '@components/index';
 import { LucideAngularModule } from 'lucide-angular';
-import { HtmlButtonDirective, HtmlBadgeDirective } from 'ngx-angular-ui';
+import { ButtonElement, BadgeElement } from 'ngx-angular-ui';
 import { BadgeService } from '../../services/code-example/badge.service';
 import { CodeExamples, LinksContent } from '../../models';
 
@@ -22,11 +22,11 @@ import { CodeExamples, LinksContent } from '../../models';
     HeadingComponent,
     PropsComponent,
     NavButtonsComponent,
-    HtmlButtonDirective,
-    HtmlBadgeDirective,
     LinksContentComponent,
     HighlightCodeComponent,
     TabsComponent,
+    ButtonElement,
+    BadgeElement,
   ],
   templateUrl: './badge.component.html',
   styles: ``,
@@ -67,8 +67,8 @@ export class BadgeComponent {
     { title: 'Primary', link: '#primary', isSubmenu: true },
     { title: 'Secondary', link: '#secondary', isSubmenu: true },
     { title: 'Outline', link: '#outline', isSubmenu: true },
-    { title: 'Solid colors', link: '#solid-colors', isSubmenu: true },
     { title: 'Outline colors', link: '#outline-colors', isSubmenu: true },
+    { title: 'Solid colors', link: '#solid-colors', isSubmenu: true },
     { title: 'Sizes', link: '#sizes', isSubmenu: true },
     { title: 'Rounded', link: '#rounded', isSubmenu: true },
     { title: 'With Icon', link: '#with-icon', isSubmenu: true },

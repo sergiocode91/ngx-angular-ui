@@ -27,7 +27,7 @@ import { Component, Input, OnChanges, OnInit } from '@angular/core';
   `,
   styles: ``,
 })
-export class HtmlSpinnerComponent implements OnInit, OnChanges {
+export class SpinnerElement implements OnInit, OnChanges {
   @Input() size: | 'xs' | 'sm' | 'lg' | 'xl' = 'lg';
   @Input() color:
     | 'default'

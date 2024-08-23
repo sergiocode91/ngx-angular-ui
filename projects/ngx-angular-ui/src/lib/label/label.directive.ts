@@ -11,7 +11,7 @@ import {
   selector: '[uiLabel]',
   standalone: true,
 })
-export class HtmlLabelDirective implements OnInit, OnChanges {
+export class LabelElement implements OnInit, OnChanges {
   @Input() class: string = '';
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}

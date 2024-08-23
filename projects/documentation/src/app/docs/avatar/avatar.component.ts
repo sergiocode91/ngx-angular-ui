@@ -8,7 +8,7 @@ import {
   TabsComponent,
   NavButtonsComponent,
 } from '@components/index';
-import { HtmlButtonDirective, HtmlAvatarDirective } from 'ngx-angular-ui';
+import { ButtonElement, AvatarElement } from 'ngx-angular-ui';
 import { AvatarService } from '../../services/code-example';
 import { CodeExamples, LinksContent, Props } from '../../models';
 
@@ -20,11 +20,11 @@ import { CodeExamples, LinksContent, Props } from '../../models';
     HeadingComponent,
     PropsComponent,
     HighlightCodeComponent,
-    HtmlAvatarDirective,
-    HtmlButtonDirective,
     LinksContentComponent,
     TabsComponent,
     NavButtonsComponent,
+    AvatarElement,
+    ButtonElement,
   ],
   templateUrl: './avatar.component.html',
   styles: ``,

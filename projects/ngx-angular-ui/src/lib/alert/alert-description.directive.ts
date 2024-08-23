@@ -11,7 +11,7 @@ import {
   selector: '[uiAlertDescription]',
   standalone: true,
 })
-export class HtmlAlertDescriptionDirective implements OnInit, OnChanges {
+export class AlertDescriptionElement implements OnInit, OnChanges {
   @Input() class: string = '';
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}

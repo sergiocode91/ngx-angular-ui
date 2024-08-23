@@ -8,9 +8,9 @@ import {
   NavButtonsComponent,
 } from '@components/index';
 import {
-  HtmlButtonDirective,
-  HtmlTextareaDirective,
-  HtmlLabelDirective,
+  TextareaElement,
+  LabelElement,
+  ButtonElement,
 } from 'ngx-angular-ui';
 import { CodeExamples, LinksContent } from '../../models';
 import { TextareaService } from '../../services/code-example';
@@ -23,11 +23,11 @@ import { TextareaService } from '../../services/code-example';
     HeadingComponent,
     HighlightCodeComponent,
     LinksContentComponent,
-    HtmlTextareaDirective,
-    HtmlLabelDirective,
-    HtmlButtonDirective,
     TabsComponent,
     NavButtonsComponent,
+    TextareaElement,
+    LabelElement,
+    ButtonElement,
   ],
   templateUrl: './textarea.component.html',
   styles: ``,

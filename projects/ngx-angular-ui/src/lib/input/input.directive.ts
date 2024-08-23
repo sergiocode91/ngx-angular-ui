@@ -11,7 +11,7 @@ import {
   selector: '[uiInput]',
   standalone: true,
 })
-export class HtmlInputDirective implements OnInit, OnChanges {
+export class InputElement implements OnInit, OnChanges {
   @Input() class: string = '';
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}

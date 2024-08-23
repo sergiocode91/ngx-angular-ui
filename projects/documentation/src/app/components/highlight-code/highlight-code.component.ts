@@ -1,12 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { HighlightModule } from 'ngx-highlightjs';
 import { LucideAngularModule } from 'lucide-angular';
-import { HtmlButtonDirective } from 'ngx-angular-ui';
+import { ButtonElement } from 'ngx-angular-ui';
 
 @Component({
   selector: 'app-highlight-code',
   standalone: true,
-  imports: [HighlightModule, HtmlButtonDirective, LucideAngularModule],
+  imports: [HighlightModule, ButtonElement, LucideAngularModule],
   templateUrl: './highlight-code.component.html',
   styles: ``
 })

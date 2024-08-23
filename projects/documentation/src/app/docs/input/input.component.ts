@@ -8,9 +8,9 @@ import {
   NavButtonsComponent,
 } from '@components/index';
 import {
-  HtmlButtonDirective,
-  HtmlLabelDirective,
-  HtmlInputDirective,
+  ButtonElement,
+  LabelElement,
+  InputElement,
 } from 'ngx-angular-ui';
 import { CodeExamples, LinksContent } from '../../models';
 import { InputService } from '../../services/code-example';
@@ -21,13 +21,13 @@ import { InputService } from '../../services/code-example';
   imports: [
     RouterModule,
     HeadingComponent,
-    HtmlInputDirective,
-    HtmlLabelDirective,
-    HtmlButtonDirective,
     HighlightCodeComponent,
     LinksContentComponent,
     TabsComponent,
     NavButtonsComponent,
+    InputElement,
+    LabelElement,
+    ButtonElement,
   ],
   templateUrl: './input.component.html',
   styles: ``,

@@ -11,7 +11,7 @@ import {
   selector: '[uiCardHeader]',
   standalone: true,
 })
-export class HtmlCardHeaderDirective implements OnInit, OnChanges {
+export class CardHeaderElement implements OnInit, OnChanges {
   @Input() class: string = '';
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}

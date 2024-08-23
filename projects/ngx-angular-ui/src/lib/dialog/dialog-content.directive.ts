@@ -9,14 +9,14 @@ import {
   Optional,
   Renderer2,
 } from '@angular/core';
-import { Dialog } from './dialog.directive';
+import { DialogElement } from './dialog.directive';
 import { DialogService } from './dialog.service';
 
 @Directive({
   selector: '[uiDialogContent]',
   standalone: true,
 })
-export class DialogContent implements OnInit, OnChanges {
+export class DialogContentElement implements OnInit, OnChanges {
   @Input() size:
     | 'xs'
     | 'sm'
@@ -33,7 +33,7 @@ export class DialogContent implements OnInit, OnChanges {
     private el: ElementRef,
     private renderer: Renderer2,
     private _dialogService: DialogService,
-    @Optional() @Host() private dialog: Dialog
+    @Optional() @Host() private dialog: DialogElement
   ) {}
 
   ngOnInit() {

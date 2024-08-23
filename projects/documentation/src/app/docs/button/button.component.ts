@@ -9,7 +9,7 @@ import {
   PropsComponent,
   TabsComponent,
 } from '@components/index';
-import { HtmlButtonDirective } from 'ngx-angular-ui';
+import { ButtonElement } from 'ngx-angular-ui';
 import { ButtonService } from '../../services/code-example';
 import { CodeExamples, LinksContent, Props } from '../../models';
 
@@ -25,7 +25,7 @@ import { CodeExamples, LinksContent, Props } from '../../models';
     TabsComponent,
     LinksContentComponent,
     NavButtonsComponent,
-    HtmlButtonDirective,
+    ButtonElement,
   ],
   templateUrl: './button.component.html',
   styles: ``,
@@ -70,8 +70,8 @@ export class ButtonComponent {
     { title: 'Primary', link: '#primary', isSubmenu: true },
     { title: 'Secondary', link: '#secondary', isSubmenu: true },
     { title: 'Outline', link: '#outline', isSubmenu: true },
-    { title: 'Solid colors', link: '#solid-colors', isSubmenu: true },
     { title: 'Outline colors', link: '#outline-colors', isSubmenu: true },
+    { title: 'Solid colors', link: '#solid-colors', isSubmenu: true },
     { title: 'Sizes', link: '#sizes', isSubmenu: true },
     { title: 'Rounded', link: '#rounded', isSubmenu: true },
     { title: 'Ghost', link: '#ghost', isSubmenu: true },

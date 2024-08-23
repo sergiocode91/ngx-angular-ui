@@ -11,7 +11,7 @@ import {
   selector: '[uiDialogDescription]',
   standalone: true,
 })
-export class DialogDescription implements OnInit, OnChanges {
+export class DialogDescriptionElement implements OnInit, OnChanges {
   @Input() class: string = '';
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}

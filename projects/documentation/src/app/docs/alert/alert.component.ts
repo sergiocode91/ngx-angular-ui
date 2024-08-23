@@ -10,10 +10,10 @@ import {
 } from '@components/index';
 import { LucideAngularModule } from 'lucide-angular';
 import {
-  HtmlButtonDirective,
-  HtmlAlertDirective,
-  HtmlAlertTitleDirective,
-  HtmlAlertDescriptionDirective,
+  AlertElement,
+  AlertTitleElement,
+  AlertDescriptionElement,
+  ButtonElement,
 } from 'ngx-angular-ui';
 import { AlertService } from '../../services/code-example';
 import { CodeExamples, LinksContent, Props } from '../../models';
@@ -25,16 +25,16 @@ import { CodeExamples, LinksContent, Props } from '../../models';
     RouterModule,
     HeadingComponent,
     HighlightCodeComponent,
-    HtmlAlertDirective,
-    HtmlAlertTitleDirective,
-    HtmlAlertDescriptionDirective,
-    HtmlButtonDirective,
     TabsComponent,
     LucideAngularModule,
     PropsComponent,
     LinksContentComponent,
     TabsComponent,
     NavButtonsComponent,
+    AlertElement,
+    AlertTitleElement,
+    AlertDescriptionElement,
+    ButtonElement,
   ],
   templateUrl: './alert.component.html',
   styles: ``,
@@ -46,8 +46,13 @@ export class AlertComponent {
     columns: [
       {
         property: 'variant',
-        type: `'primary' | 'success' | 'destructive' | 'warning' | 'info'`,
-        default: 'primary',
+        type: `'primary' | 'outline' | 'primary-inline' | 'outline-inline'`,
+        default: 'outline',
+      },
+      { 
+        property: 'color', 
+        type: `'default' | 'info' | 'help' | 'success' | 'warning' | 'danger'`, 
+        default: 'default'
       },
       {
         property: 'showIcon',
@@ -56,14 +61,15 @@ export class AlertComponent {
       },
     ],
   };
-
   public linksContent: LinksContent[] = [
     { title: 'Props', link: '#props' },
     { title: 'Usage', link: '#usage' },
     { title: 'Examples', link: '#examples' },
     { title: 'Default', link: '#default', isSubmenu: true },
     { title: 'With Icon', link: '#with-icon', isSubmenu: true },
-    { title: 'Colors', link: '#colors', isSubmenu: true },
+    { title: 'Inline Option', link: '#inline-option', isSubmenu: true },
+    { title: 'Outline Colors', link: '#outline-colors', isSubmenu: true },
+    { title: 'Solid Colors', link: '#solid-colors', isSubmenu: true },
   ];
 
   public examples: CodeExamples;

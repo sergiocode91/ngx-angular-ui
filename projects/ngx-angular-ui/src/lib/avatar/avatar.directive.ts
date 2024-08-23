@@ -11,7 +11,7 @@ import {
   selector: '[uiAvatar]',
   standalone: true,
 })
-export class HtmlAvatarDirective implements OnInit, OnChanges {
+export class AvatarElement implements OnInit, OnChanges {
   private _border: boolean = false;
   
   @Input() radius: 'full' | 'lg' | 'md' | 'sm' = 'full';

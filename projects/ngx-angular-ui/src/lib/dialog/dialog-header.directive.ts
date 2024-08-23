@@ -11,7 +11,7 @@ import {
   selector: '[uiDialogHeader]',
   standalone: true,
 })
-export class DialogHeader implements OnInit, OnChanges {
+export class DialogHeaderElement implements OnInit, OnChanges {
   @Input() class: string = '';
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}

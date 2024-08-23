@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
-import { HtmlButtonDirective } from 'ngx-angular-ui';
+import { ButtonElement } from 'ngx-angular-ui';
 import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
@@ -10,7 +10,7 @@ import { LucideAngularModule } from 'lucide-angular';
   imports: [
     CommonModule,
     LucideAngularModule,
-    HtmlButtonDirective,
+    ButtonElement,
     RouterModule
   ],
   templateUrl: './links-content.component.html',

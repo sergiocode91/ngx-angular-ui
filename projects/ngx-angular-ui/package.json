@@ -1,6 +1,6 @@
 {
   "name": "ngx-angular-ui",
-  "version": "0.1.7",
+  "version": "1.1.0",
   "peerDependencies": {
     "@angular/common": ">=17.0.0 <19.0.0",
     "@angular/core": ">=17.0.0 <19.0.0"

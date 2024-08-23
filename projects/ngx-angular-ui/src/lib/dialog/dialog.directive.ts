@@ -14,7 +14,7 @@ import { DialogService } from './dialog.service';
   selector: '[uiDialog]',
   standalone: true,
 })
-export class Dialog implements OnInit, OnChanges {
+export class DialogElement implements OnInit, OnChanges {
   @Input() size: 'sm' | 'md' | 'lg' | 'xl' = 'md';
   @Input() isOpenDialog: boolean = false;
   @Input() class: string = '';

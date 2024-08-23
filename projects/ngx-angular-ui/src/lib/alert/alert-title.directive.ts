@@ -11,7 +11,7 @@ import {
   selector: '[uiAlertTitle]',
   standalone: true,
 })
-export class HtmlAlertTitleDirective implements OnInit, OnChanges {
+export class AlertTitleElement implements OnInit, OnChanges {
   @Input() class: string = '';
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
@@ -26,7 +26,7 @@ export class HtmlAlertTitleDirective implements OnInit, OnChanges {
 
   private applyClasses() {
     const baseClasses =
-      'font-medium text-sm leading-none tracking-tight mb-1';
+      'font-semibold text-sm leading-none tracking-tight mb-1';
     const classes = `${baseClasses} ${this.class}`;
 
     this.renderer.setAttribute(this.el.nativeElement, 'class', classes);
