@@ -7,24 +7,24 @@ export class DialogCodeService {
   public codeExamples = {
   codeUseTs: `
   import { 
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-    DialogService,
+    DialogElement,
+    DialogContentElement,
+    DialogDescriptionElement,
+    DialogFooterElement,
+    DialogHeaderElement,
+    DialogTitleElement,
+    DialogService
   } from 'ngx-angular-ui';
 
   @Component({
     standalone: true,
     imports: [
-      Dialog,
-      DialogContent,
-      DialogDescription,
-      DialogFooter,
-      DialogHeader,
-      DialogTitle,
+      DialogElement,
+      DialogContentElement,
+      DialogDescriptionElement,
+      DialogFooterElement,
+      DialogHeaderElement,
+      DialogTitleElement,
     ],
     providers: [DialogService],
   })
@@ -53,26 +53,26 @@ export class DialogCodeService {
   `,
   code1: `
   import {
-    Button,
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
+    DialogElement,
+    DialogContentElement,
+    DialogDescriptionElement,
+    DialogFooterElement,
+    DialogHeaderElement,
+    DialogTitleElement,
     DialogService,
+    ButtonElement
   } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
     imports: [
-      Button,
-      Dialog,
-      DialogContent,
-      DialogDescription,
-      DialogFooter,
-      DialogHeader,
-      DialogTitle,
+      DialogElement,
+      DialogContentElement,
+      DialogDescriptionElement,
+      DialogFooterElement,
+      DialogHeaderElement,
+      DialogTitleElement,
+      ButtonElement,
     ],
     providers: [DialogService],
     template: \`
@@ -89,7 +89,7 @@ export class DialogCodeService {
           </div>
           <div uiDialogFooter class="flex justify-end space-x-2">
             <button uiButton variant="outline" (click)="closeDialog('dialog1')">Cancel</button>
-            <button uiButton (click)="handleSubmit()">Action</button>
+            <button uiButton (click)="closeDialog('dialog1')">Action</button>
           </div>
         </div>
       </div>
@@ -110,31 +110,31 @@ export class DialogCodeService {
   `,
   code2: `
   import { 
-    Label,
-    Input,
-    Button,
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-    DialogService,
+    DialogElement,
+    DialogContentElement,
+    DialogDescriptionElement,
+    DialogFooterElement,
+    DialogHeaderElement,
+    DialogTitleElement,
+    DialogServiceElement,
+    InputElement,
+    LabelElement,
+    ButtonElement
   } from 'ngx-angular-ui';
 
   @Component({
     standalone: true,
     imports: [
-      Label,
-      Input,
-      Button,
-      Dialog,
-      DialogContent,
-      DialogDescription,
-      DialogFooter,
-      DialogHeader,
-      DialogTitle,
-      DialogService,
+      DialogElement,
+      DialogContentElement,
+      DialogDescriptionElement,
+      DialogFooterElement,
+      DialogHeaderElement,
+      DialogTitleElement,
+      DialogServiceElement,
+      InputElement,
+      LabelElement,
+      ButtonElement,
     ],
     template: \`
       <button uiButton variant="outline" (click)="openDialog('dialog2')">Edit profile</button>
@@ -157,7 +157,7 @@ export class DialogCodeService {
           </div>
           <div uiDialogFooter class="flex justify-end space-x-2">
             <button uiButton variant="outline" (click)="closeDialog('dialog2')">Cancel</button>
-            <button uiButton (click)="handleSubmit()">Save changes</button>
+            <button uiButton (click)="closeDialog('dialog2')">Save changes</button>
           </div>
         </div>
       </div>
@@ -178,46 +178,46 @@ export class DialogCodeService {
   `,
   code3: `
   import { 
-    Alert,
-    Label,
-    Input,
-    Button,
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-    DialogService,
+    DialogElement,
+    DialogContentElement,
+    DialogDescriptionElement,
+    DialogFooterElement,
+    DialogHeaderElement,
+    DialogTitleElement,
+    DialogServiceElement,
+    InputElement,
+    LabelElement,
+    AlertElement,
+    ButtonElement
   } from 'ngx-angular-ui';
 
   @Component({
     standalone: true,
     imports: [
-      Alert,
-      Label,
-      Input,
-      Button,
-      Dialog,
-      DialogContent,
-      DialogDescription,
-      DialogFooter,
-      DialogHeader,
-      DialogTitle,
-      DialogService,
+      DialogElement,
+      DialogContentElement,
+      DialogDescriptionElement,
+      DialogFooterElement,
+      DialogHeaderElement,
+      DialogTitleElement,
+      DialogServiceElement,
+      InputElement,
+      LabelElement,
+      AlertElement,
+      ButtonElement,
     ],
     template: \`
       <button uiButton color="danger" (click)="openDialog('dialog3')">Delete project</button>
-
+      
       <div uiDialog dialogId="dialog3">
         <div uiDialogContent>
           <div uiDialogHeader>
             <div uiDialogTitle>Delete Project</div>
             <div uiDialogDescription>This project will be deleted, along with all its Deployments, Environment Variables and Settings.</div>
           </div>
-          <div uiAlert variant="danger">
+          <div uiAlert variant="outline-inline" color="danger">
             <div uiAlertTitle>Warning:</div>
-            <div uiAlertDescription>This action is not reversible. Please be certain.</div>
+            <div uiAlertDescription>This action is not reversible.</div>
           </div>
           <div class="grid items-center gap-4">
             <div class="flex flex-col space-y-2">
@@ -227,7 +227,7 @@ export class DialogCodeService {
           </div>
           <div uiDialogFooter class="flex justify-end space-x-2">
             <button uiButton variant="outline" (click)="closeDialog('dialog3')">Cancel</button>
-            <button uiButton color="danger" (click)="handleSubmit()">Delete project</button>
+            <button uiButton color="danger" (click)="closeDialog('dialog3')">Delete project</button>
           </div>
         </div>
       </div>
@@ -248,27 +248,27 @@ export class DialogCodeService {
   `,
   code4: `
   import { 
-    Button,
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-    DialogService,
+    DialogElement,
+    DialogContentElement,
+    DialogDescriptionElement,
+    DialogFooterElement,
+    DialogHeaderElement,
+    DialogTitleElement,
+    DialogServiceElement,
+    ButtonElement
   } from 'ngx-angular-ui';
 
   @Component({
     standalone: true,
     imports: [
-      Button,
-      Dialog,
-      DialogContent,
-      DialogDescription,
-      DialogFooter,
-      DialogHeader,
-      DialogTitle,
-      DialogService,
+      DialogElement,
+      DialogContentElement,
+      DialogDescriptionElement,
+      DialogFooterElement,
+      DialogHeaderElement,
+      DialogTitleElement,
+      DialogServiceElement,
+      ButtonElement,
     ],
     template: \`
       <button uiButton variant="outline" (click)="openDialog('dialog4')">Privacy Policy</button>
@@ -292,7 +292,7 @@ export class DialogCodeService {
           </div>
           <div uiDialogFooter class="flex justify-end space-x-2">
             <button uiButton variant="outline" (click)="closeDialog('dialog4')">Cancel</button>
-            <button uiButton (click)="handleSubmit()">Accept</button>
+            <button uiButton (click)="closeDialog('dialog4')">Accept</button>
           </div>
         </div>
       </div>
@@ -313,27 +313,27 @@ export class DialogCodeService {
   `,
   code5: `
   import { 
-    Button,
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-    DialogService,
+    DialogElement,
+    DialogContentElement,
+    DialogDescriptionElement,
+    DialogFooterElement,
+    DialogHeaderElement,
+    DialogTitleElement,
+    DialogServiceElement,
+    ButtonElement
   } from 'ngx-angular-ui';
 
   @Component({
     standalone: true,
     imports: [
-      Button,
-      Dialog,
-      DialogContent,
-      DialogDescription,
-      DialogFooter,
-      DialogHeader,
-      DialogTitle,
-      DialogService,
+      DialogElement,
+      DialogContentElement,
+      DialogDescriptionElement,
+      DialogFooterElement,
+      DialogHeaderElement,
+      DialogTitleElement,
+      DialogServiceElement,
+      ButtonElement,
     ],
     template: \`
       <button uiButton variant="outline" (click)="openDialog(dialog5)">Medium</button>
