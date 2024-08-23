@@ -115,15 +115,15 @@ export class ButtonElement implements OnInit, OnChanges {
   private getSizeClass(size: string): string {
     switch (size) {
       case 'sm':
-        return 'min-h-8 h-8 px-3 text-xs';
+        return 'min-h-8 px-3 text-xs';
       case 'md':
-        return 'min-h-9 h-9 px-4 py-2';
+        return 'min-h-9 px-4';
       case 'lg':
-        return 'min-h-10 h-10 px-8';
+        return 'min-h-10 px-8';
       case 'icon':
-        return 'min-w-9 min-h-9 h-9';
+        return 'min-w-9 min-h-9';
       default:
-        return 'min-h-9 h-9 px-4 py-2';
+        return 'min-h-9 px-4';
     }
   }
 
