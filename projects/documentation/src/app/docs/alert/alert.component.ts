@@ -76,7 +76,7 @@ export class AlertComponent {
 
   constructor(private _alertCodeService: AlertCodeService) {
     this.examples = this._alertCodeService.getExamples();
-    this.initializeTabs(4);
+    this.initializeTabs(5);
   }
 
   initializeTabs(numberOfTabs: number) {

@@ -39,6 +39,8 @@ import {
   Command,
   File,
   Search,
+  CircleDot,
+  CircleHelp,
 } from 'lucide-angular';
 
 export const appConfig: ApplicationConfig = {
@@ -82,6 +84,8 @@ export const appConfig: ApplicationConfig = {
         Command,
         File,
         Search,
+        CircleDot,
+        CircleHelp
       })
     ),
   ],
