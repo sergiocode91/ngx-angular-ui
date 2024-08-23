@@ -6,22 +6,22 @@ import { Injectable } from '@angular/core';
 export class LabelCodeService {
   public codeExamples = {
   codeUseTs: `
-  import { HtmlLabelDirective } from 'ngx-angular-ui';
+  import { LabelElement } from 'ngx-angular-ui';
 
   @Component({
     standalone: true,
-    imports: [HtmlLabelDirective],
+    imports: [LabelElement],
   })
   `,
   codeUseHtml: `
   <label uiLabel>Username</label>
   `,
   code1: `
-  import { HtmlLabelDirective, HtmlInputDirective } from 'ngx-angular-ui';
+  import { LabelElement, InputElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlLabelDirective, HtmlInputDirective],
+    imports: [LabelElement, InputElement],
     template: \`
       <div class="flex flex-col space-y-2">
         <label uiLabel for="Username">Username</label>

@@ -6,22 +6,22 @@ import { Injectable } from '@angular/core';
 export class SkeletonCodeService {
   public codeExamples = {
   codeUseTs: `
-  import { HtmlSkeletonDirective } from 'ngx-angular-ui';
+  import { SkeletonElement } from 'ngx-angular-ui';
 
   @Component({
     standalone: true,
-    imports: [HtmlSkeletonDirective],
+    imports: [SkeletonElement],
   })
   `,
   codeUseHtml: `
   <div uiSkeleton class="w-[250px] h-[125px] rounded-xl"></div>
   `,
   code1: `
-  import { HtmlSkeletonDirective } from 'ngx-angular-ui';
+  import { SkeletonElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlSkeletonDirective],
+    imports: [SkeletonElement],
     template: \`
       <div class="flex items-center space-x-4">
         <div uiSkeleton class="w-12 h-12 rounded-full"></div>
@@ -34,11 +34,11 @@ export class SkeletonCodeService {
   })
   `,
   code2: `
-  import { HtmlSkeletonDirective } from 'ngx-angular-ui';
+  import { SkeletonElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlSkeletonDirective],
+    imports: [SkeletonElement],
     template: \`
       <div class="flex flex-col space-y-3">
         <div uiSkeleton class="w-[250px] h-[125px] rounded-xl"></div>
