@@ -7,23 +7,23 @@ export class CardCodeService {
   public codeExamples = {
   codeUseTs: `
   import { 
-    HtmlCardDirective,
-    HtmlCardHeaderDirective,
-    HtmlCardTitleDirective,
-    HtmlCardDescriptionDirective,
-    HtmlCardContentDirective,
-    HtmlCardFooterDirective,
+    CardElement,
+    CardHeaderElement,
+    CardTitleElement,
+    CardDescriptionElement,
+    CardContentElement,
+    CardFooterElement
   } from 'ngx-angular-ui';
 
   @Component({
     standalone: true,
     imports: [
-      HtmlCardDirective,
-      HtmlCardHeaderDirective,
-      HtmlCardTitleDirective,
-      HtmlCardDescriptionDirective,
-      HtmlCardContentDirective,
-      HtmlCardFooterDirective,
+      CardElement,
+      CardHeaderElement,
+      CardTitleElement,
+      CardDescriptionElement,
+      CardContentElement,
+      CardFooterElement,
     ],
   })
   `,
@@ -39,23 +39,27 @@ export class CardCodeService {
   `,
   code1: `
   import { 
-    HtmlCardDirective,
-    HtmlCardHeaderDirective,
-    HtmlCardTitleDirective,
-    HtmlCardDescriptionDirective,
-    HtmlCardContentDirective,
-    HtmlCardFooterDirective
+    CardElement,
+    CardHeaderElement,
+    CardTitleElement,
+    CardDescriptionElement,
+    CardContentElement,
+    CardFooterElement,
+    InputElement,
+    ButtonElement
   } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
     imports: [
-      HtmlCardDirective,
-      HtmlCardHeaderDirective,
-      HtmlCardTitleDirective,
-      HtmlCardDescriptionDirective,
-      HtmlCardContentDirective,
-      HtmlCardFooterDirective,
+      CardElement,
+      CardHeaderElement,
+      CardTitleElement,
+      CardDescriptionElement,
+      CardContentElement,
+      CardFooterElement,
+      InputElement,
+      ButtonElement
     ],
     template: \`
       <div uiCard class="w-[550px]">
@@ -76,23 +80,29 @@ export class CardCodeService {
   `,
   code2: `
   import { 
-    HtmlCardDirective,
-    HtmlCardHeaderDirective,
-    HtmlCardTitleDirective,
-    HtmlCardDescriptionDirective,
-    HtmlCardContentDirective,
-    HtmlCardFooterDirective
+    CardElement,
+    CardHeaderElement,
+    CardTitleElement,
+    CardDescriptionElement,
+    CardContentElement,
+    CardFooterElement,
+    InputElement,
+    LabelElement,
+    ButtonElement
   } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
     imports: [
-      HtmlCardDirective,
-      HtmlCardHeaderDirective,
-      HtmlCardTitleDirective,
-      HtmlCardDescriptionDirective,
-      HtmlCardContentDirective,
-      HtmlCardFooterDirective,
+      CardElement,
+      CardHeaderElement,
+      CardTitleElement,
+      CardDescriptionElement,
+      CardContentElement,
+      CardFooterElement,
+      InputElement,
+      LabelElement,
+      ButtonElement,
     ],
     template: \`
       <div uiCard class="w-[350px]">
