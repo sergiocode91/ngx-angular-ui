@@ -6,24 +6,24 @@ import { Injectable } from '@angular/core';
 export class AvatarCodeService {
   public codeExamples = {
   codeUseTs: `
-  import { HtmlAvatarDirective } from 'ngx-angular-ui';
+  import { AvatarElement } from 'ngx-angular-ui';
 
   @Component({
     standalone: true,
-    imports: [HtmlAvatarDirective],
+    imports:  [AvatarElement],
   })
   `,
-  codeUseHtml: `
+  codeUs : `
   <div uiAvatar>
     <img src="..." alt="avatar" />
   </div>
   `,
   code1: `
-  import { HtmlAvatarDirective } from 'ngx-angular-ui';
+  import { AvatarElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlAvatarDirective],
+    imports:  [AvatarElement],
     template: \`
       <div uiAvatar>
         <span>A</span>
@@ -32,11 +32,11 @@ export class AvatarCodeService {
   })
   `,
   code2: `
-  import { HtmlAvatarDirective } from 'ngx-angular-ui';
+  import { AvatarElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlAvatarDirective],
+    imports:  [AvatarElement],
     template: \`
       <div uiAvatar>
         <img src="https://i.pravatar.cc/150?img=1" alt="avatar" />
@@ -45,11 +45,11 @@ export class AvatarCodeService {
   })
   `,
   code3: `
-  import { HtmlAvatarDirective } from 'ngx-angular-ui';
+  import { AvatarElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlAvatarDirective],
+    imports:  [AvatarElement],
     template: \`
       <div uiAvatar border>
         <img src="https://i.pravatar.cc/150?img=57" alt="avatar" />
@@ -58,11 +58,11 @@ export class AvatarCodeService {
   })
   `,
   code4: `
-  import { HtmlAvatarDirective } from 'ngx-angular-ui';
+  import { AvatarElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlAvatarDirective],
+    imports:  [AvatarElement],
     template: \`
       <div uiAvatar border color="primary">
         <img src="https://i.pravatar.cc/150?img=45" alt="avatar" />
@@ -86,11 +86,11 @@ export class AvatarCodeService {
   })
   `,
   code5: `
-  import { HtmlAvatarDirective } from 'ngx-angular-ui';
+  import { AvatarElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlAvatarDirective],
+    imports:  [AvatarElement],
     template: \`
       <div uiAvatar radius="full">
         <img src="https://i.pravatar.cc/150?img=23" alt="avatar" />
@@ -108,11 +108,11 @@ export class AvatarCodeService {
   })
   `,
   code6: `
-  import { HtmlAvatarDirective } from 'ngx-angular-ui';
+  import { AvatarElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlAvatarDirective],
+    imports:  [AvatarElement],
     template: \`
       <div uiAvatar size="xs" status="top-right" color="success">
         <img src="https://i.pravatar.cc/150?img=21" alt="avatar" />
@@ -133,11 +133,11 @@ export class AvatarCodeService {
   })
   `,
   code7: `
-  import { HtmlAvatarDirective } from 'ngx-angular-ui';
+  import { AvatarElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlAvatarDirective],
+    imports:  [AvatarElement],
     template: \`
       <div uiAvatar status="top-right" color="success">
         <img src="https://i.pravatar.cc/150?img=29" alt="avatar" />
@@ -155,11 +155,11 @@ export class AvatarCodeService {
   })
   `,
   code8: `
-  import { HtmlAvatarDirective } from 'ngx-angular-ui';
+  import { AvatarElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlAvatarDirective],
+    imports:  [AvatarElement],
     template: \`
       <div uiAvatar status="top-right" color="primary">
         <img src="https://i.pravatar.cc/150?img=60" alt="avatar" />
