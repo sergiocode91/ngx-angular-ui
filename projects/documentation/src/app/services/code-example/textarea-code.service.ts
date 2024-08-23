@@ -6,33 +6,33 @@ import { Injectable } from '@angular/core';
 export class TextareaCodeService {
   public codeExamples = {
   codeUseTs: `
-  import { HtmlTextareaDirective } from 'ngx-angular-ui';
+  import { TextareaElement } from 'ngx-angular-ui';
 
   @Component({
     standalone: true,
-    imports: [HtmlTextareaDirective],
+    imports: [TextareaElement],
   })
   `,
   codeUseHtml: `
   <textarea uiTextarea placeholder="Type your message here."></textarea>
   `,
   code1: `
-  import { HtmlTextareaDirective } from 'ngx-angular-ui';
+  import { TextareaElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlTextareaDirective],
+    imports: [TextareaElement],
     template: \`
       <textarea uiTextarea placeholder="Type your message here."></textarea>
     \`
   })
   `,
   code2: `
-  import { HtmlTextareaDirective, HtmlLabelDirective } from 'ngx-angular-ui';
+  import { TextareaElement, LabelElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlTextareaDirective, HtmlLabelDirective],
+    imports: [TextareaElement, LabelElement],
     template: \`
       <div class="flex flex-col space-y-2">
         <label uiLabel for="email">Message</label>
@@ -42,11 +42,19 @@ export class TextareaCodeService {
   })
   `,
   code3: `
-  import { HtmlInputDirective, HtmlButtonDirective } from 'ngx-angular-ui';
+  import { 
+    TextareaElement, 
+    InputElement, 
+    ButtonElement 
+  } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlInputDirective, HtmlButtonDirective],
+    imports: [
+      TextareaElement, 
+      InputElement, 
+      ButtonElement
+    ],
     template: \`
       <div class="flex flex-col items-end space-y-4">
         <textarea uiTextarea placeholder="Type your message here."></textarea>
@@ -56,11 +64,11 @@ export class TextareaCodeService {
   })
   `,
   code4: `
-  import { HtmlTextareaDirective } from 'ngx-angular-ui';
+  import { TextareaElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlTextareaDirective],
+    imports: [TextareaElement],
     template: \`
       <textarea uiTextarea placeholder="Type your message here." disabled></textarea>
     \`
