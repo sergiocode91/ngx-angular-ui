@@ -6,55 +6,55 @@ import { Injectable } from '@angular/core';
 export class ButtonCodeService {
   public codeExamples = {
   codeUseTs: `
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
+  import { ButtonElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlButtonDirective],
+    imports: [ButtonElement],
   })
   `,
   codeUseHtml: `
   <button uiButton>Button</button>
   `,
   code1: `
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
+  import { ButtonElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlButtonDirective],
+    imports: [ButtonElement],
     template: \`
       <button uiButton variant="primary">Button</button>
     \`
   })
   `,
   code2: `
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
+  import { ButtonElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlButtonDirective],
+    imports: [ButtonElement],
     template: \`
       <button uiButton variant="secondary">Button</button>
     \`
   })
   `,
   code3: `
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
+  import { ButtonElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlButtonDirective],
+    imports: [ButtonElement],
     template: \`
       <button uiButton variant="outline">Outline</button>
     \`
   })
   `,
   code4: `
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
+  import { ButtonElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlButtonDirective],
+    imports: [ButtonElement],
     template: \`
       <button uiButton variant="primary" color="info">Info</button>
       <button uiButton variant="primary" color="help">Help</button>
@@ -65,11 +65,11 @@ export class ButtonCodeService {
   })
   `,
   code5: `
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
+  import { ButtonElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlButtonDirective],
+    imports: [ButtonElement],
     template: \`
       <button uiButton variant="outline" color="info">Info</button>
       <button uiButton variant="outline" color="help">Help</button>
@@ -80,11 +80,11 @@ export class ButtonCodeService {
   })
   `,
   code6: `
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
+  import { ButtonElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlButtonDirective],
+    imports: [ButtonElement],
     template: \`
       <button uiButton variant="outline" size="sm">Small</button>
       <button uiButton variant="outline" size="md">Medium</button>
@@ -93,11 +93,11 @@ export class ButtonCodeService {
   })
   `,
   code7: `
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
+  import { ButtonElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlButtonDirective],
+    imports: [ButtonElement],
     template: \`
       <button uiButton variant="outline" rounded="md">Medium</button>
       <button uiButton variant="outline" rounded="lg">Large</button>
@@ -106,22 +106,22 @@ export class ButtonCodeService {
   })
   `,
   code8: `
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
+  import { ButtonElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlButtonDirective],
+    imports: [ButtonElement],
     template: \`
       <button uiButton variant="ghost">Get started</button>
     \`
   })
   `,
   code9: `
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
+  import { ButtonElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlButtonDirective],
+    imports: [ButtonElement],
     template: \`
       <button uiButton variant="link">Don’t have an account?</button>
     \`
@@ -129,11 +129,11 @@ export class ButtonCodeService {
   `,
   code10: `
   import { LucideAngularModule } from 'lucide-angular';
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
+  import { ButtonElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [LucideAngularModule, HtmlButtonDirective],
+    imports: [LucideAngularModule, ButtonElement],
     template: \`
       <button uiButton variant="outline" size="icon">
         <lucide-icon name="Moon" [size]="18"></lucide-icon>
@@ -143,11 +143,11 @@ export class ButtonCodeService {
   `,
   code11: `
   import { LucideAngularModule } from 'lucide-angular';
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
+  import { ButtonElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [LucideAngularModule, HtmlButtonDirective],
+    imports: [LucideAngularModule, ButtonElement],
     template: \`
       <button uiButton variant="primary">
         <lucide-icon name="Instagram" [size]="18" class="inline-flex mr-1"></lucide-icon>
@@ -158,11 +158,11 @@ export class ButtonCodeService {
   `,
   code12: `
   import { LucideAngularModule } from 'lucide-angular';
-  import { HtmlButtonDirective } from 'ngx-angular-ui';
+  import { ButtonElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [LucideAngularModule, HtmlButtonDirective],
+    imports: [LucideAngularModule, ButtonElement],
     template: \`
       <button uiButton variant="primary" color="danger" disabled="true">
         <lucide-icon name="Trash" [size]="18" class="inline-flex mr-1"></lucide-icon>
