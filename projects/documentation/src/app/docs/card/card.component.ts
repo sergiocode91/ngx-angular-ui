@@ -19,7 +19,7 @@ import {
   LabelElement,
 } from 'ngx-angular-ui';
 import { CodeExamples, LinksContent } from '../../models';
-import { CardService } from '../../services/code-example';
+import { CardCodeService } from '../../services/code-example';
 @Component({
   selector: 'app-card',
   standalone: true,
@@ -59,8 +59,8 @@ export class CardComponent {
 
   public examples: CodeExamples;
 
-  constructor(private _cardService: CardService) {
-    this.examples = this._cardService.getExamples();
+  constructor(private _cardCodeService: CardCodeService) {
+    this.examples = this._cardCodeService.getExamples();
     this.initializeTabs(4);
   }
 

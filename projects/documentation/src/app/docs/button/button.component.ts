@@ -10,7 +10,7 @@ import {
   TabsComponent,
 } from '@components/index';
 import { ButtonElement } from 'ngx-angular-ui';
-import { ButtonService } from '../../services/code-example';
+import { ButtonCodeService } from '../../services/code-example';
 import { CodeExamples, LinksContent, Props } from '../../models';
 
 @Component({
@@ -83,8 +83,8 @@ export class ButtonComponent {
 
   public examples: CodeExamples;
 
-  constructor(private _buttonService: ButtonService) {
-    this.examples = this._buttonService.getExamples();
+  constructor(private _buttonCodeService: ButtonCodeService) {
+    this.examples = this._buttonCodeService.getExamples();
     this.initializeTabs(12);
   }
 

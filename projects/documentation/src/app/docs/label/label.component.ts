@@ -13,7 +13,7 @@ import {
   InputElement,
 } from 'ngx-angular-ui';
 import { CodeExamples, LinksContent } from '../../models';
-import { LabelService } from '../../services/code-example';
+import { LabelCodeService } from '../../services/code-example';
 
 @Component({
   selector: 'app-label',
@@ -43,8 +43,8 @@ export class LabelComponent {
 
   public examples: CodeExamples;
 
-  constructor(private _labelService: LabelService) {
-    this.examples = this._labelService.getExamples();
+  constructor(private _labelCodeService: LabelCodeService) {
+    this.examples = this._labelCodeService.getExamples();
     this.initializeTabs(4);
   }
 

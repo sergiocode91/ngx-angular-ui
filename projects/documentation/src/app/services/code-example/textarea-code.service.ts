@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class TextareaService {
+export class TextareaCodeService {
   public codeExamples = {
   codeUseTs: `
   import { HtmlTextareaDirective } from 'ngx-angular-ui';

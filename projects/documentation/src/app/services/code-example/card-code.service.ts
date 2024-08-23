@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class CardService {
+export class CardCodeService {
   public codeExamples = {
   codeUseTs: `
   import { 

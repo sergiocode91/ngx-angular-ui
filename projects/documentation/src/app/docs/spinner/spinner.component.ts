@@ -10,7 +10,7 @@ import {
   NavButtonsComponent,
 } from '@components/index';
 import { SpinnerElement, ButtonElement } from 'ngx-angular-ui';
-import { SpinnerService } from '../../services/code-example';
+import { SpinnerCodeService } from '../../services/code-example';
 import { CodeExamples, LinksContent, Props } from '../../models';
 
 @Component({
@@ -62,8 +62,8 @@ export class SpinnerComponent {
 
   public examples: CodeExamples;
 
-  constructor(private _spinnerService: SpinnerService) {
-    this.examples = this._spinnerService.getExamples();
+  constructor(private _spinnerCodeService: SpinnerCodeService) {
+    this.examples = this._spinnerCodeService.getExamples();
     this.initializeTabs(4);
   }
 

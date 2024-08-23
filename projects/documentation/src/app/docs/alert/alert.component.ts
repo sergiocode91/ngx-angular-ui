@@ -15,7 +15,7 @@ import {
   AlertDescriptionElement,
   ButtonElement,
 } from 'ngx-angular-ui';
-import { AlertService } from '../../services/code-example';
+import { AlertCodeService } from '../../services/code-example';
 import { CodeExamples, LinksContent, Props } from '../../models';
 
 @Component({
@@ -74,8 +74,8 @@ export class AlertComponent {
 
   public examples: CodeExamples;
 
-  constructor(private _alertService: AlertService) {
-    this.examples = this._alertService.getExamples();
+  constructor(private _alertCodeService: AlertCodeService) {
+    this.examples = this._alertCodeService.getExamples();
     this.initializeTabs(4);
   }
 

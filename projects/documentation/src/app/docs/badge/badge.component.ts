@@ -10,7 +10,7 @@ import {
 } from '@components/index';
 import { LucideAngularModule } from 'lucide-angular';
 import { ButtonElement, BadgeElement } from 'ngx-angular-ui';
-import { BadgeService } from '../../services/code-example/badge.service';
+import { BadgeCodeService } from '../../services/code-example/badge-code.service';
 import { CodeExamples, LinksContent } from '../../models';
 
 @Component({
@@ -77,8 +77,8 @@ export class BadgeComponent {
 
   public examples: CodeExamples;
 
-  constructor(private _badgeService: BadgeService) {
-    this.examples = this._badgeService.getExamples();
+  constructor(private _badgeCodeService: BadgeCodeService) {
+    this.examples = this._badgeCodeService.getExamples();
     this.initializeTabs(10);
   }
 

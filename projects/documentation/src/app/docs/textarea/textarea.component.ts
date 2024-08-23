@@ -13,7 +13,7 @@ import {
   ButtonElement,
 } from 'ngx-angular-ui';
 import { CodeExamples, LinksContent } from '../../models';
-import { TextareaService } from '../../services/code-example';
+import { TextareaCodeService } from '../../services/code-example';
 
 @Component({
   selector: 'app-textarea',
@@ -46,8 +46,8 @@ export class TextareaComponent {
 
   public examples: CodeExamples;
 
-  constructor(private _textareaService: TextareaService) {
-    this.examples = this._textareaService.getExamples();
+  constructor(private _textareaCodeService: TextareaCodeService) {
+    this.examples = this._textareaCodeService.getExamples();
     this.initializeTabs(4);
   }
 

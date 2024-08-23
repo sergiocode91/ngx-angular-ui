@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class AvatarService {
+export class AvatarCodeService {
   public codeExamples = {
   codeUseTs: `
   import { HtmlAvatarDirective } from 'ngx-angular-ui';

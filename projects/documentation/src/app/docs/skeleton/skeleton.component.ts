@@ -9,7 +9,7 @@ import {
 } from '@components/index';
 import { SkeletonElement, ButtonElement } from 'ngx-angular-ui';
 import { CodeExamples, LinksContent } from '../../models';
-import { SkeletonService } from '../../services/code-example';
+import { SkeletonCodeService } from '../../services/code-example';
 
 @Component({
   selector: 'app-skeleton',
@@ -39,8 +39,8 @@ export class SkeletonComponent {
 
   public examples: CodeExamples;
 
-  constructor(private _skeletonService: SkeletonService) {
-    this.examples = this._skeletonService.getExamples();
+  constructor(private _skeletonCodeService: SkeletonCodeService) {
+    this.examples = this._skeletonCodeService.getExamples();
     this.initializeTabs(4);
   }
 

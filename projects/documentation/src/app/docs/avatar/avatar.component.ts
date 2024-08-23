@@ -9,7 +9,7 @@ import {
   NavButtonsComponent,
 } from '@components/index';
 import { ButtonElement, AvatarElement } from 'ngx-angular-ui';
-import { AvatarService } from '../../services/code-example';
+import { AvatarCodeService } from '../../services/code-example';
 import { CodeExamples, LinksContent, Props } from '../../models';
 
 @Component({
@@ -73,8 +73,8 @@ export class AvatarComponent {
 
   public examples: CodeExamples;
 
-  constructor(private _avatarService: AvatarService) {
-    this.examples = this._avatarService.getExamples();
+  constructor(private _avatarCodeService: AvatarCodeService) {
+    this.examples = this._avatarCodeService.getExamples();
     this.initializeTabs(8);
   }
 

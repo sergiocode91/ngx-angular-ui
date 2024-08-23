@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class SpinnerService {
+export class SpinnerCodeService {
   public codeExamples = {
   codeUseTs: `
   import { HtmlSpinnerComponent } from 'ngx-angular-ui';

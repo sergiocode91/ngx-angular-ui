@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class BadgeService {
+export class BadgeCodeService {
   public codeExamples = {
   codeUseTs: `
   import { HtmlBadgeDirective } from 'ngx-angular-ui';

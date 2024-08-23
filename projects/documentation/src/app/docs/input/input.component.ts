@@ -13,7 +13,7 @@ import {
   InputElement,
 } from 'ngx-angular-ui';
 import { CodeExamples, LinksContent } from '../../models';
-import { InputService } from '../../services/code-example';
+import { InputCodeService } from '../../services/code-example';
 
 @Component({
   selector: 'app-input',
@@ -46,8 +46,8 @@ export class InputComponent {
 
   public examples: CodeExamples;
 
-  constructor(private _inputService: InputService) {
-    this.examples = this._inputService.getExamples();
+  constructor(private _inputCodeService: InputCodeService) {
+    this.examples = this._inputCodeService.getExamples();
     this.initializeTabs(4);
   }
 

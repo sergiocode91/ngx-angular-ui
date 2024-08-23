@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class LabelService {
+export class LabelCodeService {
   public codeExamples = {
   codeUseTs: `
   import { HtmlLabelDirective } from 'ngx-angular-ui';

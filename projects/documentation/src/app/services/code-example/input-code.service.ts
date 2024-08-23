@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class InputService {
+export class InputCodeService {
   public codeExamples = {
   codeUseTs: `
   import { HtmlInputDirective } from 'ngx-angular-ui';

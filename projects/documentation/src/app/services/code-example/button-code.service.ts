@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class ButtonService {
+export class ButtonCodeService {
   public codeExamples = {
   codeUseTs: `
   import { HtmlButtonDirective } from 'ngx-angular-ui';
