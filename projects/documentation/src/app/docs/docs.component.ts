@@ -28,7 +28,7 @@ export class DocsComponent {
         { title: 'Breadcrumb', routerLink: '/docs/breadcrumb', isSoon: true },
         { title: 'Button', routerLink: '/docs/button', isSoon: false },
         { title: 'Card', routerLink: '/docs/card', isSoon: false },
-        // { title: 'Dialog', routerLink: '/docs/dialog', isSoon: false },
+        { title: 'Dialog', routerLink: '/docs/dialog', isSoon: false },
         { title: 'Input', routerLink: '/docs/input', isSoon: false },
         { title: 'Label', routerLink: '/docs/label', isSoon: false },
         { title: 'Skeleton', routerLink: '/docs/skeleton', isSoon: false },
