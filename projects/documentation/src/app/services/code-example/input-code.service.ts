@@ -6,33 +6,33 @@ import { Injectable } from '@angular/core';
 export class InputCodeService {
   public codeExamples = {
   codeUseTs: `
-  import { HtmlInputDirective } from 'ngx-angular-ui';
+  import { InputElement } from 'ngx-angular-ui';
 
   @Component({
     standalone: true,
-    imports: [HtmlInputDirective],
+    imports: [InputElement],
   })
   `,
   codeUseHtml: `
   <input uiInput type="email" placeholder="Email">
   `,
   code1: `
-  import { HtmlInputDirective } from 'ngx-angular-ui';
+  import { InputElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlInputDirective],
+    imports: [InputElement],
     template: \`
       <input uiInput type="email" placeholder="Enter your email">
     \`
   })
   `,
   code2: `
-  import { HtmlInputDirective, HtmlLabelDirective } from 'ngx-angular-ui';
+  import { InputElement, LabelElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlInputDirective, HtmlLabelDirective],
+    imports: [InputElement, HtmlLabelDirective],
     template: \`
       <div class="flex flex-col space-y-2">
         <label uiLabel for="email">Email</label>
@@ -42,11 +42,11 @@ export class InputCodeService {
   })
   `,
   code3: `
-  import { HtmlInputDirective, HtmlButtonDirective } from 'ngx-angular-ui';
+  import { InputElement, ButtonElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlInputDirective, HtmlButtonDirective],
+    imports: [InputElement, ButtonElement],
     template: \`
       <div class="w-72 flex space-x-2">
         <input uiInput type="email" placeholder="Enter your email">
@@ -56,11 +56,11 @@ export class InputCodeService {
   })
   `,
   code4: `
-  import { HtmlInputDirective } from 'ngx-angular-ui';
+  import { InputElement } from 'ngx-angular-ui';
   
   @Component({
     standalone: true,
-    imports: [HtmlInputDirective],
+    imports: [InputElement],
     template: \`
       <input uiInput type="email" placeholder="Enter your email" disabled>
     \`
