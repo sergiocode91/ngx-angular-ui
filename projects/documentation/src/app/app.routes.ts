@@ -105,6 +105,14 @@ export const routes: Routes = [
           ),
       },
       {
+        path: 'switch',
+        title: 'Switch' + ' | ' + baseTitle,
+        loadComponent: () =>
+          import('./docs/switch/switch.component').then(
+            (m) => m.SwitchComponent
+          ),
+      },
+      {
         path: 'textarea',
         title: 'Textarea' + ' | ' + baseTitle,
         loadComponent: () =>

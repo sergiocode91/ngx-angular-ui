@@ -36,5 +36,7 @@ export * from './lib/label/label.directive';
 export * from './lib/skeleton/skeleton.directive';
 // Spinner
 export * from './lib/spinner/spinner.component';
+// Switch
+export * from './lib/switch/switch.component';
 // Textarea
 export * from './lib/textarea/textarea.directive';

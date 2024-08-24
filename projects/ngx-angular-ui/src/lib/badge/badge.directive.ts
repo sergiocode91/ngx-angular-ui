@@ -12,8 +12,6 @@ import {
   standalone: true,
 })
 export class BadgeElement implements OnInit, OnChanges {
-  public _showIcon: boolean = false;
-
   @Input() variant: 'primary' | 'secondary' | 'outline' = 'primary';
   @Input() color!: 'info' | 'help' | 'success' | 'warning' | 'danger';
   @Input() rounded: 'md' | 'lg' | 'full' = 'md';

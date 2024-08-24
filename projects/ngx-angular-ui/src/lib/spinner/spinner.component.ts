@@ -37,8 +37,8 @@ export class SpinnerElement implements OnInit, OnChanges {
     | 'warning'
     | 'danger' = 'default';
 
-  sizeClass: string = '';
-  colorClass: string = '';
+  public sizeClass: string = '';
+  public colorClass: string = '';
 
   ngOnInit() {
     this.applyClasses();
@@ -64,7 +64,7 @@ export class SpinnerElement implements OnInit, OnChanges {
       case 'xl':
         return 'w-10 h-10';
       default:
-        return 'sm';
+        return 'w-5 h-5';
     }
   }
 
@@ -83,7 +83,7 @@ export class SpinnerElement implements OnInit, OnChanges {
       case 'danger':
         return 'text-red-600';
       default:
-        return 'default';
+        return 'text-zinc-400 dark:text-zinc-500';
     }
   }
 }

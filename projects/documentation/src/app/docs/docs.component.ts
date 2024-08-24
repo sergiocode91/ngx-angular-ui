@@ -33,7 +33,7 @@ export class DocsComponent {
         { title: 'Label', routerLink: '/docs/label', isSoon: false },
         { title: 'Skeleton', routerLink: '/docs/skeleton', isSoon: false },
         { title: 'Spinner', routerLink: '/docs/spinner', isSoon: false },
-        { title: 'Switch', routerLink: '/docs/switch', isSoon: true },
+        { title: 'Switch', routerLink: '/docs/switch', isSoon: false },
         { title: 'Textarea', routerLink: '/docs/textarea', isSoon: false },
         { title: 'Tooltip', routerLink: '/docs/tooltip', isSoon: true },
       ],
