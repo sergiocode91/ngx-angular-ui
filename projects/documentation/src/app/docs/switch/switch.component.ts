@@ -62,6 +62,7 @@ export class SwitchComponent {
     ],
   };
   public linksContent: LinksContent[] = [
+    { title: 'Props', link: '#props' },
     { title: 'Usage', link: '#usage' },
     { title: 'Examples', link: '#examples' },
     { title: 'Default', link: '#default', isSubmenu: true },
