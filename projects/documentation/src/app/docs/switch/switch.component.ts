@@ -7,10 +7,9 @@ import {
   TabsComponent,
   NavButtonsComponent,
 } from '@components/index';
-import { ButtonElement } from 'ngx-angular-ui';
+import { SwitchElement, ButtonElement } from 'ngx-angular-ui';
 import { CodeExamples, LinksContent } from '../../models';
 import { SwitchCodeService } from '../../services/code-example';
-import { SwitchElement } from '../../../../../ngx-angular-ui/src/public-api';
 
 @Component({
   selector: 'app-skeleton',
