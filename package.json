@@ -23,7 +23,7 @@
     "@fontsource/geist-sans": "^5.0.3",
     "highlight.js": "^11.9.0",
     "lucide-angular": "^0.378.0",
-    "ngx-angular-ui": "^1.2.0",
+    "ngx-angular-ui": "^1.3.0",
     "ngx-highlightjs": "^12.0.0",
     "npm": "^10.8.2",
     "rxjs": "~7.8.0",
