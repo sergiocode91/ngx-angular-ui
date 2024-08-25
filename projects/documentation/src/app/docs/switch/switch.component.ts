@@ -8,7 +8,7 @@ import {
   TabsComponent,
   NavButtonsComponent,
 } from '@components/index';
-import { SwitchElement, ButtonElement } from '../../../../../ngx-angular-ui/src/public-api';
+import { SwitchElement, ButtonElement } from 'ngx-angular-ui';
 import { CodeExamples, LinksContent, Props } from '../../models';
 import { SwitchCodeService } from '../../services/code-example';
 

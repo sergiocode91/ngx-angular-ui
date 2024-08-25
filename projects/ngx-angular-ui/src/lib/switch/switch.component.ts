@@ -15,7 +15,7 @@ import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angu
         [disabled]="disabled"
         [ngClass]="disabled ? 'cursor-not-allowed' : ''"
       />
-      <div [ngClass]="colorClass + ' ' + switchClass + ' ' + sizeClass + ' ' + (disabled ? 'cursor-not-allowed after:bg-neutral-400 after:dark:bg-zinc-700' : '')">
+      <div [ngClass]="colorClass + ' ' + switchClass + ' ' + sizeClass + ' ' + (disabled ? 'cursor-not-allowed after:bg-zinc-400 after:dark:bg-zinc-600' : '')">
       </div>
       @if (label) {
         <span class="font-normal text-sm leading-none ml-3 dark:text-neutral-50">
