@@ -14,7 +14,7 @@ export class SwitchCodeService {
   })
   `,
   codeUseHtml: `
-  <div uiSwitch label="All new messages" color="default"></div>
+  <div uiSwitch></div>
   `,
   code1: `
   import { SwitchElement } from 'ngx-angular-ui';

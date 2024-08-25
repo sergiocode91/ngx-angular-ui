@@ -13,7 +13,7 @@ export class AvatarCodeService {
     imports:  [AvatarElement],
   })
   `,
-  codeUs : `
+  codeUseHtml: `
   <div uiAvatar>
     <img src="..." alt="avatar" />
   </div>

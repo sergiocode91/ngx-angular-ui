@@ -22,7 +22,7 @@ export class AlertCodeService {
   })
   `,
   codeUseHtml: `
-  <div uiAlert variant="outline">
+  <div uiAlert>
     <div uiAlertTitle>Hello there!</div>
     <div uiAlertDescription>Keep your app updated for best performance.</div>
   </div>

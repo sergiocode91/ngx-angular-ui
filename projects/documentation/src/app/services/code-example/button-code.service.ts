@@ -14,7 +14,7 @@ export class ButtonCodeService {
   })
   `,
   codeUseHtml: `
-  <button uiButton variant="primary">Button</button>
+  <button uiButton>Button</button>
   `,
   code1: `
   import { ButtonElement } from 'ngx-angular-ui';
