@@ -1,0 +1,72 @@
+<div class="xl:flex xl:gap-16">
+  <div class="xl:w-[calc(100%-17rem)]">
+    <app-heading
+      title="Progress"
+      description="The Progress component displays a progress bar."
+    ></app-heading>
+    
+    <button uiButton variant="secondary" size="sm" disabled>
+      <img src="../../../assets/storybook.svg" width="13" height="13" alt="Storybook" class="mr-2">
+      Storybook
+    </button>
+
+    <app-heading id="props" title="Props" size="lg" />
+    <app-props [props]="props" />
+    
+    <app-heading id="usage" title="Usage" size="lg" [border]="true" />
+    <app-highlight-code [code]="examples.codeUseTs ?? ''" [language]="'typescript'" />
+    <app-highlight-code [code]="examples.codeUseHtml ?? ''" [language]="'html'" />
+    
+    <app-heading id="examples" title="Examples" size="lg" [border]="true" />
+    
+    <app-heading id="default" title="Default" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
+      @if(activeTabs['tab1'] === 'Preview') {
+        <div class="min-h-36 flex flex-wrap items-center justify-start overflow-auto gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <div uiProgress [progress]="currentProgress"></div>
+        </div>
+      } @else {
+        <app-highlight-code [code]="examples.code1 ?? ''" [language]="'typescript'" />
+      }
+    </app-tabs>
+
+    <app-heading id="sizes" title="Sizes" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab2', $event)">
+      @if(activeTabs['tab2'] === 'Preview') {
+        <div class="min-h-36 flex flex-wrap items-center justify-start overflow-auto gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <div uiProgress [progress]="65" size="xs"></div>
+          <div uiProgress [progress]="55" size="sm"></div>
+          <div uiProgress [progress]="45" size="md"></div>
+          <div uiProgress [progress]="35" size="lg"></div>
+        </div>
+      } @else {
+        <app-highlight-code [code]="examples.code2 ?? ''" [language]="'typescript'" />
+      }
+    </app-tabs>
+
+    <app-heading id="colors" title="Colors" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab3', $event)">
+      @if(activeTabs['tab3'] === 'Preview') {
+        <div class="min-h-36 flex flex-wrap items-center justify-start overflow-auto gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <div uiProgress [progress]="65" color="info"></div>
+          <div uiProgress [progress]="65" color="help"></div>
+          <div uiProgress [progress]="65" color="success"></div>
+          <div uiProgress [progress]="65" color="warning"></div>
+          <div uiProgress [progress]="65" color="danger"></div>
+        </div>
+      } @else {
+        <app-highlight-code [code]="examples.code3 ?? ''" [language]="'typescript'" />
+      }
+    </app-tabs>
+    
+    <app-nav-buttons
+      [labelLeft]="'Spinner'"
+      [labelRight]="'Textarea'"
+      [positionLeft]="true"
+      [positionRight]="true"
+      routerLeft="/docs/spinner"
+      routerRight="/docs/textarea"
+    />
+  </div>
+  <app-links-content class="hidden xl:block" [linksContent]="linksContent" />
+</div>

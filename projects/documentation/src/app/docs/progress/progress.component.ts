@@ -8,9 +8,9 @@ import {
   TabsComponent,
   NavButtonsComponent,
 } from '@components/index';
-import { SwitchElement, ButtonElement } from '../../../../../ngx-angular-ui/src/public-api';
+import { ButtonElement, ProgressElement } from '../../../../../ngx-angular-ui/src/public-api';
 import { CodeExamples, LinksContent, Props } from '../../models';
-import { SwitchCodeService } from '../../services/code-example';
+import { ProgressCodeService } from '../../services/code-example';
 
 @Component({
   selector: 'app-skeleton',
@@ -23,13 +23,13 @@ import { SwitchCodeService } from '../../services/code-example';
     LinksContentComponent,
     PropsComponent,
     NavButtonsComponent,
-    SwitchElement,
+    ProgressElement,
     ButtonElement
   ],
-  templateUrl: './switch.component.html',
+  templateUrl: './progress.component.html',
   styles: ``,
 })
-export class SwitchComponent {
+export class ProgressComponent {
   public activeTabs: { [key: string]: string } = {};
   public props: Props = {
     header: ['Property', 'Type', 'Default'],
@@ -46,18 +46,8 @@ export class SwitchComponent {
       },
       {
         property: 'size',
-        type: `'sm' | 'md' | 'lg'`,
+        type: `'xs' | 'sm' | 'md' | 'lg'`,
         default: 'sm',
-      },
-      {
-        property: 'checked',
-        type: 'boolean',
-        default: 'false',
-      },
-      {
-        property: 'disabled',
-        type: 'boolean',
-        default: 'false',
       },
     ],
   };
@@ -66,19 +56,22 @@ export class SwitchComponent {
     { title: 'Usage', link: '#usage' },
     { title: 'Examples', link: '#examples' },
     { title: 'Default', link: '#default', isSubmenu: true },
-    { title: 'State Toggle', link: '#state-toggle', isSubmenu: true },
-    { title: 'With Label', link: '#with-label', isSubmenu: true },
-    { title: 'Colors', link: '#colors', isSubmenu: true },
     { title: 'Sizes', link: '#sizes', isSubmenu: true },
-    { title: 'Disabled', link: '#disabled', isSubmenu: true },
+    { title: 'Colors', link: '#colors', isSubmenu: true },
   ];
 
   public examples: CodeExamples;
-  public switchState: boolean = false;
+  public currentProgress: number = 0;
 
-  constructor(private _switchCodeService: SwitchCodeService) {
-    this.examples = this._switchCodeService.getExamples();
-    this.initializeTabs(6);
+  constructor(private _progressCodeService: ProgressCodeService) {
+    this.examples = this._progressCodeService.getExamples();
+    this.initializeTabs(3);
+  }
+
+  ngOnInit() {
+    setTimeout(() => {
+      this.currentProgress = 65;
+    }, 1500);
   }
 
   initializeTabs(numberOfTabs: number) {
@@ -89,9 +82,5 @@ export class SwitchComponent {
 
   changeTab(tabId: string, newActiveTab: string) {
     this.activeTabs[tabId] = newActiveTab;
-  }
-
-  onSwitchToggle(state: boolean) {
-    this.switchState = state;
   }
 }

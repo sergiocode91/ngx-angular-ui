@@ -32,6 +32,8 @@ export * from './lib/dialog/dialog.service';
 export * from './lib/input/input.directive';
 // Label
 export * from './lib/label/label.directive';
+// Progress
+export * from './lib/progress/progress.component';
 // Skeleton
 export * from './lib/skeleton/skeleton.directive';
 // Spinner

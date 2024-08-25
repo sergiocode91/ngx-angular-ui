@@ -6,6 +6,7 @@ export * from './card-code.service';
 export * from './dialog-code.service';
 export * from './input-code.service';
 export * from './label-code.service';
+export * from './progress-code.service';
 export * from './skeleton-code.service';
 export * from './spinner-code.service';
 export * from './switch-code.service';

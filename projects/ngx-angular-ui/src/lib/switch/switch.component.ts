@@ -77,7 +77,7 @@ export class SwitchElement implements OnInit, OnChanges {
       case 'default':
         return 'bg-zinc-200 dark:bg-zinc-800 peer-checked:bg-zinc-950 peer-checked:dark:bg-neutral-50 after:bg-neutral-50 after:dark:bg-zinc-950 peer-checked:after:bg-neutral-50 peer-checked:after:dark:bg-zinc-950';
       case 'info':
-        return 'bg-zinc-200 dark:bg-zinc-800 peer-checked:bg-blue-800 after:bg-neutral-50 after:dark:bg-zinc-950 peer-checked:after:bg-neutral-50 peer-checked:after:dark:bg-blue-200';
+        return 'bg-zinc-200 dark:bg-zinc-800 peer-checked:bg-blue-700 after:bg-neutral-50 after:dark:bg-zinc-950 peer-checked:after:bg-neutral-50 peer-checked:after:dark:bg-blue-200';
       case 'help':
         return 'bg-zinc-200 dark:bg-zinc-800 peer-checked:bg-violet-700 after:bg-neutral-50 after:dark:bg-zinc-950 peer-checked:after:bg-neutral-50 peer-checked:after:dark:bg-violet-200';
       case 'success':

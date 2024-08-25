@@ -89,6 +89,14 @@ export const routes: Routes = [
           import('./docs/label/label.component').then((m) => m.LabelComponent),
       },
       {
+        path: 'progress',
+        title: 'Progress' + ' | ' + baseTitle,
+        loadComponent: () =>
+          import('./docs/progress/progress.component').then(
+            (m) => m.ProgressComponent
+          ),
+      },
+      {
         path: 'skeleton',
         title: 'Skeleton' + ' | ' + baseTitle,
         loadComponent: () =>
