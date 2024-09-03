@@ -13,7 +13,7 @@ import { CodeExamples, LinksContent, Props } from '../../models';
 import { SwitchCodeService } from '../../services/code-example';
 
 @Component({
-  selector: 'app-skeleton',
+  selector: 'app-switch',
   standalone: true,
   imports: [
     RouterModule,

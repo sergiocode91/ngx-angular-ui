@@ -1,0 +1,53 @@
+<div class="xl:flex xl:gap-16">
+  <div class="xl:w-[calc(100%-17rem)]">
+    <app-heading
+      title="Select"
+      description="Users can select options from a dropdown using this component."
+    ></app-heading>
+    
+    <button uiButton variant="secondary" size="sm" disabled>
+      <img src="../../../assets/storybook.svg" width="13" height="13" alt="Storybook" class="mr-2">
+      Storybook
+    </button>
+
+    <app-heading id="props" title="Props" size="lg" />
+    <app-props [props]="props" />
+    
+    <app-heading id="usage" title="Usage" size="lg" [border]="true" />
+    <app-highlight-code [code]="examples.codeUseTs ?? ''" [language]="'typescript'" />
+    <app-highlight-code [code]="examples.codeUseHtml ?? ''" [language]="'html'" />
+    
+    <app-heading id="examples" title="Examples" size="lg" [border]="true" />
+    
+    <app-heading id="default" title="Default" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
+      @if(activeTabs['tab1'] === 'Preview') {
+        <div class="min-h-36 flex flex-wrap items-center justify-start overflow-auto gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          
+          <div uiSelect class="w-[280px]"></div>
+
+          <!-- <div
+            uiSelect
+            [options]="cities"
+            formControlName="selectedCities" o [(ngModel)]="selectedCities"
+            optionLabel="name"
+            placeholder="Select Cities"
+          ></div> -->
+        </div>
+      } @else {
+        <app-highlight-code [code]="examples.code1 ?? ''" [language]="'typescript'" />
+      }
+    </app-tabs>
+
+    <app-nav-buttons
+      [labelLeft]="'Spinner'"
+      [labelRight]="'Textarea'"
+      [positionLeft]="true"
+      [positionRight]="true"
+      routerLeft="/docs/spinner"
+      routerRight="/docs/textarea"
+    />
+  </div>
+  <app-links-content class="hidden xl:block" [linksContent]="linksContent" />
+</div>
+

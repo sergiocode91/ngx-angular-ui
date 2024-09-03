@@ -97,6 +97,14 @@ export const routes: Routes = [
           ),
       },
       {
+        path: 'select',
+        title: 'Select' + ' | ' + baseTitle,
+        loadComponent: () =>
+          import('./docs/select/select.component').then(
+            (m) => m.SelectComponent
+          ),
+      },
+      {
         path: 'skeleton',
         title: 'Skeleton' + ' | ' + baseTitle,
         loadComponent: () =>

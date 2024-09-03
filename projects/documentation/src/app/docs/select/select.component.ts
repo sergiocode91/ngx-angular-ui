@@ -8,12 +8,13 @@ import {
   TabsComponent,
   NavButtonsComponent,
 } from '@components/index';
-import { ButtonElement, ProgressElement } from '../../../../../ngx-angular-ui/src/public-api';
+import { SwitchElement, ButtonElement } from 'ngx-angular-ui';
 import { CodeExamples, LinksContent, Props } from '../../models';
-import { ProgressCodeService } from '../../services/code-example';
+import { SwitchCodeService } from '../../services/code-example';
+import { SelectElement } from '../../../../../ngx-angular-ui/src/lib/select/select.component';
 
 @Component({
-  selector: 'app-progress',
+  selector: 'app-select',
   standalone: true,
   imports: [
     RouterModule,
@@ -23,13 +24,13 @@ import { ProgressCodeService } from '../../services/code-example';
     LinksContentComponent,
     PropsComponent,
     NavButtonsComponent,
-    ProgressElement,
+    SelectElement,
     ButtonElement
   ],
-  templateUrl: './progress.component.html',
+  templateUrl: './select.component.html',
   styles: ``,
 })
-export class ProgressComponent {
+export class SelectComponent {
   public activeTabs: { [key: string]: string } = {};
   public props: Props = {
     header: ['Property', 'Type', 'Default'],
@@ -46,8 +47,18 @@ export class ProgressComponent {
       },
       {
         property: 'size',
-        type: `'xs' | 'sm' | 'md' | 'lg'`,
+        type: `'sm' | 'md' | 'lg'`,
         default: 'sm',
+      },
+      {
+        property: 'checked',
+        type: 'boolean',
+        default: 'false',
+      },
+      {
+        property: 'disabled',
+        type: 'boolean',
+        default: 'false',
       },
     ],
   };
@@ -56,22 +67,19 @@ export class ProgressComponent {
     { title: 'Usage', link: '#usage' },
     { title: 'Examples', link: '#examples' },
     { title: 'Default', link: '#default', isSubmenu: true },
-    { title: 'Sizes', link: '#sizes', isSubmenu: true },
+    { title: 'State Toggle', link: '#state-toggle', isSubmenu: true },
+    { title: 'With Label', link: '#with-label', isSubmenu: true },
     { title: 'Colors', link: '#colors', isSubmenu: true },
+    { title: 'Sizes', link: '#sizes', isSubmenu: true },
+    { title: 'Disabled', link: '#disabled', isSubmenu: true },
   ];
 
   public examples: CodeExamples;
-  public currentProgress: number = 0;
+  public switchState: boolean = false;
 
-  constructor(private _progressCodeService: ProgressCodeService) {
-    this.examples = this._progressCodeService.getExamples();
-    this.initializeTabs(3);
-  }
-
-  ngOnInit() {
-    setTimeout(() => {
-      this.currentProgress = 65;
-    }, 1500);
+  constructor(private _switchCodeService: SwitchCodeService) {
+    this.examples = this._switchCodeService.getExamples();
+    this.initializeTabs(6);
   }
 
   initializeTabs(numberOfTabs: number) {
@@ -82,5 +90,9 @@ export class ProgressComponent {
 
   changeTab(tabId: string, newActiveTab: string) {
     this.activeTabs[tabId] = newActiveTab;
+  }
+
+  onSwitchToggle(state: boolean) {
+    this.switchState = state;
   }
 }
