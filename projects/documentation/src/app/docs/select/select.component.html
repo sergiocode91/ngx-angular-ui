@@ -22,20 +22,96 @@
     <app-heading id="default" title="Default" size="sm" />
     <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab1', $event)">
       @if(activeTabs['tab1'] === 'Preview') {
-        <div class="min-h-36 flex flex-wrap items-center justify-start overflow-auto gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
-          
-          <div uiSelect class="w-[280px]"></div>
-
-          <!-- <div
-            uiSelect
-            [options]="cities"
-            formControlName="selectedCities" o [(ngModel)]="selectedCities"
-            optionLabel="name"
-            placeholder="Select Cities"
-          ></div> -->
+        <div class="min-h-36 flex flex-wrap items-center justify-start gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <div uiSelect>
+            <div uiSelectTrigger class="w-[230px]">
+              <div uiSelectValue [placeholder]="'Select a language'"></div>
+            </div>
+            <div uiSelectContent>
+              <div uiSelectItem value="javascript">JavaScript</div>
+              <div uiSelectItem value="python">Python</div>
+              <div uiSelectItem value="java">Java</div>
+              <div uiSelectItem value="csharp">C#</div>
+            </div>
+          </div>          
         </div>
       } @else {
         <app-highlight-code [code]="examples.code1 ?? ''" [language]="'typescript'" />
+      }
+    </app-tabs>
+
+    <app-heading id="multiple" title="Multiple" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab2', $event)">
+      @if(activeTabs['tab2'] === 'Preview') {
+        <div class="min-h-36 flex flex-wrap items-center justify-start gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <div uiSelect [multiple]="true">
+            <div uiSelectTrigger class="w-[230px]">
+              <div uiSelectValue [placeholder]="'Select a car'"></div>
+            </div>
+            <div uiSelectContent>
+              <div uiSelectItem value="audi">Audi</div>
+              <div uiSelectItem value="bmw">BMW</div>
+              <div uiSelectItem value="mercedes">Mercedes</div>
+              <div uiSelectItem value="porsche">Porsche</div>
+            </div>
+          </div>
+        </div>
+      } @else {
+        <app-highlight-code [code]="examples.code2 ?? ''" [language]="'typescript'" />
+      }
+    </app-tabs>
+
+    <app-heading id="custom" title="Custom" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab3', $event)">
+      @if(activeTabs['tab3'] === 'Preview') {
+        <div class="min-h-36 flex flex-wrap items-center justify-start gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <div uiSelect>
+            <div uiSelectTrigger class="w-[230px]">
+              <div uiSelectValue [placeholder]="'Select a user'"></div>
+            </div>
+            <div uiSelectContent>
+              <div uiSelectItem value="1">
+                <img src="https://d2u8k2ocievbld.cloudfront.net/memojis/male/1.png" alt="John Doe" class="w-[22px] h-[22px] mr-3">
+                John Doe
+              </div>
+              <div uiSelectItem value="2">
+                <img src="https://d2u8k2ocievbld.cloudfront.net/memojis/male/2.png" alt="Michael Smith" class="w-[22px] h-[22px] mr-3">
+                Michael Smith
+              </div>
+              <div uiSelectItem value="3">
+                <img src="https://d2u8k2ocievbld.cloudfront.net/memojis/male/3.png" alt="David Johnson" class="w-[22px] h-[22px] mr-3">
+                David Johnson
+              </div>
+              <div uiSelectItem value="4">
+                <img src="https://d2u8k2ocievbld.cloudfront.net/memojis/male/4.png" alt="William Brown" class="w-[22px] h-[22px] mr-3">
+                William Brown
+              </div>
+            </div>
+          </div>
+        </div>
+      } @else {
+        <app-highlight-code [code]="examples.code3 ?? ''" [language]="'typescript'" />
+      }
+    </app-tabs>
+
+    <app-heading id="disabled" title="Disabled" size="sm" />
+    <app-tabs [tabs]="['Preview', 'Code']" (activeTabChange)="changeTab('tab4', $event)">
+      @if(activeTabs['tab4'] === 'Preview') {
+        <div class="min-h-36 flex flex-wrap items-center justify-start gap-4 p-4 lg:p-10 rounded-md border border-zinc-200 dark:border-zinc-800">
+          <div uiSelect [disabled]="true">
+            <div uiSelectTrigger class="w-[230px]">
+              <div uiSelectValue [placeholder]="'Select a fruit'"></div>
+            </div>
+            <div uiSelectContent>
+              <div uiSelectItem value="apple">Apple</div>
+              <div uiSelectItem value="banana">Banana</div>
+              <div uiSelectItem value="blueberry">Blueberry</div>
+              <div uiSelectItem value="cherry">Cherry</div>
+            </div>
+          </div>
+        </div>
+      } @else {
+        <app-highlight-code [code]="examples.code4 ?? ''" [language]="'typescript'" />
       }
     </app-tabs>
 

@@ -10,8 +10,8 @@ import {
 } from '@components/index';
 import { SwitchElement, ButtonElement } from 'ngx-angular-ui';
 import { CodeExamples, LinksContent, Props } from '../../models';
-import { SwitchCodeService } from '../../services/code-example';
-import { SelectElement } from '../../../../../ngx-angular-ui/src/lib/select/select.component';
+import { SelectCodeService } from '../../services/code-example';
+import { SelectElement, SelectValueElement, SelectContentElement, SelectItemElement, SelectTriggerElement } from '../../../../../ngx-angular-ui/src/public-api';
 
 @Component({
   selector: 'app-select',
@@ -25,7 +25,11 @@ import { SelectElement } from '../../../../../ngx-angular-ui/src/lib/select/sele
     PropsComponent,
     NavButtonsComponent,
     SelectElement,
-    ButtonElement
+    SelectTriggerElement,
+    SelectItemElement,
+    SelectContentElement,
+    SelectValueElement,
+    ButtonElement,
   ],
   templateUrl: './select.component.html',
   styles: ``,
@@ -36,22 +40,12 @@ export class SelectComponent {
     header: ['Property', 'Type', 'Default'],
     columns: [
       {
-        property: 'label',
+        property: 'placeholder',
         type: 'string',
-        default: 'none',
+        default: 'Select an option',
       },
       {
-        property: 'color',
-        type: `'default' | 'info' | 'help' | 'success' | 'warning' | 'danger'`,
-        default: 'default',
-      },
-      {
-        property: 'size',
-        type: `'sm' | 'md' | 'lg'`,
-        default: 'sm',
-      },
-      {
-        property: 'checked',
+        property: 'multiple',
         type: 'boolean',
         default: 'false',
       },
@@ -67,19 +61,17 @@ export class SelectComponent {
     { title: 'Usage', link: '#usage' },
     { title: 'Examples', link: '#examples' },
     { title: 'Default', link: '#default', isSubmenu: true },
-    { title: 'State Toggle', link: '#state-toggle', isSubmenu: true },
-    { title: 'With Label', link: '#with-label', isSubmenu: true },
-    { title: 'Colors', link: '#colors', isSubmenu: true },
-    { title: 'Sizes', link: '#sizes', isSubmenu: true },
+    { title: 'Multiple', link: '#multiple', isSubmenu: true },
+    { title: 'Custom', link: '#custom', isSubmenu: true },
     { title: 'Disabled', link: '#disabled', isSubmenu: true },
   ];
 
   public examples: CodeExamples;
   public switchState: boolean = false;
 
-  constructor(private _switchCodeService: SwitchCodeService) {
-    this.examples = this._switchCodeService.getExamples();
-    this.initializeTabs(6);
+  constructor(private _selectCodeService: SelectCodeService) {
+    this.examples = this._selectCodeService.getExamples();
+    this.initializeTabs(4);
   }
 
   initializeTabs(numberOfTabs: number) {

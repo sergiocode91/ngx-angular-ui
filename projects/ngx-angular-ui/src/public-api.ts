@@ -34,6 +34,13 @@ export * from './lib/input/input.directive';
 export * from './lib/label/label.directive';
 // Progress
 export * from './lib/progress/progress.component';
+// Select
+export * from './lib/select/select-content.component';
+export * from './lib/select/select-item.component';
+export * from './lib/select/select-trigger.component';
+export * from './lib/select/select-value.component';
+export * from './lib/select/select.component';
+export * from './lib/select/select.service';
 // Skeleton
 export * from './lib/skeleton/skeleton.directive';
 // Spinner
